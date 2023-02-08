@@ -33,12 +33,10 @@ body {
 	font-weight: 500;
 	line-height: 1.5;
 	color: $color_text_main;
-  @include max($midwidth) {
-    padding-top: 70px;
-  }
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: $font_secondary;
+  font-family: $font_heading;
+  color: #000;
 }
 .h1, h1 {
   font-size: 2rem;
@@ -50,7 +48,7 @@ h2 {
   font-size: 1.8rem;
   font-weight: 500;
   @include tab {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 .h2 {
@@ -61,7 +59,7 @@ h2 {
   width: 100%;
   margin: 0 auto 30px;
   @include tab {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 section, div {
@@ -123,8 +121,10 @@ a {
 .flexwrap {
   @include flexgroup();
 }
+
+.wp-block-group.alignwide,
 .wrapper {
-  max-width: 1300px;
+  max-width: $wrapper;
   width: 100%;
   margin:0 auto;
   padding-left: 15px;
@@ -321,6 +321,21 @@ a {
     }
   }
 }
+
+body.home {
+  #primary {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+body.logged-in.admin-bar {
+  @media screen and (min-width: 783px) {
+    .site-header {
+      top: 32px;
+    }
+  }
+}
+
 
 
 
