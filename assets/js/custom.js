@@ -94,7 +94,23 @@ jQuery(document).ready(function ($) {
 
   if ($('.wp-forecast').length && $('img.wp-forecast-curr-left').length) {
     var weatherNum = $('.wp-forecast-curr-right').text().trim().replace('°C', '');
+    weatherNum = parseFloat(weatherNum);
     var fahrenheit = weatherNum * 1.8 + 32;
+    fahrenheit = fahrenheit.toFixed(2);
+    /* two decimal points */
+
+    var int = fahrenheit.split('.')[0];
+    var decimal = fahrenheit.split('.')[1];
+    var lastChar = decimal.slice(-1);
+
+    if (decimal == '00') {
+      fahrenheit = int;
+    } else {
+      if (lastChar == 0) {
+        fahrenheit = int + '.' + decimal.replace(lastChar, '');
+      }
+    }
+
     var weatherDescription = $('img.wp-forecast-curr-left').attr('alt');
     var weatherDescription = weatherDescription.toLowerCase().replace(/(?<= )[^\s]|^./g, function (a) {
       return a.toUpperCase();

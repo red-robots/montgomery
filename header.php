@@ -63,7 +63,14 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
             </span>
           <?php } ?>
           <a href="javascript:void(0)" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
-          <a href="javascript:void(0)" class="head-button">Book Now</a>
+          <?php 
+          $header_button = get_field('header_cta_button','option'); 
+          $btn_target = (isset($header_button['target']) && $header_button['target']) ? $header_button['target'] : '_self';
+          $btn_text = (isset($header_button['title']) && $header_button['title']) ? $header_button['title'] : '';
+          $btn_link = (isset($header_button['url']) && $header_button['url']) ? $header_button['url'] : '';
+          if ($btn_text && $btn_link) { ?>
+          <a href="<?php echo $btn_link ?>" target="<?php echo $btn_target ?>" class="head-button"><?php echo $btn_text ?></a>
+          <?php } ?>
         </div>
       </div>
       <div class="searchbar">
