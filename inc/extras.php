@@ -131,13 +131,13 @@ function get_instagram_setup() {
 }
 
 function get_social_media() {
-    $options = get_field("social_media","option");
+    $options = get_field("social_media_links","option");
     $icons = social_icons();
     $list = array();
     if($options) {
         foreach($options as $i=>$opt) {
-            if( isset($opt['social_media_link']) && $opt['social_media_link'] ) {
-                $url = $opt['social_media_link'];
+            if( isset($opt['social_media_url']) && $opt['social_media_url'] ) {
+                $url = $opt['social_media_url'];
                 $parts = parse_url($url);
                 $host = ( isset($parts['host']) && $parts['host'] ) ? $parts['host'] : '';
                 if($host) {
@@ -167,7 +167,7 @@ function get_social_media() {
 
 function social_icons() {
     $social_types = array(
-        'facebook'  => 'fab fa-facebook',
+        'facebook'  => 'fab fa-facebook-square',
         'twitter'   => 'fab fa-twitter',
         'linkedin'  => 'fab fa-linkedin',
         'instagram' => 'fab fa-instagram',
@@ -837,3 +837,87 @@ function extractYoutubeId($link) {
   return (isset($matches[0]) && $matches[0]) ? $matches[0] : '';
 }
 
+add_shortcode( 'home_carousel', 'home_carousel_shortcode_func' );
+function home_carousel_shortcode_func( $atts ) {
+  ob_start(); 
+  ?>
+
+
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <h4>1</h4>
+    </div>
+    <div class="item">
+      <h4>2</h4>
+    </div>
+    <div class="item">
+      <h4>3</h4>
+    </div>
+    <div class="item">
+      <h4>4</h4>
+    </div>
+  </div>
+  <?php
+  $content = ob_get_contents(); 
+  ob_end_clean();
+  return $content;
+}
+
+
+/* Disabling Gutenberg on certain templates */
+
+function ea_disable_editor( $id = false ) {
+
+  $excluded_templates = array(
+    'template-flexible-content.php',
+    'page-clientlogin.php',
+    'page-contact.php'
+  );
+
+  $excluded_ids = array(
+    get_option( 'page_on_front' ) /* Home page */
+  );
+
+  if( empty( $id ) )
+    return false;
+
+  $id = intval( $id );
+  $template = get_page_template_slug( $id );
+
+  return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+}
+
+/**
+ * Disable Gutenberg by template
+ *
+ */
+function ea_disable_gutenberg( $can_edit, $post_type ) {
+
+  if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
+    return $can_edit;
+
+  if( ea_disable_editor( $_GET['post'] ) )
+    $can_edit = false;
+
+  if( get_post_type($_GET['post'])=='team' )
+    $can_edit = false;
+
+  return $can_edit;
+
+}
+add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
+add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
+
+function weatherIconsCSS() {
+  $dir = get_template_directory() . '/images/weather-icons/';
+  $icons = array_diff(scandir($dir), array('..', '.', '.DS_Store','_icons'));
+  echo '<style type="text/css">';
+  $n = 1;
+  foreach($icons as $icon) {
+    $ctr = str_pad($n, 2, '0', STR_PAD_LEFT);
+    echo '#weather-icon-'.$ctr.'{background-image: url("'.get_stylesheet_directory_uri().'/images/weather-icons/'.$icon.'")}';
+    $n++;
+  }
+  echo '</style>';
+}
+add_action ( 'wp_head', 'weatherIconsCSS' );

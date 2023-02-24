@@ -16,69 +16,25 @@ function bellaworks_scripts() {
 			false 
 		);
 
-	wp_enqueue_script( 
-			'vimeo-player', 
-			'https://player.vimeo.com/api/player.js', 
-			array(), '2.12.2', 
-			true 
-		);
-
- //  wp_enqueue_script( 
- //      'bellaworks-fancybox', 
- //      get_template_directory_uri() . '/assets/js/vendor/fancybox.js', 
- //      array(), '20200101', 
- //      true 
- //    );
+  wp_enqueue_script( 
+    'vimeo-player', 
+    'https://player.vimeo.com/api/player.js', 
+    array(), '2.12.2', true 
+  );
   
-	// wp_enqueue_script( 
-	// 		'bellaworks-carousel', 
-	// 		get_template_directory_uri() . '/assets/js/vendor/owl.carousel.min.js', 
-	// 		array(), '20200101', 
-	// 		true 
-	// 	);
-
- //  wp_enqueue_script( 
- //      'bellaworks-swiper', 
- //      get_template_directory_uri() . '/assets/js/vendor/swiper.js', 
- //      array(), '20200101', 
- //      true 
- //    );
-
-	// wp_enqueue_script( 
-	// 		'bellaworks-boostrap', 
- //      get_template_directory_uri() . '/assets/js/vendor/bootstrap.bundle.min.js', 
- //      array(), '20200101', 
- //      true 
-	// 	);
-
-  // wp_enqueue_script( 
-  //     'bellaworks-blocks', 
-  //     get_template_directory_uri() . '/assets/js/vendor.min.js', 
-  //     array(), '20220202', 
-  //     true 
-  //   );
 
   wp_enqueue_script( 
-      'bellaworks-cplugin', 
-      get_template_directory_uri() . '/assets/js/plugins.min.js', 
-      array(), '20220202', 
-      true 
-    );
+    'bellaworks-cplugin', 
+    get_template_directory_uri() . '/assets/js/plugins.min.js', 
+    array(), '20220202', true 
+  );
 
-  
+
   wp_enqueue_script( 
-      'hero-sliders', 
-      'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js', 
-      array(), '20221101', 
-      true 
-    );
-
-	wp_enqueue_script( 
-			'bellaworks-custom', 
-			get_template_directory_uri() . '/assets/js/custom/custom.js', 
-			array(), '20200713', 
-			true 
-		);
+    'bellaworks-custom', 
+    get_template_directory_uri() . '/assets/js/custom/custom.js', 
+    array(), '20200713', true 
+  );
 
 	wp_localize_script( 'bellaworks-custom', 'frontajax', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' )

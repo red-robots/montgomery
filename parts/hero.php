@@ -2,18 +2,20 @@
   if( $banners = get_field('banner') ) { 
     $type = ( count($banners) > 1 ) ? 'slideshow':'static';
   ?>
-  <div class="banners <?php echo $type ?>">
-    <?php foreach ($banners as $b) { 
-      $img = $b['image'];
-      $text = $b['text'];
-      if($img) { ?>
-        <div class="banner" style="background-image:url('<?php echo $img['url'] ?>')">
-          <?php if ($text) { ?>
-          <div class="text"><div class="pad"><?php echo $text ?></div></div> 
-          <?php } ?>
-        </div>
+  <div class="banners swiper <?php echo $type ?>">
+    <div class="swiper-wrapper">
+      <?php foreach ($banners as $b) { 
+        $img = $b['image'];
+        $text = $b['text'];
+        if($img) { ?>
+          <div class="swiper-slide banner" style="background-image:url('<?php echo $img['url'] ?>')">
+            <?php if ($text) { ?>
+            <div class="text"><div class="pad"><?php echo $text ?></div></div> 
+            <?php } ?>
+          </div>
+        <?php } ?>
       <?php } ?>
-    <?php } ?>
+    </div>
   </div>
   <?php } ?>
 <?php } ?>

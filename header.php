@@ -42,7 +42,6 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
 	<header id="masthead" class="site-header">
 		<div class="wrapper cf">
       <div class="head-inner">
-        
         <a href="javascript:void(0)" id="menu-toggle" class="menu-toggle"><span class="sr">Menu</span><span class="bar"></span></a>
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
@@ -52,11 +51,23 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
   			<?php if( get_custom_logo() ) { ?>
           <span class="site-logo"><?php the_custom_logo(); ?></span>
         <?php } else { ?>
-          <h1 class="site-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+          <h1 class="site-logo"><a hef="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
         <?php } ?>
 
-        <a href="javascript:void(0)" class="head-button">Book Now</a>
-
+        <div class="headtopright">
+          <?php if(function_exists('wp_forecast')) { ?>
+            <span class="weatherInfo">
+              <span class="live-forecast"><?php wp_forecast('A'); ?></span>
+              <span class="weather-icon"></span>
+              <span class="fahrenheit"></span>
+            </span>
+          <?php } ?>
+          <a href="javascript:void(0)" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
+          <a href="javascript:void(0)" class="head-button">Book Now</a>
+        </div>
+      </div>
+      <div class="searchbar">
+        <div class="inner"><?php get_template_part('searchform') ?></div>
       </div>
 		</div>
 	</header>

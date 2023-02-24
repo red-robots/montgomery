@@ -9,19 +9,19 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
-          'post_type' => 'careers',
-          'menu_name' => 'Careers',
-          'plural'    => 'Careers',
-          'single'    => 'Career',
-          'menu_icon' => 'dashicons-megaphone',
+          'post_type' => 'activities',
+          'menu_name' => 'Activities',
+          'plural'    => 'Activities',
+          'single'    => 'Activity',
+          'menu_icon' => 'dashicons-category',
           'supports'  => array('title','editor')
         ),
         array(
-          'post_type' => 'team',
-          'menu_name' => 'Team',
-          'plural'    => 'Teams',
-          'single'    => 'Team',
-          'menu_icon' => 'dashicons-groups',
+          'post_type' => 'events',
+          'menu_name' => 'Events',
+          'plural'    => 'Events',
+          'single'    => 'Event',
+          'menu_icon' => 'dashicons-calendar-alt',
           'supports'  => array('title','editor')
         ),
     );
@@ -191,22 +191,28 @@ function set_custom_cpt_columns($columns) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    if($post_type=='team') {
+    if($post_type=='activities') {
         unset($columns['date']);
         $columns['title'] = __( 'Name', 'bellaworks' );
-        $columns['team_photo'] = __( 'Image', 'bellaworks' );
+        $columns['image'] = __( 'Image', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
-    else if($post_type=='communities') {
+    else if($post_type=='events') {
         unset($columns['date']);
-        unset($columns['taxonomy-community-status']);
-        unset($columns['taxonomy-community-location']);
-        $columns['title'] = __( 'Name', 'bellaworks' );
-        $columns['units'] = __( 'Total Units', 'bellaworks' );
-        $columns['taxonomy-community-location'] = __( 'Location', 'bellaworks' );
-        $columns['taxonomy-community-status'] = __( 'Category', 'bellaworks' );
+        $columns['title'] = __( 'Title', 'bellaworks' );
+        $columns['image'] = __( 'Photo', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
+    // else if($post_type=='communities') {
+    //     unset($columns['date']);
+    //     unset($columns['taxonomy-community-status']);
+    //     unset($columns['taxonomy-community-location']);
+    //     $columns['title'] = __( 'Name', 'bellaworks' );
+    //     $columns['units'] = __( 'Total Units', 'bellaworks' );
+    //     $columns['taxonomy-community-location'] = __( 'Location', 'bellaworks' );
+    //     $columns['taxonomy-community-status'] = __( 'Category', 'bellaworks' );
+    //     $columns['date'] = __( 'Date', 'bellaworks' );
+    // }
     
     return $columns;
 }
@@ -218,10 +224,10 @@ function custom_post_column( $column, $post_id ) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    if($post_type=='team') {
+    if($post_type=='activities') {
         switch ( $column ) {
-          case 'team_photo' :
-            $img = get_field('photo',$post_id);
+          case 'image' :
+            $img = get_field('main_photo',$post_id);
             $img_src = ($img) ? $img['sizes']['medium'] : '';
             $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;border:1px solid #CCC;overflow:hidden;">';
             if($img_src) {
@@ -234,13 +240,19 @@ function custom_post_column( $column, $post_id ) {
             break;
         }
     }
-    else if($post_type=='communities') {
+    else if($post_type=='events') {
         switch ( $column ) {
-          case 'units' :
-            $total_units = get_field('total_units',$post_id);
-            if($total_units) {
-              echo "<strong>".$total_units."</strong>";
+          case 'image' :
+            $img = get_field('main_photo',$post_id);
+            $img_src = ($img) ? $img['sizes']['medium'] : '';
+            $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;border:1px solid #CCC;overflow:hidden;">';
+            if($img_src) {
+               $the_photo .= '<span style="display:block;width:100%;height:100%;background:url('.$img_src.') top center no-repeat;background-size:cover;transform:scale(1.2)"></span>';
+            } else {
+                $the_photo .= '<i class="dashicons dashicons-format-image" style="font-size:25px;position:relative;top:13px;left: -3px;opacity:0.3;"></i>';
             }
+            $the_photo .= '</span>';
+            echo $the_photo;
             break;
         }
     }
