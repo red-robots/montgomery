@@ -536,9 +536,9 @@ div.buttondiv {
     @include flexgroup();
     align-items: center;
     @include tab {
-      width: 60%;
+      width: 50%;
       padding-left: 12%;
-      padding-right: 3vw;
+      padding-right: 8%;
     }
     .inner {
       width: 100%;
@@ -554,7 +554,7 @@ div.buttondiv {
     margin-top: 50px;
     margin-bottom: 50px;
     @include tab {
-      width: 40%;
+      width: 50%;
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -562,10 +562,24 @@ div.buttondiv {
       position: relative;
       width: 100%;
       float: left;
+      @include tab {
+        &:before {
+          content:"";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #FFF;
+          z-index: 10;
+        }
+      }
       a {
         display: block;
         width: 100%;
         height: auto;
+        float: left;
         text-decoration: none;
       }
     }
@@ -585,26 +599,34 @@ div.buttondiv {
       text-transform: uppercase;
       color: $primary;
       transition: all ease .2s;
+      a {
+        margin-right: 40px;
+        width: auto;
+      }
       .arrow {
         display: none;
-        position: absolute;
-        top: 50%;
-        right: 35px;
-        transform: translateY(-50%);
-        &:before, &:after {
-          content:"";
-          background: $teal;
-          width: 25px;
-          height: 3px;
+        @include tab {
+          display: none;
           position: absolute;
-          top: 0;
-          left: 0;
-        }
-        &:before {
-          transform: translateY(-8px) rotate(43deg);
-        }
-        &:after {
-          transform: translateY(7px) rotate(-43deg);
+          top: 50%;
+          right: 35px;
+          transform: translateY(-50%);
+          z-index: 20;
+          &:before, &:after {
+            content:"";
+            background: $teal;
+            width: 25px;
+            height: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          &:before {
+            transform: translateY(-8px) rotate(43deg);
+          }
+          &:after {
+            transform: translateY(7px) rotate(-43deg);
+          }
         }
       }
     }
@@ -637,9 +659,19 @@ div.buttondiv {
   .owl-nav, .owl-dots {
     display: none!important;
   }
+  .owl-item.active {
+    .item:before {
+      display: none;
+    }
+  }
   .owl-item:first-child,
-  .owl-item.first.active {
+  .owl-item.center.active {
     .item .arrow {display: block;}
+  }
+  .fright .show-all {
+     .item:before {
+      display: none;
+    }
   }
 }
 
@@ -1194,6 +1226,13 @@ div.buttondiv {
     font-size: 15px;
     line-height: 1.8;
     margin: 0 0;
+    a {
+      text-decoration: none;
+      color: #FFF;
+      &:hover {
+        color: $teal;
+      }
+    }
   }
   .flexwrap {
     justify-content: space-between;

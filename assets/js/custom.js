@@ -43,26 +43,36 @@ jQuery(document).ready(function ($) {
 
   var owl = $('.owl-carousel');
   owl.owlCarousel({
+    center: true,
+    items: 2,
     loop: true,
     margin: 10,
     autoplay: true,
     autoplayTimeout: 5000,
     responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true
-      },
-      600: {
-        items: 2,
-        nav: false
-      },
-      1000: {
-        items: 2,
-        nav: true,
-        loop: false,
-        margin: 20
-      }
+    // responsive: {
+    //   0: {
+    //     items: 1,
+    //     nav: true
+    //   },
+    //   600: {
+    //     items: 2,
+    //     nav: false
+    //   },
+    //   1000: {
+    //     items: 2,
+    //     nav: true,
+    //     loop: false,
+    //     margin: 20
+    //   }
+    // },
+    onInitialized: function onInitialized() {
+      $('.home-carousel .item-title span.arrow').on('click', function () {
+        $('.home-carousel .owl-next').trigger('click');
+      });
+    },
+    onDragged: function onDragged() {
+      $('.home-carousel').addClass('show-all');
     },
     onChanged: function onChanged(e) {
       $('.home-carousel .owl-item.active').each(function (k) {

@@ -1501,18 +1501,18 @@ div.buttondiv{margin-top:30px}
 .homerow1 .button{padding:12px 35px}
 .homerow1 .fright{width:100%;margin-top:50px;margin-bottom:50px}
 .homerow1 .fright .item{position:relative;width:100%;float:left}
-.homerow1 .fright .item a{display:block;width:100%;height:auto;text-decoration:none}
+.homerow1 .fright .item a{display:block;width:100%;height:auto;float:left;text-decoration:none}
 .homerow1 .fright .item-title{display:block;position:absolute;left:0;bottom:0;background:rgba(255,255,255,.8);text-align:left;width:100%;padding:20px 15px 15px 2vw;font-family:"Lora",serif;font-size:16px;font-weight:600;line-height:1.2;text-transform:uppercase;color:#4c748c;-webkit-transition:all ease .2s;transition:all ease .2s}
-.homerow1 .fright .item-title .arrow{display:none;position:absolute;top:50%;right:35px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
-.homerow1 .fright .item-title .arrow:before,.homerow1 .fright .item-title .arrow:after{content:"";background:#3ca7c5;width:25px;height:3px;position:absolute;top:0;left:0}
-.homerow1 .fright .item-title .arrow:before{-webkit-transform:translateY(-8px) rotate(43deg);transform:translateY(-8px) rotate(43deg)}
-.homerow1 .fright .item-title .arrow:after{-webkit-transform:translateY(7px) rotate(-43deg);transform:translateY(7px) rotate(-43deg)}
+.homerow1 .fright .item-title a{margin-right:40px;width:auto}
+.homerow1 .fright .item-title .arrow{display:none}
 .homerow1 .fright figure{width:100%;margin:0;float:left;background-size:cover;background-position:center;background-repeat:no-repeat}
 .homerow1 .fright figure img{width:100%;height:auto;float:left}
 .homerow1 .fright .item a:hover .item-title{background:#3ca7c5;color:#fff}
 .homerow1 .fright .item a:hover .item-title .arrow:before,.homerow1 .fright .item a:hover .item-title .arrow:after{background:#fff}
 .homerow1 .owl-nav,.homerow1 .owl-dots{display:none !important}
-.homerow1 .owl-item:first-child .item .arrow,.homerow1 .owl-item.first.active .item .arrow{display:block}
+.homerow1 .owl-item.active .item:before{display:none}
+.homerow1 .owl-item:first-child .item .arrow,.homerow1 .owl-item.center.active .item .arrow{display:block}
+.homerow1 .fright .show-all .item:before{display:none}
 .wave-divider{margin:25px 0 20px}
 .wave-divider svg{display:block;max-width:300px;width:100%}
 .wave-divider g path{stroke:#3ca7c5 !important}
@@ -1574,6 +1574,8 @@ div.buttondiv{margin-top:30px}
 .site-footer .footlogo{display:inline-block;width:120px;margin-bottom:30px}
 .site-footer .footlogo img{width:100%;height:auto}
 .site-footer .address{font-size:15px;line-height:1.8;margin:0}
+.site-footer .address a{text-decoration:none;color:#fff}
+.site-footer .address a:hover{color:#3ca7c5}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-footer .flexwrap .fcol{width:100%}
 .site-footer .flexwrap .fcol.left{margin-bottom:35px}
@@ -1605,8 +1607,13 @@ h2{font-size:3rem}
 .banners .banner .pad{width:50%;padding-bottom:10vh}
 .button{padding:14px 35px 12px}
 .homerow1 .home-carousel{padding-left:0;padding-right:0}
-.homerow1 .fleft{width:60%;padding-left:12%;padding-right:3vw}
-.homerow1 .fright{width:40%;margin-top:0;margin-bottom:0}
+.homerow1 .fleft{width:50%;padding-left:12%;padding-right:8%}
+.homerow1 .fright{width:50%;margin-top:0;margin-bottom:0}
+.homerow1 .fright .item:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#fff;z-index:10}
+.homerow1 .fright .item-title .arrow{display:none;position:absolute;top:50%;right:35px;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:20}
+.homerow1 .fright .item-title .arrow:before,.homerow1 .fright .item-title .arrow:after{content:"";background:#3ca7c5;width:25px;height:3px;position:absolute;top:0;left:0}
+.homerow1 .fright .item-title .arrow:before{-webkit-transform:translateY(-8px) rotate(43deg);transform:translateY(-8px) rotate(43deg)}
+.homerow1 .fright .item-title .arrow:after{-webkit-transform:translateY(7px) rotate(-43deg);transform:translateY(7px) rotate(-43deg)}
 .text_divider{margin:10px 0}
 .h2{font-size:3rem}
 .flexible-content .textcol{width:50%}

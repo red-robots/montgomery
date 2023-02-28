@@ -43,8 +43,8 @@ get_header();
               <figure<?php echo $style ?>>
                 <img src="<?php echo get_stylesheet_directory_uri()?>/images/spacer-home-carousel.png" alt="" class="helper">
               </figure>
-              <span class="item-title"><?php echo $title ?><span class="arrow"></span></span>
             </a>
+            <span class="item-title"><a href="<?php echo get_permalink($id); ?>"><?php echo $title ?></a><span class="arrow"></span></span>
           </div>
           <?php } ?>
         </div>
