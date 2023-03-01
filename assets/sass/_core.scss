@@ -620,6 +620,12 @@ div.buttondiv {
       text-transform: uppercase;
       color: $primary;
       transition: all ease .2s;
+      @include tab {
+        min-height: 75px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
       a {
         margin-right: 40px;
         width: auto;

@@ -1620,6 +1620,7 @@ h2{font-size:3rem}
 .homerow1 .fright .innerwrap{width:120%;position:relative;left:-10vw}
 .homerow1 .fright .cover-first-item{display:block;position:absolute;top:0;left:-16vw;margin-right:10px;background:#fff;z-index:5}
 .homerow1 .fright .item:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#fff;z-index:10}
+.homerow1 .fright .item-title{min-height:75px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .homerow1 .fright .item-title .arrow{display:none;position:absolute;top:50%;right:35px;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:20}
 .homerow1 .fright .item-title .arrow:before,.homerow1 .fright .item-title .arrow:after{content:"";background:#3ca7c5;width:25px;height:3px;position:absolute;top:0;left:0}
 .homerow1 .fright .item-title .arrow:before{-webkit-transform:translateY(-8px) rotate(43deg);transform:translateY(-8px) rotate(43deg)}
