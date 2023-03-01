@@ -12,8 +12,10 @@ get_header();
     <?php  
     $button = get_field('adventure_button');
     $b_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
-    $b_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
-    $b_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
+    // $b_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
+    // $b_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
+    $b_text = '';
+    $b_link = '';
     ?>
     <div class="flexwrap">
     <?php if ($adventure_content) { ?>
@@ -25,28 +27,35 @@ get_header();
             <a href="<?php echo $b_link ?>" target="<?php echo $b_target ?>" class="button"><?php echo $b_text ?></a>
           </div>  
           <?php } ?>
+          <div class="carouselNavButtons">
+            <a href="javascript:void(0)" class="caroPrev" data-action=".home-carousel .owl-prev"><span>Prev</span></a>
+            <a href="javascript:void(0)" class="caroNext" data-action=".home-carousel .owl-next"><span>Next</span></a>
+          </div>
         </div>
       </div>
     <?php } ?>
 
     <?php if ($featured_post) { $count = count($featured_post); ?>
       <div class="fxcol fright">
-        <div id="carousel-items-<?php echo $count ?>" class="owl-carousel owl-theme home-carousel">
-          <?php foreach ($featured_post as $p) { 
-            $id = $p->ID;
-            $title = $p->post_title;
-            $photo = get_field('main_photo',$id);
-            $style = ($photo) ? ' style="background-image:url('.$photo['url'].')"':'';
-          ?>
-          <div class="item">
-            <a href="<?php echo get_permalink($id); ?>">
-              <figure<?php echo $style ?>>
-                <img src="<?php echo get_stylesheet_directory_uri()?>/images/spacer-home-carousel.png" alt="" class="helper">
-              </figure>
-            </a>
-            <span class="item-title"><a href="<?php echo get_permalink($id); ?>"><?php echo $title ?></a><span class="arrow"></span></span>
+        <div class="innerwrap">
+          <div class="cover-first-item"></div>
+          <div id="carousel-items-<?php echo $count ?>" class="owl-carousel owl-theme home-carousel">
+            <?php foreach ($featured_post as $p) { 
+              $id = $p->ID;
+              $title = $p->post_title;
+              $photo = get_field('main_photo',$id);
+              $style = ($photo) ? ' style="background-image:url('.$photo['url'].')"':'';
+            ?>
+            <div class="item">
+              <a href="<?php echo get_permalink($id); ?>">
+                <figure<?php echo $style ?>>
+                  <img src="<?php echo get_stylesheet_directory_uri()?>/images/spacer-home-carousel.png" alt="" class="helper">
+                </figure>
+              </a>
+              <span class="item-title"><a href="<?php echo get_permalink($id); ?>"><?php echo $title ?></a><span class="arrow"></span></span>
+            </div>
+            <?php } ?>
           </div>
-          <?php } ?>
         </div>
       </div>
     <?php } ?>

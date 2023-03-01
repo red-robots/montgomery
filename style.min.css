@@ -1499,7 +1499,9 @@ div.buttondiv{margin-top:30px}
 .homerow1 .fleft{width:100%;padding-left:30px;padding-right:30px;font-size:16px;font-weight:normal;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .homerow1 .fleft .inner{width:100%}
 .homerow1 .button{padding:12px 35px}
-.homerow1 .fright{width:100%;margin-top:50px;margin-bottom:50px}
+.homerow1 .fright{width:100%;margin-top:50px;margin-bottom:50px;overflow:hidden}
+.homerow1 .fright .innerwrap{position:relative}
+.homerow1 .fright .cover-first-item{display:none}
 .homerow1 .fright .item{position:relative;width:100%;float:left}
 .homerow1 .fright .item a{display:block;width:100%;height:auto;float:left;text-decoration:none}
 .homerow1 .fright .item-title{display:block;position:absolute;left:0;bottom:0;background:rgba(255,255,255,.8);text-align:left;width:100%;padding:20px 15px 15px 2vw;font-family:"Lora",serif;font-size:16px;font-weight:600;line-height:1.2;text-transform:uppercase;color:#4c748c;-webkit-transition:all ease .2s;transition:all ease .2s}
@@ -1513,6 +1515,12 @@ div.buttondiv{margin-top:30px}
 .homerow1 .owl-item.active .item:before{display:none}
 .homerow1 .owl-item:first-child .item .arrow,.homerow1 .owl-item.center.active .item .arrow{display:block}
 .homerow1 .fright .show-all .item:before{display:none}
+.carouselNavButtons{margin:30px 0 0}
+.carouselNavButtons a{display:inline-block;width:50px;height:50px;background:#3ca7c5;margin-right:8px;position:relative}
+.carouselNavButtons a span{display:block;width:0;text-indent:-99em;overflow:hidden}
+.carouselNavButtons a.caroPrev:before{content:"";display:block;width:17px;height:17px;border-left:2px solid #fff;border-bottom:2px solid #fff;position:absolute;top:50%;left:57%;-webkit-transform:translateX(-50%) translateY(-50%) rotate(45deg);transform:translateX(-50%) translateY(-50%) rotate(45deg)}
+.carouselNavButtons a.caroNext:before{content:"";display:block;width:17px;height:17px;border-right:2px solid #fff;border-bottom:2px solid #fff;position:absolute;top:50%;left:46%;-webkit-transform:translateX(-50%) translateY(-50%) rotate(-45deg);transform:translateX(-50%) translateY(-50%) rotate(-45deg)}
+.carouselNavButtons a:hover{background:#cea155}
 .wave-divider{margin:25px 0 20px}
 .wave-divider svg{display:block;max-width:300px;width:100%}
 .wave-divider g path{stroke:#3ca7c5 !important}
@@ -1607,8 +1615,10 @@ h2{font-size:3rem}
 .banners .banner .pad{width:50%;padding-bottom:10vh}
 .button{padding:14px 35px 12px}
 .homerow1 .home-carousel{padding-left:0;padding-right:0}
-.homerow1 .fleft{width:50%;padding-left:12%;padding-right:8%}
-.homerow1 .fright{width:50%;margin-top:0;margin-bottom:0}
+.homerow1 .fleft{width:45%;padding-left:12%;padding-right:2%}
+.homerow1 .fright{width:55%;margin-top:0;margin-bottom:0}
+.homerow1 .fright .innerwrap{width:120%;position:relative;left:-10vw}
+.homerow1 .fright .cover-first-item{display:block;position:absolute;top:0;left:-16vw;margin-right:10px;background:#fff;z-index:5}
 .homerow1 .fright .item:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#fff;z-index:10}
 .homerow1 .fright .item-title .arrow{display:none;position:absolute;top:50%;right:35px;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:20}
 .homerow1 .fright .item-title .arrow:before,.homerow1 .fright .item-title .arrow:after{content:"";background:#3ca7c5;width:25px;height:3px;position:absolute;top:0;left:0}

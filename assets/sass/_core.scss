@@ -536,9 +536,9 @@ div.buttondiv {
     @include flexgroup();
     align-items: center;
     @include tab {
-      width: 50%;
+      width: 45%;
       padding-left: 12%;
-      padding-right: 8%;
+      padding-right: 2%;
     }
     .inner {
       width: 100%;
@@ -553,10 +553,31 @@ div.buttondiv {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
+    overflow: hidden;
     @include tab {
-      width: 50%;
+      width: 55%;
       margin-top: 0;
       margin-bottom: 0;
+    }
+    .innerwrap {
+      position: relative;
+      @include tab {
+        width: 120%;
+        position: relative;
+        left: -10vw;
+      }
+    }
+    .cover-first-item {
+      display: none;
+      @include tab {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -16vw;
+        margin-right: 10px;
+        background: #FFF;
+        z-index: 5;
+      }
     }
     .item {
       position: relative;
@@ -671,6 +692,55 @@ div.buttondiv {
   .fright .show-all {
      .item:before {
       display: none;
+    }
+  }
+}
+
+.carouselNavButtons {
+  margin: 30px 0 0;
+  a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: $teal;
+    margin-right: 8px;
+    position: relative;
+    span {
+      display: block;
+      width: 0;
+      text-indent: -99em;
+      overflow: hidden;
+    }
+    &.caroPrev {
+      &:before {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 17px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        position: absolute;
+        top: 50%;
+        left: 57%;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
+    }
+    &.caroNext {
+      &:before {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 17px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        position: absolute;
+        top: 50%;
+        left: 46%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      }
+    }
+    &:hover {
+      background: $yellow2;
     }
   }
 }
