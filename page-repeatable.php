@@ -42,7 +42,7 @@ get_header(); ?>
                   <?php if ($image) { ?>
                   <div class="imagecol">
                     <figure style="background-image:url(<?php echo $image['url'] ?>)">
-                      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/square.png" alt="" class="helper">
+                      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/helper-portrait.png" alt="" class="helper">
                       <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="actual">
                     </figure>
                   </div>  
