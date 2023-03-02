@@ -943,22 +943,36 @@ add_action ( 'wp_head', 'weatherIconsCSS' );
 add_shortcode( 'contact', 'contact_shortcode_func' );
 function contact_shortcode_func( $atts ) {
   $a = shortcode_atts( array(
-    'type'=>''
+    'type'=>'',
+    'icon'=>1
   ), $atts );
   $type = ($a['type']) ? $a['type'] : '';
+  $has_icon = ($a['icon'] && $a['icon']=='false') ? false : true;
   $output = '';
   if($type=='address') {
     $type = 'office_address';
   }
   if( get_field($type,'option') ) {
     if($type=='phone') {
-      $output = '<span class="c-info '.$type.'"><i class="fas fa-sharp fa-solid fa-phone"></i><a href="tel:'.format_phone_number(get_field($type,'option')).'">' . get_field($type,'option') . '</a></span>';
+      if($has_icon) {
+        $output = '<span class="c-info '.$type.'"><i class="fas fa-sharp fa-solid fa-phone"></i><a href="tel:'.format_phone_number(get_field($type,'option')).'">' . get_field($type,'option') . '</a></span>';
+      } else {
+        $output = '<span class="c-info '.$type.'"><a href="tel:'.format_phone_number(get_field($type,'option')).'">' . get_field($type,'option') . '</a></span>';
+      }
     } 
     else if($type=='email') {
-      $output = '<span class="c-info '.$type.'"><i class="fas fa-solid fa-envelope"></i><a href="mailto:'.get_field($type,'option').'">' . get_field($type,'option') . '</a></span>';
+      if($has_icon) {
+        $output = '<span class="c-info '.$type.'"><i class="fas fa-solid fa-envelope"></i><a href="mailto:'.get_field($type,'option').'">' . get_field($type,'option') . '</a></span>';
+      } else {
+        $output = '<span class="c-info '.$type.'"><a href="mailto:'.get_field($type,'option').'">' . get_field($type,'option') . '</a></span>';
+      }
     }
     else if($type=='office_address') {
-      $output = '<span class="c-info '.$type.'"><i class="fas fa-solid fa-location-arrow"></i>' . get_field($type,'option') . '</span>';
+      if($has_icon) {
+        $output = '<span class="c-info '.$type.'"><i class="fas fa-solid fa-location-arrow"></i>' . get_field($type,'option') . '</span>';
+      } else {
+        $output = '<span class="c-info '.$type.'">' . get_field($type,'option') . '</span>';
+      }
     }
   }
   return $output;
