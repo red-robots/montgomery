@@ -319,6 +319,10 @@ function admin_css_func() { ?>
     color: #9e9e9e;
     font-style: italic;
   }
+  [data-name="contact_links"] [data-name="icon"] .image-wrap img {
+    width: 50px;
+    height: auto;
+  }
 </style>
 <?php }
 
@@ -912,6 +916,9 @@ function ea_disable_gutenberg( $can_edit, $post_type ) {
   if( get_post_type($_GET['post'])=='team' )
     $can_edit = false;
 
+  if( $_GET['post']==15 ) /* Contact page */
+    $can_edit = false;
+
   return $can_edit;
 
 }
@@ -931,3 +938,28 @@ function weatherIconsCSS() {
   echo '</style>';
 }
 add_action ( 'wp_head', 'weatherIconsCSS' );
+
+
+add_shortcode( 'contact', 'contact_shortcode_func' );
+function contact_shortcode_func( $atts ) {
+  $a = shortcode_atts( array(
+    'type'=>''
+  ), $atts );
+  $type = ($a['type']) ? $a['type'] : '';
+  $output = '';
+  if($type=='address') {
+    $type = 'office_address';
+  }
+  if( get_field($type,'option') ) {
+    if($type=='phone') {
+      $output = '<span class="c-info '.$type.'"><i class="fas fa-sharp fa-solid fa-phone"></i><a href="tel:'.format_phone_number(get_field($type,'option')).'">' . get_field($type,'option') . '</a></span>';
+    } 
+    else if($type=='email') {
+      $output = '<span class="c-info '.$type.'"><i class="fas fa-solid fa-envelope"></i><a href="mailto:'.get_field($type,'option').'">' . get_field($type,'option') . '</a></span>';
+    }
+    else if($type=='office_address') {
+      $output = '<span class="c-info '.$type.'"><i class="fas fa-solid fa-location-arrow"></i>' . get_field($type,'option') . '</span>';
+    }
+  }
+  return $output;
+}

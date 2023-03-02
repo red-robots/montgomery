@@ -1588,6 +1588,8 @@ div.buttondiv{margin-top:30px}
 .static-banner .banner-text .title{font-family:"Anton",sans-serif;font-weight:normal;font-size:3rem;line-height:1.2;color:#4c748c;text-transform:uppercase;margin-bottom:60px;position:relative;text-align:center;width:100%}
 .static-banner .banner-text .title span{display:inline-block;position:relative}
 .static-banner .banner-text .title span:after{content:"";display:block;position:relative;bottom:0;left:50%;width:150px;height:30px;-webkit-transform:translateX(-50%);transform:translateX(-50%);background-image:url("images/symbol/water.svg");background-size:contain;background-position:center;background-repeat:no-repeat}
+.static-banner .banner-text .title.white{color:#fff}
+.static-banner .banner-text .title.white span:after{background-image:url("images/symbol/wave-blue.svg")}
 .repeatable-blocks .h2{margin:0 0 30px}
 .repeatable-blocks .fullwidth .wrapper{padding-top:70px;padding-bottom:60px}
 .repeatable-blocks .repeatable:nth-child(even){background-color:#eee}
@@ -1599,6 +1601,39 @@ div.buttondiv{margin-top:30px}
 .repeatable-blocks .repeatable.text-image figure img{width:100%;height:auto}
 .repeatable-blocks .repeatable.text-image figure img.helper{display:none}
 .repeatable-blocks .repeatable.text-image figure img.actual{display:block}
+.contact-page .intro-content .wrapper{padding-top:70px;padding-bottom:60px}
+.contact-form-section .fxcol{width:100%}
+.contact-form-section .fxcol.text{padding:50px 20px;background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-size:cover;text-align:center}
+.contact-form-section .fxcol.text .inside{color:#fff}
+.contact-form-section .fxcol.text .inside p:last-child{margin-bottom:0}
+.contact-form-section .fxcol.form{background:#eee;padding:20px}
+.contact-form-section .fxcol.form .gform_title{display:none}
+.contact-form-section .fxcol.form input[type=text],.contact-form-section .fxcol.form input[type=email],.contact-form-section .fxcol.form textarea{border:1px solid #fff;outline:0;padding:5px 10px}
+.contact-form-section .fxcol.form input[type=text]:focus,.contact-form-section .fxcol.form input[type=email]:focus,.contact-form-section .fxcol.form textarea:focus{border-color:#3ca7c5}
+.contact-form-section .fxcol.form input[type=text],.contact-form-section .fxcol.form input[type=email]{height:40px}
+.contact-form-section .fxcol.form .gform_button.button{border:1px solid #4c748c;background-color:#4c748c;color:#fff;margin:0;width:100%;text-align:center}
+.contact-form-section .fxcol.form .gform_button.button:hover{border:1px solid #cea155;background-color:#cea155}
+.contact-form-section .fxcol.form ::-webkit-input-placeholder{font-family:"Inter",sans-serif;font-weight:500;color:#bebebe}
+.contact-form-section .fxcol.form ::-moz-placeholder{font-family:"Inter",sans-serif;font-weight:500;color:#bebebe}
+.contact-form-section .fxcol.form :-ms-input-placeholder{font-family:"Inter",sans-serif;font-weight:500;color:#bebebe}
+.contact-form-section .fxcol.form ::-ms-input-placeholder{font-family:"Inter",sans-serif;font-weight:500;color:#bebebe}
+.contact-form-section .fxcol.form ::placeholder{font-family:"Inter",sans-serif;font-weight:500;color:#bebebe}
+.contact-form-section .fxcol.form .gform_wrapper.gravity-theme .gfield textarea.large{height:100px}
+.contact-form-section .c-info{display:inline-block;margin:5px 10px}
+.contact-form-section .phone i,.contact-form-section .email i{position:relative;display:inline-block;margin-right:8px}
+.contact-form-section .phone i{-webkit-transform:scaleX(-1);transform:scaleX(-1)}
+.contact-form-section a{text-decoration:none;color:#fff}
+.contact-form-section a:hover{color:#ffc35d}
+.contact-links-section .wrapper{padding-top:50px;padding-bottom:50px}
+.contact-links-section .flexwrap{-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.contact-links-section .link-icon{width:50%;padding:25px 10px;text-align:center}
+.contact-links-section .link-icon a{display:block;text-decoration:none;color:#4c748c}
+.contact-links-section .link-icon a *{-webkit-transition:all ease .2s;transition:all ease .2s}
+.contact-links-section .link-icon .icon{display:inline-block;width:65px;height:65px;margin-bottom:15px;position:relative;border-radius:100%;background-color:#4c748c;border:3px solid #08a5c5}
+.contact-links-section .link-icon .icon i{display:inline-block;width:100%;height:100%;background-size:55%;background-repeat:no-repeat;background-position:center}
+.contact-links-section .link-icon .title{display:block;width:100%;font-size:16px;font-weight:600;line-height:1.2}
+.contact-links-section .link-icon a:hover .icon{background-color:#3ca7c5}
+.contact-links-section .link-icon a:hover .title{color:#3ca7c5}
 .site-footer{background:#4c748c;color:#fff;font-size:15px;font-weight:normal;line-height:1.2;position:relative;border-top:20px solid #cea155}
 .site-footer:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;right:0;background-image:url("images/symbol-large.svg");background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.8}
 .site-footer a:hover{color:#3ca7c5 !important}
@@ -1608,6 +1643,7 @@ div.buttondiv{margin-top:30px}
 .site-footer .address{font-size:15px;line-height:1.8;margin:0}
 .site-footer .address a{text-decoration:none;color:#fff}
 .site-footer .address a:hover{color:#3ca7c5}
+.site-footer .address span i[class*=fas]{display:none}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-footer .flexwrap .fcol{width:100%}
 .site-footer .flexwrap .fcol.left{margin-bottom:35px;text-align:center}
@@ -1623,8 +1659,10 @@ div.buttondiv{margin-top:30px}
 .weatherInfo .fahrenheit{font-family:"Anton",sans-serif;font-size:28px;font-weight:normal;line-height:1;color:#4c748c;display:inline-block;position:relative;letter-spacing:1px;top:2px}
 .weatherInfo .fahrenheit:after{content:"";display:block;width:8px;height:8px;border:2px solid #4c748c;border-radius:100px;position:absolute;top:1px;right:-8px}
 .weather-icon{display:inline-block;width:25px;height:25px;position:relative;top:2px;left:-3px;background-size:contain;background-position:center;background-repeat:no-repeat}
+body.contact .static-banner .banner-text:before{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to bottom,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=0)}
 body.scrolled .site-header{background-color:rgba(255,255,255,.8);-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 @media(min-width:600px){.homerow5.section .block{width:50%}
+.contact-links-section .link-icon{padding:10px 10px;width:30%}
 .site-footer .flexwrap .fcol{width:48%}
 .site-footer .flexwrap .fcol.left{margin-bottom:0;text-align:left}
 .site-footer .flexwrap .fcol.right{text-align:left;width:35%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -1687,12 +1725,18 @@ h2{font-size:3rem}
 .repeatable-blocks .repeatable.text-image.odd .flexwrap .textcol{padding-right:5vw}
 .repeatable-blocks .repeatable.text-image.even .flexwrap .imagecol{padding-left:3vw}
 .repeatable-blocks .repeatable.text-image.even .flexwrap .textcol{padding-left:5vw}
+.contact-form-section .fxcol{width:50%}
+.contact-form-section .fxcol.text{padding:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:3vw}
+.contact-form-section .fxcol.form{padding:3vw}
+.contact-links-section .wrapper{padding-top:80px;padding-bottom:80px}
 .site-footer:after{width:50%}
 .site-footer .wrapper{padding-top:70px;padding-bottom:70px}
 .site-footer .flexwrap .fcol.right{width:30%}
 .site-footer .social-media a{margin:0 5px 0 0}
+body.contact .static-banner .banner-text:before{background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=1)}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
 .static-banner{height:700px}
+.contact-links-section .link-icon{width:20%}
 }@media screen and (max-width:820px){.site-header{height:80px}
 .site-header .head-inner{padding-top:0;padding-bottom:0}
 .site-header #menu-toggle{bottom:-17px}
