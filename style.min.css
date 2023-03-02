@@ -1590,6 +1590,8 @@ div.buttondiv{margin-top:30px}
 .static-banner .banner-text .title span:after{content:"";display:block;position:relative;bottom:0;left:50%;width:150px;height:30px;-webkit-transform:translateX(-50%);transform:translateX(-50%);background-image:url("images/symbol/water.svg");background-size:contain;background-position:center;background-repeat:no-repeat}
 .static-banner .banner-text .title.white{color:#fff}
 .static-banner .banner-text .title.white span:after{background-image:url("images/symbol/wave-blue.svg")}
+.static-banner.white{background-color:#727272}
+.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to bottom,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=0)}
 .repeatable-blocks .h2{margin:0 0 30px}
 .repeatable-blocks .fullwidth .wrapper{padding-top:70px;padding-bottom:60px}
 .repeatable-blocks .repeatable:nth-child(even){background-color:#eee}
@@ -1659,7 +1661,6 @@ div.buttondiv{margin-top:30px}
 .weatherInfo .fahrenheit{font-family:"Anton",sans-serif;font-size:28px;font-weight:normal;line-height:1;color:#4c748c;display:inline-block;position:relative;letter-spacing:1px;top:2px}
 .weatherInfo .fahrenheit:after{content:"";display:block;width:8px;height:8px;border:2px solid #4c748c;border-radius:100px;position:absolute;top:1px;right:-8px}
 .weather-icon{display:inline-block;width:25px;height:25px;position:relative;top:2px;left:-3px;background-size:contain;background-position:center;background-repeat:no-repeat}
-body.contact .static-banner .banner-text:before{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to bottom,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=0)}
 body.scrolled .site-header{background-color:rgba(255,255,255,.8);-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 @media(min-width:600px){.homerow5.section .block{width:50%}
 .contact-links-section .link-icon{padding:10px 10px;width:30%}
@@ -1716,6 +1717,7 @@ h2{font-size:3rem}
 .static-banner .banner-text:before{width:70%;height:100%;background:-webkit-gradient(linear,left top,right top,from(white),to(rgba(255,255,255,0)));background:linear-gradient(to right,white 0,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#00ffffff",GradientType=1)}
 .static-banner .banner-text .title{font-size:4.5rem;margin-bottom:180px;text-align:left}
 .static-banner .banner-text .title span:after{width:200px;position:absolute;right:-95px;bottom:-50px;-webkit-transform:none;transform:none}
+.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=1)}
 .repeatable-blocks .repeatable.text-image{padding-top:70px}
 .repeatable-blocks .repeatable.text-image .textcol,.repeatable-blocks .repeatable.text-image .imagecol{width:50%}
 .repeatable-blocks .repeatable.text-image figure img.helper{display:block}
@@ -1733,7 +1735,6 @@ h2{font-size:3rem}
 .site-footer .wrapper{padding-top:70px;padding-bottom:70px}
 .site-footer .flexwrap .fcol.right{width:30%}
 .site-footer .social-media a{margin:0 5px 0 0}
-body.contact .static-banner .banner-text:before{background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=1)}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
 .static-banner{height:700px}
 .contact-links-section .link-icon{width:20%}

@@ -24,7 +24,7 @@
   <?php  $page_title = (get_field("banner_text")) ? get_field("banner_text") : get_the_title();  
     $color = get_field('banner_text_color');
   ?>
-  <div class="static-banner">
+  <div class="static-banner <?php echo $color ?>">
     <div class="banner-image" style="background-image:url('<?php echo $banner['url'] ?>')"></div>
     <div class="banner-text">
       <div class="wrapper">
