@@ -328,16 +328,25 @@ a {
 .searchbar {
   position: absolute;
   left: 0;
-  bottom: -45px;
+  bottom: -118px;
   width: 100%;
   display: none;
+  @include tab {
+    bottom: -75px;
+  }
   .inner {
     display: inline-block;
     float: right;
-    max-width: 350px;
+    max-width: 100%;
     width: 100%;
     position: relative;
-    right: 15px;
+    right: 0;
+    padding:0 10px;
+    @include tab {
+      max-width: 350px;
+      right: 15px;
+      padding: 0 0;
+    }
   }
   * {
     box-sizing: border-box;
