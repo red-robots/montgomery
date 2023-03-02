@@ -113,7 +113,7 @@ a {
 
 .wp-block-group.alignwide,
 .wrapper {
-  max-width: 95%;
+  max-width: 100%;
   width: 100%;
   margin:0 auto;
   padding-left: 15px;
@@ -506,6 +506,12 @@ div.buttondiv {
 }
 
 .homerow1 {
+  &.section {
+    margin-bottom: 0;
+    @include tab {
+      margin-bottom: 80px;
+    }
+  }
   .flexwrap {
     // max-width: $wrapper;
     // width: 100%;
@@ -702,6 +708,13 @@ div.buttondiv {
   }
 }
 
+.homerow2.section {
+  margin-top: 0;
+  @include tab {
+    margin-top: 80px;
+  }
+}
+
 .carouselNavButtons {
   margin: 30px 0 0;
   a {
@@ -790,11 +803,14 @@ div.buttondiv {
 .flexible-content {
   position: relative;
   .flex-content {
-    padding-top: 150px;
     padding-bottom: 80px;
-    margin-top: 50px;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
     position: relative;
+    @include tab {
+      padding-top: 150px;
+      margin-top: 50px;
+      margin-bottom: 120px;
+    }
   }
   .flexwrap {
     position: relative;
@@ -989,8 +1005,10 @@ div.buttondiv {
 
   @include max($tabwidth - 1px) {
     .flex-content {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      // padding-top: 20px;
+      // padding-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
       @include tab {
         margin: 20px 0;
         padding-top: 20px;
@@ -1014,8 +1032,11 @@ div.buttondiv {
       // transform: translateY(-50%);
     }
     .flex-content .textcol .inner {
-      padding: 50px 30px 60px;
+      padding: 50px 30px 80px;
       text-align: center;
+      @include tab {
+        padding: 50px 30px 60px;
+      }
     }
     .flex-content .textcol .buttondiv {
       left: 0;
@@ -1034,6 +1055,12 @@ div.buttondiv {
 }
 
 .homerow3 {
+  &.section {
+    margin-bottom: 0;
+    @include tab {
+      margin-bottom: 80px;
+    }
+  }
   .inner {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -1109,10 +1136,15 @@ div.buttondiv {
 }
 
 .homerow4 {
-  padding: 50px 0;
+  padding: 30px 0 0;
   margin-bottom: 0;
-  @include tab {
-    padding: 100px 0;
+  &.section {
+    padding: 50px 0 0;
+    margin-top: 0;
+    @include tab {
+      margin-top: 80px;
+      padding: 100px 0;
+    }
   }
   .fcol.left {
     width: 100%;
@@ -1120,7 +1152,7 @@ div.buttondiv {
     @include flexgroup();
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     @include tab {
       margin-bottom: 0;
       width: 45%;
@@ -1251,6 +1283,205 @@ div.buttondiv {
   }
 }
 
+/* SUBPAGE */
+body.subpage {
+
+}
+.static-banner {
+  background-color: #ededed;
+  position: relative;
+  height: 400px;
+  @include tab {
+    height: 580px;
+  }
+  @include mid {
+    height: 700px;
+  }
+  .banner-image, .banner-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .banner-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .banner-text {
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &:before {
+      content:"";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      opacity: 0.85;
+      background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+      @include tab {
+        width: 70%;
+        height: 100%;
+        background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+      }
+    }
+    .wrapper {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+    .title {
+      font-family: $font_heading;
+      font-weight: normal;
+      font-size: 3rem;
+      line-height: 1.2;
+      color: $primary;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      @include tab {
+        font-size: 4.5rem;
+        margin-bottom: 180px;
+        text-align: left;
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        &:after {
+          content:"";
+          display: block;
+          position: relative;
+          bottom: 0;
+          left: 50%;
+          width: 150px;
+          height: 30px;
+          transform: translateX(-50%);
+          background-image: url('images/symbol/water.svg');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include tab {
+            width: 200px;
+            position: absolute;
+            right: -95px;
+            bottom: -50px;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.repeatable-blocks {
+  .h2 {
+    margin: 0 0 30px;
+  }
+  .fullwidth {
+    .wrapper {
+      padding-top: 70px;
+      padding-bottom: 60px;
+    }
+  }
+  .repeatable:nth-child(even) {
+    background-color: $gray;
+  }
+  .repeatable.text-image {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    @include tab {
+      padding-top: 70px;
+    }
+    .wrapper {
+      max-width: 100%!important;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.odd {
+      // background-color: $gray;
+    }
+    .textcol, .imagecol {
+      width: 100%;
+      @include tab {
+        width: 50%;
+      }
+    }
+
+    .textcol {
+      padding: 20px;
+    }
+
+    figure {
+      margin: 0 0;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      img.helper {
+        display: none;
+        @include tab {
+          display: block;
+        }
+      }
+      img.actual {
+        display: block;
+        @include tab {
+          display: none;
+        }
+      }
+    }
+
+    &.odd {
+      .flexwrap {
+        @include tab {
+          flex-direction: row-reverse;
+        }
+        .imagecol {
+          @include tab {
+            padding-right: 3vw;
+          }
+        }
+        .textcol {
+          @include tab {
+            padding-right: 5vw;
+          }
+        }
+      }
+    }
+    &.even {
+      .flexwrap {
+        .imagecol {
+          @include tab {
+            padding-left: 3vw;
+          }
+        }
+        .textcol {
+          @include tab {
+            padding-left: 5vw;
+          }
+        }
+      }
+    }
+  }
+}
+
 .site-footer {
   background: $primary;
   color: #FFF;
@@ -1320,12 +1551,16 @@ div.buttondiv {
     }
     .fcol.left {
       margin-bottom: 35px;
+      text-align: center;
       @include xs {
         margin-bottom: 0;
+        text-align: left;
       }
     }
     .fcol.right {
+      text-align: center;
       @include xs {
+        text-align: left;
         width: 35%;
         @include flexgroup();
         align-items: center;
@@ -1438,8 +1673,9 @@ div.buttondiv {
 
 body.scrolled {
   .site-header {
-    background-color: rgba(255,255,255,.98);
+    background-color: rgba(255,255,255,.8);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(2px);
   }
 }
 body.logged-in.admin-bar {
@@ -1466,7 +1702,7 @@ body.logged-in.admin-bar {
       width: 100vw;
       height: 45px;
       position: absolute;
-      left: -25px;
+      left: -15px;
       bottom: -73px;
       background: $primary;
     }

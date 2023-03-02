@@ -303,31 +303,43 @@ function cat_description($tag)
     <?php
 }
 
-add_action('admin_head', 'remove_default_category_description');
-function remove_default_category_description()
-{
-  global $current_screen;
-  $currentLink = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-  if ( $current_screen->id == 'edit-divisions' )
-  {
-  ?>
-      <script type="text/javascript">
-      jQuery(function($) {
-          $('textarea#description').closest('tr.form-field').remove();
-      });
-      </script>
-  <?php
+add_action('admin_head', 'admin_css_func');
+function admin_css_func() { ?>
+<style type="text/css">
+  .acf-field[data-name="repeatable_blocks"] .values .acf-fc-layout-handle {
+    position: relative;
+    font-size: 13px;
+    line-height: 1.2;
   }
-  if( isset($_GET['taxonomy']) && $_GET['taxonomy']=='divisions' && (strpos($currentLink, 'edit-tags') !== false) ) { ?>
-    <style type="text/css">
-      body.taxonomy-divisions .term-description-wrap, 
-      body.taxonomy-divisions #acf-term-fields {
-        display: none!important;
+  .acf-field[data-name="repeatable_blocks"] .values .acf-fc-layout-handle.has-title:after {
+    position: relative;
+    left: 5px;
+    content:'– ' attr(data-section-title);
+    display: inline-block;
+    color: #9e9e9e;
+    font-style: italic;
+  }
+</style>
+<?php }
+
+add_action('admin_footer', 'admin_js_scripts_func');
+function admin_js_scripts_func() { ?>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  if( $('.acf-field[data-name="repeatable_blocks"]').length ) {
+    var parent = $('[data-name="title"]').parents('[data-name="repeatable_blocks"] .layout');
+    $('[data-name="repeatable_blocks"] .values .layout [data-name="title"]').each(function(){
+      var handle = $(this).parents('.layout').find('.acf-fc-layout-handle');
+      var title = $(this).find('.acf-input input').val().trim();
+      if(title.replace(/\s+/g,'')) {
+        handle.addClass('has-title');
+        handle.attr('data-section-title',title);
       }
-    </style>
-  <?php
+    });
   }
-}
+});
+</script>
+<?php }
 
 /* Remove description column in the wp table list */
 add_filter('manage_edit-divisions_columns', function ( $columns ) {
@@ -869,9 +881,7 @@ function home_carousel_shortcode_func( $atts ) {
 function ea_disable_editor( $id = false ) {
 
   $excluded_templates = array(
-    'template-flexible-content.php',
-    'page-clientlogin.php',
-    'page-contact.php'
+    'page-repeatable.php',
   );
 
   $excluded_ids = array(

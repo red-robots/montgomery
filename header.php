@@ -33,9 +33,15 @@ var siteURL = '<?php echo get_site_url();?>';
 var currentURL = '<?php echo get_permalink();?>';
 var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 </script>
+<?php
+$extra_class = 'no-banner';
+if( !is_front_page() || !is_home() ) {
+  $extra_class = ( get_field("banner_image") ) ? 'has-banner':'no-banner';
+}
+?>
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class($extra_class); ?>>
 <div id="page" class="site cf">
 	<div id="overlay"></div>
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>

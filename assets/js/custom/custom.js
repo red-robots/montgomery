@@ -110,9 +110,9 @@ jQuery(document).ready(function ($) {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      $("body.home").removeClass('scrolled');
+      $("body").removeClass('scrolled');
     } else {
-      $("body.home").addClass('scrolled');
+      $("body").addClass('scrolled');
     }
     prevScrollpos = currentScrollPos;
   }

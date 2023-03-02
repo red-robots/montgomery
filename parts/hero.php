@@ -18,4 +18,18 @@
     </div>
   </div>
   <?php } ?>
+<?php } else { ?>
+
+  <?php if( $banner = get_field("banner_image") ) { ?>
+  <?php  $page_title = (get_field("banner_text")) ? get_field("banner_text") : get_the_title();  ?>
+  <div class="static-banner">
+    <div class="banner-image" style="background-image:url('<?php echo $banner['url'] ?>')"></div>
+    <div class="banner-text">
+      <div class="wrapper">
+        <div class="title"><span><?php echo $page_title ?></span></div>
+      </div>
+    </div>
+  </div>
+  <?php } ?>
+
 <?php } ?>
