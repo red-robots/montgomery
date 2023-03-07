@@ -29,9 +29,9 @@ pre {
 }
 body {
 	font-family: $font_primary;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: normal;
-	line-height: 1.5;
+	line-height: 1.4;
 	color: $color_text_main;
 }
 h1,h2,h3,h4,h5,h6 {
@@ -472,7 +472,7 @@ a {
   }
 }
 div.buttondiv {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .button {
   display: inline-block;
@@ -806,6 +806,17 @@ div.buttondiv {
   line-height: 1.2;
   @include tab {
     font-size: 3rem;
+  }
+}
+h1.page-title {
+  text-transform: uppercase;
+  color: $primary;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  @include tab {
+    font-size: 3.2rem;
   }
 }
 
@@ -1423,6 +1434,7 @@ body.subpage {
   }
 }
 
+
 .repeatable-blocks {
   .h2 {
     margin: 0 0 30px;
@@ -1431,6 +1443,9 @@ body.subpage {
     .wrapper {
       padding-top: 70px;
       padding-bottom: 60px;
+    }
+    .buttondiv {
+      margin-bottom: 20px;
     }
   }
   .repeatable:nth-child(even) {
@@ -1463,6 +1478,9 @@ body.subpage {
 
     figure {
       margin: 0 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       img {
         width: 100%;
         height: auto;
@@ -1905,6 +1923,7 @@ body.subpage {
 //   }
 // }
 
+
 body.scrolled {
   .site-header {
     background-color: rgba(255,255,255,.8);
@@ -1919,6 +1938,35 @@ body.logged-in.admin-bar {
     }
   }
 }
+
+body.page-template-default,
+body.page-template-page-custom {
+  .site-header {
+    position: relative;
+    background-color: rgba(255,255,255,.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  #primary {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    min-height: 20em;
+  }
+  &.logged-in.admin-bar {
+    .site-header {
+      top: 0;
+    }
+  }
+}
+
+.generic-layout {
+  .wp-block-group.alignwide {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 
 /* MOBILE */
