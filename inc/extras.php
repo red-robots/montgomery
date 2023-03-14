@@ -979,8 +979,8 @@ function contact_shortcode_func( $atts ) {
 }
 
 
-add_shortcode( 'accordions', 'accordions_shortcode_func' );
-function accordions_shortcode_func( $atts ) {
+add_shortcode( 'display_faqs', 'display_faqs_shortcode_func' );
+function display_faqs_shortcode_func( $atts ) {
   // $a = shortcode_atts( array(
   //   'numcol'=>3
   // ), $atts );
