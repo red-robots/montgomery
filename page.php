@@ -19,17 +19,13 @@ get_header(); ?>
     <div class="wrapper">
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if ( !$banner ) { ?>
-			<div class="titlediv">
-				<h1 class="page-title"><?php the_title(); ?></h1>
-			</div>
-			<?php } ?>
+      <div class="titlediv">
+        <h1 class="page-title"><?php the_title(); ?></h1>
+      </div>
 			
-      <?php if ( get_the_content() ) { ?>
       <div class="entry-content">
         <?php the_content(); ?>
-      </div> 
-      <?php } ?>
+      </div>
     </div>  
 
 		<?php endwhile; ?>

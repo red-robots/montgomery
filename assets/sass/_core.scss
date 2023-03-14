@@ -1923,6 +1923,96 @@ body.subpage {
 //   }
 // }
 
+/* ACCORDIONS */
+.accordions-section {
+  .accordion {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  .acc-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0 0 1.3rem;
+  }
+
+  .questions {
+    .q-item {
+      margin: 0.75rem 0;
+    }
+    .q-title {
+      font-family: $font_forth;
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.2;
+      background: $primary;
+      color: #FFF;
+      margin: 0 0;
+      position: relative;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #FFF;
+        padding: 15px 15px;
+      }
+      span.icon {
+        cursor: pointer;
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        &:before, &:after {
+          content:"";
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: #FFF;
+          // transition: all linear .1s;
+        }
+        &:before {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:after {
+          position: absolute;
+          top: 50%;
+          margin-top: -2px;
+          margin-left: -1px;
+          transform: rotate(90deg) translateY(-50%);
+        }
+      }
+    }
+  }
+  .q-text {
+    padding: 1.5rem;
+    display: none;
+    @include animateThis(1s);
+    h3 {
+      font-size: 1.3rem;
+      line-height: 1.2;
+      margin: 1.5rem 0 0.5rem;
+      color: $primary;
+    }
+    h3:first-child {
+      margin-top: 0;
+    }
+  }
+  .q-item.active {
+    .q-text {
+      @include animateEffect(fadeIn);
+      display: block;
+    }
+    .q-title a.active {
+      span:after {
+        transform: rotate(0deg) translateY(0);
+      }
+    }
+  }
+}
+
 
 body.scrolled {
   .site-header {

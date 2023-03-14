@@ -977,3 +977,20 @@ function contact_shortcode_func( $atts ) {
   }
   return $output;
 }
+
+
+add_shortcode( 'accordions', 'accordions_shortcode_func' );
+function accordions_shortcode_func( $atts ) {
+  // $a = shortcode_atts( array(
+  //   'numcol'=>3
+  // ), $atts );
+  // $numcol = ($a['numcol']) ? $a['numcol'] : 3;
+  $output = '';
+  ob_start();
+  include_once(locate_template('parts/accordions.php'));
+  $output = ob_get_contents();
+  ob_end_clean();
+
+  return $output;
+}
+

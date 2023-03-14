@@ -1663,6 +1663,20 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .weatherInfo .fahrenheit{font-family:"Anton",sans-serif;font-size:28px;font-weight:normal;line-height:1;color:#4c748c;display:inline-block;position:relative;letter-spacing:1px;top:2px}
 .weatherInfo .fahrenheit:after{content:"";display:block;width:8px;height:8px;border:2px solid #4c748c;border-radius:100px;position:absolute;top:1px;right:-8px}
 .weather-icon{display:inline-block;width:25px;height:25px;position:relative;top:2px;left:-3px;background-size:contain;background-position:center;background-repeat:no-repeat}
+.accordions-section .accordion{margin-top:3rem;margin-bottom:2.5rem}
+.accordions-section .acc-title{font-size:2.5rem;line-height:1.2;margin:0 0 1.3rem}
+.accordions-section .questions .q-item{margin:.75rem 0}
+.accordions-section .questions .q-title{font-family:"Inter",sans-serif;font-size:1.1rem;font-weight:500;line-height:1.2;background:#4c748c;color:#fff;margin:0;position:relative}
+.accordions-section .questions .q-title a{display:block;text-decoration:none;color:#fff;padding:15px 15px}
+.accordions-section .questions .q-title span.icon{cursor:pointer;display:block;width:20px;height:20px;position:absolute;top:50%;right:15px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.accordions-section .questions .q-title span.icon:before,.accordions-section .questions .q-title span.icon:after{content:"";display:block;width:100%;height:3px;background:#fff}
+.accordions-section .questions .q-title span.icon:before{position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.accordions-section .questions .q-title span.icon:after{position:absolute;top:50%;margin-top:-2px;margin-left:-1px;-webkit-transform:rotate(90deg) translateY(-50%);transform:rotate(90deg) translateY(-50%)}
+.accordions-section .q-text{padding:1.5rem;display:none;-webkit-animation-duration:1s;animation-duration:1s}
+.accordions-section .q-text h3{font-size:1.3rem;line-height:1.2;margin:1.5rem 0 .5rem;color:#4c748c}
+.accordions-section .q-text h3:first-child{margin-top:0}
+.accordions-section .q-item.active .q-text{-webkit-animation-name:fadeIn;animation-name:fadeIn;display:block}
+.accordions-section .q-item.active .q-title a.active span:after{-webkit-transform:rotate(0) translateY(0);transform:rotate(0) translateY(0)}
 body.scrolled .site-header{background-color:rgba(255,255,255,.8);-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 body.page-template-default .site-header,body.page-template-page-custom .site-header{position:relative;background-color:rgba(255,255,255,.8);-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1)}
 body.page-template-default #primary,body.page-template-page-custom #primary{padding-top:90px;padding-bottom:90px;min-height:20em}

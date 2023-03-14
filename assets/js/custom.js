@@ -154,4 +154,11 @@ jQuery(document).ready(function ($) {
   function basename(path) {
     return path.substring(path.lastIndexOf('/') + 1);
   }
+  /* Accordions */
+
+
+  $('.accordion .q-title a').on('click', function () {
+    $(this).toggleClass('active');
+    $(this).parents('.q-item').toggleClass('active'); //$(this).parents('.q-item').find('.q-text').show();
+  });
 });
