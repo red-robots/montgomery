@@ -102,6 +102,57 @@ a {
 		z-index: 100000; /* Above WP toolbar. */
 	}
 }
+
+.gform_wrapper.gravity-theme {
+  input[type="tel"],input[type="text"],input[type="email"],input[type="number"],textarea, select {
+    border: 1px solid $primary;
+    &:focus {
+      outline: none;
+      border-color: $yellow2;
+    }
+  }
+  .gfield textarea.textarea.large {
+    height: 110px;
+  }
+  div.ginput_container_name {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    br {
+      display: none;
+    }
+    label {
+      margin: 0 0;
+    }
+    p {
+      margin: 0 0;
+      width: 49%;
+    }
+  }
+  div.gfield p:empty {
+    display: none;
+  }
+  .gform_footer.top_label {
+    margin-top: 1.5em;
+    p:empty, br {
+      display: none;
+    }
+    input.gform_button {
+      border: 1px solid $primary;
+      background: $primary;
+      color: #FFF;
+      padding: 15px 40px 13px;
+      &:hover {
+        border-color: $teal;
+        background: $teal;
+      }
+    }
+  }
+}
+
+
+
 .site {
   position: relative;
   overflow-x: hidden;
@@ -1315,7 +1366,8 @@ body.subpage {
     height: 580px;
   }
   @include mid {
-    height: 700px;
+    // height: 700px;
+    height: 50rem;
   }
   .banner-image, .banner-text {
     position: absolute;
@@ -2124,6 +2176,7 @@ body.page-template-page-custom {
     }
   }
 }
+
 
 
 

@@ -1435,6 +1435,18 @@ a:hover{color:#191970}
 .nombottom{margin-bottom:0 !important}
 .sr{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .sr:focus{background-color:#333;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,.6);box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto !important;color:#fff;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+.gform_wrapper.gravity-theme input[type=tel],.gform_wrapper.gravity-theme input[type=text],.gform_wrapper.gravity-theme input[type=email],.gform_wrapper.gravity-theme input[type=number],.gform_wrapper.gravity-theme textarea,.gform_wrapper.gravity-theme select{border:1px solid #4c748c}
+.gform_wrapper.gravity-theme input[type=tel]:focus,.gform_wrapper.gravity-theme input[type=text]:focus,.gform_wrapper.gravity-theme input[type=email]:focus,.gform_wrapper.gravity-theme input[type=number]:focus,.gform_wrapper.gravity-theme textarea:focus,.gform_wrapper.gravity-theme select:focus{outline:0;border-color:#cea155}
+.gform_wrapper.gravity-theme .gfield textarea.textarea.large{height:110px}
+.gform_wrapper.gravity-theme div.ginput_container_name{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.gform_wrapper.gravity-theme div.ginput_container_name br{display:none}
+.gform_wrapper.gravity-theme div.ginput_container_name label{margin:0}
+.gform_wrapper.gravity-theme div.ginput_container_name p{margin:0;width:49%}
+.gform_wrapper.gravity-theme div.gfield p:empty{display:none}
+.gform_wrapper.gravity-theme .gform_footer.top_label{margin-top:1.5em}
+.gform_wrapper.gravity-theme .gform_footer.top_label p:empty,.gform_wrapper.gravity-theme .gform_footer.top_label br{display:none}
+.gform_wrapper.gravity-theme .gform_footer.top_label input.gform_button{border:1px solid #4c748c;background:#4c748c;color:#fff;padding:15px 40px 13px}
+.gform_wrapper.gravity-theme .gform_footer.top_label input.gform_button:hover{border-color:#3ca7c5;background:#3ca7c5}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
 .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .wp-block-group.alignwide,.wrapper{max-width:100%;width:100%;margin:0 auto;padding-left:15px;padding-right:15px}
@@ -1759,7 +1771,7 @@ h1.page-title{font-size:3.2rem}
 .site-footer .flexwrap .fcol.right{width:30%}
 .site-footer .social-media a{margin:0 5px 0 0}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
-.static-banner{height:700px}
+.static-banner{height:50rem}
 .contact-links-section .link-icon{width:20%}
 }@media screen and (max-width:820px){.site-header{height:80px}
 .site-header .head-inner{padding-top:0;padding-bottom:0}
