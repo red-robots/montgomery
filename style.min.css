@@ -1748,7 +1748,7 @@ h1.page-title{font-size:3.2rem}
 .homerow4 .fcol.left{margin-bottom:0;width:45%;padding:0 5vw 0 11vw}
 .homerow4 .fcol.right{width:55%}
 .homerow5.section .block{width:33.33%}
-.static-banner{height:580px}
+.static-banner{height:33rem}
 .static-banner .banner-text:before{width:70%;height:100%;background:-webkit-gradient(linear,left top,right top,from(white),to(rgba(255,255,255,0)));background:linear-gradient(to right,white 0,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#00ffffff",GradientType=1)}
 .static-banner .banner-text .title{font-size:4.5rem;margin-bottom:180px;text-align:left}
 .static-banner .banner-text .title span:after{width:200px;position:absolute;right:-95px;bottom:-50px;-webkit-transform:none;transform:none}
@@ -1771,7 +1771,7 @@ h1.page-title{font-size:3.2rem}
 .site-footer .flexwrap .fcol.right{width:30%}
 .site-footer .social-media a{margin:0 5px 0 0}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
-.static-banner{height:50rem}
+.static-banner{height:38rem}
 .contact-links-section .link-icon{width:20%}
 }@media screen and (max-width:820px){.site-header{height:80px}
 .site-header .head-inner{padding-top:0;padding-bottom:0}
