@@ -35,7 +35,11 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
 </script>
 <?php
 $extra_class = ( get_field("banner_image") ) ? 'has-banner':'no-banner';
-?>
+if( get_field("banner_image") && get_field("banner_text") ) { ?>
+<style>
+.titlediv {display: none!important;}
+</style>
+<?php } ?>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class($extra_class); ?>>
