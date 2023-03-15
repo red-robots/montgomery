@@ -1355,19 +1355,16 @@ h1.page-title {
 }
 
 /* SUBPAGE */
-body.subpage {
-
-}
 .static-banner {
   background-color: #ededed;
   position: relative;
   height: 400px;
   @include tab {
-    height: 33rem;
+    height: 35rem;
   }
   @include mid {
     // height: 700px;
-    height: 35rem;
+    height: 40rem;
   }
   .banner-image, .banner-text {
     position: absolute;
@@ -1483,6 +1480,15 @@ body.subpage {
         }
       }
     }
+  }
+}
+
+body.subpage.has-banner {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
 
