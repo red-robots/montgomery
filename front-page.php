@@ -157,7 +157,7 @@ get_header();
       <div class="textwrap">
         <div class="inside">
           <div class="text font16">
-            <?php echo $restaurant_text ?>
+            <?php echo anti_email_spam($restaurant_text) ?>
           </div>
           <?php if ($res_text && $res_link) { ?>
           <div class="buttondiv">
@@ -192,7 +192,7 @@ get_header();
           <h2 class="t1"><?php echo $mc_title ?></h2>
           <?php } ?>
           <?php if ($mc_text) { ?>
-          <div class="text"><?php echo $mc_text ?></div>
+          <div class="text"><?php echo anti_email_spam($mc_text) ?></div>
           <?php } ?>
           <?php if ($mcbtn_text && $mcbtn_link) { ?>
           <div class="buttondiv">
@@ -249,7 +249,7 @@ get_header();
              <h2 class="h2"><?php echo $event_title ?></h2> 
             <?php } ?>
             <?php if ($event_text) { ?>
-             <div class="font16"><?php echo $event_text ?></div> 
+             <div class="font16"><?php echo anti_email_spam($event_text) ?></div> 
             <?php } ?>
           </div>
           <?php } ?>
@@ -295,7 +295,7 @@ get_header();
         <?php } ?>
         
         <?php if ($subscribe_text) { ?>
-        <div class="text font16"><?php echo $subscribe_text ?></text>
+        <div class="text font16"><?php echo anti_email_spam($subscribe_text) ?></text>
         <?php } ?>
 
         <?php if ($sb_text && $sb_link) { ?>

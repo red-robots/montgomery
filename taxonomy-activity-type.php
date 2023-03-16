@@ -41,7 +41,7 @@ if($category_image) { ?>
   <main id="main" class="site-main" role="main">
     <?php if ( category_description( $current_term_id ) ) { ?>
     <div class="wrapper cat-description">
-      <?php echo category_description( $current_term_id ); ?>
+      <?php echo anti_email_spam(category_description( $current_term_id )); ?>
     </div>
     <?php } ?>
 

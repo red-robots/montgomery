@@ -22,7 +22,7 @@ get_header(); ?>
             <div class="repeatable fullwidth">
               <div class="wrapper">
               <?php if ($title) { ?><h2 class="h2"><?php echo $title ?></h2><?php } ?>
-              <?php if ($content) { ?><div class="text font16"><?php echo $content ?></div><?php } ?>
+              <?php if ($content) { ?><div class="text font16"><?php echo anti_email_spam($content) ?></div><?php } ?>
               <?php if ($btn_title && $btn_url) { ?>
               <div class="buttondiv">
                 <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
@@ -49,7 +49,7 @@ get_header(); ?>
                   <?php if ($title || $content) { ?>
                   <div class="textcol">
                     <?php if ($title) { ?><h2 class="h2"><?php echo $title ?></h2><?php } ?>
-                    <?php if ($content) { ?><div class="text font16"><?php echo $content ?></div><?php } ?>
+                    <?php if ($content) { ?><div class="text font16"><?php echo anti_email_spam($content) ?></div><?php } ?>
 
                     <?php if ($btn_title && $btn_url) { ?>
                     <div class="buttondiv">
