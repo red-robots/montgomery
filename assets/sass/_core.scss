@@ -214,7 +214,7 @@ a {
   text-decoration: none;
   background:$primary;
   color: #FFF;
-  font-family: $font_sixth;
+  font-family: $font_primary;
   font-size: 18px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -466,6 +466,14 @@ a {
   background-color: #CCC;
   @include tab {
     height: 100vh;
+  }
+  img.actual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    @include tab {
+      display: none;
+    }
   }
   .banner {
     height: 100%;
@@ -1355,6 +1363,7 @@ h1.page-title {
 }
 
 /* SUBPAGE */
+.taxonomy-banner,
 .static-banner {
   background-color: #ededed;
   position: relative;
@@ -1365,6 +1374,14 @@ h1.page-title {
   @include mid {
     // height: 700px;
     height: 40rem;
+  }
+  img.actual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    @include tab {
+      display: none;
+    }
   }
   .banner-image, .banner-text {
     position: absolute;
@@ -1768,6 +1785,66 @@ body.subpage.has-banner {
       .title {
         color: $teal;
       }
+    }
+  }
+}
+
+.taxonomy-content {
+  &.no-cat-desc {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  .wrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .cat-description {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .taxonomy-posts {
+    .flexwrap {
+      @include flexgroup();
+      justify-content: center;
+      margin: -15px;
+      padding-bottom: 30px;
+    }
+    .item {
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+      @include tab {
+        width: 33.333%;
+        margin: 0 0;
+      }
+      figure {
+        margin: 0 0;
+        background-color: #CCC;
+        background-size: cover;
+        background-repeat: no-repeat;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .name {
+        margin: 0 0 15px;
+        text-transform: uppercase;
+        color: $primary;
+      }
+    }
+    .wrap {
+      padding: 0;
+      height: 100%;
+      background: $gray;
+    }
+    .buttondiv {
+      margin: 0 0;
+    }
+    .info {
+      padding: 30px;
     }
   }
 }

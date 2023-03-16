@@ -283,29 +283,29 @@ remove_filter( 'pre_term_description', 'wp_filter_kses' );
 remove_filter( 'term_description', 'wp_kses_data' );
 
 // $taxonomy_edit_form_fields
-add_filter('divisions_edit_form_fields', 'cat_description');
-function cat_description($tag)
-{
-    ?>
-        <table class="form-table">
-            <tr class="form-field">
-                <th scope="row" valign="top"><label for="description"><?php _ex('Description', 'Taxonomy Description'); ?></label></th>
-                <td>
-                <?php
-                  $settings = array('wpautop' => true, 'media_buttons' => true, 'quicktags' => true, 'textarea_rows' => '15', 'textarea_name' => 'description' );
-                  wp_editor(wp_kses_post($tag->description , ENT_QUOTES, 'UTF-8'), 'cat_description', $settings);
-                ?>
-                <br />
-                <span class="description"><?php _e('The description is not prominent by default; however, some themes may show it.'); ?></span>
-                </td>
-            </tr>
-        </table>
+add_filter('activity-type_edit_form_fields', 'edit_cat_description');
+function edit_cat_description($category) { 
+    $tag_extra_fields = get_option("description1");?>
+    <table class="form-table">
+    <tr class="form-field">
+    <th scope="row" valign="top"><label for="description">
+  <?php _ex('Description', 'Taxonomy Description'); ?></label></th>
+    <td>
+    <?php $settings = array('wpautop' => true, 'media_buttons' => true,'quicktags' => true, 'textarea_rows' => '15', 'textarea_name' => 'description' );
+
+    wp_editor(html_entity_decode($category->description , ENT_QUOTES, 'UTF-8'), 'description1', $settings); ?>
+    <br />
+    <span class="description"><?php _e('The description is not prominent by default, however some themes may show it.'); ?></span>
+    </td>
+    </tr>
+    </table>
     <?php
 }
 
 add_action('admin_head', 'admin_css_func');
 function admin_css_func() { ?>
 <style type="text/css">
+  body.taxonomy-activity-type .form-field.term-description-wrap {display: none!important}
   .acf-field[data-name="repeatable_blocks"] .values .acf-fc-layout-handle {
     position: relative;
     font-size: 13px;

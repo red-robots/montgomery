@@ -1455,7 +1455,7 @@ a:hover{color:#191970}
 .site-header .head-inner{position:relative;padding-top:20px;padding-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-logo{display:inline-block;width:110px}
 .site-logo a,.site-logo img{display:block;width:100%;height:auto}
-.head-button{display:inline-block;text-decoration:none;background:#4c748c;color:#fff;font-family:"Noto Serif Display",serif;font-size:18px;line-height:1.2;text-transform:uppercase;padding:10px 20px 8px}
+.head-button{display:inline-block;text-decoration:none;background:#4c748c;color:#fff;font-family:"Roboto",sans-serif;font-size:18px;line-height:1.2;text-transform:uppercase;padding:10px 20px 8px}
 .head-button:hover{color:#fff;text-decoration:none;background:#3ca7c5}
 #menu-toggle{display:inline-block;width:50px;height:50px;background-image:url("images/menu.svg");background-position:center;background-size:contain;background-repeat:no-repeat}
 #menu-toggle:hover{background-image:url("images/menu-hover.svg")}
@@ -1494,6 +1494,7 @@ a:hover{color:#191970}
 .searchbar.show{display:block}
 .searchbar.show form{-webkit-animation-name:fadeIn;animation-name:fadeIn}
 .banners{height:600px;background-color:#ccc}
+.banners img.actual-image{width:100%;height:auto;display:block}
 .banners .banner{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-size:cover;background-repeat:no-repeat;background-position:center}
 .banners .banner .text{padding-bottom:0;font-family:"Anton",sans-serif;font-size:3rem;font-weight:400;line-height:1.2;text-transform:uppercase;color:#fff;width:100%;margin:0 auto;position:relative;text-align:center;-webkit-transform:translateY(3vh);transform:translateY(3vh)}
 .banners .banner .pad{position:relative;z-index:5;padding-bottom:7vh;width:100%}
@@ -1592,19 +1593,20 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .homerow6.section .textwrap{text-align:center;color:#fff;padding-top:100px;padding-bottom:100px;font-weight:normal}
 .homerow6.section .h2{color:#fff}
 .homerow6.section .buttondiv{margin-top:50px}
-.static-banner{background-color:#ededed;position:relative;height:400px}
-.static-banner .banner-image,.static-banner .banner-text{position:absolute;top:0;left:0;width:100%;height:100%}
-.static-banner .banner-image{background-size:cover;background-repeat:no-repeat;background-position:center}
-.static-banner .banner-text{z-index:5;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.static-banner .banner-text:before{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:90%;opacity:.85;background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),to(white));background:linear-gradient(to bottom,rgba(255,255,255,0) 0,white 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#ffffff",GradientType=0)}
-.static-banner .banner-text .wrapper{position:relative;z-index:3;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}
-.static-banner .banner-text .title{font-family:"Anton",sans-serif;font-weight:normal;font-size:3rem;line-height:1.2;color:#4c748c;text-transform:uppercase;margin-bottom:60px;position:relative;text-align:center;width:100%}
-.static-banner .banner-text .title span{display:inline-block;position:relative}
-.static-banner .banner-text .title span:after{content:"";display:block;position:relative;bottom:0;left:50%;width:150px;height:30px;-webkit-transform:translateX(-50%);transform:translateX(-50%);background-image:url("images/symbol/water.svg");background-size:contain;background-position:center;background-repeat:no-repeat}
-.static-banner .banner-text .title.white{color:#fff}
-.static-banner .banner-text .title.white span:after{background-image:url("images/symbol/wave-blue.svg")}
-.static-banner.white{background-color:#727272}
-.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to bottom,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=0)}
+.taxonomy-banner,.static-banner{background-color:#ededed;position:relative;height:400px}
+.taxonomy-banner img.actual-image,.static-banner img.actual-image{width:100%;height:auto;display:block}
+.taxonomy-banner .banner-image,.taxonomy-banner .banner-text,.static-banner .banner-image,.static-banner .banner-text{position:absolute;top:0;left:0;width:100%;height:100%}
+.taxonomy-banner .banner-image,.static-banner .banner-image{background-size:cover;background-repeat:no-repeat;background-position:center}
+.taxonomy-banner .banner-text,.static-banner .banner-text{z-index:5;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.taxonomy-banner .banner-text:before,.static-banner .banner-text:before{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:90%;opacity:.85;background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),to(white));background:linear-gradient(to bottom,rgba(255,255,255,0) 0,white 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#ffffff",GradientType=0)}
+.taxonomy-banner .banner-text .wrapper,.static-banner .banner-text .wrapper{position:relative;z-index:3;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}
+.taxonomy-banner .banner-text .title,.static-banner .banner-text .title{font-family:"Anton",sans-serif;font-weight:normal;font-size:3rem;line-height:1.2;color:#4c748c;text-transform:uppercase;margin-bottom:60px;position:relative;text-align:center;width:100%}
+.taxonomy-banner .banner-text .title span,.static-banner .banner-text .title span{display:inline-block;position:relative}
+.taxonomy-banner .banner-text .title span:after,.static-banner .banner-text .title span:after{content:"";display:block;position:relative;bottom:0;left:50%;width:150px;height:30px;-webkit-transform:translateX(-50%);transform:translateX(-50%);background-image:url("images/symbol/water.svg");background-size:contain;background-position:center;background-repeat:no-repeat}
+.taxonomy-banner .banner-text .title.white,.static-banner .banner-text .title.white{color:#fff}
+.taxonomy-banner .banner-text .title.white span:after,.static-banner .banner-text .title.white span:after{background-image:url("images/symbol/wave-blue.svg")}
+.taxonomy-banner.white,.static-banner.white{background-color:#727272}
+.taxonomy-banner.white .banner-text:before,.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to bottom,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=0)}
 body.subpage.has-banner .site-header{position:fixed;top:0;left:0;width:100%}
 .repeatable-blocks .h2{margin:0 0 30px}
 .repeatable-blocks .fullwidth .wrapper{padding-top:70px;padding-bottom:60px}
@@ -1651,6 +1653,17 @@ body.subpage.has-banner .site-header{position:fixed;top:0;left:0;width:100%}
 .contact-links-section .link-icon .title{display:block;width:100%;font-size:16px;font-weight:600;line-height:1.2}
 .contact-links-section .link-icon a:hover .icon{background-color:#3ca7c5}
 .contact-links-section .link-icon a:hover .title{color:#3ca7c5}
+.taxonomy-content.no-cat-desc{padding-top:5rem;padding-bottom:3rem}
+.taxonomy-content .wrapper{padding-top:5rem;padding-bottom:5rem}
+.taxonomy-content .cat-description p:last-child{margin-bottom:0}
+.taxonomy-content .taxonomy-posts .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:-15px;padding-bottom:30px}
+.taxonomy-content .taxonomy-posts .item{padding:15px;width:100%;text-align:center;margin:5px 0}
+.taxonomy-content .taxonomy-posts .item figure{margin:0;background-color:#ccc;background-size:cover;background-repeat:no-repeat}
+.taxonomy-content .taxonomy-posts .item figure img{width:100%;height:auto}
+.taxonomy-content .taxonomy-posts .item .name{margin:0 0 15px;text-transform:uppercase;color:#4c748c}
+.taxonomy-content .taxonomy-posts .wrap{padding:0;height:100%;background:#eee}
+.taxonomy-content .taxonomy-posts .buttondiv{margin:0}
+.taxonomy-content .taxonomy-posts .info{padding:30px}
 .site-footer{background:#4c748c;color:#fff;font-size:15px;font-weight:normal;line-height:1.2;position:relative;border-top:20px solid #cea155}
 .site-footer:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;right:0;background-image:url("images/symbol-large.svg");background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.8}
 .site-footer a:hover{color:#3ca7c5 !important}
@@ -1711,6 +1724,7 @@ h2{font-size:3rem}
 .searchbar{bottom:-75px}
 .searchbar .inner{max-width:350px;right:15px;padding:0}
 .banners{height:100vh}
+.banners img.actual-image{display:none}
 .banners .banner .text{text-align:left;font-size:4.5rem;padding-bottom:0;max-width:80vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .banners .banner .pad{width:50%;padding-bottom:10vh}
 .button{padding:14px 35px 12px}
@@ -1749,11 +1763,12 @@ h1.page-title{font-size:3.2rem}
 .homerow4 .fcol.left{margin-bottom:0;width:45%;padding:0 5vw 0 11vw}
 .homerow4 .fcol.right{width:55%}
 .homerow5.section .block{width:33.33%}
-.static-banner{height:35rem}
-.static-banner .banner-text:before{width:70%;height:100%;background:-webkit-gradient(linear,left top,right top,from(white),to(rgba(255,255,255,0)));background:linear-gradient(to right,white 0,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#00ffffff",GradientType=1)}
-.static-banner .banner-text .title{font-size:4.5rem;margin-bottom:180px;text-align:left}
-.static-banner .banner-text .title span:after{width:200px;position:absolute;right:-95px;bottom:-50px;-webkit-transform:none;transform:none}
-.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=1)}
+.taxonomy-banner,.static-banner{height:35rem}
+.taxonomy-banner img.actual-image,.static-banner img.actual-image{display:none}
+.taxonomy-banner .banner-text:before,.static-banner .banner-text:before{width:70%;height:100%;background:-webkit-gradient(linear,left top,right top,from(white),to(rgba(255,255,255,0)));background:linear-gradient(to right,white 0,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#00ffffff",GradientType=1)}
+.taxonomy-banner .banner-text .title,.static-banner .banner-text .title{font-size:4.5rem;margin-bottom:180px;text-align:left}
+.taxonomy-banner .banner-text .title span:after,.static-banner .banner-text .title span:after{width:200px;position:absolute;right:-95px;bottom:-50px;-webkit-transform:none;transform:none}
+.taxonomy-banner.white .banner-text:before,.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000",endColorstr="#00000000",GradientType=1)}
 .repeatable-blocks .repeatable.text-image{padding-top:70px}
 .repeatable-blocks .repeatable.text-image .textcol,.repeatable-blocks .repeatable.text-image .imagecol{width:50%}
 .repeatable-blocks .repeatable.text-image figure img.helper{display:block}
@@ -1767,12 +1782,13 @@ h1.page-title{font-size:3.2rem}
 .contact-form-section .fxcol.text{padding:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:3vw}
 .contact-form-section .fxcol.form{padding:3vw}
 .contact-links-section .wrapper{padding-top:80px;padding-bottom:80px}
+.taxonomy-content .taxonomy-posts .item{width:33.333%;margin:0}
 .site-footer:after{width:50%}
 .site-footer .wrapper{padding-top:70px;padding-bottom:70px}
 .site-footer .flexwrap .fcol.right{width:30%}
 .site-footer .social-media a{margin:0 5px 0 0}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
-.static-banner{height:40rem}
+.taxonomy-banner,.static-banner{height:40rem}
 .contact-links-section .link-icon{width:20%}
 }@media screen and (max-width:820px){.site-header{height:80px}
 .site-header .head-inner{padding-top:0;padding-bottom:0}
