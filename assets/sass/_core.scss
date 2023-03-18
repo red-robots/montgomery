@@ -1849,6 +1849,230 @@ body.subpage.has-banner {
   }
 }
 
+body.single-activities {
+  .entry-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    p:last-child {
+      margin-bottom: 0;
+    }
+    h3 {
+      font-family: $font_sixth;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+  }
+}
+
+.section-trip-options {
+  background: #F1F5F7;
+  padding: 5rem 0;
+  font-size: 14px;
+  line-height: 1.4;
+  .flexwrap.f-options {
+    justify-content: space-between;
+  }
+  .fleft, .fright {
+    width: 100%;
+  }
+  &.half {
+    .fleft {
+      @include tab {
+        width: 67%;
+      }
+    }
+
+    .fright {
+      @include tab {
+        width: 29%;
+      }
+    }
+  }
+  .table-data {
+    .flexwrap {
+      // align-items: center;
+    }
+    .tbcol {
+      width: 20%;
+      padding: 10px 20px 9px;
+    }
+    .tbcol:first-child {
+      width: 60%;
+    }
+    .thead {
+      .tbcol {
+        color: $primary;
+        text-transform: uppercase;
+      }
+      .c2,.c3 {
+        text-align: center;
+      }
+    }
+    .tbody {
+      .trow {
+        .flexwrap {
+          background: $teal;
+          color: #FFF;
+        }
+        .tbcol {
+          border-left: 1px solid #FFF;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        .tbcol:first-child {
+          border-left: none;
+        }
+      }
+      .c1 {
+        font-family: $font_heading;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: .02em;
+      }
+      .c2, .c3 {
+        text-align: center;
+        justify-content: center;
+      }
+      .info {
+        padding: 20px;
+      }
+      .f-size {
+        color: $primary;
+        text-transform: uppercase;
+        margin-top: 20px;
+      }
+    }
+  }
+
+
+  .graybox {
+    background: #8686861D;
+    margin: 0 0 3em;
+    .box-title {
+      color: $primary;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 13px 15px 12px;
+      border-bottom: 1px solid $primary;
+    }
+    .box-text {
+      padding: 15px;
+    }
+
+    .box-text {
+      padding: 30px 3vw;
+    }
+    &.pass_options {
+      text-align: center;
+      .box-text {
+        padding:20px 3vw 30px;
+      }
+    }
+    .p-info {
+      padding: 10px 0;
+    }
+    .p-title {
+      color: $primary;
+      text-transform: uppercase;
+    }
+    .p-price {
+      font-family: $font_heading;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: $primary;
+      margin: 5px 0;
+    }
+  }
+
+  .buttondiv {
+    margin-top: 10px;
+  }
+  .button-outline {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid $primary;
+    color: $primary;
+    text-transform: uppercase;
+    padding: 10px 20px 8px;
+  }
+}
+
+.section-additional-information {
+  background-color: $teal;
+  background-image: url('images/BKG_Cover_2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  font-size: 14px;
+  line-height: 1.4;
+  .stitle {
+    text-align: center;
+    color: #FFF;
+    margin: 0 0 1.1em;
+  }
+  .accordions {
+    .acc-item {
+      border-top: 1px solid #FFF;
+      background: #FFF;
+      &.first {
+        border-top: none;
+      }
+    }
+    .title {
+      a {
+        display: block;
+        text-decoration: none;
+        color: #FFF;
+        padding: 15px 18px 12px;
+        background: $teal;
+        text-transform: uppercase;
+        font-size: 18px;
+        position: relative;
+        span {
+          display: block;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 25px;
+          right: 20px;
+          &:before, &:after {
+            content:"";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #FFF;
+            transition: all ease .2s;
+          }
+          &:after {
+            transform: translateY(-2px) rotate(-90deg);
+          }
+        }
+      }
+    }
+    .text {
+      padding: 30px;
+      display: none;
+      @include animateThis(1s);
+    }
+    .acc-item.active {
+      .text {
+        display: block;
+        @include animateEffect(fadeIn);
+      }
+      .title span {
+        &:after {
+          transform: translateY(-2px) rotate(0);
+        }
+      }
+    }
+  }
+}
+
 .site-footer {
   background: $primary;
   color: #FFF;

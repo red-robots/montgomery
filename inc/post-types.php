@@ -14,7 +14,7 @@ function js_custom_init() {
           'plural'    => 'Activities',
           'single'    => 'Activity',
           'menu_icon' => 'dashicons-category',
-          'supports'  => array('title','editor')
+          'supports'  => array('title')
         ),
         array(
           'post_type' => 'events',

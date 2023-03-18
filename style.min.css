@@ -100,7 +100,11 @@ wght@0,
 400;1,
 500;1,
 700;1,
-900&display=swap";html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+900&family=Libre+Caslon+Text:ital,
+wght@0,
+400;0,
+700;1,
+400&display=swap";html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -1664,6 +1668,45 @@ body.subpage.has-banner .site-header{position:fixed;top:0;left:0;width:100%}
 .taxonomy-content .taxonomy-posts .wrap{padding:0;height:100%;background:#eee}
 .taxonomy-content .taxonomy-posts .buttondiv{margin:0}
 .taxonomy-content .taxonomy-posts .info{padding:30px}
+body.single-activities .entry-content{padding-top:5rem;padding-bottom:5rem}
+body.single-activities .entry-content p:last-child{margin-bottom:0}
+body.single-activities .entry-content h3{font-family:"Libre Caslon Text",serif;font-size:1.4rem;font-weight:500;line-height:1.2;margin:0 0 1rem}
+.section-trip-options{background:#f1f5f7;padding:5rem 0;font-size:14px;line-height:1.4}
+.section-trip-options .flexwrap.f-options{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.section-trip-options .fleft,.section-trip-options .fright{width:100%}
+.section-trip-options .table-data .tbcol{width:20%;padding:10px 20px 9px}
+.section-trip-options .table-data .tbcol:first-child{width:60%}
+.section-trip-options .table-data .thead .tbcol{color:#4c748c;text-transform:uppercase}
+.section-trip-options .table-data .thead .c2,.section-trip-options .table-data .thead .c3{text-align:center}
+.section-trip-options .table-data .tbody .trow .flexwrap{background:#3ca7c5;color:#fff}
+.section-trip-options .table-data .tbody .trow .tbcol{border-left:1px solid #fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.section-trip-options .table-data .tbody .trow .tbcol:first-child{border-left:0}
+.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1.3rem;font-weight:400;line-height:1.2;letter-spacing:.02em}
+.section-trip-options .table-data .tbody .c2,.section-trip-options .table-data .tbody .c3{text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.section-trip-options .table-data .tbody .info{padding:20px}
+.section-trip-options .table-data .tbody .f-size{color:#4c748c;text-transform:uppercase;margin-top:20px}
+.section-trip-options .graybox{background:#8686861D;margin:0 0 3em}
+.section-trip-options .graybox .box-title{color:#4c748c;text-transform:uppercase;text-align:center;padding:13px 15px 12px;border-bottom:1px solid #4c748c}
+.section-trip-options .graybox .box-text{padding:15px}
+.section-trip-options .graybox .box-text{padding:30px 3vw}
+.section-trip-options .graybox.pass_options{text-align:center}
+.section-trip-options .graybox.pass_options .box-text{padding:20px 3vw 30px}
+.section-trip-options .graybox .p-info{padding:10px 0}
+.section-trip-options .graybox .p-title{color:#4c748c;text-transform:uppercase}
+.section-trip-options .graybox .p-price{font-family:"Anton",sans-serif;font-weight:500;font-size:1.5rem;line-height:1;color:#4c748c;margin:5px 0}
+.section-trip-options .buttondiv{margin-top:10px}
+.section-trip-options .button-outline{display:inline-block;text-decoration:none;border:2px solid #4c748c;color:#4c748c;text-transform:uppercase;padding:10px 20px 8px}
+.section-additional-information{background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-repeat:no-repeat;padding:6rem 0;font-size:14px;line-height:1.4}
+.section-additional-information .stitle{text-align:center;color:#fff;margin:0 0 1.1em}
+.section-additional-information .accordions .acc-item{border-top:1px solid #fff;background:#fff}
+.section-additional-information .accordions .acc-item.first{border-top:0}
+.section-additional-information .accordions .title a{display:block;text-decoration:none;color:#fff;padding:15px 18px 12px;background:#3ca7c5;text-transform:uppercase;font-size:18px;position:relative}
+.section-additional-information .accordions .title a span{display:block;width:16px;height:16px;position:absolute;top:25px;right:20px}
+.section-additional-information .accordions .title a span:before,.section-additional-information .accordions .title a span:after{content:"";display:block;width:100%;height:2px;background:#fff;-webkit-transition:all ease .2s;transition:all ease .2s}
+.section-additional-information .accordions .title a span:after{-webkit-transform:translateY(-2px) rotate(-90deg);transform:translateY(-2px) rotate(-90deg)}
+.section-additional-information .accordions .text{padding:30px;display:none;-webkit-animation-duration:1s;animation-duration:1s}
+.section-additional-information .accordions .acc-item.active .text{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
+.section-additional-information .accordions .acc-item.active .title span:after{-webkit-transform:translateY(-2px) rotate(0);transform:translateY(-2px) rotate(0)}
 .site-footer{background:#4c748c;color:#fff;font-size:15px;font-weight:normal;line-height:1.2;position:relative;border-top:20px solid #cea155}
 .site-footer:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;right:0;background-image:url("images/symbol-large.svg");background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.8}
 .site-footer a:hover{color:#3ca7c5 !important}
@@ -1783,6 +1826,8 @@ h1.page-title{font-size:3.2rem}
 .contact-form-section .fxcol.form{padding:3vw}
 .contact-links-section .wrapper{padding-top:80px;padding-bottom:80px}
 .taxonomy-content .taxonomy-posts .item{width:33.333%;margin:0}
+.section-trip-options.half .fleft{width:67%}
+.section-trip-options.half .fright{width:29%}
 .site-footer:after{width:50%}
 .site-footer .wrapper{padding-top:70px;padding-bottom:70px}
 .site-footer .flexwrap .fcol.right{width:30%}
