@@ -1681,7 +1681,7 @@ body.single-activities .entry-content h3{font-family:"Libre Caslon Text",serif;f
 .section-trip-options .table-data .tbody .trow .flexwrap{background:#3ca7c5;color:#fff}
 .section-trip-options .table-data .tbody .trow .tbcol{border-left:1px solid #fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .section-trip-options .table-data .tbody .trow .tbcol:first-child{border-left:0}
-.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1.3rem;font-weight:400;line-height:1.2;letter-spacing:.02em}
+.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1.3rem;font-weight:400;line-height:1.2;letter-spacing:.02em;text-transform:uppercase}
 .section-trip-options .table-data .tbody .c2,.section-trip-options .table-data .tbody .c3{text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .section-trip-options .table-data .tbody .info{padding:20px}
 .section-trip-options .table-data .tbody .f-size{color:#4c748c;text-transform:uppercase;margin-top:20px}
