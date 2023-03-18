@@ -1696,6 +1696,7 @@ body.single-activities .entry-content h3{font-family:"Libre Caslon Text",serif;f
 .section-trip-options .graybox .p-price{font-family:"Anton",sans-serif;font-weight:500;font-size:1.5rem;line-height:1;color:#4c748c;margin:5px 0}
 .section-trip-options .buttondiv{margin-top:10px}
 .section-trip-options .button-outline{display:inline-block;text-decoration:none;border:2px solid #4c748c;color:#4c748c;text-transform:uppercase;padding:10px 20px 8px}
+.section-trip-options .button-outline:hover{background:#4c748c;color:#fff}
 .section-additional-information{background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-repeat:no-repeat;padding:6rem 0;font-size:14px;line-height:1.4}
 .section-additional-information .stitle{text-align:center;color:#fff;margin:0 0 1.1em}
 .section-additional-information .accordions .acc-item{border-top:1px solid #fff;background:#fff}
