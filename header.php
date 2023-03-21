@@ -34,6 +34,8 @@ var currentURL = '<?php echo get_permalink();?>';
 var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 </script>
 <?php
+global $obj;
+$obj = ( is_archive() ) ? get_queried_object() : '';
 $extra_class = ( get_field("banner_image") ) ? 'has-banner':'no-banner';
 if( get_field("banner_image")  ) { ?>
 <style>
@@ -86,6 +88,6 @@ if( get_field("banner_image")  ) { ?>
 		</div>
 	</header>
 
-	<?php get_template_part('parts/hero') ?>
+	<?php get_template_part('parts/hero'); ?>
 
 	<div id="content" class="site-content">

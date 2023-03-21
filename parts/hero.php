@@ -20,18 +20,40 @@
   <?php } ?>
 <?php } else { ?>
 
-  <?php if( $banner = get_field("banner_image") ) { ?>
-  <?php  $page_title = (get_field("banner_text")) ? get_field("banner_text") : get_the_title();  
-    $color = get_field('banner_text_color');
-  ?>
-  <div class="static-banner <?php echo $color ?>">
-    <div class="banner-image" style="background-image:url('<?php echo $banner['url'] ?>')"></div>
-    <div class="banner-text">
-      <div class="wrapper">
-        <div class="title <?php echo $color ?>"><span><?php echo $page_title ?></span></div>
+  <?php if ( is_archive() ) { ?>
+
+    <?php  
+    global $obj;
+    $current_term_id = $obj->term_id;
+    $current_term_name = $obj->name;
+    $taxonomy = $obj->taxonomy;
+    $category_image = get_field("category_image",$taxonomy.'_'.$current_term_id);
+    if($category_image) { ?>
+    <div class="static-banner taxonomy-banner">
+      <div class="banner-image" style="background-image:url('<?php echo $category_image['url'] ?>')"></div>
+      <div class="banner-text">
+        <div class="wrapper">
+          <div class="title"><span><?php echo $current_term_name ?></span></div>
+        </div>
       </div>
     </div>
-  </div>
+    <?php } ?>
+
+    
+  <?php } else { ?>
+    <?php if( $banner = get_field("banner_image") ) { ?>
+    <?php  $page_title = (get_field("banner_text")) ? get_field("banner_text") : get_the_title();  
+      $color = get_field('banner_text_color');
+    ?>
+    <div class="static-banner <?php echo $color ?>">
+      <div class="banner-image" style="background-image:url('<?php echo $banner['url'] ?>')"></div>
+      <div class="banner-text">
+        <div class="wrapper">
+          <div class="title <?php echo $color ?>"><span><?php echo $page_title ?></span></div>
+        </div>
+      </div>
+    </div>
+    <?php } ?>
   <?php } ?>
 
 <?php } ?>

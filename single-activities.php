@@ -51,8 +51,8 @@ get_header(); ?>
                   <div class="trow">
                     <div class="flexwrap">
                       <div class="tbcol c1"><?php echo $t_title ?></div>
-                      <div class="tbcol c2">DIFFICULTY</div>
-                      <div class="tbcol c3">QUALIFIER</div>
+                      <div class="tbcol c2"><?php echo $t_difficulty ?></div>
+                      <div class="tbcol c3"><?php echo $t_qualifier ?></div>
                     </div>
                     <?php if ($t_description || $t_size) { ?>
                     <div class="info">
@@ -77,6 +77,11 @@ get_header(); ?>
               $btnText = (isset($passBtn['title']) && $passBtn['title']) ? $passBtn['title'] : '';
               $btnUrl = (isset($passBtn['url']) && $passBtn['url']) ? $passBtn['url'] : '';
               $btnTarget = (isset($passBtn['target']) && $passBtn['target']) ? $passBtn['target'] : '_self';
+
+              $pass_note_button = get_field('pass_note_button');
+              $nBtnLink = ( isset($pass_note_button['url']) && $pass_note_button['url'] ) ? $pass_note_button['url'] : '';
+              $nBtnTitle = ( isset($pass_note_button['title']) && $pass_note_button['title'] ) ? $pass_note_button['title'] : '';
+              $nBtnTarget = ( isset($pass_note_button['target']) && $pass_note_button['target'] ) ? $pass_note_button['target'] : '_self';
             ?>
             <div class="fxcol fright">
               <?php if ($pass_options) { ?>
@@ -103,7 +108,14 @@ get_header(); ?>
                 <?php if ($note_title) { ?>
                 <div class="box-title"><?php echo $note_title ?></div> 
                 <?php } ?>
-                <div class="box-text"><?php echo anti_email_spam($note_content); ?></div>
+                <div class="box-text">
+                  <div class="text"><?php echo anti_email_spam($note_content); ?></div>
+                  <?php if ($nBtnLink && $nBtnTitle) { ?>
+                  <div class="buttondiv mt-25">
+                    <a href="<?php echo $nBtnLink ?>" target="<?php echo $nBtnTarget ?>" class="button-outline"><?php echo $nBtnTitle ?></a>
+                  </div> 
+                  <?php } ?>
+                </div>
               </div> 
               <?php } ?>
             </div>
@@ -122,7 +134,7 @@ get_header(); ?>
           <?php $i=1; foreach ($additional_information as $a) { ?>
             <?php if ($a['title'] && $a['text']) { ?>
             <div class="acc-item<?php echo ($i==1) ? ' active first':'' ?>">
-              <div class="title"><a href="javascript:void(0)"><?php echo $a['title'] ?><span></span></a></div>
+              <div class="title"><a href="javascript:void(0)"><?php echo $a['title'] ?></a></div>
               <div class="text"><?php echo $a['text'] ?></div>
             </div> 
             <?php $i++; } ?>

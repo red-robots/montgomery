@@ -7,35 +7,15 @@
  * @package bellaworks
  */
 
-get_header(); 
-//$parent_page_id = ( isset($_GET['pp']) && $_GET['pp'] ) ? $_GET['pp'] : '';
-
-
-$obj = get_queried_object();
+get_header();
+global $obj;
+//$obj = get_queried_object();
 $current_term_id = $obj->term_id;
 $current_term_slug = $obj->slug;
 $current_term_name = $obj->name;
 $taxonomy = $obj->taxonomy;
-// Tweak #1 to get term order. See below for tweak #2
-// $child_terms = get_terms( array(
-// 	'child_of' => $current_term_id, 
-// 	'orderby' => 'term_order',
-//     'order' => 'ASC',
-//     'taxonomy' => $taxonomy
-// ));
-$category_image = get_field("category_image",$taxonomy.'_'.$current_term_id);
 $has_cat_description = ( category_description( $current_term_id ) ) ? 'has-cat-desc' : 'no-cat-desc';
-if($category_image) { ?>
-<div class="static-banner taxonomy-banner">
-  <div class="banner-image" style="background-image:url('<?php echo $category_image['url'] ?>')"></div>
-  <div class="banner-text">
-    <div class="wrapper">
-      <div class="title"><span><?php echo $current_term_name ?></span></div>
-    </div>
-  </div>
-</div>
-<?php	} ?>
-
+?>
 
 <div id="primary" data-term="<?php echo $current_term_name ?>" class="content-area-full taxonomy-content taxonomy-<?php echo $current_term_slug ?> <?php echo $has_cat_description ?>">
   <main id="main" class="site-main" role="main">

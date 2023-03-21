@@ -157,7 +157,7 @@ jQuery(document).ready(function ($) {
   /* Accordions */
 
 
-  $('.accordion .q-title a').on('click', function () {
+  $('.accordion .q-title a, .accordion .q-title a span').on('click', function () {
     $(this).toggleClass('active');
     $(this).parents('.q-item').toggleClass('active'); //$(this).parents('.q-item').find('.q-text').show();
   });
