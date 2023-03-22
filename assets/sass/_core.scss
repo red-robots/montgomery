@@ -241,6 +241,7 @@ a {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 50;
   &:hover {
     background-image: url('images/menu-hover.svg');
   }
@@ -2423,6 +2424,9 @@ body.scrolled {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     backdrop-filter: blur(2px);
   }
+  .main-navigation.show {
+    height: 100vh;
+  }
 }
 body.logged-in.admin-bar {
   @media screen and (min-width: 783px) {
@@ -2475,17 +2479,17 @@ body.page-template-page-custom {
     }
     .headtopright {
       width: 100vw;
-      height: 45px;
+      height: 50px;
       position: absolute;
       left: -15px;
-      bottom: -73px;
+      bottom: -85px;
       background: $primary;
     }
   }
   .site-logo {
-    width: 70px;
+    width: 58px;
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 0;
   }
   .weatherInfo {
@@ -2493,8 +2497,9 @@ body.page-template-page-custom {
     width: 40%;
     padding: 0 15px;
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 12px;
+    left: 5px;
+
     
     // width: 140px;
     // padding: 0 15px;
@@ -2513,13 +2518,13 @@ body.page-template-page-custom {
   }
   .headtopright {
     .search-button {
-      bottom: -10px;
-      left: -6px;
+      bottom: -16px;
+      left: -9px;
       filter: brightness(0) invert(1);
     }
     .head-button {
-      bottom: -5px;
-      right: 4px;
+      bottom: -7px;
+      right: 7px;
       padding: 8px 18px;
       font-size: 16px;
       background: #FFF;
