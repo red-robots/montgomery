@@ -66,13 +66,16 @@ if( get_field("banner_image")  ) { ?>
         <?php } ?>
 
         <div class="headtopright">
-          <?php if(function_exists('wp_forecast')) { ?>
-            <span class="weatherInfo">
-              <span class="live-forecast"><?php wp_forecast('A'); ?></span>
+            
+          <?php //if(function_exists('wp_forecast')) { ?>
+            <!-- <span class="weatherInfo">
+              <span class="live-forecast"><?php //wp_forecast('A'); ?></span>
               <span class="weather-icon"></span>
               <span class="fahrenheit"></span>
-            </span>
-          <?php } ?>
+            </span> -->
+          <?php //} ?>
+
+
           <a href="#" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
           <?php 
           $header_button = get_field('header_cta_button','option'); 
