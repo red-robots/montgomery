@@ -2484,10 +2484,12 @@ body.page-template-page-custom {
     .headtopright {
       width: 100vw;
       height: 50px;
+      display: block;
       position: absolute;
       left: -15px;
       bottom: -48px;
       background: $primary;
+      text-align: right;
     }
   }
   .site-logo {
@@ -2522,7 +2524,7 @@ body.page-template-page-custom {
   }
   .headtopright {
     .search-button {
-      bottom: -16px;
+      bottom: 7px;
       left: -9px;
       filter: brightness(0) invert(1);
     }

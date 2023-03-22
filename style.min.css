@@ -1845,13 +1845,13 @@ h1.page-title{font-size:3.2rem}
 }@media screen and (max-width:820px){.site-header,.site-header .head-inner{height:80px}
 .site-header .head-inner{padding-top:0;padding-bottom:0}
 .site-header #menu-toggle{bottom:0;left:12px}
-.site-header .headtopright{width:100vw;height:50px;position:absolute;left:-15px;bottom:-48px;background:#4c748c}
+.site-header .headtopright{width:100vw;height:50px;display:block;position:absolute;left:-15px;bottom:-48px;background:#4c748c;text-align:right}
 .site-logo{width:58px;position:absolute;top:10px;right:0}
 .weatherInfo{display:block;width:40%;padding:0 15px;position:absolute;top:12px;left:5px}
 .weatherInfo .weather-icon{-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 .weatherInfo .fahrenheit{color:#fff}
 .weatherInfo .fahrenheit:after{border-color:#fff}
-.headtopright .search-button{bottom:-16px;left:-9px;-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
+.headtopright .search-button{bottom:7px;left:-9px;-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 .headtopright .head-button{bottom:-7px;right:7px;padding:8px 18px;font-size:16px;background:#fff;color:#4c748c}
 }@media screen and (max-width:819px){.flexible-content .flex-content{padding-top:0;padding-bottom:0}
 .flexible-content .flex-content .imagecol{display:none}
