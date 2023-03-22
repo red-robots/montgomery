@@ -2468,21 +2468,25 @@ body.page-template-page-custom {
 
 /* MOBILE */
 @include max($tabwidth) {
-  .site-header {
+  .site-header,
+  .site-header .head-inner {
     height: 80px;
+  }
+  .site-header {
     .head-inner {
       padding-top: 0;
       padding-bottom: 0;
     }
     #menu-toggle {
-      bottom: -17px;
+      bottom: 0;
+      left: 12px;
     }
     .headtopright {
       width: 100vw;
       height: 50px;
       position: absolute;
       left: -15px;
-      bottom: -85px;
+      bottom: -48px;
       background: $primary;
     }
   }
