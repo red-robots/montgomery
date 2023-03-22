@@ -7,11 +7,11 @@
  */
 jQuery(document).ready(function ($) {
   /* Menu Button */
-  $(document).on('click touchstart', '.menu-toggle, .mobile-menu-button', function (e) {
+  $(document).on('click', '.menu-toggle, .mobile-menu-button', function (e) {
     e.preventDefault();
     $('#site-navigation').toggleClass('show');
   });
-  $(document).on('click touchstart', '#topsearchBtn', function (e) {
+  $(document).on('click', '#topsearchBtn', function (e) {
     e.preventDefault();
     $(this).toggleClass('show');
     $('.searchbar').toggleClass('show');
