@@ -16,14 +16,14 @@ function js_custom_init() {
           'menu_icon' => 'dashicons-category',
           'supports'  => array('title')
         ),
-        array(
-          'post_type' => 'events',
-          'menu_name' => 'Events',
-          'plural'    => 'Events',
-          'single'    => 'Event',
-          'menu_icon' => 'dashicons-calendar-alt',
-          'supports'  => array('title','editor')
-        ),
+        // array(
+        //   'post_type' => 'events',
+        //   'menu_name' => 'Events',
+        //   'plural'    => 'Events',
+        //   'single'    => 'Event',
+        //   'menu_icon' => 'dashicons-calendar-alt',
+        //   'supports'  => array('title','editor')
+        // ),
     );
     
     if($post_types) {
