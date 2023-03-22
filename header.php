@@ -52,6 +52,9 @@ if( get_field("banner_image")  ) { ?>
 		<div class="wrapper cf">
       <div class="head-inner">
         <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
+
+        <a href="#" class="test-button" onclick="alert('You click me!')"><span>MENU</span></a>
+
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
