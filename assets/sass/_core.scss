@@ -2476,10 +2476,13 @@ body.page-template-page-custom {
     .head-inner {
       padding-top: 0;
       padding-bottom: 0;
+      width: 100%;
+      display: block;
     }
     #menu-toggle {
       bottom: 0;
       left: 12px;
+      height: 100%;
     }
     .headtopright {
       width: 100vw;
