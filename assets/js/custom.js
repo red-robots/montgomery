@@ -7,7 +7,7 @@
  */
 jQuery(document).ready(function ($) {
   /* Menu Button */
-  $('.menu-toggle, .mobile-menu-button').on('click', function (e) {
+  $('.menu-toggle, .mobile-menu-button').on('mousedown touchstart', function (e) {
     e.preventDefault();
     $('#site-navigation').toggleClass('show');
   });
