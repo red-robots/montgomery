@@ -52,7 +52,6 @@ if( get_field("banner_image")  ) { ?>
 		<div class="wrapper cf">
       <div class="head-inner">
         <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
-        <a href="#" class="mobile-menu-button"><span>MENU</span></a>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
@@ -67,13 +66,13 @@ if( get_field("banner_image")  ) { ?>
 
         <div class="headtopright">
             
-          <?php //if(function_exists('wp_forecast')) { ?>
-            <!-- <span class="weatherInfo">
-              <span class="live-forecast"><?php //wp_forecast('A'); ?></span>
+          <?php if(function_exists('wp_forecast')) { ?>
+            <span class="weatherInfo">
+              <span class="live-forecast"><?php wp_forecast('A'); ?></span>
               <span class="weather-icon"></span>
               <span class="fahrenheit"></span>
-            </span> -->
-          <?php //} ?>
+            </span>
+          <?php } ?>
 
 
           <a href="#" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>

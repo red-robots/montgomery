@@ -40,37 +40,37 @@ jQuery(document).ready(function ($) {
     }
   });
   /* Carousel */
-  // var owl = $('.owl-carousel');
-  // owl.owlCarousel({
-  //   center: true,
-  //   items:2,
-  //   loop: true,
-  //   margin: 10,
-  //   autoplay: false,
-  //   autoplayTimeout: 5000,
-  //   responsiveClass: true,
-  //   onInitialized:function(){
-  //     $('.home-carousel .item-title span.arrow').on('click',function(){
-  //       $('.home-carousel .owl-next').trigger('click');
-  //     });
-  //     coverCarouselItem();
-  //   },
-  //   onDragged:function(){
-  //     $('.home-carousel').addClass('show-all');
-  //     coverCarouselItem();
-  //   },
-  //   onChanged:function(e){
-  //     //$('.home-carousel .owl-item.center').prev().addClass('hide-item');
-  //     $('.home-carousel .owl-item.active').each(function(k){
-  //       if(k==1) {
-  //         $(this).addClass('first');
-  //       } else {
-  //         $(this).removeClass('first');
-  //       }
-  //     });
-  //   }
-  // });
 
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+    center: true,
+    items: 2,
+    loop: true,
+    margin: 10,
+    autoplay: false,
+    autoplayTimeout: 5000,
+    responsiveClass: true,
+    onInitialized: function onInitialized() {
+      $('.home-carousel .item-title span.arrow').on('click', function () {
+        $('.home-carousel .owl-next').trigger('click');
+      });
+      coverCarouselItem();
+    },
+    onDragged: function onDragged() {
+      $('.home-carousel').addClass('show-all');
+      coverCarouselItem();
+    },
+    onChanged: function onChanged(e) {
+      //$('.home-carousel .owl-item.center').prev().addClass('hide-item');
+      $('.home-carousel .owl-item.active').each(function (k) {
+        if (k == 1) {
+          $(this).addClass('first');
+        } else {
+          $(this).removeClass('first');
+        }
+      });
+    }
+  });
   $(document).on('click', '.carouselNavButtons a', function (e) {
     e.preventDefault();
     var action = $(this).attr('data-action');
