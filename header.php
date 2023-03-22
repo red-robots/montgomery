@@ -51,7 +51,7 @@ if( get_field("banner_image")  ) { ?>
 	<header id="masthead" class="site-header">
 		<div class="wrapper cf">
       <div class="head-inner">
-        <a href="javascript:void(0)" id="menu-toggle" class="menu-toggle"><span class="sr">Menu</span><span class="bar"></span></a>
+        <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
@@ -71,7 +71,7 @@ if( get_field("banner_image")  ) { ?>
               <span class="fahrenheit"></span>
             </span>
           <?php } ?>
-          <a href="javascript:void(0)" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
+          <a href="#" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
           <?php 
           $header_button = get_field('header_cta_button','option'); 
           $btn_target = (isset($header_button['target']) && $header_button['target']) ? $header_button['target'] : '_self';
