@@ -2559,6 +2559,9 @@ body.post-type-archive-tribe_events {
   .tribe-events .tribe-events-calendar-month__calendar-event--featured:before {
     background-color: $blue!important;
   }
+  .tribe-events .tribe-events-calendar-month__multiday-event-bar-inner {
+    background-color: color(a98-rgb 0.59 0.82 0.98 / 0.24);
+  }
 }
 
 

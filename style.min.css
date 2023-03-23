@@ -1760,6 +1760,7 @@ body.page-template-default.logged-in.admin-bar .site-header,body.page-template-p
 .generic-layout .wp-block-group.alignwide{max-width:100%;width:100%;padding-left:0;padding-right:0}
 body.post-type-archive-tribe_events .tribe-common .tribe-common-c-svgicon{color:#3ba8c4 !important}
 body.post-type-archive-tribe_events .tribe-events .tribe-events-calendar-month__calendar-event--featured:before{background-color:#3ba8c4 !important}
+body.post-type-archive-tribe_events .tribe-events .tribe-events-calendar-month__multiday-event-bar-inner{background-color:color(a98-rgb .59 .82 .98/0.24)}
 @media(min-width:600px){.homerow5.section .block{width:50%}
 .contact-links-section .link-icon{padding:10px 10px;width:30%}
 .site-footer .flexwrap .fcol{width:48%}
