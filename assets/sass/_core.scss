@@ -234,11 +234,8 @@ a {
   display: inline-block;
   width: 40px;
   height: 40px;
-  // position: absolute;
-  // left: 0;
-  // bottom: 15px;
   background-image: url('images/menu.svg');
-  background-position: center;
+  background-position: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 50;
@@ -2444,9 +2441,12 @@ body.page-template-page-custom {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
   #primary {
-    padding-top: 90px;
+    padding-top: 0;
     padding-bottom: 90px;
     min-height: 20em;
+    @include tab {
+      padding-top: 90px;
+    }
   }
   &.logged-in.admin-bar {
     .site-header {
@@ -2482,9 +2482,9 @@ body.page-template-page-custom {
       z-index: 80;
     }
     #menu-toggle {
-      bottom: 0;
+      top: 50%;
+      transform: translateY(-50%);
       left: 12px;
-      height: 100%;
     }
     .headtopright {
       width: 100vw;
@@ -2550,6 +2550,16 @@ body.page-template-page-custom {
   }
 }
 
+
+/* TRIBE CALENDAR */
+body.post-type-archive-tribe_events {
+  .tribe-common .tribe-common-c-svgicon {
+    color: $blue!important;
+  }
+  .tribe-events .tribe-events-calendar-month__calendar-event--featured:before {
+    background-color: $blue!important;
+  }
+}
 
 
 

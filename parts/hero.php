@@ -1,4 +1,5 @@
-<?php if ( is_front_page() || is_home() ) { 
+<?php 
+if ( is_front_page() || is_home() ) { 
   if( $banners = get_field('banner') ) { 
     $type = ( count($banners) > 1 ) ? 'slideshow':'static';
   ?>
@@ -24,17 +25,26 @@
 
     <?php  
     global $obj;
-    $current_term_id = $obj->term_id;
-    $current_term_name = $obj->name;
-    $taxonomy = $obj->taxonomy;
-    $category_image = get_field("category_image",$taxonomy.'_'.$current_term_id);
-    if($category_image) { ?>
+    $banner_image = '';
+    $banner_text = '';
+    if( isset($obj->name) && $obj->name=='tribe_events' ) {
+      $banner_image = get_field("calendar_banner_image","option");
+      $banner_text = get_field("calendar_banner_text","option");
+    } else {
+      $current_term_id = $obj->term_id;
+      $banner_text = $obj->name;
+      $taxonomy = $obj->taxonomy;
+      $banner_image = get_field("category_image",$taxonomy.'_'.$current_term_id);
+    }
+    if($banner_image) { ?>
     <div class="static-banner taxonomy-banner">
-      <div class="banner-image" style="background-image:url('<?php echo $category_image['url'] ?>')"></div>
+      <div class="banner-image" style="background-image:url('<?php echo $banner_image['url'] ?>')"></div>
       <div class="banner-text">
+        <?php if ($banner_text) { ?>
         <div class="wrapper">
-          <div class="title"><span><?php echo $current_term_name ?></span></div>
+          <div class="title"><span><?php echo $banner_text ?></span></div>
         </div>
+        <?php } ?>
       </div>
     </div>
     <?php } ?>
@@ -49,7 +59,7 @@
       <div class="banner-image" style="background-image:url('<?php echo $banner['url'] ?>')"></div>
       <div class="banner-text">
         <div class="wrapper">
-          <div class="title <?php echo $color ?>"><span><?php echo $page_title ?></span></div>
+          <div class="title <?php echo $color ?>"><span><?php echo $secondary ?></span></div>
         </div>
       </div>
     </div>

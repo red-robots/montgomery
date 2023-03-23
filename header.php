@@ -42,6 +42,11 @@ if( get_field("banner_image")  ) { ?>
 .titlediv {display: none!important;}
 </style>
 <?php } ?>
+
+<?php if ( isset($obj->name) && $obj->name=='tribe_events' ) { 
+$extra_class = ( get_field("calendar_banner_image","option") ) ? 'has-banner':'no-banner';  
+} ?>
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class($extra_class); ?>>
