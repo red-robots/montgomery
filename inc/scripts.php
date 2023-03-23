@@ -23,22 +23,10 @@ function bellaworks_scripts() {
   );
   
 
-  // wp_enqueue_script( 
-  //   'bellaworks-cplugin', 
-  //   get_template_directory_uri() . '/assets/js/plugins.min.js', 
-  //   array(), '20220202', true 
-  // );
-
   wp_enqueue_script( 
-    'owl-carousel-js', 
-    get_template_directory_uri() . '/assets/js/vendor/owl.carousel.min.js', 
-    array(), '20200713', true 
-  );
-
-  wp_enqueue_script( 
-    'swiper-js', 
-    get_template_directory_uri() . '/assets/js/vendor/swiper-bundle.min.js', 
-    array(), '20200713', true 
+    'bellaworks-cplugin', 
+    get_template_directory_uri() . '/assets/js/plugins.min.js', 
+    array(), '20220202', true 
   );
 
   wp_enqueue_script( 
