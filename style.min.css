@@ -1693,14 +1693,14 @@ body.single-activities .entry-content h3{font-family:"Adonis",serif;font-size:1.
 .section-trip-options{background:#f1f5f7;padding:5rem 0;font-size:14px;line-height:1.4}
 .section-trip-options .flexwrap.f-options{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .section-trip-options .fleft,.section-trip-options .fright{width:100%}
-.section-trip-options .table-data .tbcol{width:20%;padding:10px 20px 9px}
-.section-trip-options .table-data .tbcol:first-child{width:60%}
+.section-trip-options .table-data .tbcol{width:30%;padding:10px 10px 9px}
+.section-trip-options .table-data .tbcol:first-child{width:40%}
 .section-trip-options .table-data .thead .tbcol{color:#4c748c;text-transform:uppercase;line-height:1.2}
 .section-trip-options .table-data .thead .c2,.section-trip-options .table-data .thead .c3{text-align:center}
 .section-trip-options .table-data .tbody .trow .flexwrap{background:#3ca7c5;color:#fff}
 .section-trip-options .table-data .tbody .trow .tbcol{border-left:1px solid #fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.2}
 .section-trip-options .table-data .tbody .trow .tbcol:first-child{border-left:0}
-.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1.3rem;font-weight:400;line-height:1.2;letter-spacing:.02em;text-transform:uppercase}
+.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1rem;font-weight:400;line-height:1.2;letter-spacing:.04em;text-transform:uppercase}
 .section-trip-options .table-data .tbody .c2,.section-trip-options .table-data .tbody .c3{text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .section-trip-options .table-data .tbody .info{padding:20px}
 .section-trip-options .table-data .tbody .f-size{color:#4c748c;text-transform:uppercase;margin-top:20px}
@@ -1856,6 +1856,9 @@ h1.page-title{font-size:3.2rem}
 .taxonomy-content .taxonomy-posts .item{width:33.333%;margin:0}
 .section-trip-options.half .fleft{width:67%}
 .section-trip-options.half .fright{width:29%}
+.section-trip-options .table-data .tbcol{padding:10px 20px 9px;width:20%}
+.section-trip-options .table-data .tbcol:first-child{width:60%}
+.section-trip-options .table-data .tbody .c1{font-size:1.3rem}
 .site-footer:after{width:50%}
 .site-footer .wrapper{padding-top:70px;padding-bottom:70px}
 .site-footer .flexwrap .fcol.right{width:30%}

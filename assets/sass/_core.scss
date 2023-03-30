@@ -2010,11 +2010,18 @@ body.single-activities {
       // align-items: center;
     }
     .tbcol {
-      width: 20%;
-      padding: 10px 20px 9px;
+      width: 30%;
+      padding: 10px 10px 9px;
+      @include tab {
+        padding: 10px 20px 9px;
+        width: 20%;
+      }
     }
     .tbcol:first-child {
-      width: 60%;
+      width: 40%;
+      @include tab {
+        width: 60%;
+      }
     }
     .thead {
       .tbcol {
@@ -2045,11 +2052,14 @@ body.single-activities {
       }
       .c1 {
         font-family: $font_heading;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 1.2;
-        letter-spacing: .02em;
+        letter-spacing: .04em;
         text-transform: uppercase;
+        @include tab {
+          font-size: 1.3rem;
+        }
       }
       .c2, .c3 {
         text-align: center;
