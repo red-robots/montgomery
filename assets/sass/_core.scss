@@ -234,14 +234,49 @@ a {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-image: url('images/menu.svg');
-  background-position: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  // background-image: url('images/menu.svg');
+  // background-position: 100%;
+  // background-size: contain;
+  // background-repeat: no-repeat;
   z-index: 50;
-  &:hover {
-    background-image: url('images/menu-hover.svg');
+  span.bar, 
+  span.bar:before,
+  span.bar:after {
+    display: block;
+    height: 3px;
+    background: $primary;
+    position: absolute;
+    left: 0;
+    transition: all ease .3s;
   }
+  span.bar {
+    width: 90%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  span.bar:before,
+  span.bar:after {
+    content:"";
+    width: 100%;
+  }
+  span.bar:before {
+   top: -10px; 
+  }
+  span.bar:after {
+   top: 10px; 
+  }
+  &:hover {
+    span.bar, 
+    span.bar:before,
+    span.bar:after {
+      background: $teal;
+    }
+  }
+  // &:hover {
+  //   background-image: url('images/menu-hover.svg');
+  // }
+  
 }
 
 .head-button, #menu-toggle {
@@ -461,10 +496,10 @@ a {
 }
 
 .banners {
-  height: 600px;
+  height: 400px;
   background-color: #CCC;
   @include tab {
-    height: 100vh;
+    height: 65vh;
   }
   img.actual-image {
     width: 100%;
@@ -485,7 +520,7 @@ a {
     .text {
       padding-bottom: 0;
       font-family: $font_heading;
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-weight: 400;
       line-height: 1.2;
       text-transform: uppercase;
@@ -495,10 +530,14 @@ a {
       position: relative;
       text-align: center;
       transform: translateY(3vh);
+      padding-left: 20px;
+      padding-right: 20px;
       @include tab {
         text-align: left;
         font-size: 4.5rem;
         padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
         max-width: 80vw;
         @include flexgroup();
         justify-content: flex-end;
@@ -525,6 +564,71 @@ a {
       @include tab {
         width: 50%;
         padding-bottom: 10vh;
+      }
+    }
+  }
+
+  .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &:before {
+      content:"";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,.25);
+    }
+    .banner-inner {
+      width: 100%;
+      position: relative;
+      z-index: 5;
+    }
+    .banner-logo {
+      text-align: center;
+      transform: translateY(-3vh);
+      img {
+        width: 140px;
+        height: auto;
+        @include tab {
+          width: auto;
+          height: 20vh;
+        }
+      }
+    }
+  }
+
+  .banner.logo-and-text {
+    text-align: center;
+    .banner-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      .banner-logo {
+        transform: translateY(0);
+      }
+    }
+    .text {
+      justify-content: center;
+      .pad {
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: center;
+        @include tab {
+          font-size: 3rem;
+          width: 80%;
+        }
       }
     }
   }
@@ -2464,13 +2568,20 @@ body.page-template-page-custom {
   }
 }
 
-
+.site-logo.mobile {
+  display: none;
+}
 
 /* MOBILE */
 @include max($tabwidth) {
+  body.page-template-default .site-header,
+  body.page-template-page-custom .site-header,
+  .site-header {
+    background-color: $primary;
+  }
   .site-header,
   .site-header .head-inner {
-    height: 80px;
+    height: 70px;
   }
   .site-header {
     .head-inner {
@@ -2497,11 +2608,18 @@ body.page-template-page-custom {
       text-align: right;
     }
   }
-  .site-logo {
-    width: 58px;
+  .headtopright,
+  .site-logo.desktop {
+    display: none!important;
+  }
+  .site-logo.mobile {
+    display: block;
+    width: 55px;
     position: absolute;
-    top: 10px;
-    right: 0;
+    top: 50%;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
   .weatherInfo {
     display: block;
@@ -2548,16 +2666,27 @@ body.page-template-page-custom {
     transform: translateY(-50%);
     margin-left: 60px;
   }
+  #menu-toggle span.bar,
+  #menu-toggle span.bar:before,
+  #menu-toggle span.bar:after {
+    background-color: #FFF;
+  }
+  .banners {
+    position: relative;
+    top: -1px;
+  }
 }
+
+
 
 
 /* TRIBE CALENDAR */
 body.post-type-archive-tribe_events {
   .tribe-common .tribe-common-c-svgicon {
-    color: $blue!important;
+    color: $primary!important;
   }
   .tribe-events .tribe-events-calendar-month__calendar-event--featured:before {
-    background-color: $blue!important;
+    background-color: $primary!important;
   }
   .tribe-events .tribe-events-calendar-month__multiday-event-bar-inner {
     background-color: color(a98-rgb 0.59 0.82 0.98 / 0.24);

@@ -63,10 +63,16 @@ $extra_class = ( get_field("calendar_banner_image","option") ) ? 'has-banner':'n
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
         </nav><!-- #site-navigation -->
 
+        <?php $mobileLogo = get_field('logo_mobile','option'); ?>
+        <?php if ($mobileLogo) { ?>
+        <span class="site-logo mobile">
+          <a hef="<?php bloginfo('url'); ?>"><img src="<?php echo $mobileLogo['url'] ?>" alt="<?php echo $mobileLogo['title'] ?>"></a>
+        </span>
+        <?php } ?>
   			<?php if( get_custom_logo() ) { ?>
-          <span class="site-logo"><?php the_custom_logo(); ?></span>
+          <span class="site-logo desktop"><?php the_custom_logo(); ?></span>
         <?php } else { ?>
-          <h1 class="site-logo"><a hef="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+          <h1 class="site-logo desktop"><a hef="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
         <?php } ?>
 
         <div class="headtopright">

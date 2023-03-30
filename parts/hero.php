@@ -8,10 +8,23 @@ if ( is_front_page() || is_home() ) {
       <?php foreach ($banners as $b) { 
         $img = $b['image'];
         $text = $b['text'];
+        $banner_logo = $b['banner_logo'];
+        $banner_class = ( $banner_logo && $text ) ? ' logo-and-text':'';
         if($img) { ?>
-          <div class="swiper-slide banner" style="background-image:url('<?php echo $img['url'] ?>')">
-            <?php if ($text) { ?>
-            <div class="text"><div class="pad"><?php echo $text ?></div></div> 
+          <div class="swiper-slide banner<?php echo $banner_class ?>" style="background-image:url('<?php echo $img['url'] ?>')">
+            <?php if ($banner_logo || $text) { ?>
+            <div class="banner-content">
+              <div class="banner-inner">
+                <?php if ($banner_logo) { ?>
+                <div class="banner-logo">
+                  <img src="<?php echo $banner_logo['url'] ?>" alt="<?php echo $banner_logo['title'] ?>">
+                </div>
+                <?php } ?>
+                <?php if ($text) { ?>
+                <div class="text"><div class="pad"><?php echo $text ?></div></div> 
+                <?php } ?>
+              </div>
+            </div>
             <?php } ?>
           </div>
         <?php } ?>

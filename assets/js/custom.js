@@ -127,7 +127,6 @@ jQuery(document).ready(function ($) {
     var weatherDescription = $('img.wp-forecast-curr-left').attr('alt'); //var weatherDescription = weatherDescription.toLowerCase().replace(/(?<= )[^\s]|^./g, a=>a.toUpperCase());
 
     var weatherDescription = weatherDescription.toLowerCase().trim();
-    console.log(weatherDescription);
     var basename = basename($('img.wp-forecast-curr-left').attr('src'));
     var extension = basename.split('.').pop();
     var iconName = 'weather-icon-' + basename.replace('.' + extension, '');
