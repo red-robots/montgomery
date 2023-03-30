@@ -1860,7 +1860,7 @@ h1.page-title{font-size:3.2rem}
 .site-footer .wrapper{padding-top:70px;padding-bottom:70px}
 .site-footer .flexwrap .fcol.right{width:30%}
 .site-footer .social-media a{margin:0 5px 0 0}
-body.page-template-default #primary,body.page-template-page-custom #primary{padding-top:90px}
+body.page-template-default #primary,body.page-template-page-custom #primary{padding-top:20px}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
 .taxonomy-banner,.static-banner{height:40rem}
 .contact-links-section .link-icon{width:20%}
