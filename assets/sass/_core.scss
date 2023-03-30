@@ -871,7 +871,8 @@ div.buttondiv {
   }
   .owl-item:first-child,
   .owl-item.center.active {
-    .item .arrow {display: block;}
+    // .item .arrow {display: block;}
+    .item .arrow {display: none!important;}
   }
   .fright .show-all {
      .item:before {
@@ -1461,8 +1462,11 @@ h1.page-title {
   .h2 {
     font-family: $font_fifth;
     font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.2;
     color: #FFF;
     letter-spacing: .25px;
+    text-transform: none;
   }
   .buttondiv {
     margin-top: 50px;

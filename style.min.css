@@ -1550,7 +1550,7 @@ div.buttondiv{margin-top:40px}
 .homerow1 .fright .item a:hover .item-title .arrow:before,.homerow1 .fright .item a:hover .item-title .arrow:after{background:#fff}
 .homerow1 .owl-nav,.homerow1 .owl-dots{display:none !important}
 .homerow1 .owl-item.active .item:before{display:none}
-.homerow1 .owl-item:first-child .item .arrow,.homerow1 .owl-item.center.active .item .arrow{display:block}
+.homerow1 .owl-item:first-child .item .arrow,.homerow1 .owl-item.center.active .item .arrow{display:none !important}
 .homerow1 .fright .show-all .item:before{display:none}
 .homerow2.section{margin-top:0}
 .carouselNavButtons{margin:30px 0 0}
@@ -1614,7 +1614,7 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .homerow5.section .block:hover .title span{-webkit-transform:translateY(0);transform:translateY(0)}
 .homerow6.section{background:#3ca7c5;margin-top:0;margin-bottom:0}
 .homerow6.section .textwrap{text-align:center;color:#fff;padding-top:100px;padding-bottom:100px;font-weight:normal}
-.homerow6.section .h2{font-family:"Adonis",serif;font-weight:bold;color:#fff;letter-spacing:.25px}
+.homerow6.section .h2{font-family:"Adonis",serif;font-weight:bold;font-size:3.5rem;line-height:1.2;color:#fff;letter-spacing:.25px;text-transform:none}
 .homerow6.section .buttondiv{margin-top:50px}
 .taxonomy-banner,.static-banner{background-color:#ededed;position:relative;height:400px}
 .taxonomy-banner img.actual-image,.static-banner img.actual-image{width:100%;height:auto;display:block}
