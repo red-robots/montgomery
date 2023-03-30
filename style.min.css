@@ -1754,7 +1754,7 @@ body.single-activities .entry-content h3{font-family:"Adonis",serif;font-size:1.
 .weatherInfo .fahrenheit:after{content:"";display:block;width:8px;height:8px;border:2px solid #4c748c;border-radius:100px;position:absolute;top:1px;right:-8px}
 .weather-icon{display:inline-block;width:20px;height:20px;position:relative;top:2px;left:-3px;background-size:contain;background-position:center;background-repeat:no-repeat}
 .accordions-section .accordion{margin-top:3rem;margin-bottom:2.5rem}
-.accordions-section .acc-title{font-size:2.5rem;line-height:1.2;margin:0 0 1.3rem}
+.accordions-section .acc-title{font-size:2.5rem;line-height:1.2;margin:0 0 1.3rem;color:#4c748c}
 .accordions-section .questions .q-item{margin:.75rem 0}
 .accordions-section .questions .q-title{font-family:"Roboto",sans-serif;font-size:1.1rem;font-weight:500;line-height:1.2;background:#4c748c;color:#fff;margin:0;position:relative}
 .accordions-section .questions .q-title a{display:block;text-decoration:none;color:#fff;padding:15px 15px}
