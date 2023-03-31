@@ -31,7 +31,7 @@ get_header(); ?>
               </div>
             </div>
             <?php } ?> 
-          <?php } elseif ( get_row_layout() == 'image_and_text' ) { 
+          <?php } else if ( get_row_layout() == 'image_and_text' ) { 
             $title = get_sub_field('title');
             $content = get_sub_field('content');
             $image = get_sub_field('image'); 
@@ -70,7 +70,50 @@ get_header(); ?>
                 </div>
               </div>
             </div>
-          <?php $n++; } ?> 
+          <?php $n++; } else if ( get_row_layout() == 'grid_layout' ) {  
+            $blocks = get_sub_field('blocks'); ?> 
+            <div class="repeatable grid-layout">
+              <div class="wrapper">
+                <div class="flexwrap blocks">
+                  <?php foreach ($blocks as $b) { 
+                    $title = $b['title'];
+                    $text = $b['text'];
+                    $btn = $b['button'];
+                    $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
+                    $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
+                    $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
+                    $image = $b['image'];
+                    ?>
+                    <div class="block">
+                      <div class="inside">
+                        <?php if ($image) { ?>
+                        <div class="bImage">
+                          <figure style="background-image:url('<?php echo $image['url'] ?>')">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rectangle-lg.png" alt="">
+                          </figure>
+                        </div>
+                        <div class="desc">
+                          <?php } ?>
+                          <?php if ($title) { ?>
+                          <div class="bTitle"><?php echo $title ?></div>
+                          <?php } ?>
+                          <?php if ($text) { ?>
+                          <div class="bText"><?php echo $text ?></div>
+                          <?php } ?>
+                          <?php if ($btnTitle && $btnLink) { ?>
+                          <div class="buttondiv">
+                            <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
+                          </div>
+                          <?php } ?>
+                        </div>
+                      </div>
+                    </div>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+          <?php } ?>
+
         <?php endwhile; ?>
       </div>
       <?php } ?>
