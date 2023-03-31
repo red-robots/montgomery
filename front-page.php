@@ -230,14 +230,15 @@ get_header();
   $event_title = get_field('event_title');
   $event_text = get_field('event_text');
   $event_visibility = get_field('event_visibility');
-  if($event_visibility=='on') { ?>
+  $displayNum = (get_field('eventNumDisplay')) ? get_field('eventNumDisplay') : 6;
+  if($event_visibility=='show') { ?>
 
     <?php  
     $today = date('Y-m-d H:i:s');
     $arg = array(
-      'post_type'     =>'events',
+      'post_type'     =>'upcoming-events',
       'post_status'   =>'publish',
-      'posts_per_page'=> 6,
+      'posts_per_page'=> $displayNum,
       'order'       => 'ASC',
       'meta_key'      => 'start_date',
       'orderby'       => 'start_date',
