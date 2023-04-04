@@ -38,14 +38,18 @@ global $obj;
 $obj = ( is_archive() ) ? get_queried_object() : '';
 $extra_class = ( get_field("banner_image") ) ? 'has-banner':'no-banner';
 if( get_field("banner_image")  ) { ?>
-<style>
-.titlediv {display: none!important;}
-</style>
+<style>.titlediv {display: none!important;}</style>
 <?php } ?>
 
 <?php if ( isset($obj->name) && $obj->name=='tribe_events' ) { 
 $extra_class = ( get_field("calendar_banner_image","option") ) ? 'has-banner':'no-banner';  
 } ?>
+
+<?php 
+$titleOpt = get_field('page_title_visibility');
+if ( $titleOpt=='hide' ) { ?>
+<style>.titlediv,h1.page-title,.default-page-title {display: none!important;}</style>
+<?php } ?>
 
 <?php wp_head(); ?>
 </head>
