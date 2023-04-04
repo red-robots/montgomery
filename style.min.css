@@ -1914,7 +1914,7 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .contact-links-section .link-icon{width:20%}
 }@media(min-width:1200px){.banners .banner .text{font-size:4.5rem}
 }@media screen and (max-width:820px){.banners .banner-content .banner-logo img.banner-logo-desktop{display:none}
-.banners .banner-content .banner-logo img.banner-logo-mobile{display:block}
+.banners .banner-content .banner-logo img.banner-logo-mobile{display:block;width:65%}
 body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c}
 .site-header,.site-header .head-inner{height:70px}
 .site-header .head-inner{padding-top:0;padding-bottom:0;width:100%;display:block;position:relative;z-index:80}
