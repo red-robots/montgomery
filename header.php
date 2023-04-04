@@ -38,7 +38,7 @@ global $obj;
 $obj = ( is_archive() ) ? get_queried_object() : '';
 $extra_class = ( get_field("banner_image") ) ? 'has-banner':'no-banner';
 if( get_field("banner_image")  ) { ?>
-<style>.titlediv {display: none!important;}</style>
+<style>.titlediv:not(.typical) {display: none!important;}</style>
 <?php } ?>
 
 <?php if ( isset($obj->name) && $obj->name=='tribe_events' ) { 

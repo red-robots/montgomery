@@ -14,9 +14,9 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if ( !$banner ) { ?>
-				<h1 class="page-title"><?php the_title(); ?></h1>
-			<?php } ?>
+			<div class="titlediv typical">
+        <h1 class="page-title"><span><?php the_title(); ?></span></h1>
+      </div>
 
       <?php if ( get_the_content() ) { ?>
 			<div class="entry-content padtop">
