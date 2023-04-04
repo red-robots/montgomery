@@ -1660,6 +1660,24 @@ body.subpage.has-banner {
     left: 0;
     width: 100%;
   }
+  .page-default-template {
+    .site-main.wrapper {
+      h1.page-title {
+        margin:1.3em auto 0.5em;
+      }
+      .entry-content {
+        .wp-block-group.alignwide {
+          max-width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        &.padtop {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
 }
 
 body.subpage.no-banner {

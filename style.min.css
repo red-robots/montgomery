@@ -1637,6 +1637,9 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .page-default-template .site-main.wrapper .entry-content .wp-block-group.alignwide{max-width:100%;padding-left:0;padding-right:0}
 .page-default-template .site-main.wrapper .entry-content.padtop{padding-top:0}
 body.subpage.has-banner .site-header{position:fixed;top:0;left:0;width:100%}
+body.subpage.has-banner .page-default-template .site-main.wrapper h1.page-title{margin:1.3em auto .5em}
+body.subpage.has-banner .page-default-template .site-main.wrapper .entry-content .wp-block-group.alignwide{max-width:100%;padding-left:0;padding-right:0}
+body.subpage.has-banner .page-default-template .site-main.wrapper .entry-content.padtop{padding-top:50px;padding-bottom:50px}
 body.subpage.no-banner .site-header{position:relative;top:0;background-color:rgba(255,255,255,.8);-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 body.subpage.no-banner.logged-in.admin-bar .site-header{top:0}
 .repeatable-blocks{padding-bottom:40px}
