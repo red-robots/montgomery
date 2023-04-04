@@ -499,7 +499,7 @@ a {
   height: 400px;
   background-color: #CCC;
   @include tab {
-    height: 65vh;
+    height: 77vh;
   }
   img.actual-image {
     width: 100%;
@@ -534,13 +534,16 @@ a {
       padding-right: 20px;
       @include tab {
         text-align: left;
-        font-size: 4.5rem;
+        font-size: 3.2rem;
         padding-bottom: 0;
         padding-left: 0;
         padding-right: 0;
         max-width: 80vw;
         @include flexgroup();
         justify-content: flex-end;
+      }
+      @include desk {
+        font-size: 4.5rem;
       }
     }
     .pad {
@@ -1612,6 +1615,44 @@ h1.page-title {
   }
 }
 
+.entry-content.padtop {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.custom-page-layout {
+  h1.page-title {
+    max-width: 80%;
+    width: 100%;
+    margin:1.3em auto 0.5em;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .entry-content.padtop {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.page-default-template {
+  .site-main.wrapper {
+    h1.page-title {
+      margin:1.3em auto 0.5em;
+    }
+    .entry-content {
+      .wp-block-group.alignwide {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &.padtop {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+
 body.subpage.has-banner {
   .site-header {
     position: fixed;
@@ -1621,6 +1662,20 @@ body.subpage.has-banner {
   }
 }
 
+body.subpage.no-banner {
+  .site-header {
+    position: relative;
+    top: 0;
+    background-color: rgba(255,255,255,.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(2px);
+  }
+  &.logged-in.admin-bar {
+    .site-header {
+      top: 0;
+    }
+  }
+}
 
 .repeatable-blocks {
   padding-bottom: 40px;
@@ -2620,7 +2675,6 @@ body.page-template-page-custom {
     .bImage {
       width: 100%;
       float: left;
-      margin-bottom: 20px;
       figure {
         margin: 0 0;
         width: 100%;
@@ -2638,10 +2692,13 @@ body.page-template-page-custom {
     .desc {
       width: 100%;
       float: left;
+      padding: 20px;
+      background: $gray;
     }
     .bTitle {
       font-family: $font_heading;
       font-size: 1.75rem;
+      line-height: 1.2;
       margin: 0 0 15px;
       text-transform: uppercase;
       color: $primary;

@@ -1,19 +1,16 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package bellaworks
- */
+/*
+Template Name: Custom page layout
+Template Post Type: post, upcoming-events
+*/
 
 $placeholder = THEMEURI . 'images/rectangle.png';
 $banner = get_field("banner_image");
 $has_banner = ($banner) ? 'hasbanner':'nobanner';
 get_header(); ?>
 
-<div id="primary" class="content-area-full content-default page-default-template <?php echo $has_banner ?>">
-	<main id="main" class="site-main wrapper" role="main">
+<div id="primary" class="content-area-full custom-page-layout <?php echo $has_banner ?>">
+	<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
