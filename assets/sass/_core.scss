@@ -603,11 +603,25 @@ a {
       img {
         width: 140px;
         height: auto;
+        margin: 2em auto;
         @include tab {
           width: auto;
           height: 20vh;
         }
+        &.banner-logo-mobile {
+          display: none;
+        }
+
+        @include max($tabwidth) {
+          &.banner-logo-desktop {
+            display: none;
+          }
+          &.banner-logo-mobile {
+            display: block;
+          }
+        }
       }
+
     }
   }
 

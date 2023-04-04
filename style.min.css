@@ -1516,7 +1516,8 @@ a:hover{color:#191970}
 .banners .banner-content:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:rgba(0,0,0,.25)}
 .banners .banner-content .banner-inner{width:100%;position:relative;z-index:5}
 .banners .banner-content .banner-logo{text-align:center;-webkit-transform:translateY(-3vh);transform:translateY(-3vh)}
-.banners .banner-content .banner-logo img{width:140px;height:auto}
+.banners .banner-content .banner-logo img{width:140px;height:auto;margin:2em auto}
+.banners .banner-content .banner-logo img.banner-logo-mobile{display:none}
 .banners .banner.logo-and-text{text-align:center}
 .banners .banner.logo-and-text .banner-content{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .banners .banner.logo-and-text .banner-content .banner-logo{-webkit-transform:translateY(0);transform:translateY(0)}
@@ -1912,7 +1913,9 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .taxonomy-banner,.static-banner{height:40rem}
 .contact-links-section .link-icon{width:20%}
 }@media(min-width:1200px){.banners .banner .text{font-size:4.5rem}
-}@media screen and (max-width:820px){body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c}
+}@media screen and (max-width:820px){.banners .banner-content .banner-logo img.banner-logo-desktop{display:none}
+.banners .banner-content .banner-logo img.banner-logo-mobile{display:block}
+body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c}
 .site-header,.site-header .head-inner{height:70px}
 .site-header .head-inner{padding-top:0;padding-bottom:0;width:100%;display:block;position:relative;z-index:80}
 .site-header #menu-toggle{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:12px}
