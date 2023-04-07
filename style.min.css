@@ -1807,6 +1807,7 @@ body.scrolled .main-navigation.show{height:100vh}
 body.page-template-default .site-header,body.page-template-page-custom .site-header{position:relative;background-color:rgba(255,255,255,.8);-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1)}
 body.page-template-default #primary,body.page-template-page-custom #primary{padding-top:0;padding-bottom:90px;min-height:20em}
 body.page-template-default.logged-in.admin-bar .site-header,body.page-template-page-custom.logged-in.admin-bar .site-header{top:0}
+body.home #primary{padding-bottom:0}
 .generic-layout .wp-block-group.alignwide{max-width:100%;width:100%;padding-left:0;padding-right:0}
 .site-logo.mobile{display:none}
 .grid-layout{margin:0}
