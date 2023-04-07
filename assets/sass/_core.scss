@@ -919,7 +919,7 @@ div.buttondiv {
 .homerow2.section {
   margin-top: 0;
   @include tab {
-    margin-top: 80px;
+    margin-top: 0;
   }
 }
 
@@ -1032,6 +1032,11 @@ h1.page-title {
       margin-bottom: 120px;
     }
   }
+  .flex-content:first-child {
+    @include tab {
+      margin-top: 0;
+    }
+  }
   .flexwrap {
     position: relative;
     z-index: 10;
@@ -1116,7 +1121,7 @@ h1.page-title {
     }
     @include tab {
       position: absolute;
-      top: 50px;
+      top: 60px;
       right: 0;
       width: 70%;
       height: 100%;
@@ -2811,7 +2816,8 @@ body.page-template-page-custom {
     padding-bottom: 90px;
     min-height: 20em;
     @include tab {
-      padding-top: 20px;
+      // padding-top: 20px;
+      padding-top: 0;
     }
   }
   &.logged-in.admin-bar {
