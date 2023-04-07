@@ -37,6 +37,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $font_heading;
   color: #000;
+  letter-spacing: 0.0352em;
 }
 .h1, h1 {
   font-size: 2rem;
@@ -47,7 +48,6 @@ h1,h2,h3,h4,h5,h6 {
 h2 {
   font-size: 1.8rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
   @include tab {
     font-size: 2.5em;
   }
@@ -175,13 +175,14 @@ a {
   }
 }
 .site-header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
-  z-index: 200;
-  background-color: rgba(255,255,255,.75);
+  // height: 120px;
+  height: 80px;
+  z-index: 300;
+  background-color: #FFF;
   .wrapper {
     position: relative;
   }
@@ -197,10 +198,17 @@ a {
 .site-logo {
   display: inline-block;
   width: 110px;
-  a, img {
+  a {
     display: block;
     width: 100%;
-    height: auto;
+  }
+  img {
+    display: block;
+    width: auto;
+    height: 75px;
+    margin: 0 auto;
+    position: relative;
+    top: -9px;
   }
   @include tab {
     position: absolute;
@@ -281,7 +289,7 @@ a {
 
 .head-button, #menu-toggle {
   position: relative;
-  bottom: -35px;
+  bottom: 0;
 }
 .main-navigation {
   position: fixed;
@@ -311,6 +319,7 @@ a {
     font-family: $font_secondary;
     font-weight: 400;
     color: #FFF;
+    letter-spacing: 0.055em;
   }
   ul.menu li > a {
     text-transform: uppercase;
@@ -366,9 +375,12 @@ a {
   @include flexgroup();
   justify-content: flex-end;
   align-items: flex-start;
-  bottom: -40px;
+  bottom: 0;
   .head-button {
-    bottom: 5px;
+    bottom: 0;
+  }
+  .weatherInfo {
+    top: 5px;
   }
   .search-button {
     display: inline-block;
@@ -381,7 +393,7 @@ a {
     margin-right: 20px;
     margin-left: 30px;
     position: relative;
-    bottom: -3px;
+    bottom: -8px;
     i {
       display: block;
       width: 0;
@@ -639,6 +651,7 @@ a {
     }
     .text {
       justify-content: center;
+      letter-spacing: 0.02em;
       .pad {
         font-size: 1.8rem;
         width: 100%;
@@ -823,8 +836,12 @@ div.buttondiv {
         align-items: center;
       }
       a {
+        color: $primary;
         margin-right: 40px;
         width: auto;
+        &:hover {
+          color: $yellow1;
+        }
       }
       .arrow {
         display: none;
@@ -997,6 +1014,7 @@ h1.page-title {
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 0.5em;
+  letter-spacing: 0.035em;
   @include tab {
     font-size: 3.2rem;
   }
@@ -1670,9 +1688,9 @@ h1.page-title {
 
 body.subpage.has-banner {
   .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
     width: 100%;
   }
   .page-default-template {
@@ -1761,11 +1779,11 @@ body.single-tribe_events {
   padding-bottom: 40px;
   .h2 {
     margin: 0 0 30px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.035em;
   }
   .fullwidth {
     .wrapper {
-      padding-top: 70px;
+      padding-top: 60px;
       padding-bottom: 60px;
     }
     .buttondiv {
@@ -2040,7 +2058,7 @@ body.single-tribe_events {
 
 .taxonomy-content {
   &.no-cat-desc {
-    padding-top: 5rem;
+    padding-top: 4rem;
     padding-bottom: 3rem;
   }
   .wrapper {
@@ -2053,13 +2071,25 @@ body.single-tribe_events {
     }
   }
   .taxonomy-posts {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include tab {
+      max-width: 83%;
+    }
     .flexwrap {
       @include flexgroup();
       justify-content: center;
       margin: -15px;
       padding-bottom: 30px;
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 0;
+      padding-right: 0;
+      @include tab {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
     }
     .item {
       padding: 15px;
@@ -2097,12 +2127,23 @@ body.single-tribe_events {
     .info {
       padding: 30px;
     }
+    &.count-1,
+    &.count-2,
+    &.count-4,
+    &.count-5 {
+      .flexwrap {
+        justify-content: flex-start;
+      }
+    }
   }
 }
 
 body.single-activities {
+  .titlediv {
+    margin-top: 45px;
+  }
   .entry-content {
-    padding-top: 5rem;
+    // padding-top: 5rem;
     padding-bottom: 5rem;
     p:last-child {
       margin-bottom: 0;
@@ -2393,6 +2434,29 @@ body.single-activities {
         background-repeat: no-repeat;
       }
     }
+  }
+  &.tax-title {
+    .page-title {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.titlediv.nomb {
+  .page-title {
+    margin-top: 45px;
+    margin-bottom: 0!important;
+  }
+}
+
+body.post-type-archive-tribe_events {
+  .tribe-common-l-container.tribe-events-l-container {
+    max-width: 100%!important;
+    width: 100%!important;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 70px;
   }
 }
 
@@ -2699,21 +2763,41 @@ body.single-activities {
 
 body.scrolled {
   .site-header {
-    background-color: rgba(255,255,255,.8);
+    position: fixed!important;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     backdrop-filter: blur(2px);
+    * {
+      transition: all ease .3s;
+    }
+    @media screen and (min-width: 783px) {
+      // height: 75px;
+      background-color: #FFF!important;
+      .head-button, #menu-toggle {
+        bottom: 0;
+      }
+      .site-logo img {
+        // height: 75px;
+        // width: auto;
+        // display: block;
+        // margin: 0 auto;
+        // position: relative;
+        // top: -4px;
+      }
+    }
   }
   .main-navigation.show {
     height: 100vh;
   }
+  
 }
-body.logged-in.admin-bar {
+body.logged-in.admin-bar.scrolled {
   @media screen and (min-width: 783px) {
     .site-header {
-      top: 32px;
+      top: 32px!important;
     }
   }
 }
+
 
 body.page-template-default,
 body.page-template-page-custom {
@@ -2964,4 +3048,23 @@ body.post-type-archive-tribe_events {
   font-size: 1.2em;
   line-height: 1.2;
 }
-
+body.single-tribe_events {
+  .hentry .tribe-events-event-image {
+    img {
+      display: none;
+    }
+    &.image-bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 30vh;
+      @include tab {
+        height: 45vh;
+      }
+      @include desk {
+        height: 40vh;
+      }
+    }
+  }
+}

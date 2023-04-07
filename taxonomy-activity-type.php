@@ -39,8 +39,8 @@ $has_cat_description = ( category_description( $current_term_id ) ) ? 'has-cat-d
       )
     );
     $posts = new WP_Query($args);
-    if ($posts->have_posts()) { ?>
-    <div class="taxonomy-posts">
+    if ($posts->have_posts()) { $count = $posts->found_posts;?>
+    <div class="taxonomy-posts count-<?php echo $count?>">
       <div class="flexwrap">
         <?php while ($posts->have_posts()) : $posts->the_post(); 
           $main_photo = get_field('main_photo');

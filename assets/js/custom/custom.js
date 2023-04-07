@@ -138,4 +138,11 @@ jQuery(document).ready(function ($) {
     $(this).parents('.q-item').toggleClass('active');
     //$(this).parents('.q-item').find('.q-text').show();
   });
+
+  /* Tribe Events >  Single page Featured Image */
+  if( $('body.single-tribe_events .hentry .tribe-events-event-image').length ) {
+    var tribeImage = $('body.single-tribe_events .hentry .tribe-events-event-image img').attr('src');
+    $('body.single-tribe_events .hentry .tribe-events-event-image').addClass('image-bg');
+    $('body.single-tribe_events .hentry .tribe-events-event-image').css('background-image','url('+tribeImage+')');
+  }
 }); 

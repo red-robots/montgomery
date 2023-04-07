@@ -14,6 +14,13 @@ get_header(); ?>
         $form_shortcode = get_field('form_shortcode');
         $form_div = ($from_content && $form_shortcode) ? 'twocol':'onecol';
       ?>
+
+      <div class="titlediv typical nomb">
+        <div class="wrapper">
+          <h1 class="page-title"><span><?php the_title(); ?></span></h1>
+        </div>
+      </div>
+
       <?php if ($intro_content) { ?>
       <div class="intro-content font16">
         <div class="wrapper"><div class="text"><?php echo $intro_content ?></div></div>

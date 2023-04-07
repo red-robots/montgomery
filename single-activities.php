@@ -13,7 +13,7 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
       <div class="wrapper">
-        <div class="titlediv"><h1 class="page-title"><?php the_title(); ?></h1></div>
+        <div class="titlediv typical"><h1 class="page-title"><span><?php the_title(); ?></span></h1></div>
         <?php if ( $intro = get_field('intro') ) { ?>
         <div class="entry-content">
           <?php echo anti_email_spam($intro); ?>

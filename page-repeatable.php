@@ -3,10 +3,17 @@
  * Template Name: Repeatable Blocks
  */
 
-get_header(); ?>
+get_header(); 
+?>
 <div id="primary" class="content-area-full repeatable-layout ">
 	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
+
+    <div class="titlediv typical nomb">
+      <div class="wrapper">
+        <h1 class="page-title"><span><?php the_title(); ?></span></h1>
+      </div>
+    </div>
 			
       <?php if( have_rows('repeatable_blocks') ) { ?>
       <div class="repeatable-blocks">
