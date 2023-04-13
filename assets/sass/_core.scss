@@ -1027,7 +1027,7 @@ h1.page-title {
     margin-bottom: 20px;
     position: relative;
     @include tab {
-      padding-top: 150px;
+      padding-top: 100px;
       margin-top: 50px;
       margin-bottom: 120px;
     }
@@ -2826,7 +2826,12 @@ body.page-template-page-custom {
     }
   }
 }
-body.home #primary {padding-bottom: 0}
+body.home {
+  background-color: $gray;
+  #primary {
+    padding-bottom: 0
+  }
+}
 
 .generic-layout {
   .wp-block-group.alignwide {
@@ -3066,11 +3071,8 @@ body.single-tribe_events {
       background-repeat: no-repeat;
       width: 100%;
       height: 30vh;
-      @include tab {
-        height: 45vh;
-      }
       @include desk {
-        height: 40vh;
+        height: 45vh;
       }
     }
   }
