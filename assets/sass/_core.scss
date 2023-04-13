@@ -2835,6 +2835,14 @@ body.scrolled {
   }
   
 }
+body.logged-in.admin-bar {
+  @media screen and (max-width: $tabwidth) {
+    padding-top: 68px;
+    .site-header#masthead {
+      top: 46px;
+    }
+  }
+}
 body.logged-in.admin-bar.scrolled {
   @media screen and (min-width: 783px) {
     .site-header {
@@ -2956,6 +2964,9 @@ body.home {
 
 /* MOBILE */
 @include max($tabwidth) {
+  body {
+    padding-top: 70px;
+  }
   body.page-template-default .site-header,
   body.page-template-page-custom .site-header,
   .site-header {
@@ -2966,6 +2977,11 @@ body.home {
     height: 70px;
   }
   .site-header {
+    position: fixed!important;
+    .site-logo img {
+      height: 65px;
+      top: 0;
+    }
     .head-inner {
       padding-top: 0;
       padding-bottom: 0;

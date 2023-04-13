@@ -1944,8 +1944,13 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
 }@media screen and (max-width:820px){.banners .banner-content .banner-logo img.banner-logo-desktop{display:none}
 .banners .banner-content .banner-logo img.banner-logo-mobile{display:block;width:65%}
+body.logged-in.admin-bar{padding-top:68px}
+body.logged-in.admin-bar .site-header#masthead{top:46px}
+body{padding-top:70px}
 body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c}
 .site-header,.site-header .head-inner{height:70px}
+.site-header{position:fixed !important}
+.site-header .site-logo img{height:65px;top:0}
 .site-header .head-inner{padding-top:0;padding-bottom:0;width:100%;display:block;position:relative;z-index:80}
 .site-header #menu-toggle{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:12px}
 .site-header .headtopright{width:100vw;height:50px;display:block;position:absolute;left:-15px;bottom:-48px;background:#4c748c;text-align:right}

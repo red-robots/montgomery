@@ -70,7 +70,7 @@ if ( $titleOpt=='hide' ) { ?>
         <?php $mobileLogo = get_field('logo_mobile','option'); ?>
         <?php if ($mobileLogo) { ?>
         <span class="site-logo mobile">
-          <a hef="<?php bloginfo('url'); ?>"><img src="<?php echo $mobileLogo['url'] ?>" alt="<?php echo $mobileLogo['title'] ?>"></a>
+          <a href="<?php bloginfo('url'); ?>" class="custom-logo-link" rel="home"><img src="<?php echo $mobileLogo['url'] ?>" alt="<?php echo $mobileLogo['title'] ?>"></a>
         </span>
         <?php } ?>
   			<?php if( get_custom_logo() ) { ?>
