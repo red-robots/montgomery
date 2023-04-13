@@ -1769,7 +1769,7 @@ body.single-activities .entry-content h3{font-family:"Adonis",serif;font-size:1.
 .titlediv.typical.tax-title .page-title{margin-top:50px;margin-bottom:0}
 .titlediv.nomb .page-title{margin-top:45px;margin-bottom:0 !important}
 body.post-type-archive-tribe_events .tribe-common-l-container.tribe-events-l-container{max-width:100% !important;width:100% !important;padding-left:0;padding-right:0;padding-top:70px}
-.site-footer{background:#4c748c;color:#fff;font-size:15px;font-weight:normal;line-height:1.2;position:relative;border-top:20px solid #cea155}
+.site-footer{width:100%;float:left;background:#4c748c;color:#fff;font-size:15px;font-weight:normal;line-height:1.2;position:relative;border-top:20px solid #cea155}
 .site-footer:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;right:0;background-image:url("images/symbol-large.svg");background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.8}
 .site-footer a:hover{color:#3ca7c5 !important}
 .site-footer .wrapper{padding-top:50px;padding-bottom:50px;position:relative;z-index:5}
