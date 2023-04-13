@@ -1672,6 +1672,8 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image.orig-size .flexwrap{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .repeatable-blocks .repeatable.text-image.orig-size .imagecol img.helper{display:none}
 .repeatable-blocks .repeatable.text-image.orig-size .imagecol img.actual{display:block}
+.repeatable-blocks .repeatable.text-image.full .flexwrap{max-width:80%;width:100%;margin:0 auto}
+.repeatable-blocks .repeatable.text-image.full .flexwrap .textcol,.repeatable-blocks .repeatable.text-image.full .flexwrap .imagecol{width:100%}
 .contact-page .intro-content .wrapper{padding-top:70px;padding-bottom:60px}
 .contact-form-section .fxcol{width:100%}
 .contact-form-section .fxcol.text{padding:50px 20px;background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-size:cover;text-align:center}

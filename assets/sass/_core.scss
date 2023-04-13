@@ -1898,6 +1898,17 @@ body.single-tribe_events {
         }
       }
     }
+
+    &.full {
+      .flexwrap {
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+        .textcol, .imagecol {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
