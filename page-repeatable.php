@@ -42,8 +42,13 @@ get_header();
             $title = get_sub_field('title');
             $content = get_sub_field('content');
             $image = get_sub_field('image'); 
+            $imageSize = get_sub_field('image_size'); 
+            $text_alignment = get_sub_field('text_alignment'); 
+
             $col = ( ($title || $content) && $image ) ? 'half':'full';
             $col .= ($n % 2==0) ? ' even':' odd';
+            $col .= ($imageSize) ? ' orig-size':' crop-size';
+            $col .= ($text_alignment) ? ' text-'.$text_alignment:' text-left';
 
             $button = get_sub_field('button'); 
             $btn_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';

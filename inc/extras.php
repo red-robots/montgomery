@@ -323,6 +323,19 @@ function admin_css_func() { ?>
     width: 50px;
     height: auto;
   }
+  [data-name="repeatable_blocks"] [data-name="image_size"]{
+    position: relative;
+  }
+  [data-name="repeatable_blocks"] [data-name="image_size"] div.acf-label {
+    margin-bottom: 0;
+    padding-left: 25px;
+  }
+  [data-name="repeatable_blocks"] [data-name="image_size"] div.acf-input {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    left: 17px;
+  }
 </style>
 <?php }
 

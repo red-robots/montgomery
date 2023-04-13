@@ -1605,7 +1605,7 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .homerow4 .fcol.right{width:100%}
 .homerow4 .fcol.right figure{margin:0;width:100%;float:left;background-color:#ccc;background-size:cover;background-position:center;background-repeat:no-repeat}
 .homerow4 .fcol.right figure img{width:100%;height:auto;float:left}
-.homerow5.section{margin-top:0;margin-bottom:0;padding:100px 0;background-image:url("images/wave-big.svg");background-size:40%;background-position:center;background-repeat:repeat}
+.homerow5.section{margin-top:0;margin-bottom:0;padding:100px 0;background-image:url("images/wave-big.svg");border-top:1px solid #d5e0e3;background-size:40%;background-position:center;background-repeat:repeat}
 .homerow5.section .titlediv{text-align:center;margin-bottom:50px}
 .homerow5.section .flexwrap{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .homerow5.section .block{display:block;text-decoration:none;width:100%;padding:25px}
@@ -1667,11 +1667,17 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image figure img{width:100%;height:auto}
 .repeatable-blocks .repeatable.text-image figure img.helper{display:none}
 .repeatable-blocks .repeatable.text-image figure img.actual{display:block}
+.repeatable-blocks .repeatable.text-image.text-middle .textcol{text-align:center}
+.repeatable-blocks .repeatable.text-image.text-right .textcol{text-align:right}
+.repeatable-blocks .repeatable.text-image.orig-size .flexwrap{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.repeatable-blocks .repeatable.text-image.orig-size .imagecol img.helper{display:none}
+.repeatable-blocks .repeatable.text-image.orig-size .imagecol img.actual{display:block}
 .contact-page .intro-content .wrapper{padding-top:70px;padding-bottom:60px}
 .contact-form-section .fxcol{width:100%}
 .contact-form-section .fxcol.text{padding:50px 20px;background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-size:cover;text-align:center}
 .contact-form-section .fxcol.text .inside{color:#fff}
 .contact-form-section .fxcol.text .inside p:last-child{margin-bottom:0}
+.contact-form-section .fxcol.text .inside p:empty{display:none}
 .contact-form-section .fxcol.form{background:#eee;padding:20px}
 .contact-form-section .fxcol.form .gform_title{display:none}
 .contact-form-section .fxcol.form input[type=text],.contact-form-section .fxcol.form input[type=email],.contact-form-section .fxcol.form textarea{border:1px solid #fff;outline:0;padding:5px 10px}
@@ -1690,6 +1696,7 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .contact-form-section .phone i{-webkit-transform:scaleX(-1);transform:scaleX(-1)}
 .contact-form-section a{text-decoration:none;color:#fff}
 .contact-form-section a:hover{color:#ffc35d}
+.contact-form-section .fxcol.text p:empty{display:none}
 .contact-links-section .wrapper{padding-top:50px;padding-bottom:50px}
 .contact-links-section .flexwrap{-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .contact-links-section .link-icon{width:50%;padding:25px 10px;text-align:center}

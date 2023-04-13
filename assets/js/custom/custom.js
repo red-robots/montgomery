@@ -145,4 +145,14 @@ jQuery(document).ready(function ($) {
     $('body.single-tribe_events .hentry .tribe-events-event-image').addClass('image-bg');
     $('body.single-tribe_events .hentry .tribe-events-event-image').css('background-image','url('+tribeImage+')');
   }
+
+  /* Contact us page contact section (teal background) */
+  if( $('.contact-form-section .fxcol.text').length ) {
+    $('.contact-form-section .fxcol.text p').each(function(){
+      var pstr = $(this).text().trim().replace(/\s+/g,'');
+      if(pstr=='') { /* remove empty paragrap */
+        $(this).remove();
+      }
+    });
+  }
 }); 

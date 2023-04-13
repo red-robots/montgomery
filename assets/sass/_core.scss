@@ -1416,6 +1416,7 @@ h1.page-title {
   margin-bottom: 0;
   padding: 100px 0;
   background-image: url('images/wave-big.svg');
+  border-top: 1px solid #d5e0e3;
   // background-image: url('images/wavy-lines.png');
   background-size: 40%;
   background-position: center;
@@ -1809,9 +1810,6 @@ body.single-tribe_events {
       padding-left: 0;
       padding-right: 0;
     }
-    &.odd {
-      // background-color: $gray;
-    }
     .textcol, .imagecol {
       width: 100%;
       @include tab {
@@ -1877,6 +1875,29 @@ body.single-tribe_events {
         }
       }
     }
+    &.text-middle {
+      .textcol {
+        text-align: center;
+      }
+    }
+    &.text-right {
+      .textcol {
+        text-align: right;
+      }
+    }
+    &.orig-size {
+      .flexwrap {
+       align-items: center; 
+      }
+      .imagecol {
+        img.helper {
+          display: none;
+        }
+        img.actual {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -1915,6 +1936,9 @@ body.single-tribe_events {
         color: #FFF;
         p:last-child {
           margin-bottom: 0;
+        }
+        p:empty {
+          display: none;
         }
       }
     }
@@ -1989,6 +2013,9 @@ body.single-tribe_events {
     &:hover {
       color: $yellow1;
     }
+  }
+  .fxcol.text {
+    p:empty {display:none}
   }
 }
 
