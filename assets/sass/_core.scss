@@ -240,18 +240,20 @@ a {
 
 #menu-toggle {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  // height: 40px;
   // background-image: url('images/menu.svg');
   // background-position: 100%;
   // background-size: contain;
   // background-repeat: no-repeat;
+  width: 33px;
+  height: 28px;
   z-index: 50;
   span.bar, 
   span.bar:before,
   span.bar:after {
     display: block;
-    height: 3px;
+    height: 2px;
     background: $primary;
     position: absolute;
     left: 0;
@@ -269,10 +271,10 @@ a {
     width: 100%;
   }
   span.bar:before {
-   top: -10px; 
+   top: -9px; 
   }
   span.bar:after {
-   top: 10px; 
+   top: 9px; 
   }
   &:hover {
     span.bar, 
@@ -289,7 +291,7 @@ a {
 
 .head-button, #menu-toggle {
   position: relative;
-  bottom: 0;
+  bottom: -7px;
 }
 .main-navigation {
   position: fixed;
@@ -2817,9 +2819,9 @@ body.scrolled {
     @media screen and (min-width: 783px) {
       // height: 75px;
       background-color: #FFF!important;
-      .head-button, #menu-toggle {
-        bottom: 0;
-      }
+      // .head-button, #menu-toggle {
+      //   bottom: 0;
+      // }
       .site-logo img {
         // height: 75px;
         // width: auto;
