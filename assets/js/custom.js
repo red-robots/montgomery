@@ -140,8 +140,8 @@ jQuery(document).ready(function ($) {
   /* Accordions */
 
 
-  $('.accordion .q-title a, .accordion .q-title a span').on('click', function () {
-    $(this).toggleClass('active');
+  $('.accordion .q-title').on('click', function () {
+    $(this).find('a').toggleClass('active');
     $(this).parents('.q-item').toggleClass('active'); //$(this).parents('.q-item').find('.q-text').show();
   });
   /* Tribe Events >  Single page Featured Image */
