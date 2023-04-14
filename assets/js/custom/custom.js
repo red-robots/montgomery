@@ -89,17 +89,27 @@ jQuery(document).ready(function ($) {
 
 
   /* Add Class when scroll down */
-  
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      $("body").removeClass('scrolled');
+  // var prevScrollpos = window.pageYOffset;
+  // window.onscroll = function () {
+  //   var currentScrollPos = window.pageYOffset;
+  //   if (prevScrollpos > currentScrollPos) {
+  //     $("body").removeClass('scrolled');
+  //   } else {
+  //     $("body").addClass('scrolled');
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // }
+
+  var targetDiv = $('body');
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop();
+    // change amount here to choose distance from top to add class
+    if( windowpos >= 50 ) {
+      targetDiv.addClass('scrolled');
     } else {
-      $("body").addClass('scrolled');
+      targetDiv.removeClass('scrolled');
     }
-    prevScrollpos = currentScrollPos;
-  }
+  });
 
   /* Weather conversion from Celcius to Fahrenheit */
   if( $('.wp-forecast').length && $('img.wp-forecast-curr-left').length ) {

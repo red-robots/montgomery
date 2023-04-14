@@ -111,7 +111,6 @@ get_header();
                 <h4 class="t2"><?php echo $title2 ?></h4>  
                 <?php } ?>
               </div>
-              <div class="text_divider <?php echo $type ?>"><?php include( locate_template('images/symbol/'.$type.'.svg') ); ?></div>
               <?php } ?>
 
               <?php if ($text || $button) { ?>

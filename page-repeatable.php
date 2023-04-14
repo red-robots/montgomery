@@ -26,7 +26,7 @@ get_header();
             $btn_title = (isset($button['title']) && $button['title']) ? $button['title'] : '';
             $btn_url = (isset($button['url']) && $button['url']) ? $button['url'] : '';
             if($title || $content) { ?>
-            <div class="repeatable fullwidth">
+            <div class="repeatable fullwidth <?php echo ($title) ? 'has-subtitle':'no-subtitle' ?>">
               <div class="wrapper">
               <?php if ($title) { ?><h2 class="h2"><?php echo $title ?></h2><?php } ?>
               <?php if ($content) { ?><div class="text font16"><?php echo anti_email_spam($content) ?></div><?php } ?>

@@ -37,7 +37,7 @@ get_header(); ?>
 
               <div class="table-data">
                 <div class="thead flexwrap">
-                  <div class="tbcol c1">TRIP OPTION</div>
+                  <div class="tbcol c1">OPTIONS</div>
                   <div class="tbcol c2">DIFFICULTY</div>
                   <div class="tbcol c3">QUALIFIER</div>
                 </div>

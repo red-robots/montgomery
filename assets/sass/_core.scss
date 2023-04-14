@@ -33,6 +33,10 @@ body {
 	font-weight: normal;
 	line-height: 1.4;
 	color: $color_text_main;
+  padding-top: 75px;
+  &.subpage.no-banner {
+    padding-top: 100px;
+  }
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: $font_heading;
@@ -175,7 +179,7 @@ a {
   }
 }
 .site-header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -183,6 +187,7 @@ a {
   height: 80px;
   z-index: 300;
   background-color: #FFF;
+  transition: all ease .5s;
   .wrapper {
     position: relative;
   }
@@ -298,7 +303,7 @@ a {
   top: 0;
   left: -100vw;
   width: 330px;
-  height: 100%;
+  height: 100vh;
   z-index: -99;
   overflow: auto;
   transition: all ease .5s;
@@ -923,6 +928,19 @@ div.buttondiv {
   @include tab {
     margin-top: 0;
   }
+  .flex-content {
+    .titlediv {
+      position: relative;
+      &:after {
+        content:"";
+        display: block;
+        width: 130px;
+        height: 2px;
+        background: $yellow2;
+        margin: 10px 0 20px;
+      }
+    }
+  }
 }
 
 .carouselNavButtons {
@@ -1030,13 +1048,14 @@ h1.page-title {
     position: relative;
     @include tab {
       padding-top: 100px;
-      margin-top: 50px;
-      margin-bottom: 120px;
+      margin-top: 70px;
+      margin-bottom: 130px;
     }
   }
   .flex-content:first-child {
     @include tab {
       margin-top: 0;
+      margin-bottom: 0;
     }
   }
   .flexwrap {
@@ -1369,8 +1388,7 @@ h1.page-title {
     padding: 50px 0 0;
     margin-top: 0;
     @include tab {
-      margin-top: 80px;
-      padding: 100px 0;
+      padding: 0 0 80px;
     }
   }
   .fcol.left {
@@ -1732,7 +1750,7 @@ body.subpage.has-banner {
 
 body.subpage.no-banner {
   .site-header {
-    position: relative;
+    // position: relative;
     top: 0;
     background-color: rgba(255,255,255,.8);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -1796,6 +1814,11 @@ body.single-tribe_events {
     }
     .buttondiv {
       margin-bottom: 20px;
+    }
+  }
+  .fullwidth.no-subtitle {
+    .wrapper {
+      padding-top: 10px;
     }
   }
   .repeatable:nth-child(even) {
@@ -2465,18 +2488,27 @@ body.single-activities {
     span {
       display: inline-block;
       position: relative;
+      // &:after {
+      //   content: "";
+      //   display: block;
+      //   position: relative;
+      //   bottom: -15px;
+      //   left: 0;
+      //   width: 150px;
+      //   height: 30px;
+      //   background-image: url('images/symbol/water.svg');
+      //   background-size: contain;
+      //   background-position: center;
+      //   background-repeat: no-repeat;
+      // }
       &:after {
         content: "";
         display: block;
+        width: 100px;
+        height: 2px;
+        background: $yellow2;
         position: relative;
-        bottom: -15px;
-        left: 0;
-        width: 150px;
-        height: 30px;
-        background-image: url('images/symbol/water.svg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+        margin: 10px 0 20px;
       }
     }
   }
@@ -2525,7 +2557,7 @@ body.post-type-archive-tribe_events {
     right: 0;
     background-image: url('images/symbol-large.svg');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.8;
     @include tab {
@@ -2593,18 +2625,28 @@ body.post-type-archive-tribe_events {
         .inner {
           padding: 25px 0 10px;
           position: relative;
+          // &:before {
+          //   content:"";
+          //   display: block;
+          //   width: 20px;
+          //   height: 100%;
+          //   background-image: url('images/wave-vertical.svg');
+          //   background-position: center;
+          //   background-size: contain;
+          //   background-repeat: repeat-y;
+          //   position: absolute;
+          //   top: 0;
+          //   left: -4vw;
+          // }
           &:before {
             content:"";
             display: block;
-            width: 20px;
+            width: 2px;
             height: 100%;
-            background-image: url('images/wave-vertical.svg');
-            background-position: center;
-            background-size: contain;
-            background-repeat: repeat-y;
+            background: $yellow2;
             position: absolute;
             top: 0;
-            left: -4vw;
+            left: -3vw;
           }
         }
       }
@@ -2838,17 +2880,20 @@ body.scrolled {
   
 }
 body.logged-in.admin-bar {
+  .site-header {
+    top: 30px;
+  }
   @media screen and (max-width: $tabwidth) {
     padding-top: 68px;
-    .site-header#masthead {
+    .site-header {
       top: 46px;
     }
   }
-}
-body.logged-in.admin-bar.scrolled {
-  @media screen and (min-width: 783px) {
-    .site-header {
-      top: 32px!important;
+  &.scrolled {
+    @media screen and (min-width: 783px) {
+      // .site-header {
+      //   top: 32px!important;
+      // }
     }
   }
 }
@@ -2857,8 +2902,9 @@ body.logged-in.admin-bar.scrolled {
 body.page-template-default,
 body.page-template-page-custom {
   .site-header {
-    position: relative;
-    background-color: rgba(255,255,255,.8);
+    // position: relative;
+    // background-color: rgba(255,255,255,.8);
+    background-color: #FFF;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
   #primary {
@@ -2870,11 +2916,11 @@ body.page-template-page-custom {
       padding-top: 0;
     }
   }
-  &.logged-in.admin-bar {
-    .site-header {
-      top: 0;
-    }
-  }
+  // &.logged-in.admin-bar {
+  //   .site-header {
+  //     top: 0;
+  //   }
+  // }
 }
 body.home {
   background-color: $gray;
@@ -2967,7 +3013,7 @@ body.home {
 /* MOBILE */
 @include max($tabwidth) {
   body {
-    padding-top: 70px;
+    padding-top: 70px!important;
   }
   body.page-template-default .site-header,
   body.page-template-page-custom .site-header,
@@ -2979,6 +3025,7 @@ body.home {
     height: 70px;
   }
   .site-header {
+    background: $secondary;
     position: fixed!important;
     .site-logo img {
       height: 65px;
