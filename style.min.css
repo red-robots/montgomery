@@ -1670,7 +1670,7 @@ body.single-tribe_events .tribe-events-back a:hover{color:#ffc35d}
 body.single-tribe_events #main{padding-top:50px;padding-bottom:50px}
 body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform:uppercase;color:#4c748c;font-family:"Anton",sans-serif;font-size:2rem;font-weight:400;line-height:1.2;margin:0 0 .5em}
 .repeatable-blocks{padding-bottom:0}
-.repeatable-blocks .h2{margin:0 0 30px;letter-spacing:.035em}
+.repeatable-blocks .h2{margin:0 0 20px;letter-spacing:.045em}
 .repeatable-blocks .fullwidth .wrapper{padding-top:60px;padding-bottom:40px}
 .repeatable-blocks .fullwidth .buttondiv{margin-bottom:20px}
 .repeatable-blocks .fullwidth.no-subtitle .wrapper{padding-top:4em;padding-bottom:3.5em}
@@ -1753,7 +1753,7 @@ body.single-activities .entry-content h3{font-family:"Adonis",serif;font-size:1.
 .section-trip-options .table-data .tbody .trow .flexwrap{background:#3ca7c5;color:#fff}
 .section-trip-options .table-data .tbody .trow .tbcol{border-left:1px solid #fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.2}
 .section-trip-options .table-data .tbody .trow .tbcol:first-child{border-left:0}
-.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1rem;font-weight:400;line-height:1.2;letter-spacing:.04em;text-transform:uppercase}
+.section-trip-options .table-data .tbody .c1{font-family:"Anton",sans-serif;font-size:1rem;font-weight:400;line-height:1.2;letter-spacing:.08em;text-transform:uppercase}
 .section-trip-options .table-data .tbody .c2,.section-trip-options .table-data .tbody .c3{text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .section-trip-options .table-data .tbody .info{padding:20px}
 .section-trip-options .table-data .tbody .f-size{color:#4c748c;margin-top:20px}
@@ -1846,7 +1846,7 @@ body.home #primary{padding-bottom:0}
 .grid-layout .blocks .bImage figure{margin:0;width:100%;float:left;background-size:cover;background-repeat:no-repeat;background-position:center}
 .grid-layout .blocks .bImage figure img{width:100%;height:auto;float:left}
 .grid-layout .blocks .desc{width:100%;float:left;padding:20px;background:#eee}
-.grid-layout .blocks .bTitle{font-family:"Anton",sans-serif;font-size:1.75rem;line-height:1.2;margin:0 0 15px;text-transform:uppercase;color:#4c748c;text-align:center}
+.grid-layout .blocks .bTitle{font-family:"Anton",sans-serif;font-size:1.75rem;line-height:1.2;margin:0 0 15px;text-transform:uppercase;color:#4c748c;text-align:center;letter-spacing:.04em}
 .grid-layout .blocks .buttondiv{text-align:center;margin-top:20px}
 body.post-type-archive-tribe_events .tribe-common .tribe-common-c-svgicon{color:#4c748c !important}
 body.post-type-archive-tribe_events .tribe-events .tribe-events-calendar-month__calendar-event--featured:before{background-color:#4c748c !important}

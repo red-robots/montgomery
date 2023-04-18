@@ -1916,8 +1916,8 @@ body.single-tribe_events {
   // padding-bottom: 40px;
   padding-bottom: 0;
   .h2 {
-    margin: 0 0 30px;
-    letter-spacing: 0.035em;
+    margin: 0 0 20px;
+    letter-spacing: 0.045em;
   }
   .fullwidth {
     .wrapper {
@@ -2420,7 +2420,7 @@ body.single-activities {
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.2;
-        letter-spacing: .04em;
+        letter-spacing: .08em;
         text-transform: uppercase;
         @include tab {
           font-size: 1.3rem;
@@ -3126,6 +3126,7 @@ body.home {
       text-transform: uppercase;
       color: $primary;
       text-align: center;
+      letter-spacing: 0.04em;
     }
     .buttondiv {
       text-align: center;
