@@ -13,9 +13,9 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
       <div class="wrapper">
-        <div class="titlediv typical"><h1 class="page-title"><span><?php the_title(); ?></span></h1></div>
+        <div class="titlediv typical nomb"><h1 class="page-title"><span><?php the_title(); ?></span></h1></div>
         <?php if ( $intro = get_field('intro') ) { ?>
-        <div class="entry-content">
+        <div class="entry-content" style="padding-top: 15px;">
           <?php echo anti_email_spam($intro); ?>
         </div>
         <?php } ?>
