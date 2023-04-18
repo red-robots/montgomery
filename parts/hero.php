@@ -1,40 +1,95 @@
 <?php 
 if ( is_front_page() || is_home() ) { 
   if( $banners = get_field('banner') ) { 
-    $type = ( count($banners) > 1 ) ? 'slideshow':'static';
-  ?>
-  <div class="banners swiper <?php echo $type ?>">
-    <div class="swiper-wrapper">
-      <?php foreach ($banners as $b) { 
-        $img = $b['image'];
-        $text = $b['text'];
-        $banner_logo = $b['banner_logo'];
-        $banner_logo_mobile = $b['banner_logo_mobile'];
-        $banner_class = ( $banner_logo && $text ) ? ' logo-and-text':'';
-        if($img) { ?>
-          <div class="swiper-slide banner<?php echo $banner_class ?>" style="background-image:url('<?php echo $img['url'] ?>')">
-            <?php if ($banner_logo || $text) { ?>
-            <div class="banner-content">
-              <div class="banner-inner">
-                <?php if ($banner_logo) { ?>
-                <div class="banner-logo">
-                  <img src="<?php echo $banner_logo['url'] ?>" alt="<?php echo $banner_logo['title'] ?>" class="banner-logo-desktop">
-                  <?php if ($banner_logo_mobile) { ?>
-                  <img src="<?php echo $banner_logo_mobile['url'] ?>" alt="<?php echo $banner_logo_mobile['title'] ?>" class="banner-logo-mobile">
+    $banner_type = get_field('banner_type');
+    if($banner_type=='image') {
+      $type = ( count($banners) > 1 ) ? 'slideshow':'static';
+      ?>
+    <div class="banners swiper <?php echo $type ?>">
+      <div class="swiper-wrapper">
+        <?php foreach ($banners as $b) { 
+          $img = $b['image'];
+          $text = $b['text'];
+          $banner_logo = $b['banner_logo'];
+          $banner_logo_mobile = $b['banner_logo_mobile'];
+          $banner_class = ( $banner_logo && $text ) ? ' logo-and-text':'';
+          if($img) { ?>
+            <div class="swiper-slide banner<?php echo $banner_class ?>" style="background-image:url('<?php echo $img['url'] ?>')">
+              <?php if ($banner_logo || $text) { ?>
+              <div class="banner-content">
+                <div class="banner-inner">
+                  <?php if ($banner_logo) { ?>
+                  <div class="banner-logo">
+                    <img src="<?php echo $banner_logo['url'] ?>" alt="<?php echo $banner_logo['title'] ?>" class="banner-logo-desktop">
+                    <?php if ($banner_logo_mobile) { ?>
+                    <img src="<?php echo $banner_logo_mobile['url'] ?>" alt="<?php echo $banner_logo_mobile['title'] ?>" class="banner-logo-mobile">
+                    <?php } ?>
+                  </div>
+                  <?php } ?>
+                  <?php if ($text) { ?>
+                  <div class="text"><div class="pad"><?php echo $text ?></div></div> 
                   <?php } ?>
                 </div>
-                <?php } ?>
-                <?php if ($text) { ?>
-                <div class="text"><div class="pad"><?php echo $text ?></div></div> 
-                <?php } ?>
               </div>
+              <?php } ?>
             </div>
+          <?php } ?>
+        <?php } ?>
+      </div>
+    </div>
+    <?php } else { ?>
+
+      <?php if( $banner_video = get_field('banner_video') ) { 
+        $type = pathinfo($banner_video);
+        $videoFormat = array('mp4','mov','webm');
+        $extension = ( isset($type['extension']) && $type['extension'] ) ? strtolower($type['extension']) : '';
+        $vidTextType = get_field('banner_video_overlay');
+        $vidTextContent = get_field('banner_video_caption_text');
+        $vidImageDesktop = get_field('banner_video_caption_image_desktop');
+        $vidImageMobile = get_field('banner_video_caption_image_mobile');
+
+        if( in_array($extension,$videoFormat) ) { ?>
+        <div class="banner-video">
+          <div class="banner-inner">
+            <video id="homeVideo" width="400" autoplay muted loop>
+              <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
+              Your browser does not support HTML video.
+            </video>
+            <?php if ($vidTextType=='image') { ?>
+
+              <?php if ($vidImageDesktop) { ?>
+              <div class="video-caption type-image">
+                <div class="video-inner">
+                  <figure>
+                    <img src="<?php echo $vidImageDesktop['url'] ?>" alt="<?php echo $vidImageDesktop['title'] ?>" class="img-desktop">
+
+                    <?php if ($vidImageMobile) { ?>
+                    <img src="<?php echo $vidImageMobile['url'] ?>" alt="<?php echo $vidImageMobile['title'] ?>" class="img-mobile">
+                    <?php } else { ?>
+                    <img src="<?php echo $vidImageDesktop['url'] ?>" alt="<?php echo $vidImageDesktop['title'] ?>" class="img-mobile">
+                    <?php } ?>
+                  </figure>
+                </div>
+              </div>
+              <?php } ?>
+
+            <?php } else if( $vidTextType=='text' ) { ?>
+
+              <?php if ($vidTextContent) { ?>
+              <div class="video-caption type-text">
+                <div class="video-inner">
+                  <div class="video-text"><?php echo $vidTextContent ?></div>
+                </div>
+              </div>
+              <?php } ?>
+
             <?php } ?>
-          </div>
+          </div>  
+        </div>
         <?php } ?>
       <?php } ?>
-    </div>
-  </div>
+
+    <?php } ?>
   <?php } ?>
 <?php } else { ?>
 
