@@ -1973,7 +1973,7 @@ body.logged-in.admin-bar .site-header{top:46px}
 body{padding-top:70px !important}
 body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c}
 .site-header,.site-header .head-inner{height:70px}
-.site-header{background:#073253;position:fixed !important}
+.site-header{background:#4c748c;position:fixed !important}
 .site-header .site-logo img{height:65px;top:0}
 .site-header .head-inner{padding-top:0;padding-bottom:0;width:100%;display:block;position:relative;z-index:80}
 .site-header #menu-toggle{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:12px}
