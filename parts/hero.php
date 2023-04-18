@@ -51,7 +51,7 @@ if ( is_front_page() || is_home() ) {
         if( in_array($extension,$videoFormat) ) { ?>
         <div class="banner-video">
           <div class="banner-inner">
-            <video id="homeVideo" width="400" autoplay muted loop>
+            <video id="homeVideo" width="400" autoplay muted loop playsinline>
               <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
               Your browser does not support HTML video.
             </video>
