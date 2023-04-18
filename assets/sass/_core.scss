@@ -1045,9 +1045,9 @@ div.buttondiv {
         width: 130px;
         height: 2px;
         background: $yellow2;
-        margin: 10px auto 20px;
+        margin: 16px auto 30px;
         @include tab {
-          margin: 10px 0 20px;
+          margin: 16px 0 30px;
         }
       }
     }
@@ -2626,7 +2626,7 @@ body.single-activities {
         height: 2px;
         background: $yellow2;
         position: relative;
-        margin: 10px 0 20px;
+        margin: 16px 0 20px;
       }
     }
   }

@@ -1571,7 +1571,7 @@ div.buttondiv{margin-top:40px}
 .homerow1 .fright .show-all .item:before{display:none}
 .homerow2.section{margin-top:0}
 .homerow2.section .flex-content .titlediv{position:relative}
-.homerow2.section .flex-content .titlediv:after{content:"";display:block;width:130px;height:2px;background:#cea155;margin:10px auto 20px}
+.homerow2.section .flex-content .titlediv:after{content:"";display:block;width:130px;height:2px;background:#cea155;margin:16px auto 30px}
 .carouselNavButtons{margin:30px 0 0}
 .carouselNavButtons a{display:inline-block;width:50px;height:50px;background:#3ca7c5;margin-right:8px;position:relative}
 .carouselNavButtons a span{display:block;width:0;text-indent:-99em;overflow:hidden}
@@ -1784,7 +1784,7 @@ body.single-activities .entry-content h3{font-family:"Adonis",serif;font-size:1.
 .titlediv.typical{position:relative}
 .titlediv.typical .page-title{position:relative;margin-top:30px;margin-bottom:50px}
 .titlediv.typical .page-title span{display:inline-block;position:relative}
-.titlediv.typical .page-title span:after{content:"";display:block;width:100px;height:2px;background:#cea155;position:relative;margin:10px 0 20px}
+.titlediv.typical .page-title span:after{content:"";display:block;width:100px;height:2px;background:#cea155;position:relative;margin:16px 0 20px}
 .titlediv.typical.tax-title .page-title{margin-top:50px;margin-bottom:0}
 .titlediv.nomb .page-title{margin-top:50px;margin-bottom:0 !important}
 body.post-type-archive-tribe_events .tribe-common-l-container.tribe-events-l-container{max-width:100% !important;width:100% !important;padding-left:0;padding-right:0;padding-top:70px}
@@ -1901,7 +1901,7 @@ h2{font-size:2.5em}
 .homerow1 .fright .item-title .arrow:before{-webkit-transform:translateY(-8px) rotate(43deg);transform:translateY(-8px) rotate(43deg)}
 .homerow1 .fright .item-title .arrow:after{-webkit-transform:translateY(6px) rotate(-43deg);transform:translateY(6px) rotate(-43deg)}
 .homerow2.section{margin-top:0}
-.homerow2.section .flex-content .titlediv:after{margin:10px 0 20px}
+.homerow2.section .flex-content .titlediv:after{margin:16px 0 30px}
 .text_divider{margin:10px 0}
 .h2{font-size:3rem}
 h1.page-title{font-size:3.2rem}
