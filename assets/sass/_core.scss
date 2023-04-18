@@ -1655,10 +1655,6 @@ h1.page-title {
   @include tab {
     height: 35rem;
   }
-  @include mid {
-    // height: 700px;
-    height: 40rem;
-  }
   img.actual-image {
     width: 100%;
     height: auto;

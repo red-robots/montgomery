@@ -1961,7 +1961,6 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .grid-layout .wrapper{padding-left:30px;padding-right:30px}
 .grid-layout .blocks .block{width:33.333%}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
-.taxonomy-banner,.static-banner{height:40rem}
 .contact-links-section .link-icon{width:20%}
 }@media(min-width:1200px){.banners .banner .text{font-size:4.5rem}
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
