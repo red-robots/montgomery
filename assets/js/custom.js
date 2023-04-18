@@ -17,7 +17,19 @@ jQuery(document).ready(function ($) {
     $('.searchbar').toggleClass('show');
     $('.searchbar input.search-field').focus();
   });
+
+  if ($('.repeatable-blocks').length) {
+    var divPrev = $('.repeatable-blocks').prev();
+    console.log(divPrev);
+
+    if (divPrev.hasClass('titlediv')) {
+      if ($('.repeatable-blocks .repeatable').eq(0).hasClass('fullwidth')) {
+        $('.repeatable-blocks .repeatable').eq(0).addClass('first');
+      }
+    }
+  }
   /* Slideshow */
+
 
   var swiper = new Swiper('.slideshow', {
     effect: 'fade',

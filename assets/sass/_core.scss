@@ -1045,7 +1045,10 @@ div.buttondiv {
         width: 130px;
         height: 2px;
         background: $yellow2;
-        margin: 10px 0 20px;
+        margin: 10px auto 20px;
+        @include tab {
+          margin: 10px 0 20px;
+        }
       }
     }
   }
@@ -1910,7 +1913,8 @@ body.single-tribe_events {
 }
 
 .repeatable-blocks {
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
+  padding-bottom: 0;
   .h2 {
     margin: 0 0 30px;
     letter-spacing: 0.035em;
@@ -1926,7 +1930,13 @@ body.single-tribe_events {
   }
   .fullwidth.no-subtitle {
     .wrapper {
-      padding-top: 10px;
+      padding-top: 4em;
+      padding-bottom: 3.5em;
+    }
+    &.first {
+      .wrapper {
+        padding-top: 15px;
+      }
     }
   }
   .repeatable:nth-child(even) {
@@ -3269,7 +3279,7 @@ body.post-type-archive-tribe_events {
 #tribe-events a {
   color: $teal;
   &:hover {
-    color: $yellow1;
+    color: $yellow2;
   }
 }
 .tribe-events-single .tribe-events-sub-nav {
