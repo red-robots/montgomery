@@ -1875,7 +1875,7 @@ body.subpage.no-banner {
   }
   &.logged-in.admin-bar {
     .site-header {
-      top: 0;
+      top: 34px;
     }
     &.scrolled {
       .site-header {
@@ -2058,7 +2058,7 @@ body.single-tribe_events {
 .contact-page {
   .intro-content {
     .wrapper {
-      padding-top: 70px;
+      padding-top: 20px;
       padding-bottom: 60px;
     } 
   }
