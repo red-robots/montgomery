@@ -789,12 +789,13 @@ a {
     .video-mobile {
       display: none;
       width: 110vh;
-      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+      @media screen and (max-width: 850px) {
         display: block;
+      }
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
         width: 110vh;
       }
       @media screen and (max-device-width: 850px) and (orientation: landscape) {
-        display: block;
         width: 120vw;
       }
     }
