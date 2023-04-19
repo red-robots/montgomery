@@ -53,11 +53,7 @@ if ( is_front_page() || is_home() ) {
         if( in_array($extension,$videoFormat) ) { ?>
         <div class="banner-video <?php echo ($vidMobile) ? 'has-mobile-video':'no-mobile-video'?>">
           <div class="banner-inner">
-<<<<<<< HEAD
             <video class="video-desktop" width="400" autoplay muted loop>
-=======
-            <video id="homeVideo" width="400" autoplay muted loop playsinline>
->>>>>>> 3f37f757c94374ecd0fa662a24a7bcb83d285748
               <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
               Your browser does not support HTML video.
             </video>
