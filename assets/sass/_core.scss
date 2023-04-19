@@ -778,6 +778,27 @@ a {
       }
     }
   }
+
+  &.has-mobile-video {
+    .video-desktop {
+      display: none;
+      @media screen and (min-width: 850px) {
+        display: block;
+      }
+    }
+    .video-mobile {
+      display: none;
+      width: 110vh;
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+        display: block;
+        width: 110vh;
+      }
+      @media screen and (max-device-width: 850px) and (orientation: landscape) {
+        display: block;
+        width: 120vw;
+      }
+    }
+  }
 }
 div.buttondiv {
   margin-top: 40px;

@@ -48,13 +48,21 @@ if ( is_front_page() || is_home() ) {
         $vidImageDesktop = get_field('banner_video_caption_image_desktop');
         $vidImageMobile = get_field('banner_video_caption_image_mobile');
 
+        $vidMobile = get_field('banner_video_mobile');
+
         if( in_array($extension,$videoFormat) ) { ?>
-        <div class="banner-video">
+        <div class="banner-video <?php echo ($vidMobile) ? 'has-mobile-video':'no-mobile-video'?>">
           <div class="banner-inner">
-            <video id="homeVideo" width="400" autoplay muted loop>
+            <video class="video-desktop" width="400" autoplay muted loop>
               <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
               Your browser does not support HTML video.
             </video>
+            <?php if ($vidMobile) { ?>
+            <video class="video-mobile" width="400" autoplay muted loop>
+              <source src="<?php echo $banner_video ?>" type="video/<?php echo $extension ?>">
+              Your browser does not support HTML video.
+            </video>
+            <?php } ?>
             <?php if ($vidTextType=='image') { ?>
 
               <?php if ($vidImageDesktop) { ?>
