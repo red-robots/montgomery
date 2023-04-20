@@ -1,5 +1,3 @@
-@import "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100;
-
 /*!
 Theme Name: Montgomery Whitewater 1.0
 Theme URI: https://bellaworksweb.com/
@@ -20,91 +18,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/
-
-200;300;400;500;600;700;800;900&family=Jost:ital,
-wght@0,
-100;0,
-200;0,
-300;0,
-400;0,
-500;0,
-600;0,
-700;0,
-800;0,
-900;1,
-100;1,
-200;1,
-300;1,
-400;1,
-500;1,
-600;1,
-700;1,
-800;1,
-900&family=Lora:ital,
-wght@0,
-400;0,
-500;0,
-600;0,
-700;1,
-400;1,
-500;1,
-600;1,
-700&family=Noto+Serif+Display:ital,
-wght@0,
-100;0,
-200;0,
-300;0,
-400;0,
-500;0,
-600;0,
-700;0,
-800;0,
-900;1,
-100;1,
-200;1,
-300;1,
-400;1,
-500;1,
-600;1,
-700;1,
-800;1,
-900&family=Noto+Serif:ital,
-wght@0,
-400;0,
-700;1,
-400;1,
-700&family=Playfair+Display:ital,
-wght@0,
-400;0,
-500;0,
-600;0,
-700;0,
-800;0,
-900;1,
-400;1,
-500;1,
-600;1,
-700;1,
-800;1,
-900&family=Roboto:ital,
-wght@0,
-100;0,
-300;0,
-400;0,
-500;0,
-700;0,
-900;1,
-100;1,
-300;1,
-400;1,
-500;1,
-700;1,
-900&family=Libre+Caslon+Text:ital,
-wght@0,
-400;0,
-700;1,
-400&display=swap";html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+*/html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -1505,7 +1419,7 @@ a:hover{color:#191970}
 .searchbar form label,.searchbar form .search-field{display:block;width:100%;margin:0}
 .searchbar form label{position:relative}
 .searchbar form label:before{content:"";display:block;width:18px;height:18px;background-image:url("images/icon-search.svg");background-position:center;background-repeat:no-repeat;background-size:contain;position:absolute;top:11px;right:14px}
-.searchbar form .search-field{border-radius:100px;padding:8px 40px 8px 15px;height:40px;font-size:16px;outline:0;-webkit-box-sizing:border-box;box-sizing:border-box;color:#000;border:1px solid #4c748c}
+.searchbar form .search-field{border-radius:100px;padding:8px 40px 8px 15px;height:40px;font-size:16px;outline:0;-webkit-box-sizing:border-box;box-sizing:border-box;color:#4c748c;border:1px solid #4c748c}
 .searchbar form .search-submit{display:block;position:absolute;top:3px;right:3px;width:40px;height:85%;border:0;z-index:10;background:transparent;color:transparent}
 .searchbar.show{display:block}
 .searchbar.show form{-webkit-animation-name:fadeIn;animation-name:fadeIn}
@@ -1861,6 +1775,30 @@ body.post-type-archive-tribe_events .tribe-events .tribe-events-calendar-month__
 .tribe-events-meta-group .tribe-events-single-section-title{color:#4c748c;font-size:1.2em;line-height:1.2}
 body.single-tribe_events .hentry .tribe-events-event-image img{display:none}
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;height:30vh}
+body.search .site-header{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1)}
+body.search #main{padding-top:60px;padding-bottom:60px;min-height:25rem}
+body.search #main .hentry{margin:0 0 50px;padding-bottom:50px;border-bottom:1px dotted #d4d4d4}
+body.search #main .hentry .entry-title{font-size:1.8em}
+body.search #main .hentry .entry-title a{color:#4c748c;text-decoration:none}
+body.search #main .hentry .entry-title a:hover{color:#cea155}
+body.search #main .hentry .buttondiv{margin:15px 0 0}
+body.search #main .hentry .buttondiv .button{padding:10px 20px 8px;font-size:13px}
+body.search .page-header{margin-bottom:40px}
+body.search .page-header .page-title{margin:0}
+body.search .page-header .page-title span{display:inline-block}
+body.search .page-header .page-title span:after{content:"";display:block;width:100px;height:2px;background:#cea155;position:relative;margin:10px 0 0}
+body.search #primary .not-found .search-form{max-width:400px;width:100%;margin-top:35px;position:relative}
+body.search #primary .not-found .search-form label{display:block;width:100%;margin:0;position:relative}
+body.search #primary .not-found .search-form label:after{content:"";display:block;width:50px;height:100%;position:absolute;top:0;right:-20px;background-image:url(images/icon-search.svg);background-position:center;background-repeat:no-repeat;background-size:23px}
+body.search #primary .not-found .search-form .search-field{height:30px;padding:5px 10px;border:1px solid #4c748c;border-radius:100px;width:100%;background-color:transparent;position:relative;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s;color:#4c748c}
+body.search #primary .not-found .search-form .search-field:focus{outline:0;-webkit-box-shadow:0 0 10px 1px rgba(0,0,0,.2);box-shadow:0 0 10px 1px rgba(0,0,0,.2)}
+body.search #primary .not-found .search-form .search-submit{outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-box-shadow:none;box-shadow:none;position:absolute;top:0;right:-24px;height:100%;border:0;background:transparent;color:transparent;z-index:3}
+body.search.search-no-results form.search-form{margin:35px auto 0}
+body.search.search-no-results .page-header{margin-bottom:20px}
+body.search.search-no-results .page-header .page-title{font-weight:500;letter-spacing:.01em}
+body.search.search-no-results .page-header .page-title span{text-transform:none}
+body.search.search-no-results .not-found{text-align:center}
+body.search.search-no-results .page-content{font-size:1.3em}
 @media screen and (max-device-width:480px)and (orientation:portrait){.banner-video.has-mobile-video .video-mobile{width:110vh}
 }@media screen and (max-device-width:850px)and (orientation:landscape){.banner-video.has-mobile-video .video-mobile{width:120vw}
 }@media(min-width:600px){.homerow5.section .block{width:50%}

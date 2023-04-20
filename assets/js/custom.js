@@ -182,4 +182,8 @@ jQuery(document).ready(function ($) {
       }
     });
   }
+
+  if ($('form.search-form input.search-field').length) {
+    $('form.search-form input.search-field').attr('required', 1);
+  }
 });

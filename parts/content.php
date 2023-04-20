@@ -26,22 +26,32 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bellaworks' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+	<div class="entry-content post-info">
+    <?php 
+      $content = get_the_content();
+      if( get_field('intro') ) {
+        $content = get_field('intro');
+      } else if ( get_field('intro_content') ) {
+        $content = get_field('intro_content'); 
+      }
+
+      if( $content ) {
+        $content = strip_tags($content);
+        $content = strip_shortcodes($content);
+        echo shortenText($content,300,' ','...');
+      }
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bellaworks' ),
 				'after'  => '</div>',
 			) );
 		?>
+
+    <?php if ( is_search() && ( get_the_title() || $content ) ) { ?>
+    <div class="buttondiv">
+      <a href="<?php echo get_permalink() ?>" class="button">Read More &raquo;</a>
+    </div>  
+    <?php } ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php bellaworks_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

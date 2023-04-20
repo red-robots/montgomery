@@ -490,7 +490,7 @@ a {
       font-size: 16px;
       outline: none;
       box-sizing: border-box;
-      color: #000;
+      color: $primary;
       border:1px solid $primary;
     }
     .search-submit {
@@ -3327,9 +3327,143 @@ body.single-tribe_events {
   }
 }
 
+body.search {
+  .site-header {
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  }
+  #main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 25rem;
+    .hentry {
+      margin: 0 0 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px dotted #d4d4d4;
+      .entry-title {
+        font-size: 1.8em;
+        a {
+          color: $primary;
+          text-decoration: none;
+          &:hover {
+            color: $yellow2;
+          }
+        }
+      }
+
+      .buttondiv {
+        margin: 15px 0 0;
+        .button {
+          padding: 10px 20px 8px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .page-header {
+    margin-bottom: 40px;;
+    .page-title {
+      margin: 0 0;
+      span {
+        display: inline-block;
+        &:after {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 2px;
+          background: $yellow2;
+          position: relative;
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+
+
+  #primary .not-found {
+    .search-form {
+      max-width: 400px;
+      width: 100%;
+      margin-top: 35px;
+      position: relative;
+      label {
+        display: block;
+        width: 100%;
+        margin: 0 0;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: -20px;
+          background-image: url(images/icon-search.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 23px;
+        }
+      }
+      .search-field {
+        height: 30px;
+        padding: 5px 10px;
+        border: 1px solid $primary;
+        border-radius: 100px;
+        width: 100%;
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+        transition: all ease .3s;
+        color: $primary;
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+        }
+      }
+      .search-submit {
+        outline: none;
+        appearance: none;
+        box-shadow: none;
+        position: absolute;
+        top: 0;
+        right: -24px;
+        height: 100%;
+        border: none;
+        background: transparent;
+        color: transparent;
+        z-index: 3;
+      }
+    }
+  }
+
+  &.search-no-results {
+    form.search-form {
+      margin: 35px auto 0;
+    }
+    .page-header {
+      margin-bottom: 20px;
+      .page-title {
+        // font-family: $font_primary;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        span {
+          text-transform: none;
+        }
+      }
+    }
+    .not-found {
+      text-align: center;
+    }
+    .page-content {
+      font-size: 1.3em;
+    }
+  }
+}
+
 @media screen and (max-width: 782px) {
   #wpadminbar {
     position: fixed!important;
     top: 0!important;
   }
 }
+
