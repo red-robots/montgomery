@@ -1914,7 +1914,7 @@ body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
 body.logged-in.admin-bar{padding-top:68px}
 body.logged-in.admin-bar .site-header{top:46px}
 body{padding-top:70px !important}
-body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c}
+body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c !important}
 .site-header,.site-header .head-inner{height:70px}
 .site-header{background:#4c748c;position:fixed !important}
 .site-header .site-logo img{height:65px;top:0}
@@ -1940,6 +1940,7 @@ body.page-template-default .site-header,body.page-template-page-custom .site-hea
 .flexible-content .flex-content .textcol .buttondiv{left:0;width:100%;text-align:center}
 .flexible-content .wave-divider svg{margin:0 auto}
 }@media screen and (max-width:782px){#wpadminbar{position:fixed !important;top:0 !important}
+body.subpage.no-banner.logged-in.admin-bar .site-header{top:45px}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}

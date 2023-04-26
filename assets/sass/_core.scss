@@ -3162,7 +3162,7 @@ body.home {
   body.page-template-default .site-header,
   body.page-template-page-custom .site-header,
   .site-header {
-    background-color: $primary;
+    background-color: $primary!important;
   }
   .site-header,
   .site-header .head-inner {
@@ -3464,6 +3464,9 @@ body.search {
   #wpadminbar {
     position: fixed!important;
     top: 0!important;
+  }
+  body.subpage.no-banner.logged-in.admin-bar .site-header {
+    top: 45px;
   }
 }
 
