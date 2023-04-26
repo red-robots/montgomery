@@ -126,8 +126,11 @@ get_header(); ?>
       </div> 
 
 
-      <?php if ($additional_information = get_field('additional_information')) { ?>
-      <div class="section-additional-information">
+      <?php if ($additional_information = get_field('additional_information')) { 
+        $infoBg = get_field('additional_information_bg');
+        $bgStyle = ($infoBg) ? ' style="background-image:url('.$infoBg['url'].')"':'';
+      ?>
+      <div class="section-additional-information"<?php echo $bgStyle ?>>
         <div class="wrapper">
           <h2 class="stitle">ADDITIONAL INFORMATION</h2>
           <div class="accordions">

@@ -151,6 +151,8 @@ get_header();
   $restaurant_image = get_field('restaurant_image');
   $restaurant_text = get_field('restaurant_content');
   $restaurant_button = get_field('restaurant_button');
+  $restaurant_bg_image = get_field('restaurant_bg_image');
+  $restDivStyle = ($restaurant_bg_image) ? ' style="background-image:url('.$restaurant_bg_image['url'].')"':'';
   $res_style = ($restaurant_image) ? ' style="background-image:url('.$restaurant_image['url'].')"':'';
 
   $res_target = (isset($restaurant_button['target']) && $restaurant_button['target']) ? $restaurant_button['target'] : '_self';
@@ -160,7 +162,7 @@ get_header();
   ?>
   <?php if( $restaurant_text ) { ?>
   <section class="section homerow3 full-width-bg">
-    <div class="inner">
+    <div class="inner"<?php echo $restDivStyle ?>>
       <?php if ($restaurant_image) { ?>
       <div class="feat-image"<?php echo $res_style ?>></div>
       <?php } ?>
