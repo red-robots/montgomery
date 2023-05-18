@@ -3460,6 +3460,13 @@ body.search {
   }
 }
 
+.tribe-events-calendar-month__calendar-event-tooltip {
+  p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
+
 @media screen and (max-width: 782px) {
   #wpadminbar {
     position: fixed!important;
