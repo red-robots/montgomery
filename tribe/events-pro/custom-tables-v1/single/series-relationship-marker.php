@@ -32,7 +32,10 @@ if ( ! empty( $modifier ) ) {
 	$classes[] = 'tribe-events-series-relationship-single-marker--' . $modifier;
 }
 $id = $event->ID;
-$post_name = $event->post_name;
+$event_slug = $event->post_name;
+$removeLinks = array('hours-of-operation');
+$show_series_link = ( in_array($event_slug,$removeLinks) ) ? false : true;
+
 
 // This is an occurrence the real post ID is hold as a reference on the occurrence table.
 if ( isset( $event->_tec_occurrence ) && $event->_tec_occurrence instanceof Occurrence ) {
@@ -57,14 +60,11 @@ $title_classes = tec_get_series_marker_label_classes( $series, $id );
       <?php echo esc_html( $series_relationship_label ); ?>
     </span>
 
-    <?php if ($post_name!=='hours-of-operation') { ?>
-  	<a
-  		href="<?php echo esc_url( $series_link ); ?>"
-  		class="tribe-events-series-relationship-single-marker__title tribe-common-cta--alt"
-  	>
+    <?php if( $show_series_link ) { ?>
+  	<a href="<?php echo esc_url( $series_link ); ?>" class="tribe-events-series-relationship-single-marker__title tribe-common-cta--alt">
   		<span class="tec_series_marker__title" >
   			<?php echo esc_html( $series_title ); ?>
   		</span>
   	</a>
-  <?php } ?>
+    <?php } ?>
 </div>
