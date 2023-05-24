@@ -3476,4 +3476,21 @@ body.search {
     top: 45px;
   }
 }
-
+button.rocketrez-web-engine-button {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid $primary;
+  color: $primary;
+  text-transform: uppercase;
+  padding: 10px 20px 8px;
+  &:hover {
+    background: $primary;
+    color: #FFF;
+  }
+}
+.rocketrez-iframe-container {
+  margin-top: 120px;
+  @media screen and (min-width: $tabwidth) {
+    margin-top: 110px;
+  }
+}

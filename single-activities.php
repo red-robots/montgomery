@@ -24,6 +24,7 @@ get_header(); ?>
       <?php  
       $trip_options = get_field('trip_options');
       $pass_options = get_field('pass_options');
+      $rr_btn = get_field('rr_btn');
       $note_title = get_field('pass_note_title');
       $note_content = get_field('pass_note_content');
       $section_class = ($trip_options && ($pass_options || $note_content )) ? 'half':'full';
@@ -99,6 +100,7 @@ get_header(); ?>
                     <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button-outline"><?php echo $btnText ?></a>
                   </div> 
                   <?php } ?>
+                  <?php if( $rr_btn ){ echo $rr_btn; } ?>
                 </div>
               </div> 
               <?php } ?>
