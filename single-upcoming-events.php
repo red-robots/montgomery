@@ -13,12 +13,13 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 global $post;
 get_header(); ?>
 
-<div id="primary" class="content-area-full content-default page-default-template <?php echo $has_banner ?>">
-	<main id="main" class="site-main wrapper" role="main">
+<div id="primary" class="content-area-full repeatable-layout <?php echo $has_banner ?>">
+	<main id="main" class="site-main " role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if( get_page_template_slug( get_the_ID() ) ) { ?>
+		<div class="wrapper">
+		<?php if( get_page_template_slug( get_the_ID() ) ) { ?>
         <div class="titlediv">
           <h1 class="page-title"><?php the_title(); ?></h1>
         </div>
@@ -35,7 +36,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div>
       <?php } ?>
-
+      </div>
 
       <?php include(locate_template( 'parts/repeatable-blocks.php' )); ?>
 
