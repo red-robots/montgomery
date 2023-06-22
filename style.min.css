@@ -1764,7 +1764,6 @@ body.post-type-archive-tribe_events .tribe-events .tribe-events-calendar-month__
 #tribe-events a:hover{color:#cea155}
 .tribe-events-single .tribe-events-sub-nav{padding-left:0}
 .tribe-events-meta-group .tribe-events-single-section-title{color:#4c748c;font-size:1.2em;line-height:1.2}
-body.single-tribe_events .hentry .tribe-events-event-image img{display:none}
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;height:30vh}
 body.search .site-header{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.1);box-shadow:0 5px 15px rgba(0,0,0,0.1)}
 body.search #main{padding-top:60px;padding-bottom:60px;min-height:25rem}

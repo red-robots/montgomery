@@ -160,11 +160,11 @@ jQuery(document).ready(function ($) {
   });
 
   /* Tribe Events >  Single page Featured Image */
-  if( $('body.single-tribe_events .hentry .tribe-events-event-image').length ) {
-    var tribeImage = $('body.single-tribe_events .hentry .tribe-events-event-image img').attr('src');
-    $('body.single-tribe_events .hentry .tribe-events-event-image').addClass('image-bg');
-    $('body.single-tribe_events .hentry .tribe-events-event-image').css('background-image','url('+tribeImage+')');
-  }
+  // if( $('body.single-tribe_events .hentry .tribe-events-event-image').length ) {
+  //   var tribeImage = $('body.single-tribe_events .hentry .tribe-events-event-image img').attr('src');
+  //   $('body.single-tribe_events .hentry .tribe-events-event-image').addClass('image-bg');
+  //   $('body.single-tribe_events .hentry .tribe-events-event-image').css('background-image','url('+tribeImage+')');
+  // }
 
   /* Contact us page contact section (teal background) */
   if( $('.contact-form-section .fxcol.text').length ) {
