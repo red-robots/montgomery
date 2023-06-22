@@ -3313,6 +3313,8 @@ body.single-tribe_events {
   .hentry .tribe-events-event-image {
     img {
       // display: none;
+      width: 100%;
+      height: auto;
     }
     &.image-bg {
       background-size: cover;
