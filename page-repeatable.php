@@ -22,6 +22,7 @@ get_header();
             $title = get_sub_field('title');
             $content = get_sub_field('content');
             $button = get_sub_field('button'); 
+            $rr_btn = get_sub_field('rocket_rez_button_code'); 
             $btn_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
             $btn_title = (isset($button['title']) && $button['title']) ? $button['title'] : '';
             $btn_url = (isset($button['url']) && $button['url']) ? $button['url'] : '';
@@ -35,6 +36,9 @@ get_header();
                 <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
               </div>  
               <?php } ?>
+              <?php if( $rr_btn ){ ?>
+                            <div class="btn-center"><?php echo $rr_btn; ?></div>
+                          <?php } ?>
               </div>
             </div>
             <?php } ?> 
@@ -50,6 +54,7 @@ get_header();
             $col .= ($imageSize) ? ' orig-size':' crop-size';
             $col .= ($text_alignment) ? ' text-'.$text_alignment:' text-left';
 
+            $rr_btn = get_sub_field('rocket_rez_button_code');
             $button = get_sub_field('button'); 
             $btn_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
             $btn_title = (isset($button['title']) && $button['title']) ? $button['title'] : '';
@@ -68,6 +73,9 @@ get_header();
                       <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
                     </div>  
                     <?php } ?>
+                    <?php if( $rr_btn ){ ?>
+                            <div class="btn-center"><?php echo $rr_btn; ?></div>
+                          <?php } ?>
                   </div>  
                   <?php } ?>
 
@@ -90,6 +98,7 @@ get_header();
                   <?php foreach ($blocks as $b) { 
                     $title = $b['title'];
                     $text = $b['text'];
+                    $rr_btn = $b['rocket_rez_button_code'];
                     $btn = $b['button'];
                     $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
                     $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
@@ -116,6 +125,9 @@ get_header();
                           <div class="buttondiv">
                             <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
                           </div>
+                          <?php } ?>
+                          <?php if( $rr_btn ){ ?>
+                            <div class="btn-center"><?php echo $rr_btn; ?></div>
                           <?php } ?>
                         </div>
                       </div>
