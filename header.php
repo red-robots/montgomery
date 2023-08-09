@@ -57,7 +57,11 @@ if ( $titleOpt=='hide' ) { ?>
 <style>.titlediv,h1.page-title,.default-page-title {display: none!important;}</style>
 <?php } ?>
 
-<?php wp_head(); ?>
+<?php 
+wp_head(); 
+
+$rr_btn_menu = get_field('rr_btn_menu', 'option');
+?>
 </head>
 <body <?php body_class($extra_class); ?>>
 <div id="page" class="site cf">
@@ -71,6 +75,9 @@ if ( $titleOpt=='hide' ) { ?>
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
+          <?php if( $rr_btn_menu ){  ?>
+            <div class="menu-cta-btn"><?php echo $rr_btn_menu; ?></div>
+          <?php } ?>
         </nav><!-- #site-navigation -->
 
         <?php $mobileLogo = get_field('logo_mobile','option'); ?>

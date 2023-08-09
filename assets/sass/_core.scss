@@ -298,6 +298,9 @@ a {
   position: relative;
   bottom: -7px;
 }
+.menu-cta-btn {
+  padding: 20px 0 10px 15px;
+}
 .main-navigation {
   position: fixed;
   top: 0;
@@ -307,13 +310,15 @@ a {
   z-index: -99;
   overflow: auto;
   transition: all ease .5s;
+  background: $teal;
+  padding: 150px 40px 80px;
   &.show {
     left: 0;
     z-index: 210;
   }
   .menu-wrapper {
-    background: $teal;
-    padding: 150px 40px 80px;
+    // background: $teal;
+    // padding: 150px 40px 80px;
   }
   ul {
     margin: 0 0;
