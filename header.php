@@ -61,6 +61,8 @@ if ( $titleOpt=='hide' ) { ?>
 wp_head(); 
 
 $rr_btn_menu = get_field('rr_btn_menu', 'option');
+$activities_link = get_field('activities_link', 'option');
+$a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '/';
 ?>
 </head>
 <body <?php body_class($extra_class); ?>>
@@ -77,6 +79,9 @@ $rr_btn_menu = get_field('rr_btn_menu', 'option');
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
           <?php if( $rr_btn_menu ){  ?>
             <div class="menu-cta-btn"><?php echo $rr_btn_menu; ?></div>
+          <?php } ?>
+          <?php if( $activities_link ){ ?>
+            <div class="menu-cta-btn mobile"><a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a></div>
           <?php } ?>
         </nav><!-- #site-navigation -->
 
@@ -112,11 +117,19 @@ $rr_btn_menu = get_field('rr_btn_menu', 'option');
           if ($btn_text && $btn_link) { ?>
           <a href="<?php echo $btn_link ?>" target="<?php echo $btn_target ?>" class="head-button"><?php echo $btn_text ?></a>
           <?php } ?>
+          <?php if( $activities_link ){ ?>
+            <div class="header-link">
+              <a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a>
+            </div>
+          <?php } ?>
+
         </div>
+
       </div>
       <div class="searchbar">
         <div class="inner"><?php get_template_part('searchform') ?></div>
       </div>
+      
 		</div>
 	</header>
 

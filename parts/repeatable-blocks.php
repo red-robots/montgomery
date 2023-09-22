@@ -107,8 +107,61 @@
                 </div>
               </div>
             </div>
+          <?php }  else if ( get_row_layout() == 'slider' ) {  
+            $gallery = get_sub_field('gallery_slider'); 
+              // echo '<pre>';
+              // print_r($gallery);
+              // echo '</pre>';
+            ?>
+            <div class="caro-wrap">
+            <div class="owl-carousel">
+              <?php foreach( $gallery as $img ) { ?>
+                <div>
+                  <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                </div>
+              <?php } ?>
+            </div>
+            </div>
+
+          <?php }  else if ( get_row_layout() == 'faqs' ) {  ?>
+              <?php if ($additional_information = get_sub_field('faq_toggles')) { 
+                $sTitle = get_sub_field('section_title');
+                // $bgStyle = ($infoBg) ? ' style="background-image:url('.$infoBg['url'].')"':'';
+              ?>
+              <div class="section-additional-information"<?php echo $bgStyle ?>>
+                <div class="wrapper">
+                  <?php if( $sTitle ){ ?>
+                    <h2 class="stitle"><?php echo $sTitle; ?></h2>
+                  <?php } ?>
+                  <div class="accordions">
+                  <?php $i=1; foreach ($additional_information as $a) { ?>
+                    <?php if ($a['question'] && $a['answer']) { ?>
+                    <div class="acc-item<?php echo ($i==1) ? ' active first':'' ?>">
+                      <div class="title"><a href="javascript:void(0)"><?php echo $a['question'] ?></a></div>
+                      <div class="text"><?php echo $a['answer'] ?></div>
+                    </div> 
+                    <?php $i++; } ?>
+                  <?php } ?>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
           <?php } ?>
 
         <?php endwhile; ?>
       </div>
 <?php } ?>
+<script>
+jQuery(document).ready(function($){
+
+});
+
+var handles = document.querySelectorAll('.acc-item .title');
+for (var i = 0; i < handles.length; i++) {
+  handles[i].addEventListener('click', function(e) {
+    var textPanel = e.target.parentNode.nextElementSibling;
+    var wrap = e.target.parentNode.parentNode;
+    wrap.classList.toggle("active");
+  });
+}
+</script>

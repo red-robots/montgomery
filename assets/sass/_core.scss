@@ -300,6 +300,25 @@ a {
 }
 .menu-cta-btn {
   padding: 20px 0 10px 15px;
+  &.mobile {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid $primary;
+      color: $primary;
+      text-transform: uppercase;
+      padding: 10px 20px 8px;
+      background-color: #fff;
+      &:hover {
+        background: $primary;
+        color: #FFF;
+      }
+    }
+    @include tab {
+      display: none;
+    }
+  }
+  
 }
 .main-navigation {
   position: fixed;
@@ -386,7 +405,8 @@ a {
   position: relative;
   @include flexgroup();
   justify-content: flex-end;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: center;
   bottom: 0;
   .head-button {
     bottom: 0;
@@ -823,6 +843,42 @@ div.buttondiv {
   padding: 10px 25px;
   @include tab {
     padding: 14px 35px 12px;
+  }
+  &:hover {
+    text-decoration: none;
+    background: $yellow2;
+    color: #FFF;
+  }
+  &.btn-white {
+    background: #FFF;
+    color: #999;
+    &:hover {
+      text-decoration: none;
+      background: $yellow2;
+      color: #FFF;
+    }
+  }
+}
+.header-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: $font_forth;
+  font-size: 14px;
+  font-weight: 500;
+  // line-height: 1.2;
+  
+  a {
+    text-decoration: none;
+  background: $teal;
+  color: #FFF;
+    color: #fff;
+    transition: all ease .2s;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    padding: 10px 25px;
+    @include tab {
+      padding: 10px 25px 10px;
+    }
   }
   &:hover {
     text-decoration: none;
@@ -3504,4 +3560,39 @@ button.rocketrez-web-engine-button {
 .btn-center {
   width: 100%;
   text-align: center;
+}
+.caro-wrap {
+  width: 100%;
+  margin: 20px auto;
+}
+.owl-carousel {
+  &:hover {
+    .owl-nav {
+      .owl-prev, .owl-next {
+        opacity: 1;
+      }
+    }
+  }
+  .owl-nav {
+    
+    width: 100%;
+      .owl-prev, .owl-next {
+        opacity: 0;
+        transition: all ease .2s;
+        position: absolute;
+        top: 40%;
+        span {
+          font-size: 50px;
+          color: #fff;
+          background-color: rgba(#000,.3);
+          padding: 0 20px;
+        }
+      }
+      .owl-prev {
+        
+      }
+      .owl-next {
+        right: 0;
+      }
+  }
 }

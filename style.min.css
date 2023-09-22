@@ -1381,6 +1381,8 @@ a:hover{color:midnightblue}
 #menu-toggle:hover span.bar,#menu-toggle:hover span.bar:before,#menu-toggle:hover span.bar:after{background:#3ca7c5}
 .head-button,#menu-toggle{position:relative;bottom:-7px}
 .menu-cta-btn{padding:20px 0 10px 15px}
+.menu-cta-btn.mobile a{display:inline-block;text-decoration:none;border:2px solid #4c748c;color:#4c748c;text-transform:uppercase;padding:10px 20px 8px;background-color:#fff}
+.menu-cta-btn.mobile a:hover{background:#4c748c;color:#FFF}
 .main-navigation{position:fixed;top:0;left:-100vw;width:330px;height:100vh;z-index:-99;overflow:auto;-webkit-transition:all ease .5s;transition:all ease .5s;background:#3ca7c5;padding:150px 40px 80px}
 .main-navigation.show{left:0;z-index:210}
 .main-navigation ul{margin:0;padding:0;list-style:none}
@@ -1394,7 +1396,7 @@ a:hover{color:midnightblue}
 #closeMenu span.bar:before,#closeMenu span.bar:after{content:"";background:#FFF}
 #closeMenu span.bar:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
 #closeMenu span.bar:after{-webkit-transform:translateY(-2px) rotate(-45deg);transform:translateY(-2px) rotate(-45deg)}
-.headtopright{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;bottom:0}
+.headtopright{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center;bottom:0}
 .headtopright .head-button{bottom:0}
 .headtopright .weatherInfo{top:5px}
 .headtopright .search-button{display:inline-block;width:20px;height:20px;background-image:url("images/icon-search.svg");background-position:center;background-repeat:no-repeat;background-size:contain;margin-right:20px;margin-left:30px;position:relative;bottom:-8px}
@@ -1450,6 +1452,11 @@ div.buttondiv{margin-top:40px}
 .button:hover{text-decoration:none;background:#cea155;color:#FFF}
 .button.btn-white{background:#FFF;color:#999}
 .button.btn-white:hover{text-decoration:none;background:#cea155;color:#FFF}
+.header-link{display:inline-block;margin-top:10px;font-family:"Inter",sans-serif;font-size:14px;font-weight:500}
+.header-link a{text-decoration:none;background:#3ca7c5;color:#FFF;color:#fff;-webkit-transition:all ease .2s;transition:all ease .2s;text-transform:uppercase;letter-spacing:.25px;padding:10px 25px}
+.header-link:hover{text-decoration:none;background:#cea155;color:#FFF}
+.header-link.btn-white{background:#FFF;color:#999}
+.header-link.btn-white:hover{text-decoration:none;background:#cea155;color:#FFF}
 .bg_gray{background-color:#eee}
 .section{margin-top:80px;margin-bottom:80px;font-weight:normal}
 .homerow1.section{margin-bottom:0}
@@ -1795,6 +1802,12 @@ button.rocketrez-web-engine-button{display:inline-block;text-decoration:none;bor
 button.rocketrez-web-engine-button:hover{background:#4c748c;color:#FFF}
 .rocketrez-iframe-container{margin-top:120px}
 .btn-center{width:100%;text-align:center}
+.caro-wrap{width:100%;margin:20px auto}
+.owl-carousel:hover .owl-nav .owl-prev,.owl-carousel:hover .owl-nav .owl-next{opacity:1}
+.owl-carousel .owl-nav{width:100%}
+.owl-carousel .owl-nav .owl-prev,.owl-carousel .owl-nav .owl-next{opacity:0;-webkit-transition:all ease .2s;transition:all ease .2s;position:absolute;top:40%}
+.owl-carousel .owl-nav .owl-prev span,.owl-carousel .owl-nav .owl-next span{font-size:50px;color:#fff;background-color:rgba(0,0,0,0.3);padding:0 20px}
+.owl-carousel .owl-nav .owl-next{right:0}
 @media screen and (max-device-width:480px) and (orientation:portrait){.banner-video.has-mobile-video .video-mobile{width:110vh}
 }@media screen and (max-device-width:850px) and (orientation:landscape){.banner-video.has-mobile-video .video-mobile{width:120vw}
 }@media(min-width:600px){.homerow5.section .block{width:50%}
@@ -1811,6 +1824,7 @@ button.rocketrez-web-engine-button:hover{background:#4c748c;color:#FFF}
 }@media(min-width:820px){.h1,h1{font-size:2.8rem}
 h2{font-size:2.5em}
 .site-logo{position:absolute;top:12px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.menu-cta-btn.mobile{display:none}
 .searchbar{bottom:-75px}
 .searchbar .inner{max-width:350px;right:15px;padding:0}
 .banners{height:77vh}
@@ -1826,6 +1840,7 @@ h2{font-size:2.5em}
 .banner-video .video-caption.type-image .img-desktop{display:block}
 .banner-video .video-caption.type-image .img-mobile{display:none}
 .button{padding:14px 35px 12px}
+.header-link a{padding:10px 25px 10px}
 .homerow1.section{margin-bottom:80px}
 .homerow1 .home-carousel{padding-left:0;padding-right:0}
 .homerow1 .fleft{width:45%;padding-left:12%;padding-right:2%}
