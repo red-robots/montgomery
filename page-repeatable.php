@@ -90,6 +90,21 @@ get_header();
                 </div>
               </div>
             </div>
+          <?php }  else if ( get_row_layout() == 'slider' ) {  
+            $gallery = get_sub_field('gallery_slider'); 
+              // echo '<pre>';
+              // print_r($gallery);
+              // echo '</pre>';
+            ?>
+            <div class="caro-wrap">
+            <div class="owl-carousel">
+              <?php foreach( $gallery as $img ) { ?>
+                <div>
+                  <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                </div>
+              <?php } ?>
+            </div>
+            </div>
           <?php $n++; } else if ( get_row_layout() == 'grid_layout' ) {  
             $blocks = get_sub_field('blocks'); ?> 
             <div class="repeatable grid-layout">
