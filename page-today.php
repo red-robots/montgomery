@@ -19,8 +19,9 @@ get_header(); ?>
           <h1 class="page-title"><span><?php the_title(); ?></span></h1>
         </div>
         <div class="entry-content">
+        	<?php $anyContent = get_the_content(); ?>
 	        <?php the_content(); ?>
-	        <br><br>
+	        <?php if( $anyContent ){ ?><br><br><?php } ?>
 	        <?php
 
 			$praams = '/hours-of-operation-' . date("m-d-y") . '/';
