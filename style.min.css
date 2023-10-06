@@ -1640,8 +1640,8 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .contact-links-section .link-icon .title{display:block;width:100%;font-size:16px;font-weight:600;line-height:1.2}
 .contact-links-section .link-icon a:hover .icon{background-color:#3ca7c5}
 .contact-links-section .link-icon a:hover .title{color:#3ca7c5}
-.taxonomy-content.no-cat-desc{padding-top:4rem;padding-bottom:3rem}
 .taxonomy-content .wrapper{padding-top:5rem;padding-bottom:5rem}
+.taxonomy-content .wrapper.wraptax{padding-top:0}
 .taxonomy-content .cat-description p:last-child{margin-bottom:0}
 .taxonomy-content .taxonomy-posts{max-width:100%;width:100%;margin:0 auto;padding-left:15px;padding-right:15px}
 .taxonomy-content .taxonomy-posts .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:-15px;padding-bottom:30px;padding-left:0;padding-right:0}

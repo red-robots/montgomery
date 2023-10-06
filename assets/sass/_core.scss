@@ -2323,12 +2323,15 @@ body.single-tribe_events {
 
 .taxonomy-content {
   &.no-cat-desc {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+    // padding-top: 4rem;
+    // padding-bottom: 3rem;
   }
   .wrapper {
     padding-top: 5rem;
     padding-bottom: 5rem;
+    &.wraptax {
+      padding-top: 0;
+    }
   }
   .cat-description {
     p:last-child {
