@@ -21,7 +21,7 @@ $has_cat_description = ( category_description( $current_term_id ) ) ? 'has-cat-d
   <main id="main" class="site-main" role="main">
 
     <div class="wrapper wraptax">
-      <div class="titlediv typical nomb"><h1 class="page-title"><span><?php the_title(); ?></span></h1></div>
+      <div class="titlediv typical nomb"><h1 class="page-title"><span><?php echo $current_term_name; ?></span></h1></div>
       <?php if ( category_description( $current_term_id ) ) { ?>
       <div class="entry-content" style="padding-top: 15px;">
         <?php echo anti_email_spam(category_description( $current_term_id )); ?>
