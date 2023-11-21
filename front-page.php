@@ -87,6 +87,7 @@ get_header();
       $button = get_sub_field('button');
       $soon = get_sub_field('coming_soon');
       $type = get_sub_field('type');
+      $rr_btn = get_sub_field('rr_btn_home');
       $is_coming_soon = (isset($soon[0]) && $soon[0]) ? ' coming_soon' : '';
 
       $fc_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
@@ -123,6 +124,11 @@ get_header();
                 <div class="buttondiv">
                   <a href="<?php echo $fc_link ?>" target="<?php echo $fc_target ?>" class="button"><?php echo $fc_text ?></a>
                 </div>  
+                <?php } ?>
+                <?php if( $rr_btn ){ ?>
+                  <div class="buttondiv">
+                    <?php echo $rr_btn; ?>
+                  </div>
                 <?php } ?>
               </div>
               <?php } ?>
