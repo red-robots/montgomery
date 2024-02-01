@@ -1,4 +1,9 @@
-<div class="banners swiper <?php echo $type ?>">
+<?php if( is_front_page() ){
+	$cClass = '';
+} else {
+	$cClass = 'static-banner';
+} ?>
+<div class="banners swiper <?php echo $type ?> <?php echo $cClass; ?>">
 	<div class="swiper-wrapper">
 	  <?php foreach ($banners as $b) { 
 	    $img = $b['image'];
