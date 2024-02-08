@@ -27,6 +27,7 @@
             $image = get_sub_field('image'); 
             $imageSize = get_sub_field('image_size'); 
             $text_alignment = get_sub_field('text_alignment'); 
+            $rocket_rez_button = get_sub_field('rocket_rez_button'); 
 
             $col = ( ($title || $content) && $image ) ? 'half':'full';
             $col .= ($n % 2==0) ? ' even':' odd';
@@ -50,6 +51,10 @@
                     <div class="buttondiv">
                       <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
                     </div>  
+                    <?php } ?>
+                    <?php if( $rocket_rez_button ) { ?>
+                      <br>
+                      <?php echo $rocket_rez_button; ?>
                     <?php } ?>
                   </div>  
                   <?php } ?>
