@@ -152,7 +152,9 @@
               </div>
               <?php } ?>
           <?php } else if ( get_row_layout() == 'single_image' ) { ?>
-            <?php if ($image = get_sub_field('image')) { 
+
+            <div class="repeatable_single_image">
+            <?php if ( $image = get_sub_field('image') ) { 
               $lightbox = get_sub_field('lightbox'); ?>
               <figure class="repeatable-single-image">
                 <?php if($lightbox) { ?>
@@ -162,6 +164,8 @@
                 <?php } ?>
               </figure>
             <?php } ?>
+            </div>
+
           <?php } ?>
 
         <?php endwhile; ?>
