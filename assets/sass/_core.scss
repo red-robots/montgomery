@@ -3176,6 +3176,10 @@ body.home {
       @include tab {
         width: 33.333%;
       }
+      .inside {
+        height: 100%;
+        background: #eee;
+      }
     }
     .bImage {
       width: 100%;

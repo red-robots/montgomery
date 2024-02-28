@@ -92,8 +92,8 @@
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rectangle-lg.png" alt="">
                           </figure>
                         </div>
+                        <?php } ?>
                         <div class="desc">
-                          <?php } ?>
                           <?php if ($title) { ?>
                           <div class="bTitle"><?php echo $title ?></div>
                           <?php } ?>

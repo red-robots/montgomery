@@ -5,7 +5,6 @@
  *	Developed by: Lisa DeBona
  *  Date Modified: 02.07.2023
  */
-
 jQuery(document).ready(function ($) {
   /* Menu Button */
   $(document).on('click', '.menu-toggle, .mobile-menu-button', function (e) {
@@ -18,19 +17,23 @@ jQuery(document).ready(function ($) {
     $('.searchbar').toggleClass('show');
     $('.searchbar input.search-field').focus();
   });
+
   if ($('.repeatable-blocks').length) {
     var divPrev = $('.repeatable-blocks').prev();
     console.log(divPrev);
+
     if (divPrev.hasClass('titlediv')) {
       if ($('.repeatable-blocks .repeatable').eq(0).hasClass('fullwidth')) {
         $('.repeatable-blocks .repeatable').eq(0).addClass('first');
       }
     }
   }
-
   /* Slideshow */
+
+
   var swiper = new Swiper('.slideshow', {
     effect: 'fade',
+
     /* "slide", "fade", "cube", "coverflow" or "flip" */
     loop: true,
     noSwiping: true,
@@ -48,7 +51,6 @@ jQuery(document).ready(function ($) {
       prevEl: ".swiper-button-prev"
     }
   });
-
   /* Carousel */
   // var owlPage = $('.owl-page-carousel');
   // owlPage.owlCarousel({
@@ -82,6 +84,7 @@ jQuery(document).ready(function ($) {
   // });
 
   /* Carousel */
+
   var owl = $('.owl-carousel');
   owl.owlCarousel({
     center: true,
@@ -132,6 +135,7 @@ jQuery(document).ready(function ($) {
     var action = $(this).attr('data-action');
     $(action).trigger('click');
   });
+
   function coverCarouselItem() {
     var first = $('.home-carousel img.helper').eq(0);
     var width = first.width();
@@ -141,7 +145,6 @@ jQuery(document).ready(function ($) {
       'height': height + 'px'
     });
   }
-
   /* Add Class when scroll down */
   // var prevScrollpos = window.pageYOffset;
   // window.onscroll = function () {
@@ -154,26 +157,30 @@ jQuery(document).ready(function ($) {
   //   prevScrollpos = currentScrollPos;
   // }
 
+
   var targetDiv = $('body');
   $(window).scroll(function () {
-    var windowpos = $(window).scrollTop();
-    // change amount here to choose distance from top to add class
+    var windowpos = $(window).scrollTop(); // change amount here to choose distance from top to add class
+
     if (windowpos >= 50) {
       targetDiv.addClass('scrolled');
     } else {
       targetDiv.removeClass('scrolled');
     }
   });
-
   /* Weather conversion from Celcius to Fahrenheit */
+
   if ($('.wp-forecast').length && $('img.wp-forecast-curr-left').length) {
     var weatherNum = $('.wp-forecast-curr-right').text().trim().replace('°C', '');
     weatherNum = parseFloat(weatherNum);
     var fahrenheit = weatherNum * 1.8 + 32;
-    fahrenheit = fahrenheit.toFixed(2); /* two decimal points */
+    fahrenheit = fahrenheit.toFixed(2);
+    /* two decimal points */
+
     var int = fahrenheit.split('.')[0];
     var decimal = fahrenheit.split('.')[1];
     var lastChar = decimal.slice(-1);
+
     if (decimal == '00') {
       fahrenheit = int;
     } else {
@@ -181,8 +188,9 @@ jQuery(document).ready(function ($) {
         fahrenheit = int + '.' + decimal.replace(lastChar, '');
       }
     }
-    var weatherDescription = $('img.wp-forecast-curr-left').attr('alt');
-    //var weatherDescription = weatherDescription.toLowerCase().replace(/(?<= )[^\s]|^./g, a=>a.toUpperCase());
+
+    var weatherDescription = $('img.wp-forecast-curr-left').attr('alt'); //var weatherDescription = weatherDescription.toLowerCase().replace(/(?<= )[^\s]|^./g, a=>a.toUpperCase());
+
     var weatherDescription = weatherDescription.toLowerCase().trim();
     var basename = basename($('img.wp-forecast-curr-left').attr('src'));
     var extension = basename.split('.').pop();
@@ -190,17 +198,17 @@ jQuery(document).ready(function ($) {
     $('.weather-icon').attr('id', iconName);
     $('.weatherInfo .fahrenheit').text(fahrenheit).attr('title', weatherDescription);
   }
+
   function basename(path) {
     return path.substring(path.lastIndexOf('/') + 1);
   }
-
   /* Accordions */
+
+
   $('.accordion .q-title').on('click', function () {
     $(this).find('a').toggleClass('active');
-    $(this).parents('.q-item').toggleClass('active');
-    //$(this).parents('.q-item').find('.q-text').show();
+    $(this).parents('.q-item').toggleClass('active'); //$(this).parents('.q-item').find('.q-text').show();
   });
-
   /* Tribe Events >  Single page Featured Image */
   // if( $('body.single-tribe_events .hentry .tribe-events-event-image').length ) {
   //   var tribeImage = $('body.single-tribe_events .hentry .tribe-events-event-image img').attr('src');
@@ -209,15 +217,18 @@ jQuery(document).ready(function ($) {
   // }
 
   /* Contact us page contact section (teal background) */
+
   if ($('.contact-form-section .fxcol.text').length) {
     $('.contact-form-section .fxcol.text p').each(function () {
       var pstr = $(this).text().trim().replace(/\s+/g, '');
+
       if (pstr == '') {
         /* remove empty paragrap */
         $(this).remove();
       }
     });
   }
+
   if ($('form.search-form input.search-field').length) {
     $('form.search-form input.search-field').attr('required', 1);
   }
