@@ -112,12 +112,21 @@
                 </div>
               </div>
             </div>
-          <?php }  else if ( get_row_layout() == 'slider' ) {  
-            $gallery = get_sub_field('gallery_slider'); 
-              // echo '<pre>';
-              // print_r($gallery);
-              // echo '</pre>';
-            ?>
+          <?php } else if ( get_row_layout() == 'single_image' ) { ?>
+
+            <?php if ( $image = get_sub_field('image') ) { 
+              $lightbox = get_sub_field('lightbox'); ?>
+              <figure class="repeatable-single-image">
+                <?php if($lightbox) { ?>
+                  <a href="<?php echo $image['url'] ?>" data-fancybox="gallery"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" /></a>
+                <?php } else { ?>
+                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
+                <?php } ?>
+              </figure>
+            <?php } ?>
+
+          <?php } else if ( get_row_layout() == 'slider' ) {  
+            $gallery = get_sub_field('gallery_slider'); ?>
             <div class="caro-wrap">
             <div class="owl-carousel">
               <?php foreach( $gallery as $img ) { ?>
@@ -128,7 +137,7 @@
             </div>
             </div>
 
-          <?php }  else if ( get_row_layout() == 'faqs' ) {  ?>
+          <?php } else if ( get_row_layout() == 'faqs' ) { ?>
               <?php if ($additional_information = get_sub_field('faq_toggles')) { 
                 $sTitle = get_sub_field('section_title');
                 // $bgStyle = ($infoBg) ? ' style="background-image:url('.$infoBg['url'].')"':'';
@@ -151,21 +160,6 @@
                 </div>
               </div>
               <?php } ?>
-          <?php } else if ( get_row_layout() == 'single_image' ) { ?>
-
-            <div class="repeatable_single_image">
-            <?php if ( $image = get_sub_field('image') ) { 
-              $lightbox = get_sub_field('lightbox'); ?>
-              <figure class="repeatable-single-image">
-                <?php if($lightbox) { ?>
-                  <a href="<?php echo $image['url'] ?>" data-fancybox="gallery"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" /></a>
-                <?php } else { ?>
-                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
-                <?php } ?>
-              </figure>
-            <?php } ?>
-            </div>
-
           <?php } ?>
 
         <?php endwhile; ?>
