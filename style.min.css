@@ -1761,6 +1761,9 @@ body.home #content{background-color:#eee;position:relative;z-index:10}
 body.home #primary{padding-bottom:0}
 .generic-layout .wp-block-group.alignwide{max-width:100%;width:100%;padding-left:0;padding-right:0}
 .site-logo.mobile{display:none}
+.repeatable-blocks .repeatable-single-image{margin:0}
+.repeatable-blocks .repeatable-single-image a{display:block}
+.repeatable-blocks .repeatable-single-image img{width:100%;height:auto}
 .grid-layout{margin:0}
 .grid-layout .wrapper{max-width:100%;width:100%;padding-left:15px;padding-right:15px}
 .grid-layout .blocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-15px;margin-right:-15px}

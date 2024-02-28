@@ -3149,6 +3149,20 @@ body.home {
   display: none;
 }
 
+.repeatable-blocks {
+  .repeatable-single-image {
+    margin: 0 0;
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
 .grid-layout {
   margin: 0 0;
   .wrapper {
