@@ -85,7 +85,7 @@
                     $image = $b['image'];
                     ?>
                     <div class="block">
-                      <div class="inside">
+                      <div class="inside <?php echo ($image) ? 'has-image':'no-image' ?>">
                         <?php if ($image) { ?>
                         <div class="bImage">
                           <figure style="background-image:url('<?php echo $image['url'] ?>')">

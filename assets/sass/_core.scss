@@ -3179,6 +3179,12 @@ body.home {
       .inside {
         height: 100%;
         background: #eee;
+        &.no-image {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
     .bImage {
