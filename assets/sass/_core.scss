@@ -3164,14 +3164,10 @@ body.home {
       height: auto;
     }
   }
-  .fullwidth_content {
-    .buttondiv {
-      &.center {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-      }
-    }
+  .buttondiv.center {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
   }
 }
 
