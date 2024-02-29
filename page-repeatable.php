@@ -151,6 +151,17 @@ get_header();
                 </div>
               </div>
             </div>
+          <?php } else if ( get_row_layout() == 'single_image_block' ) { ?>
+            <?php if ( $image = get_sub_field('image') ) { 
+              $lightbox = get_sub_field('lightbox'); ?>
+              <figure class="repeatable-single-image">
+                <?php if($lightbox) { ?>
+                  <a href="<?php echo $image['url'] ?>" data-fancybox="gallery"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" /></a>
+                <?php } else { ?>
+                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
+                <?php } ?>
+              </figure>
+            <?php } ?>
           <?php } ?>
 
         <?php endwhile; ?>

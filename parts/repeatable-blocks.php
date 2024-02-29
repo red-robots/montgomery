@@ -112,7 +112,7 @@
                 </div>
               </div>
             </div>
-          <?php } else if ( get_row_layout() == 'single_image' ) { ?>
+          <?php } else if ( get_row_layout() == 'single_image_block' ) { ?>
 
             <?php if ( $image = get_sub_field('image') ) { 
               $lightbox = get_sub_field('lightbox'); ?>
