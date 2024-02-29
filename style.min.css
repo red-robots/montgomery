@@ -1771,7 +1771,7 @@ body.home #primary{padding-bottom:0}
 .grid-layout .blocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-15px;margin-right:-15px}
 .grid-layout .blocks .block{width:100%;padding:30px 15px}
 .grid-layout .blocks .block .inside{height:100%;background:#eee}
-.grid-layout .blocks .block .inside.no-image{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.grid-layout .blocks .block .inside.no-image{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .grid-layout .blocks .bImage{width:100%;float:left}
 .grid-layout .blocks .bImage figure{margin:0;width:100%;float:left;background-size:cover;background-repeat:no-repeat;background-position:center}
 .grid-layout .blocks .bImage figure img{width:100%;height:auto;float:left}
