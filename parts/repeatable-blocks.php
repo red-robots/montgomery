@@ -8,13 +8,15 @@
             $btn_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
             $btn_title = (isset($button['title']) && $button['title']) ? $button['title'] : '';
             $btn_url = (isset($button['url']) && $button['url']) ? $button['url'] : '';
+            $button_center = get_sub_field('button_center');
+
             if($title || $content) { ?>
             <div class="repeatable fullwidth <?php echo ($title) ? 'has-subtitle':'no-subtitle' ?>">
               <div class="wrapper">
               <?php if ($title) { ?><h2 class="h2"><?php echo $title ?></h2><?php } ?>
               <?php if ($content) { ?><div class="text font16"><?php echo anti_email_spam($content) ?></div><?php } ?>
               <?php if ($btn_title && $btn_url) { ?>
-              <div class="buttondiv">
+              <div class="buttondiv <?php echo ($button_center) ? 'center':'left' ?>">
                 <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
               </div>  
               <?php } ?>
