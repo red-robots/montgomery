@@ -3207,6 +3207,9 @@ body.home {
           flex-wrap: wrap;
           // align-items: center;
           justify-content: center;
+          .desc {
+            padding: 30px 20px;
+          }
         }
       }
     }
