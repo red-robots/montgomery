@@ -41,7 +41,9 @@ get_header(); ?>
                       <img src="<?php echo $placeholder ?>" alt="" class="helper" />
                     </a>
                   </figure>
-                  <div class="video-title"><?php echo $title ?></div>
+                  <div class="video-title">
+                    <a href="<?php echo $videoLink ?>" data-fancybox="gallery" data-type="video"><?php echo $title ?></a>
+                  </div>
                 </div>
               <?php } ?>
             <?php } ?>
