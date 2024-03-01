@@ -3598,6 +3598,7 @@ body.search {
       width: 100%;
       float: left;
       position: relative;
+      overflow: hidden;
     }
     img.helper {
       width: 100%;
@@ -3613,6 +3614,10 @@ body.search {
       object-fit: cover;
       object-position: center;
       z-index: 2;
+      transition: all ease .3s;
+    }
+    a:hover img.thumbnail {
+      transform: scale(1.1);
     }
     iframe {
       margin: 0 0;

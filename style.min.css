@@ -1819,9 +1819,10 @@ body.search.search-no-results .page-content{font-size:1.3em}
 .videoLibrary .video{width:33.333%;padding:15px}
 .videoLibrary .video-title{width:100%;float:left;margin-top:8px;font-size:16px;font-weight:500}
 .videoLibrary figure{margin:0;width:100%;float:left;position:relative;overflow:hidden;border-radius:10px}
-.videoLibrary figure a{display:block;width:100%;float:left;position:relative}
+.videoLibrary figure a{display:block;width:100%;float:left;position:relative;overflow:hidden}
 .videoLibrary figure img.helper{width:100%;height:auto;float:left}
-.videoLibrary figure img.thumbnail{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;z-index:2}
+.videoLibrary figure img.thumbnail{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
+.videoLibrary figure a:hover img.thumbnail{-webkit-transform:scale(1.1);transform:scale(1.1)}
 .videoLibrary figure iframe{margin:0;border:0;width:100% !important;height:100%;position:absolute;top:0;left:0;z-index:5}
 button.rocketrez-web-engine-button{display:inline-block;text-decoration:none;border:2px solid #4c748c;color:#4c748c;text-transform:uppercase;padding:10px 20px 8px}
 button.rocketrez-web-engine-button:hover{background:#4c748c;color:#fff}
