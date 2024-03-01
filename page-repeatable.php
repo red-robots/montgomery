@@ -4,6 +4,7 @@
  */
 
 get_header(); 
+$postId = get_the_ID();
 ?>
 <div id="primary" class="content-area-full repeatable-layout ">
 	<main id="main" class="site-main" role="main">
@@ -119,13 +120,18 @@ get_header();
                     $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
                     $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
                     $image = $b['image'];
+                    $imageHelper = get_stylesheet_directory_uri() . '/images/rectangle-lg.png';
+                    //Events page
+                    if($postId==39) {
+                      $imageHelper = get_stylesheet_directory_uri() . '/images/square.png';
+                    }
                     ?>
                     <div class="block">
                       <div class="inside">
                         <?php if ($image) { ?>
                         <div class="bImage">
                           <figure style="background-image:url('<?php echo $image['url'] ?>')">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rectangle-lg.png" alt="">
+                            <img src="<?php echo $imageHelper ?>" alt="">
                           </figure>
                         </div>
                         <div class="desc">
