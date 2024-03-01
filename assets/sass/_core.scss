@@ -3569,6 +3569,38 @@ body.search {
   }
 }
 
+.videoLibrary {
+  display: flex;
+  flex-wrap: wrap;
+  .video {
+    width: 33.333%;
+    padding: 10px;
+  }
+  figure {
+    margin: 0 0;
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    img.helper {
+      width: 100%;
+      height: auto;
+      float: left;
+    }
+    iframe {
+      margin: 0 0;
+      border: none;
+      width: 100%!important;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+  }
+}
+
 @media screen and (max-width: 782px) {
   #wpadminbar {
     position: fixed!important;
