@@ -41,6 +41,7 @@ get_header(); ?>
                       <img src="<?php echo $placeholder ?>" alt="" class="helper" />
                     </a>
                   </figure>
+                  <div class="video-title"><?php echo $title ?></div>
                 </div>
               <?php } ?>
             <?php } ?>
