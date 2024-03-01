@@ -3568,7 +3568,9 @@ body.search {
     line-height: 1.3;
   }
 }
-
+body.page-template-page-videos .titlediv.typical .page-title {
+  margin-bottom: 20px;
+}
 .videoLibrary {
   display: flex;
   flex-wrap: wrap;

@@ -1815,6 +1815,7 @@ body.search.search-no-results .page-header .page-title span{text-transform:none}
 body.search.search-no-results .not-found{text-align:center}
 body.search.search-no-results .page-content{font-size:1.3em}
 .tribe-events-calendar-month__calendar-event-tooltip p{font-size:12px;line-height:1.3}
+body.page-template-page-videos .titlediv.typical .page-title{margin-bottom:20px}
 .videoLibrary{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-15px;margin-right:-15px;margin-bottom:50px}
 .videoLibrary .video{width:33.333%;padding:15px}
 .videoLibrary .video-title{width:100%;float:left;margin-top:8px;font-size:16px;font-weight:500}
