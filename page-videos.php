@@ -26,16 +26,23 @@ get_header(); ?>
           <?php if( $videos = get_field('videoLibrary') ) { ?>
           <div class="videoLibrary">
             <?php foreach ($videos as $v) { 
-              $basename = basename( $v['video_link'] );
-              $title = $v['video_title'];
-              $placeholder = get_stylesheet_directory_uri() . '/images/video-helper.png';
-            ?>
-            <div class="video">
-              <figure>
-                <iframe title="vimeo-player" src="https://player.vimeo.com/video/<?php echo $basename ?>" frameborder="0" allowfullscreen></iframe>
-                <img src="<?php echo $placeholder ?>" alt="" class="helper" />
-              </figure>
-            </div>
+              $videoLink = $v['video_link'];
+              if($videoLink) {
+                $basename = basename( $videoLink );
+                $title = $v['video_title'];
+                $placeholder = get_stylesheet_directory_uri() . '/images/video-helper.png';
+                $thumbnail = 'https://vumbnail.com/'.$basename.'.jpg';
+                ?>
+                <div class="video">
+                  <figure>
+                    <a href="<?php echo $videoLink ?>" data-fancybox="gallery" data-type="video">
+                      <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/<?php //echo $basename ?>" frameborder="0" allowfullscreen></iframe> -->
+                      <img src="<?php echo $thumbnail ?>" alt="" class="thumbnail">
+                      <img src="<?php echo $placeholder ?>" alt="" class="helper" />
+                    </a>
+                  </figure>
+                </div>
+              <?php } ?>
             <?php } ?>
           </div>
           <?php } ?>
