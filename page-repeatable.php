@@ -107,10 +107,7 @@ $postId = get_the_ID();
             </div>
             </div>
           <?php $n++; } else if ( get_row_layout() == 'grid_layout' ) {  
-            $blocks = get_sub_field('blocks'); 
-            // $start_date = get_sub_field('event_start_date'); 
-            // $end_date = get_sub_field('event_end_date'); 
-            ?> 
+            $blocks = get_sub_field('blocks'); ?> 
             <div class="repeatable grid-layout">
               <div class="wrapper">
                 <div class="flexwrap blocks">
