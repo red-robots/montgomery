@@ -107,7 +107,10 @@ $postId = get_the_ID();
             </div>
             </div>
           <?php $n++; } else if ( get_row_layout() == 'grid_layout' ) {  
-            $blocks = get_sub_field('blocks'); ?> 
+            $blocks = get_sub_field('blocks'); 
+            // $start_date = get_sub_field('event_start_date'); 
+            // $end_date = get_sub_field('event_end_date'); 
+            ?> 
             <div class="repeatable grid-layout">
               <div class="wrapper">
                 <div class="flexwrap blocks">
@@ -125,9 +128,27 @@ $postId = get_the_ID();
                     if($postId==39) {
                       $imageHelper = get_stylesheet_directory_uri() . '/images/square.png';
                     }
+                    $current_date = strtotime(date('Y-m-d'));
+                    $start_date = ($b['event_start_date']) ? strtotime($b['event_start_date']) : '';
+                    $end_date = ($b['event_end_date']) ? strtotime($b['event_end_date']) : '';
+                    $is_completed = false;
+                    if($end_date) {
+                      if($current_date>$end_date) {
+                        $is_completed = true;
+                      }
+                    } else {
+                      if($start_date) {
+                        if($current_date>$start_date) {
+                          $is_completed = true;
+                        }
+                      }
+                    }
                     ?>
                     <div class="block">
                       <div class="inside">
+                        <?php if ($is_completed) { ?>
+                        <div class="status">Event Completed</div>  
+                        <?php } ?>
                         <?php if ($image) { ?>
                         <div class="bImage">
                           <figure style="background-image:url('<?php echo $image['url'] ?>')">
