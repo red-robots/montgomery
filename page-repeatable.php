@@ -144,7 +144,7 @@ $postId = get_the_ID();
                     <div class="block">
                       <div class="inside">
                         <?php if ($is_completed) { ?>
-                        <div class="status">Event Completed</div>  
+                        <div class="status">Event Complete</div>  
                         <?php } ?>
                         <?php if ($image) { ?>
                         <div class="bImage">
