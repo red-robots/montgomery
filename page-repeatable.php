@@ -8,6 +8,14 @@ $postId = get_the_ID();
 ?>
 <div id="primary" class="content-area-full repeatable-layout ">
 	<main id="main" class="site-main" role="main">
+
+    <?php 
+    //EVENTS Page
+    if ($postId==39) { 
+      get_template_part('parts/upcoming-events'); 
+    } ?>
+
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
     <div class="titlediv typical nomb">
@@ -195,8 +203,9 @@ $postId = get_the_ID();
         <?php endwhile; ?>
       </div>
       <?php } ?>
-
 		<?php endwhile; ?>
+
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 

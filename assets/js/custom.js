@@ -28,6 +28,22 @@ jQuery(document).ready(function ($) {
       }
     }
   }
+
+  eventBoxDetails();
+  $(window).on('resize', function () {
+    eventBoxDetails();
+  });
+
+  function eventBoxDetails() {
+    if ($('.events-list-wrapper .eventBox').length) {
+      $('.events-list-wrapper .eventBox').each(function () {
+        var wrapHeight = $(this).find('.inside').height();
+        var imgHeight = $(this).find('figure').height();
+        var descHeight = wrapHeight - imgHeight;
+        $(this).find('.description').css('height', descHeight + 'px');
+      });
+    }
+  }
   /* Slideshow */
 
 
