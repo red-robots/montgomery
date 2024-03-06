@@ -35,8 +35,7 @@ get_header(); ?>
                 ?>
                 <div class="video">
                   <figure>
-                    <a href="<?php echo $videoLink ?>" data-fancybox="gallery" data-type="video">
-                      <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/<?php //echo $basename ?>" frameborder="0" allowfullscreen></iframe> -->
+                    <a href="<?php echo $videoLink ?>" class="fancybox fancybox.iframe" data-fancybox="gallery" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0">
                       <img src="<?php echo $thumbnail ?>" alt="" class="thumbnail">
                       <img src="<?php echo $placeholder ?>" alt="" class="helper" />
                     </a>

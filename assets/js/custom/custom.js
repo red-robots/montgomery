@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
 
   if( $('.repeatable-blocks').length ) {
     var divPrev = $('.repeatable-blocks').prev();
-    console.log(divPrev);
+    //console.log(divPrev);
     if(divPrev.hasClass('titlediv')) {
       if( $('.repeatable-blocks .repeatable').eq(0).hasClass('fullwidth') ) {
         $('.repeatable-blocks .repeatable').eq(0).addClass('first');
