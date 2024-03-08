@@ -3809,3 +3809,83 @@ button.rocketrez-web-engine-button {
     }
   }
 }
+
+/* New Homepage Styles*/
+body.page-template-page-home-new,
+body.page-template-page-home-new.no-banner {
+  padding-top: 80px;
+}
+.home-repeatable-blocks {
+  .hero {
+    height: 100vh;
+    figure {
+      margin: 0 0;
+      padding: 0 0;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      img.hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .overlay {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+        gap: 1em;
+      }
+      .img-overlay {
+        display: block;
+        width: 80vw;
+        height: 20vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        z-index: 10;
+        @media screen and (max-width: 768px) {
+          height: 40vw;
+        }
+      }
+      .text-overlay {
+        width: 100%;
+        text-align: center;
+        color: #FFF;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+    }
+
+    &.has-overlay {
+      &:before {
+        content:"";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.35);
+        z-index: 2;
+      } 
+    }
+  }
+}
+
+
