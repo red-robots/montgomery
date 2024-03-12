@@ -3817,7 +3817,7 @@ body.page-template-page-home-new.no-banner {
 }
 .home-repeatable-blocks {
   .hero {
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     position: relative;
     figure {
@@ -3890,6 +3890,7 @@ body.page-template-page-home-new.no-banner {
     }
 
     &.hero-video {
+      height: 100%;
       .overlay-wrap {
         position: absolute;
         top: 0;
