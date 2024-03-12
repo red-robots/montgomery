@@ -1851,13 +1851,39 @@ button.rocketrez-web-engine-button:hover{background:#4c748c;color:#fff}
 .events-list-wrapper .description .summary p:last-child{margin-bottom:0}
 .events-list-wrapper .description .buttondiv{margin-top:20px}
 body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padding-top:80px}
-.home-repeatable-blocks .hero{height:100vh}
+.home-repeatable-blocks .hero{height:100%;overflow:hidden;position:relative}
 .home-repeatable-blocks .hero figure{margin:0;padding:0;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:relative}
 .home-repeatable-blocks .hero figure img.hero-image{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute;top:0;left:0}
-.home-repeatable-blocks .hero figure .overlay{max-width:1200px;width:100%;margin:0 auto;padding:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:relative;z-index:10;gap:1em}
-.home-repeatable-blocks .hero figure .img-overlay{display:block;width:80vw;height:20vw;background-size:contain;background-repeat:no-repeat;background-position:center;position:relative;z-index:10}
-.home-repeatable-blocks .hero figure .text-overlay{width:100%;text-align:center;color:#fff;font-size:3rem;font-weight:600;line-height:1.3}
+.home-repeatable-blocks .hero .overlay{max-width:1200px;width:100%;margin:0 auto;padding:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:relative;z-index:10;gap:1em}
+.home-repeatable-blocks .hero .img-overlay{display:block;width:80vw;height:20vw;background-size:contain;background-repeat:no-repeat;background-position:center;position:relative;z-index:10}
+.home-repeatable-blocks .hero .text-overlay{width:100%;text-align:center;color:#fff;font-size:3rem;font-weight:600;line-height:1.3}
 .home-repeatable-blocks .hero.has-overlay:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:rgba(0,0,0,.35);z-index:2}
+.home-repeatable-blocks .hero.hero-video .overlay-wrap{position:absolute;top:0;left:0;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.home-repeatable-blocks .hero.hero-video .video-wrapper{position:relative;padding-bottom:56.25%;max-width:100%;height:auto}
+.home-repeatable-blocks .hero.hero-video iframe{width:100% !important;height:100% !important;position:absolute;top:0;left:0}
+.icons-repeatable{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.icons-repeatable .icon-block{width:25%;text-align:center}
+.icons-repeatable .icon-block a{padding:30px;text-decoration:none;min-height:220px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}
+.icons-repeatable .icon-block a .link-title{display:block;width:100%;-webkit-transition:all ease .3s;transition:all ease .3s}
+.icons-repeatable .icon-block a:hover .link-title,.icons-repeatable .icon-block a:focus .link-title{-webkit-transform:scale(1.1);transform:scale(1.1)}
+.icons-repeatable .icon-block i[class*=fa-]{display:block;font-size:4rem;font-weight:normal;line-height:1;margin-bottom:10px;width:100%}
+.icons-repeatable .icon-block .title{font-size:1.5em;font-weight:500;line-height:1.3;width:100%}
+.icons-repeatable.icons-count-3 .icon-block{width:33.333%}
+.icons-repeatable.icons-count-4 .icon-block{width:25%}
+.icons-repeatable.icons-count-5 .icon-block{width:20%}
+.fullscreen-text-image-repeatable figure{margin:0;width:100%;min-height:530px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex}
+.fullscreen-text-image-repeatable figure.bottom-left{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+.fullscreen-text-image-repeatable figure.bottom-right{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.fullscreen-text-image-repeatable figure.top-left{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+.fullscreen-text-image-repeatable figure.top-right{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.fullscreen-text-image-repeatable figure.left-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+.fullscreen-text-image-repeatable figure.right-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.fullscreen-text-image-repeatable figure.middle{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.fullscreen-text-image-repeatable figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute;top:0;left:0}
+.fullscreen-text-image-repeatable figure .textblock{position:relative;z-index:10;background:#fff;padding:30px;color:#000;width:30%}
+.fullscreen-text-image-repeatable figure .buttondiv{margin-top:5px}
+.fullscreen-text-image-repeatable figure .buttondiv a.button{display:inline-block;text-decoration:none;background:#3ca7c5;color:#fff;padding:10px 20px}
+.fullscreen-text-image-repeatable figure .buttondiv a.button:hover,.fullscreen-text-image-repeatable figure .buttondiv a.button:focus{background:#cea155}
 @media screen and (max-device-width:480px)and (orientation:portrait){.banner-video.has-mobile-video .video-mobile{width:110vh}
 }@media screen and (max-device-width:850px)and (orientation:landscape){.banner-video.has-mobile-video .video-mobile{width:120vw}
 }@media(min-width:600px){.homerow5.section .block{width:50%}
@@ -1969,6 +1995,8 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .contact-links-section .link-icon{width:20%}
 }@media(min-width:1200px){.banners .banner .text{font-size:4.5rem}
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
+}@media screen and (min-width:1300px){.fullscreen-text-image-repeatable figure .textblock{padding:2vw}
+}@media screen and (min-width:1500px){.fullscreen-text-image-repeatable figure .textblock{padding:3vw}
 }@media screen and (max-width:1024px){.events-list-wrapper .eventBox{width:50%}
 }@media screen and (max-width:980px){.banner-video .banner-inner video{width:200vh;height:auto;top:0;-webkit-transform:translateY(0);transform:translateY(0)}
 }@media screen and (max-width:850px){.banner-video.has-mobile-video .video-mobile{display:block}
@@ -2005,7 +2033,10 @@ body.page-template-default .site-header,body.page-template-page-custom .site-hea
 .flexible-content .wave-divider svg{margin:0 auto}
 }@media screen and (max-width:782px){#wpadminbar{position:fixed !important;top:0 !important}
 body.subpage.no-banner.logged-in.admin-bar .site-header{top:45px}
-}@media screen and (max-width:768px){.home-repeatable-blocks .hero figure .img-overlay{height:40vw}
+}@media screen and (max-width:768px){.home-repeatable-blocks .hero .img-overlay{height:40vw}
+}@media screen and (max-width:600px){.fullscreen-text-image-repeatable figure .textblock{width:100%}
+}@media screen and (max-width:500px){.icons-repeatable .icon-block{width:100% !important}
+.icons-repeatable .icon-block a{min-height:150px}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
