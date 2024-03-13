@@ -3990,6 +3990,7 @@ body.page-template-page-home-new.no-banner {
   figure {
     margin: 0 0;
     width: 100%;
+    padding: 20px;
     min-height: 530px;
     position: relative;
     display: flex;
@@ -4036,7 +4037,7 @@ body.page-template-page-home-new.no-banner {
       background: #FFF;
       padding: 30px;
       color: #000;
-      width: 30%;
+      width: 35%;
       @media screen and (min-width: 1300px) {
         padding: 2vw;
       }
