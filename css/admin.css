@@ -11,3 +11,15 @@
   position: relative;
   z-index: 5;
 }
+.acf-field-true-false[data-name="clickthrough_target"] {
+  position: relative;
+}
+.acf-field-true-false[data-name="clickthrough_target"] .acf-label {
+  padding-left: 22px;
+}
+.acf-field-true-false[data-name="clickthrough_target"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: 16px;
+}

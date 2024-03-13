@@ -164,6 +164,55 @@ $postId = get_the_ID();
                 </figure>
               </div>
               <?php } ?>
+            <?php } else if( get_row_layout() == 'fullwidth_section_columns' ) {  ?>
+              <div class="fullwidth_section_or_columns">
+                <?php if( $content = get_sub_field('content') ) { $countContent = count($content); ?>
+                  <div class="columns-content content-<?php echo $countContent ?>">
+                    <?php foreach ($content as $c) { 
+                      $image = $c['image'];
+                      $clickthrough = $c['clickthrough_image'];
+                      $clickthrough_target = $c['clickthrough_target'];
+                      $textgroup = $c['textgroup'];
+                      $text = ( isset($textgroup['text']) && $textgroup['text'] ) ? $textgroup['text'] : '';
+                      $button = ( isset($textgroup['button']) && $textgroup['button'] ) ? $textgroup['button'] : '';
+                      $btnTitle = (isset($button['title']) && $button['title']) ? $button['title'] : '';
+                      $btnUrl = (isset($button['url']) && $button['url']) ? $button['url'] : '';
+                      $btnTarget = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
+                      $is_only_image = false;
+                      if( empty($text) && empty($btnTitle) &&  empty($btnUrl) ) {
+                        $is_only_image = true;
+                      }
+                      if ($image || $text ) { ?>
+                      <div class="inner<?php echo ($is_only_image) ? ' only-image':'' ?>">
+                        <?php if ($image) { ?>
+                          <?php if ($clickthrough) { ?>
+                          <figure>
+                            <a href="<?php echo $clickthrough ?>" target="<?php echo ($clickthrough_target) ? '_blank':'_self' ?>"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>"></a>
+                          </figure>
+                          <?php } else { ?>
+                          <figure>
+                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                          </figure>
+                          <?php } ?>
+                        <?php } ?>
+                        <?php if ($text) { ?>
+                        <div class="textblock">
+                          <div class="wrap">
+                            <div class="text"><?php echo $text ?></div>
+                            <?php if ($btnTitle || $btnUrl) { ?>
+                              <div class="buttondiv">
+                                <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
+                              </div>
+                            <?php } ?>
+                          </div>
+                        </div>
+                        <?php } ?>
+                      </div>
+                      <?php } ?>
+                    <?php } ?>
+                  </div>
+                <?php } ?>
+              </div>
             <?php } ?>
 
           <?php endwhile; ?>
