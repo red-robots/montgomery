@@ -1895,7 +1895,9 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .fullwidth_section_or_columns .inner:not(.only-image) .textblock h2{margin:0 0 15px}
 .fullwidth_section_or_columns .columns-content{background:#fff;padding:15px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .fullwidth_section_or_columns .columns-content .inner{width:33.333%}
+.fullwidth_section_or_columns .columns-content.content-1{padding:0}
 .fullwidth_section_or_columns .columns-content.content-1 .inner{width:100%}
+.fullwidth_section_or_columns .columns-content.content-1 .textblock{background:#f0f0f0}
 .fullwidth_section_or_columns .columns-content.content-2 .inner,.fullwidth_section_or_columns .columns-content.content-3 .inner{padding:15px}
 .fullwidth_section_or_columns .columns-content.content-2 figure,.fullwidth_section_or_columns .columns-content.content-2 .textblock,.fullwidth_section_or_columns .columns-content.content-3 figure,.fullwidth_section_or_columns .columns-content.content-3 .textblock{width:100%}
 .fullwidth_section_or_columns .columns-content.content-2 .textblock,.fullwidth_section_or_columns .columns-content.content-3 .textblock{background:#f0f0f0}
