@@ -193,7 +193,7 @@ a {
   }
   .head-inner {
     position: relative;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
     @include flexgroup();
     align-items: center;
@@ -832,8 +832,12 @@ div.buttondiv {
 .button {
   display: inline-block;
   text-decoration: none;
-  background: $teal;
-  color: #FFF;
+  // background: $teal;
+  appearance: none;
+  border-radius: 0;
+  border: none!important;
+  background: $color_dark;
+  color: #FFF!important;
   font-family: $font_forth;
   font-size: 15px;
   font-weight: 500;
@@ -846,7 +850,7 @@ div.buttondiv {
   }
   &:hover {
     text-decoration: none;
-    background: $yellow2;
+    background: $yellow2!important;
     color: #FFF;
   }
   &.btn-white {
@@ -866,7 +870,9 @@ div.buttondiv {
   font-size: 14px;
   font-weight: 500;
   // line-height: 1.2;
-  
+  button.rocketrez-web-engine-button {
+    padding: 10px 20px 10px;
+  }
   a {
     text-decoration: none;
   background: $teal;
@@ -3816,6 +3822,14 @@ body.page-template-page-home-new.no-banner {
   padding-top: 80px;
 }
 .home-repeatable-blocks {
+  background: #FFF;
+  .home-repeatable-section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .home-repeatable-section:first-child {
+    margin-top: 0;
+  }
   .hero {
     height: 100vh;
     overflow: hidden;
@@ -4038,11 +4052,22 @@ body.page-template-page-home-new.no-banner {
       padding: 30px;
       color: #000;
       width: 35%;
+      min-height: 25vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      h2,p {
+        display: block;
+        width: 100%;
+      }
       @media screen and (min-width: 1300px) {
         padding: 2vw;
       }
       @media screen and (min-width: 1500px) {
         padding: 3vw;
+      }
+      @media screen and (max-width: 900px) {
+        width: 55%;
       }
       @media screen and (max-width: 600px) {
         width: 100%;
@@ -4053,12 +4078,27 @@ body.page-template-page-home-new.no-banner {
       a.button {
         display: inline-block;
         text-decoration: none;
-        background: $teal;
+        // background: $teal;
+        background: $color_dark;
         color: #FFF;
         padding: 10px 20px;
+        letter-spacing: 0.08em;
         &:hover, &:focus {
           background: $yellow2;
         }
+      }
+    }
+  }
+  &.only-image {
+    .bottom-left {
+      padding: 0 0!important;
+    }
+    figure {
+      img {
+        height: auto!important;
+        position: relative!important;
+        object-fit: unset;
+        object-position: unset;
       }
     }
   }
@@ -4071,6 +4111,15 @@ body.page-template-page-home-new.no-banner {
     img {
       width: 100%;
       height: auto;
+    }
+  }
+  .button {
+    background: $color_dark;
+    color: #FFF;
+    padding: 10px 20px;
+    letter-spacing: 0.08em;
+    &:hover, &:focus {
+      background: $yellow2;
     }
   }
   .inner:not(.only-image) {
@@ -4111,7 +4160,7 @@ body.page-template-page-home-new.no-banner {
 
   .columns-content {
     background: #FFF;
-    padding: 15px;
+    padding: 10px 15px 15px;
     display: flex;
     flex-wrap: wrap;
     .inner {
@@ -4157,6 +4206,29 @@ body.page-template-page-home-new.no-banner {
   }
 }
 
+#pagination {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  span, a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    width: 31px;
+    height: 31px;
+    font-size: 20px;
+    background: #EEE;
+    margin: 5px 3px;
+    text-decoration: none;
+  }
+  .current {
+    background: $primary;
+    color: #FFF;
+  }
+}
 
 
 

@@ -22,7 +22,7 @@ $postId = get_the_ID();
                 if($hero_type=='image') { 
                   $image = get_sub_field('image');
                   ?>
-                  <div class="hero<?php echo $has_overlay ?>">
+                  <div class="home-repeatable-section hero<?php echo $has_overlay ?>">
                     <figure>
                         <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="hero-image">
                         <?php if ($img_overlay || $txt_overlay) { ?>
@@ -64,7 +64,7 @@ $postId = get_the_ID();
                   ?>
 
                   <?php if ($vimeoId || $youtubeId) { ?>
-                  <div class="hero hero-video<?php echo $has_overlay ?>">
+                  <div class="home-repeatable-section hero hero-video<?php echo $has_overlay ?>">
                     <div class="video-wrapper">
                     <?php if ($vimeoId) { ?>     
                       <iframe src="https://player.vimeo.com/video/<?php echo $vimeoId ?>?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
@@ -94,7 +94,7 @@ $postId = get_the_ID();
             <?php } else if( get_row_layout() == 'icons' ) { 
                 $icons = get_sub_field('icons');
                 if($icons) { $count = count($icons); ?>
-                <div class="icons-repeatable icons-count-<?php echo $count ?>">
+                <div class="home-repeatable-section icons-repeatable icons-count-<?php echo $count ?>">
                   <?php $ctr=1; foreach ($icons as $ic) { 
                     $link = $ic['link'];
                     $icon = $ic['icon'];
@@ -147,8 +147,9 @@ $postId = get_the_ID();
               $btnTitle = (isset($button['title']) && $button['title']) ? $button['title'] : '';
               $btnUrl = (isset($button['url']) && $button['url']) ? $button['url'] : '';
               $btnTarget = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
+              $has_text = ($text || ($btnTitle && $btnUrl)) ? 'has-text':'only-image';
               if($image) { ?>
-              <div class="fullscreen-text-image-repeatable">
+              <div class="home-repeatable-section fullscreen-text-image-repeatable <?php echo $has_text ?>">
                 <figure class="<?php echo ($position) ? $position : 'left' ?>">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
                   <?php if ($text) { ?>
@@ -165,7 +166,7 @@ $postId = get_the_ID();
               </div>
               <?php } ?>
             <?php } else if( get_row_layout() == 'fullwidth_section_columns' ) {  ?>
-              <div class="fullwidth_section_or_columns">
+              <div class="home-repeatable-section fullwidth_section_or_columns">
                 <?php if( $content = get_sub_field('content') ) { $countContent = count($content); ?>
                   <div class="columns-content content-<?php echo $countContent ?>">
                     <?php foreach ($content as $c) { 

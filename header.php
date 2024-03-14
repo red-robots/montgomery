@@ -118,7 +118,8 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
           <?php } ?>
           <?php if( $activities_link ){ ?>
             <div class="header-link">
-              <a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a>
+              <!-- <a href="<?php //echo $a_link; ?>"><?php //echo $activities_link; ?></a> -->
+              <button type="button" class="rocketrez-web-engine-button button" eid="b51df41873cb0f76" id="rafting">Book Rafting Now</button>
             </div>
           <?php } ?>
 

@@ -1,13 +1,27 @@
 <?php
 $posts_per_page = 8;
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
-$args = array(
-  'posts_per_page'  => -1,
-  'post_type'       => 'upcoming-events',
-  'orderby'         => 'date',
-  'order'           => 'desc',
-  'post_status'     => 'publish',
-  'paged'           => $paged
+$time = current_time( 'timestamp' );
+
+// $args = array(
+//   'posts_per_page'  => -1,
+//   'post_type'       => 'upcoming-events',
+//   'meta_key'        => 'start_date',
+//   'orderby'         => 'meta_value_num',
+//   'order'           => 'DESC',
+//   'post_status'     => 'publish',
+//   'paged'           => $paged
+// );
+$args = array (
+  'post_type'              => 'upcoming-events', // your event post type slug
+  'post_status'            => 'publish', // only show published events
+  'orderby'                => 'meta_value', // order by date
+  'meta_key'               => 'start_date', // your ACF Date & Time Picker field
+  'meta_value'             => $time, // Use the current time from above
+  'meta_compare'           => '>=', // Compare today's datetime with our event datetime
+  'order'                  => 'DESC', // Show earlier events first
+  'posts_per_page'         => 3,
+  'paged'                  => $paged
 );
 $events = new WP_Query($args);
 if ( $events->have_posts() ) {  ?>
@@ -57,5 +71,25 @@ if ( $events->have_posts() ) {  ?>
       </div>
     </div>
   <?php $i++; endwhile; wp_reset_postdata(); ?>
+  <?php
+    $total_pages = $events->max_num_pages;
+    if ($total_pages > 1){ ?>
+        <div id="pagination" class="pagination">
+            <?php
+                $pagination = array(
+                    'base' => @add_query_arg('pg','%#%'),
+                    'format' => '?paged=%#%',
+                    'current' => $paged,
+                    'total' => $total_pages,
+                    'prev_text' => __( '&laquo;', 'bellaworks' ),
+                    'next_text' => __( '&raquo;', 'bellaworks' ),
+                    'type' => 'plain'
+                );
+                echo paginate_links($pagination);
+            ?>
+        </div>
+        <?php
+    }
+   ?>
 </div>
 <?php } ?>
