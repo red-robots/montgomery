@@ -1915,6 +1915,16 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 #pagination{display:block;margin-top:30px;margin-bottom:20px;width:100%;text-align:center}
 #pagination span,#pagination a{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 10px;width:31px;height:31px;font-size:20px;background:#eee;margin:5px 3px;text-decoration:none}
 #pagination .current{background:#4c748c;color:#fff}
+.menu-custom .submenu-items{position:fixed;top:0;left:-100vw;z-index:-99;width:380px;height:100%;-webkit-transition:all ease .3s;transition:all ease .3s;background:#ececec;-webkit-box-shadow:12px 5px 20px rgba(0,0,0,.2);box-shadow:12px 5px 20px rgba(0,0,0,.2);padding:20px 15px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;overflow:auto;transition:all ease .3s}
+.menu-custom .submenu-items .items{width:50%;padding:10px}
+.menu-custom .submenu-items .menu-heading{text-transform:uppercase;font-size:16px;line-height:1.2;color:#000}
+.menu-custom .submenu-items .menulink{margin:0;padding:0}
+.menu-custom .submenu-items .menulink a{color:#4d768d}
+.menu-custom .has-sub-items .submenu-items.show{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;left:329px;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-name:slideInLeft;animation-name:slideInLeft;z-index:999}
+.goBackToNav{display:none}
+#site-navigation{z-index:100}
+#navOverlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.65);z-index:90;display:none}
+#navOverlay.show{display:block;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-name:fadeIn;animation-name:fadeIn}
 @media screen and (max-device-width:480px)and (orientation:portrait){.banner-video.has-mobile-video .video-mobile{width:110vh}
 }@media screen and (max-device-width:850px)and (orientation:landscape){.banner-video.has-mobile-video .video-mobile{width:120vw}
 }@media(min-width:600px){.homerow5.section .block{width:50%}
@@ -2068,6 +2078,8 @@ body.page-template-default .site-header,body.page-template-page-custom .site-hea
 }@media screen and (max-width:782px){#wpadminbar{position:fixed !important;top:0 !important}
 body.subpage.no-banner.logged-in.admin-bar .site-header{top:45px}
 }@media screen and (max-width:768px){.home-repeatable-blocks .hero .img-overlay{height:40vw}
+.goBackToNav{display:inline-block;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;background-color:transparent;position:absolute;top:12px;left:7px;font-size:25px;padding:2px 15px;color:#000}
+.menu-custom .has-sub-items .submenu-items.show{left:0;padding-top:60px}
 }@media screen and (max-width:600px){.fullscreen-text-image-repeatable figure .textblock{width:100%}
 }@media screen and (max-width:500px){.icons-repeatable .icon-block{width:100% !important}
 .icons-repeatable .icon-block a{min-height:150px}

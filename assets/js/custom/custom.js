@@ -6,10 +6,29 @@
 
 jQuery(document).ready(function ($) {
 
+  $(document).on('click','#navOverlay',function(e){
+    e.preventDefault();
+    $(this).removeClass('show');
+    $('#site-navigation').removeClass('show');
+    $('.menu-custom .submenu-items').removeClass('show');
+  });
+
+  $(document).on('click','.goBackToNav',function(e){
+    e.preventDefault();
+    $('.menu-custom .submenu-items').removeClass('show');
+  });
+
   /* Menu Button */
   $(document).on('click','.menu-toggle, .mobile-menu-button',function(e){
     e.preventDefault();
     $('#site-navigation').toggleClass('show');
+    $('#navOverlay').toggleClass('show');
+    $('.menu-custom .submenu-items').removeClass('show');
+  });
+
+  $('.menu-custom .has-sub-items a[data-link]').on('click', function(e){
+    e.preventDefault();
+    $(this).next().addClass('show');
   });
 
   $(document).on('click','#topsearchBtn',function(e){

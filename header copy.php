@@ -14,7 +14,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
 <script type="text/javascript" src="https://secure.rocket-rez.com/RocketWeb2/assets/scripts/webengine_load.js" async></script>
+
 <?php if ( is_singular(array('post')) ) { 
 global $post;
 $post_id = $post->ID;
@@ -71,77 +73,16 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
       <div class="head-inner">
         <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
 
-        <div id="site-navigation" class="main-navigation" role="navigation">
+        <nav id="site-navigation" class="main-navigation" role="navigation">
           <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
-          <?php if( have_rows('navigation_items', 'option') ) { ?>
-            <ul id="primary-menu" class="menu menu-custom">
-            <?php $n=1; while( have_rows('navigation_items', 'option') ): the_row(); ?>
-            <?php if( get_row_layout() == 'navlink' ) {  ?>
-                <?php 
-                $link_type = get_sub_field('link_type');
-                if($link_type=='link') { 
-                  $link = get_sub_field('link'); 
-                  $btnTitle = (isset($link['title']) && $link['title']) ? $link['title'] : '';
-                  $btnUrl = (isset($link['url']) && $link['url']) ? $link['url'] : '';
-                  $btnTarget = (isset($link['target']) && $link['target']) ? $link['target'] : '_self';
-                  ?>
-                  <li>
-                    <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>"><?php echo $btnTitle ?></a>
-                  </li>
-                <?php } 
-                  else if($link_type=='dropdown') { 
-                    $dropdown_title = get_sub_field('dropdown_title'); 
-                    $dropdowns = get_sub_field('dropdown'); 
-                    if($dropdown_title) { ?>
-                    <li class="has-sub-items">
-                      <a href="javascript:void(0)" data-link="#submenu-items-<?php echo $n ?>"><?php echo $dropdown_title ?></a>
-                      <?php if ($dropdowns) { ?>
-                      <div id="submenu-items-<?php echo $n ?>" class="submenu-items">
-                        <button class="goBackToNav" aria-label="Go Back to Main Navigation"><i class="fa-solid fa-arrow-left-long"></i></button>
-                        <?php foreach ($dropdowns as $d) { 
-                          $heading = $d['heading'];
-                          $menulinks = $d['dropdown'];
-                          ?>
-                          <div class="items">
-                            <?php if ($heading) { ?>
-                              <div class="menu-heading"><?php echo $heading ?></div>
-                            <?php } ?>
-                            <?php if ($menulinks) { ?>
-                              <ul class="menulink">
-                                <?php foreach ($menulinks as $m) { 
-                                  $mlink = $m['link'];
-                                  $mTitle = (isset($link['title']) && $link['title']) ? $link['title'] : '';
-                                  $mUrl = (isset($link['url']) && $link['url']) ? $link['url'] : '';
-                                  $mTarget = (isset($link['target']) && $link['target']) ? $link['target'] : '_self';
-                                  if($mTitle && $mUrl) { ?>
-                                  <li>
-                                    <a href="<?php echo $mUrl ?>" target="<?php echo $mTarget ?>"><?php echo $mTitle ?></a>
-                                  </li> 
-                                  <?php } ?>
-                                <?php } ?>
-                              </ul>
-                            <?php } ?>
-                          </div>
-                        <?php } ?>
-                      </div>
-                      <?php } ?>
-                    </li>
-                  <?php } ?>
-                <?php } ?>
-              <?php } ?>
-            <?php $n++; endwhile; ?>
-            </ul>
-          <?php } ?>
-
-
+          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
           <?php if( $rr_btn_menu ){  ?>
             <div class="menu-cta-btn"><?php echo $rr_btn_menu; ?></div>
           <?php } ?>
           <?php if( $activities_link ){ ?>
             <div class="menu-cta-btn mobile"><a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a></div>
           <?php } ?>
-        </div><!-- #site-navigation -->
-        <div id="navOverlay"></div>
+        </nav><!-- #site-navigation -->
 
         <?php $mobileLogo = get_field('logo_mobile','option'); ?>
         <?php if ($mobileLogo) { ?>
