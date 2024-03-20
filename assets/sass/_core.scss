@@ -2746,31 +2746,13 @@ body.post-type-archive-tribe_events {
 .site-footer {
   width: 100%;
   float: left;
-  background: $primary;
+  background: $color_dark;
   color: #FFF;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   line-height: 1.2;
   position: relative;
   z-index: 10;
-  border-top: 20px solid $yellow2;
-  &:after {
-    content:"";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url('images/symbol-large.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    @include tab {
-      width: 50%;
-    }
-  }
   a:hover {
     color: $teal!important;
   }
@@ -2794,7 +2776,6 @@ body.post-type-archive-tribe_events {
     }
   }
   .address {
-    font-size: 14px;
     line-height: 1.8;
     margin: 0 0;
     a {
@@ -2809,56 +2790,14 @@ body.post-type-archive-tribe_events {
   .flexwrap {
     justify-content: space-between;
     .fcol {
-      width: 100%;
-      @include xs {
-        width: 48%;
-      }
-    }
-    .fcol.left {
-      margin-bottom: 35px;
-      text-align: center;
-      @include xs {
-        margin-bottom: 0;
-        text-align: left;
-      }
-    }
-    .fcol.right {
-      text-align: center;
-      @include xs {
-        text-align: left;
-        width: 35%;
-        @include flexgroup();
-        align-items: center;
-        .inner {
-          padding: 25px 0 10px;
-          position: relative;
-          // &:before {
-          //   content:"";
-          //   display: block;
-          //   width: 20px;
-          //   height: 100%;
-          //   background-image: url('images/wave-vertical.svg');
-          //   background-position: center;
-          //   background-size: contain;
-          //   background-repeat: repeat-y;
-          //   position: absolute;
-          //   top: 0;
-          //   left: -4vw;
-          // }
-          &:before {
-            content:"";
-            display: block;
-            width: 2px;
-            height: 100%;
-            background: $yellow2;
-            position: absolute;
-            top: 0;
-            left: -3vw;
-          }
+      width: 33.333%;
+      @media screen and (max-width: 960px) {
+        width: 100%;
+        margin: 20px 0;
+        &.first {
+          margin-top: 0;
+          margin-bottom: 0;
         }
-      }
-      @include tab {
-        width: 30%;
       }
     }
   }
@@ -2877,8 +2816,15 @@ body.post-type-archive-tribe_events {
       display: inline-block;
       text-decoration: none;
       color: #FFF;
-      font-size: 14px;
       line-height: 1.8;
+    }
+    ul {
+      margin: 0 0;
+      padding: 0 0;
+      list-style: none;
+      li {
+        margin: 4px 0;
+      }
     }
   }
   .social-media {
@@ -2887,14 +2833,55 @@ body.post-type-archive-tribe_events {
       display: inline-block;
       text-decoration: none;
       color: #FFF;
-      font-size: 25px;
+      font-size: 28px;
       line-height: 1;
       margin: 5px;
       @include tab {
-        margin: 0 5px 0 0;
+        margin: 0 10px 0 0;
       }
       &:hover {
         color: $yellow1;
+      }
+    }
+  }
+
+  .button-right-arrow {
+    display: inline-block;
+    text-decoration: none;
+    background: #FFF;
+    color: $primary!important;
+    padding: 8px 65px 8px 25px;
+    position: relative;
+    margin-bottom: 5px;
+    &:before, &:after {
+      transition: all ease .2s;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 22px;
+      border: 1px solid $primary;
+      border-radius: 100px;
+      position: absolute;
+      top: 12px;
+      right: 25px;
+    }
+    &:after {
+      content: "\f061";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      top: 10px;
+      right: 32px;
+      font-size: 15px;
+    }
+    &:hover, &:focus {
+      &:before {
+        border-color: $teal;
+      }
+      &:before, &:after {
+        transform: translateX(3px);
       }
     }
   }
