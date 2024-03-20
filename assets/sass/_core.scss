@@ -2768,7 +2768,7 @@ body.post-type-archive-tribe_events {
   }
   .footlogo {
     display: inline-block;
-    width: 120px;
+    width: 150px;
     margin-bottom: 30px;
     img {
       width: 100%;
@@ -2791,6 +2791,10 @@ body.post-type-archive-tribe_events {
     justify-content: space-between;
     .fcol {
       width: 33.333%;
+      &.first {
+        display: flex;
+        align-items: center;
+      }
       @media screen and (max-width: 960px) {
         width: 100%;
         margin: 20px 0;

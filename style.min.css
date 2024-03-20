@@ -1715,7 +1715,7 @@ body.post-type-archive-tribe_events .tribe-common-l-container.tribe-events-l-con
 .site-footer{width:100%;float:left;background:#403f3f;color:#fff;font-size:17px;font-weight:normal;line-height:1.2;position:relative;z-index:10}
 .site-footer a:hover{color:#3ca7c5 !important}
 .site-footer .wrapper{padding-top:50px;padding-bottom:50px;position:relative;z-index:5}
-.site-footer .footlogo{display:inline-block;width:120px;margin-bottom:30px}
+.site-footer .footlogo{display:inline-block;width:150px;margin-bottom:30px}
 .site-footer .footlogo img{width:100%;height:auto}
 .site-footer .address{line-height:1.8;margin:0}
 .site-footer .address a{text-decoration:none;color:#fff}
@@ -1723,6 +1723,7 @@ body.post-type-archive-tribe_events .tribe-common-l-container.tribe-events-l-con
 .site-footer .address span i[class*=fas]{display:none}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-footer .flexwrap .fcol{width:33.333%}
+.site-footer .flexwrap .fcol.first{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .site-footer .wdt-title{font-family:"Anton",sans-serif;font-size:16px;font-weight:500;line-height:1.2;letter-spacing:1px;color:#fff;margin:0 0 10px}
 .site-footer .wdt-text{color:#fff}
 .site-footer .wdt-text a{display:inline-block;text-decoration:none;color:#fff;line-height:1.8}
