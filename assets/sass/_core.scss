@@ -4224,6 +4224,7 @@ body.page-template-page-home-new.no-banner {
   figure {
     position: relative;
     margin: 0 0;
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
@@ -4284,6 +4285,18 @@ body.page-template-page-home-new.no-banner {
     }
     .textblock {
       background: #FFF;
+    }
+    &.content-1,
+    &.content-2 {
+      figure {
+        transition: all ease .3s;
+      }
+      .inner:hover {
+        figure {
+          border-top-left-radius: 40px;
+          border-bottom-right-radius: 40px;
+        }
+      }
     }
     &.content-1 {
       padding: 0 0;
