@@ -30,7 +30,7 @@ if ($events->have_posts())  {
       <?php } ?>
 
       <div class="blocks">
-        <div class="flexwrap">
+        <div class="flexwrap <?php echo ($count>5) ? 'has-view-more':'no-more-button'; ?>">
         <?php 
           $ctr=1;
           while ($events->have_posts()) : $events->the_post(); 
@@ -60,7 +60,7 @@ if ($events->have_posts())  {
           </a>
           <?php } ?>
           <?php if ($ctr==$count) { ?>
-              <?php if ($count>2) { ?>
+              <?php if ($count>5) { ?>
               <div class="more">
                 <a href="/events/" class="moreBtn button">View all upcoming events</a>
               </div>  

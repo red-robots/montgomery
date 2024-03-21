@@ -1567,10 +1567,14 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .homerow5.section .rightColumn{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-top:-15px;margin-left:-15px;margin-right:-15px}
 .homerow5.section .rightColumn img{-webkit-transition:all ease .3s;transition:all ease .3s}
 .homerow5.section .rightColumn a{padding:15px;width:50% !important}
+.homerow5.section .rightColumn a .inner{display:block;width:100%;height:100%}
+.homerow5.section .rightColumn a figure{height:100%}
 .homerow5.section .rightColumn a:hover,.homerow5.section .rightColumn a:focus{-webkit-transform:translateY(-3px);transform:translateY(-3px)}
 .homerow5.section .rightColumn a:hover img,.homerow5.section .rightColumn a:focus img{-webkit-box-shadow:0 2px 25px rgba(0,0,0,.4);box-shadow:0 2px 25px rgba(0,0,0,.4)}
 .homerow5.section .rightColumn div.more{width:100%;padding:15px 15px 0}
 .homerow5.section .rightColumn div.more a{display:block;width:100% !important;text-align:center;background:#403f3f;color:#fff;padding:11px 10px 10px;text-transform:uppercase;text-decoration:none;letter-spacing:.075em}
+.homerow5.section .flexwrap.no-more-button .leftColumn{padding-bottom:30px}
+.homerow5.section .flexwrap.no-more-button .leftColumn a{height:auto !important}
 .homerow6.section{background:#3ca7c5;margin-top:0;margin-bottom:0}
 .homerow6.section .textwrap{text-align:center;color:#fff;padding-top:100px;padding-bottom:100px;font-weight:normal}
 .homerow6.section .h2{font-family:"Adonis",serif;font-weight:bold;font-size:3.5rem;line-height:1.2;color:#fff;letter-spacing:.25px;text-transform:none}

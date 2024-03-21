@@ -1773,6 +1773,14 @@ h1.page-title {
     a {
       padding: 15px;
       width: 50%!important;
+      .inner {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      figure {
+        height: 100%;
+      }
       &:hover, &:focus {
         transform: translateY(-3px);
         img {
@@ -1797,6 +1805,15 @@ h1.page-title {
         text-decoration: none;
         letter-spacing: 0.075em;
       }
+    }
+  }
+
+  .flexwrap.no-more-button {
+    .leftColumn {
+      padding-bottom: 30px;
+    }
+    .leftColumn a {
+      height: auto!important;
     }
   }
 
