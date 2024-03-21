@@ -1777,13 +1777,14 @@ h1.page-title {
         display: block;
         width: 100%;
         height: 100%;
+        transition: all ease .3s;
       }
       figure {
         height: 100%;
       }
       &:hover, &:focus {
-        transform: translateY(-3px);
-        img {
+        .inner {
+          transform: translateY(-3px);
           box-shadow: 0 2px 25px rgba(0,0,0,.4);
         }
       }
