@@ -1772,7 +1772,7 @@ h1.page-title {
     }
     a {
       padding: 15px;
-      width: 50%;
+      width: 50%!important;
       &:hover, &:focus {
         transform: translateY(-3px);
         img {
