@@ -166,21 +166,16 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
           <?php } ?>
 
 
-          <a href="#" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
-          <?php 
-          $header_button = get_field('header_cta_button','option'); 
-          $btn_target = (isset($header_button['target']) && $header_button['target']) ? $header_button['target'] : '_self';
-          $btn_text = (isset($header_button['title']) && $header_button['title']) ? $header_button['title'] : '';
-          $btn_link = (isset($header_button['url']) && $header_button['url']) ? $header_button['url'] : '';
-          if ($btn_text && $btn_link) { ?>
-          <a href="<?php echo $btn_link ?>" target="<?php echo $btn_target ?>" class="head-button"><?php echo $btn_text ?></a>
-          <?php } ?>
-          <?php if( $activities_link ){ ?>
+            <a href="#" id="topsearchBtn" class="search-button"><i class="search-icon">Search</i></a>
+            <?php $buttonLabel = get_field('book_button_label','option'); ?>
+            <?php if ($buttonLabel) { ?>
             <div class="header-link">
-              <!-- <a href="<?php //echo $a_link; ?>"><?php //echo $activities_link; ?></a> -->
-              <button type="button" class="rocketrez-web-engine-button button" eid="b51df41873cb0f76" id="rafting">Book Rafting Now</button>
+              <button type="button" class="rocketrez-web-engine-button button" eid="b51df41873cb0f76" id="rafting"><?php echo $buttonLabel ?></button>
             </div>
-          <?php } ?>
+            <?php } ?>
+            
+
+
 
         </div>
 

@@ -183,16 +183,33 @@ $postId = get_the_ID();
                       if( empty($text) && empty($btnTitle) &&  empty($btnUrl) ) {
                         $is_only_image = true;
                       }
+                      $is_multiple_columns = ($countContent>2) ? ' multple-columns':'';
                       if ($image || $text ) { ?>
-                      <div class="inner<?php echo ($is_only_image) ? ' only-image':'' ?>">
+                      <div class="inner<?php echo ($is_only_image) ? ' only-image':'' ?><?php echo $is_multiple_columns ?>">
                         <?php if ($image) { ?>
                           <?php if ($clickthrough) { ?>
                           <figure>
-                            <a href="<?php echo $clickthrough ?>" target="<?php echo ($clickthrough_target) ? '_blank':'_self' ?>"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>"></a>
+                            <a href="<?php echo $clickthrough ?>" target="<?php echo ($clickthrough_target) ? '_blank':'_self' ?>">
+                              <?php if ($countContent>2) { ?>
+                                <span class="img">
+                                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                                  <img src="<?php echo get_stylesheet_directory_uri() ?>/images/portrait.png" alt="" class="resizer">
+                                </span>
+                              <?php } else { ?>
+                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                              <?php } ?>
+                            </a>
                           </figure>
                           <?php } else { ?>
                           <figure>
-                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                            <?php if ($countContent>2) { ?>
+                              <span class="img">
+                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/portrait.png" alt="" class="resizer">
+                              </span>
+                            <?php } else { ?>
+                              <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                            <?php } ?>
                           </figure>
                           <?php } ?>
                         <?php } ?>
@@ -223,57 +240,7 @@ $postId = get_the_ID();
 		<?php endwhile; ?>
 
 
-    <?php  
-    $displayNum = 6;
-    $event_title = 'Upcoming Events';
-    $today = date('Y-m-d H:i:s');
-    $arg = array(
-      'post_type'     =>'upcoming-events',
-      'post_status'   =>'publish',
-      'posts_per_page'=> $displayNum,
-      'order'       => 'ASC',
-      'meta_key'      => 'start_date',
-      'orderby'       => 'start_date',
-      'meta_query'    => array(
-          array(
-            'key'   => 'start_date',
-            'compare' => '>=',
-            'value'   => $today,
-          ),    
-        )
-      );
-
-    $events = new WP_Query($arg);
-    if ($events->have_posts())  { 
-       $count = $events->found_posts; ?>
-      <section id="events_section" class="section homerow5 events-count-<?php echo $count?>">
-        <div class="wrapper">
-          <?php if ($event_title ) { ?>
-          <div class="titlediv">
-            <h2 class="h2"><?php echo $event_title ?></h2> 
-          </div>
-          <?php } ?>
-
-          <div class="blocks">
-            <div class="flexwrap">
-            <?php while ($events->have_posts()) : $events->the_post(); 
-              $photo  = get_field('main_photo');
-              $style = ($photo) ? ' style="background-image:url('.$photo['url'].')"':'';
-              ?>
-              <a href="<?php echo get_permalink(); ?>" class="block">
-                <span class="inner">
-                  <span class="title"><span><?php the_title(); ?></span></span>
-                  <figure<?php echo $style ?>>
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/images/square.png" alt="" class="helper">
-                  </figure>
-                </span>
-              </a>
-            <?php endwhile; wp_reset_postdata(); ?>
-            </div>
-          </div>
-        </div>
-      </section>
-    <?php } ?>
+    <?php get_template_part('parts/upcoming-events-new'); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
