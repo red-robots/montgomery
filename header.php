@@ -101,27 +101,39 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
                         <?php foreach ($dropdowns as $d) { 
                           $heading = $d['heading'];
                           $menulinks = $d['dropdown'];
-                          ?>
-                          <div class="items">
-                            <?php if ($heading) { ?>
-                              <div class="menu-heading"><?php echo $heading ?></div>
-                            <?php } ?>
-                            <?php if ($menulinks) { ?>
-                              <ul class="menulink">
-                                <?php foreach ($menulinks as $m) { 
-                                  $mlink = $m['link'];
-                                  $mTitle = (isset($link['title']) && $link['title']) ? $link['title'] : '';
-                                  $mUrl = (isset($link['url']) && $link['url']) ? $link['url'] : '';
-                                  $mTarget = (isset($link['target']) && $link['target']) ? $link['target'] : '_self';
-                                  if($mTitle && $mUrl) { ?>
-                                  <li>
-                                    <a href="<?php echo $mUrl ?>" target="<?php echo $mTarget ?>"><?php echo $mTitle ?></a>
-                                  </li> 
+                          $sublink_type = $d['sublink_type'];
+                          $link2 = $d['page_link'];
+                          if($sublink_type=='list') { ?>
+                            <div class="items">
+                              <?php if ($heading) { ?>
+                                <div class="menu-heading"><?php echo $heading ?></div>
+                              <?php } ?>
+                              <?php if ($menulinks) { ?>
+                                <ul class="menulink">
+                                  <?php foreach ($menulinks as $m) { 
+                                    $mlink = $m['link'];
+                                    $mTitle = (isset($mlink['title']) && $mlink['title']) ? $mlink['title'] : '';
+                                    $mUrl = (isset($mlink['url']) && $mlink['url']) ? $mlink['url'] : '';
+                                    $mTarget = (isset($mlink['target']) && $mlink['target']) ? $mlink['target'] : '_self';
+                                    if($mTitle && $mUrl) { ?>
+                                    <li>
+                                      <a href="<?php echo $mUrl ?>" target="<?php echo $mTarget ?>"><?php echo $mTitle ?></a>
+                                    </li> 
+                                    <?php } ?>
                                   <?php } ?>
-                                <?php } ?>
-                              </ul>
-                            <?php } ?>
-                          </div>
+                                </ul>
+                              <?php } ?>
+                            </div>
+                          <?php } else { 
+                              $sbBtnTitle = (isset($link2['title']) && $link2['title']) ? $link2['title'] : '';
+                              $sbBtnUrl = (isset($link2['url']) && $link2['url']) ? $link2['url'] : '';
+                              $sbBtnTarget = (isset($link2['target']) && $link2['target']) ? $link2['target'] : '_self';
+                              if($sbBtnTitle && $sbBtnUrl) { ?>
+                                <div class="items">
+                                  <div class="menu-heading"><a href="<?php echo $sbBtnUrl ?>" target="<?php echo $sbBtnTarget ?>"><?php echo $sbBtnTitle ?></a></div>
+                                </div>
+                              <?php } ?>
+                          <?php } ?>
                         <?php } ?>
                       </div>
                       <?php } ?>
@@ -141,6 +153,8 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
             <div class="menu-cta-btn mobile"><a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a></div>
           <?php } ?>
         </div><!-- #site-navigation -->
+        <div id="subMenuContainer"></div>
+
         <div id="navOverlay"></div>
 
         <?php $mobileLogo = get_field('logo_mobile','option'); ?>
