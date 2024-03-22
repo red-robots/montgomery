@@ -1878,6 +1878,7 @@ button.rocketrez-web-engine-button:hover{background:#4c748c;color:#fff}
 .events-list-wrapper .description .buttondiv{margin-top:20px}
 body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padding-top:80px}
 .home-repeatable-blocks{background:#fff}
+.home-repeatable-blocks p{color:#868686}
 .home-repeatable-blocks .home-repeatable-section{margin-top:10px;margin-bottom:10px}
 .home-repeatable-blocks .home-repeatable-section:first-child{margin-top:0}
 .home-repeatable-blocks .hero{height:100vh;overflow:hidden;position:relative}
