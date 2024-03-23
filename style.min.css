@@ -1963,6 +1963,8 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .menu-custom .submenu-items .menu-heading a:hover,.menu-custom .submenu-items .menu-heading a:focus{color:#3ca7c5}
 .menu-custom .submenu-items .menulink{margin:0;padding:0}
 .menu-custom .submenu-items .menulink a{display:inline-block;color:#4d768d;padding:10px 0}
+.menu-custom .has-sub-items a[data-link]{position:relative}
+.menu-custom .has-sub-items a[data-link] i[class*=fa-]{display:inline-block;position:relative;top:0;right:-5px;font-size:13px}
 .menu-custom .has-sub-items .submenu-items.show{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;left:329px;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft;z-index:999;padding:20px 15px;width:380px}
 #subMenuContainer{position:fixed;top:0;left:329px;width:380px;height:100vh;z-index:999;overflow:hidden;display:none}
 #subMenuContainer.show{display:block}
@@ -1975,6 +1977,7 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 #subMenuContainer .submenu-items .items .menu-heading a{color:#000}
 #subMenuContainer .submenu-items .items .menu-heading a:hover,#subMenuContainer .submenu-items .items .menu-heading a:focus{color:#3ca8c5}
 #subMenuContainer .submenu-items .items .menulink{margin:0;padding:0;list-style:none}
+#subMenuContainer .submenu-items .items.page_link{margin-bottom:0}
 #subMenuContainer .submenu-items.show{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.4s;animation-duration:.4s;-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}
 .goBackToNav{display:none}
 #site-navigation{z-index:100}
@@ -2133,6 +2136,7 @@ body.page-template-default .site-header,body.page-template-page-custom .site-hea
 #menu-toggle span.bar,#menu-toggle span.bar:before,#menu-toggle span.bar:after{background-color:#fff}
 .banners{position:relative;top:-1px}
 .events-list-wrapper .eventBox{width:100%}
+.home-repeatable-blocks .hero{height:70vh}
 .icons-repeatable .icon-block{width:50% !important}
 .icons-repeatable .icon-block a{min-height:180px;padding:20px 20px 15px}
 .icons-repeatable .icon-block.last-odd{width:100% !important}

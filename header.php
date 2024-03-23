@@ -94,7 +94,7 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
                     $dropdowns = get_sub_field('dropdown'); 
                     if($dropdown_title) { ?>
                     <li class="has-sub-items">
-                      <a href="javascript:void(0)" data-link="#submenu-items-<?php echo $n ?>"><?php echo $dropdown_title ?></a>
+                      <a href="javascript:void(0)" data-link="#submenu-items-<?php echo $n ?>"><?php echo $dropdown_title ?> <i class="fa-solid fa-plus"></i></a>
                       <?php if ($dropdowns) { ?>
                       <div id="submenu-items-<?php echo $n ?>" class="submenu-items">
                         <button class="goBackToNav" aria-label="Go Back to Main Navigation"><i class="fa-solid fa-arrow-left-long"></i></button>
@@ -129,7 +129,7 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
                               $sbBtnUrl = (isset($link2['url']) && $link2['url']) ? $link2['url'] : '';
                               $sbBtnTarget = (isset($link2['target']) && $link2['target']) ? $link2['target'] : '_self';
                               if($sbBtnTitle && $sbBtnUrl) { ?>
-                                <div class="items">
+                                <div class="items page_link">
                                   <div class="menu-heading"><a href="<?php echo $sbBtnUrl ?>" target="<?php echo $sbBtnTarget ?>"><?php echo $sbBtnTitle ?></a></div>
                                 </div>
                               <?php } ?>
