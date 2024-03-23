@@ -1972,7 +1972,7 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 #subMenuContainer .submenu-items a{display:inline-block;padding:2px;text-decoration:none}
 #subMenuContainer .submenu-items a:hover,#subMenuContainer .submenu-items a:focus{color:#3ca8c5}
 #subMenuContainer .submenu-items a:focus{outline:1px dotted #3ca8c5}
-#subMenuContainer .submenu-items .items{width:50%;margin-bottom:20px}
+#subMenuContainer .submenu-items .items{width:100%;margin-bottom:20px}
 #subMenuContainer .submenu-items .items .menu-heading{text-transform:uppercase;color:#000;margin-bottom:5px}
 #subMenuContainer .submenu-items .items .menu-heading a{color:#000}
 #subMenuContainer .submenu-items .items .menu-heading a:hover,#subMenuContainer .submenu-items .items .menu-heading a:focus{color:#3ca8c5}
