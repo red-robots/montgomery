@@ -30,48 +30,15 @@ if ($events->have_posts())  {
       <?php } ?>
 
       <div class="blocks">
-        <div class="flexwrap <?php echo ($count>5) ? 'has-view-more':'no-more-button'; ?><?php echo ($count<=4) ? ' normal-columns':'' ?>">
+        <div class="flexwrap <?php echo ($count>5) ? 'has-view-more':'no-more-button'; ?>">
         <?php 
           $ctr=1;
           while ($events->have_posts()) : $events->the_post(); 
           $photo  = get_field('main_photo');
           $style = ($photo) ? ' style="background-image:url('.$photo['url'].')"':'';
           $first = ($ctr==1) ? ' first':'';
-          if($count>4) {
-
-            if($ctr==1) { ?>
-            <div class="leftColumn">
-              <a href="<?php echo get_permalink(); ?>" class="block<?php echo $first ?>">
-                <span class="inner">
-                  <span class="title"><span><?php the_title(); ?></span></span>
-                  <figure<?php echo $style ?>>
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/images/square.png" alt="" class="helper">
-                  </figure>
-                </span>
-              </a>
-            </div>
-            <div class="rightColumn">
-              <?php } else { ?>
-              <a href="<?php echo get_permalink(); ?>" class="block<?php echo $first ?>">
-                <span class="inner">
-                  <span class="title"><span><?php the_title(); ?></span></span>
-                  <figure<?php echo $style ?>>
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/images/square.png" alt="" class="helper">
-                  </figure>
-                </span>
-              </a>
-              <?php } ?>
-              <?php if ($ctr==$count) { ?>
-                  <?php if ($count>5) { ?>
-                  <div class="more">
-                    <a href="/events/" class="moreBtn button">View all upcoming events</a>
-                  </div>  
-                  <?php } ?>
-            </div>  
-            <?php } ?>
-
-          <?php } else { ?>
-
+          if($ctr==1) { ?>
+          <div class="leftColumn">
             <a href="<?php echo get_permalink(); ?>" class="block<?php echo $first ?>">
               <span class="inner">
                 <span class="title"><span><?php the_title(); ?></span></span>
@@ -80,9 +47,26 @@ if ($events->have_posts())  {
                 </figure>
               </span>
             </a>
+          </div>
+          <div class="rightColumn">
+          <?php } else { ?>
+          <a href="<?php echo get_permalink(); ?>" class="block<?php echo $first ?>">
+            <span class="inner">
+              <span class="title"><span><?php the_title(); ?></span></span>
+              <figure<?php echo $style ?>>
+                <img src="<?php echo get_stylesheet_directory_uri()?>/images/square.png" alt="" class="helper">
+              </figure>
+            </span>
+          </a>
           <?php } ?>
-
-
+          <?php if ($ctr==$count) { ?>
+              <?php if ($count>5) { ?>
+              <div class="more">
+                <a href="/events/" class="moreBtn button">View all upcoming events</a>
+              </div>  
+              <?php } ?>
+          </div>  
+          <?php } ?>
         <?php $ctr++; endwhile; wp_reset_postdata(); ?>
         </div>
       </div>
