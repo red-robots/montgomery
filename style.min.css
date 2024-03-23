@@ -2093,6 +2093,8 @@ body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
 }@media screen and (min-width:1500px){.fullscreen-text-image-repeatable figure .textblock{padding:3vw}
 }@media screen and (max-width:1100px){.homerow5.section .wrapper{max-width:100%}
 }@media screen and (max-width:1024px){.events-list-wrapper .eventBox{width:50%}
+.fullwidth_section_or_columns .columns-content.content-1 .inner figure{width:60%}
+.fullwidth_section_or_columns .columns-content.content-1 .textblock{width:40%}
 }@media screen and (max-width:980px){.banner-video .banner-inner video{width:200vh;height:auto;top:0;-webkit-transform:translateY(0);transform:translateY(0)}
 }@media screen and (max-width:960px){.homerow5.section.events-count-2 .normal-columns a,.homerow5.section.events-count-3 .normal-columns a{padding:10px}
 .homerow5.section .leftColumn,.homerow5.section .rightColumn{width:100%}
@@ -2149,6 +2151,7 @@ body.page-template-default .site-header,body.page-template-page-custom .site-hea
 body.subpage.no-banner.logged-in.admin-bar .site-header{top:45px}
 }@media screen and (max-width:768px){.homerow5.section .rightColumn{margin-left:-10px !important;margin-right:-10px !important;padding:15px 10px}
 .homerow5.section .rightColumn a{padding:10px}
+.site-footer .wrapper{padding-left:30px;padding-right:30px}
 .home-repeatable-blocks .hero .img-overlay{height:40vw}
 .icons-repeatable .icon-block .link-title .icon img{height:50px}
 .fullscreen-text-image-repeatable .bottom-left{padding:0}

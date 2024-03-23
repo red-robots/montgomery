@@ -2913,6 +2913,10 @@ body.post-type-archive-tribe_events {
       padding-top: 70px;
       padding-bottom: 70px;
     }
+    @media screen and (max-width: 768px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
   .footlogo {
     display: inline-block;
@@ -4392,6 +4396,14 @@ body.page-template-page-home-new.no-banner {
       padding: 0 0;
       .inner {
         width: 100%;
+      }
+      @media screen and (max-width: 1024px) {
+        .inner figure {
+          width: 60%;
+        }
+        .textblock {
+          width: 40%;
+        }
       }
     }
     &.content-2,
