@@ -1898,6 +1898,8 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .icons-repeatable .icon-block a .link-title{display:block;width:100%;-webkit-transition:all ease .3s;transition:all ease .3s}
 .icons-repeatable .icon-block a:hover .link-title,.icons-repeatable .icon-block a:focus .link-title{-webkit-transform:scale(1.1);transform:scale(1.1)}
 .icons-repeatable .icon-block i[class*=fa-]{display:block;font-size:4rem;font-weight:normal;line-height:1;margin-bottom:10px;width:100%}
+.icons-repeatable .icon-block .link-title .icon{text-align:center;margin-bottom:10px}
+.icons-repeatable .icon-block .link-title .icon img{display:inline-block;width:auto;height:60px}
 .icons-repeatable .icon-block .title{font-size:1.5em;font-weight:500;line-height:1.3;width:100%}
 .icons-repeatable.icons-count-3 .icon-block{width:33.333%}
 .icons-repeatable.icons-count-4 .icon-block{width:25%}
@@ -1981,6 +1983,7 @@ body.logged-in.admin-bar .submenu-items{padding-top:80px !important}
 }@media(min-width:600px){.homerow5.section .block{width:50%}
 .contact-links-section .link-icon{padding:10px 10px;width:30%}
 .grid-layout .blocks .block{width:50%}
+}@media screen and (min-width:769px)and (max-width:900px){.icons-repeatable .icon-block .link-title .icon img{height:45px}
 }@media screen and (min-width:783px){body.scrolled .site-header{background-color:#fff !important}
 }@media screen and (max-width:819px)and (min-width:820px){.flexible-content .flex-content{margin:20px 0;padding-top:20px;padding-bottom:20px}
 .flexible-content .flex-content .textcol .inner{padding:50px 30px 60px}
@@ -2139,6 +2142,7 @@ body.subpage.no-banner.logged-in.admin-bar .site-header{top:45px}
 }@media screen and (max-width:768px){.homerow5.section .rightColumn{margin-left:-10px !important;margin-right:-10px !important;padding:15px 10px}
 .homerow5.section .rightColumn a{padding:10px}
 .home-repeatable-blocks .hero .img-overlay{height:40vw}
+.icons-repeatable .icon-block .link-title .icon img{height:50px}
 .fullscreen-text-image-repeatable .bottom-left{padding:0}
 .fullscreen-text-image-repeatable figure{min-height:unset !important;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .fullscreen-text-image-repeatable figure img{height:auto !important;position:relative !important;-o-object-fit:unset;object-fit:unset;-o-object-position:unset;object-position:unset}

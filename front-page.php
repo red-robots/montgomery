@@ -97,7 +97,8 @@ $postId = get_the_ID();
                 <div class="home-repeatable-section icons-repeatable icons-count-<?php echo $count ?>">
                   <?php $ctr=1; foreach ($icons as $ic) { 
                     $link = $ic['link'];
-                    $icon = $ic['icon'];
+                    //$icon = $ic['icon'];
+                    $icon = $ic['icon_image'];
                     $textcolor = $ic['textcolor'];
                     $bgcolor = $ic['bgcolor'];
                     $title = (isset($link['title']) && $link['title']) ? $link['title'] : '';
@@ -127,10 +128,14 @@ $postId = get_the_ID();
                       <div class="inner">
                         <a href="<?php echo $url ?>" target="<?php echo $target ?>">
                           <span class="link-title">
-                          <?php echo $icon ?>
-                          <?php if ($title) { ?>
-                           <div class="title"><?php echo $title ?></div> 
-                          <?php } ?>
+                            <?php if ($icon) { ?>
+                              <div class="icon">
+                                <img src="<?php echo $icon['url'] ?>" alt="">
+                              </div>
+                            <?php } ?>
+                            <?php if ($title) { ?>
+                             <div class="title"><?php echo $title ?></div> 
+                            <?php } ?>
                           </span>
                         </a>
                       </div>

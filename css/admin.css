@@ -23,3 +23,8 @@
   top: 15px;
   left: 16px;
 }
+.acf-field-image[data-name="icon_image"] .image-wrap img {
+  width: auto!important;
+  height: 45px!important;
+  background: #adadad!important;
+}
