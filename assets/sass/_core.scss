@@ -840,7 +840,7 @@ div.buttondiv {
   color: #FFF!important;
   font-family: $font_forth;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: .25px;
@@ -3936,6 +3936,7 @@ body.page-template-page-home-new.no-banner {
   background: #FFF;
   p {
     color: #868686;
+    font-weight: 300!important;
   }
   .home-repeatable-section {
     margin-top: 10px;

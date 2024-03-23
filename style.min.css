@@ -1457,7 +1457,7 @@ a:hover{color:#191970}
 .banner-video.has-mobile-video .video-desktop{display:none}
 .banner-video.has-mobile-video .video-mobile{display:none;width:110vh}
 div.buttondiv{margin-top:40px}
-.button{display:inline-block;text-decoration:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;border:none !important;background:#403f3f;color:#fff !important;font-family:"Inter",sans-serif;font-size:15px;font-weight:500;line-height:1.2;text-transform:uppercase;letter-spacing:.25px;padding:10px 25px}
+.button{display:inline-block;text-decoration:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;border:none !important;background:#403f3f;color:#fff !important;font-family:"Inter",sans-serif;font-size:15px;font-weight:400;line-height:1.2;text-transform:uppercase;letter-spacing:.25px;padding:10px 25px}
 .button:hover{text-decoration:none;background:#cea155 !important;color:#fff}
 .button.btn-white{background:#fff;color:#999}
 .button.btn-white:hover{text-decoration:none;background:#cea155;color:#fff}
@@ -1878,7 +1878,7 @@ button.rocketrez-web-engine-button:hover{background:#4c748c;color:#fff}
 .events-list-wrapper .description .buttondiv{margin-top:20px}
 body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padding-top:80px}
 .home-repeatable-blocks{background:#fff}
-.home-repeatable-blocks p{color:#868686}
+.home-repeatable-blocks p{color:#868686;font-weight:300 !important}
 .home-repeatable-blocks .home-repeatable-section{margin-top:10px;margin-bottom:10px}
 .home-repeatable-blocks .home-repeatable-section:first-child{margin-top:0}
 .home-repeatable-blocks .hero{height:100vh;overflow:hidden;position:relative}
