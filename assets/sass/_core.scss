@@ -4121,6 +4121,19 @@ body.page-template-page-home-new.no-banner {
     }
   }
 
+  @media screen and (max-width: 820px) {
+    .icon-block {
+      width: 50%!important;
+      a {
+        min-height: 180px;
+        padding: 20px 20px 15px;
+      }
+    }
+    .icon-block.last-odd {
+      width: 100%!important;
+    }
+  }
+
   @media screen and (max-width: 500px) {
     .icon-block {
       width: 100%!important;

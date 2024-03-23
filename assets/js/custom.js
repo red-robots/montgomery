@@ -6,6 +6,17 @@
  *  Date Modified: 02.07.2023
  */
 jQuery(document).ready(function ($) {
+  if ($('.icon-block').length > 3) {
+    var countIcons = $('.icon-block').length;
+    var iconLastIndex = countIcons - 1;
+    var lastIcon = $('.icon-block').eq(iconLastIndex);
+    lastIcon.addClass('last');
+
+    if (lastIcon.hasClass('odd')) {
+      lastIcon.addClass('last-odd');
+    }
+  }
+
   if ($('.submenu-items').length) {
     $('.submenu-items').each(function () {
       $(this).appendTo('#subMenuContainer');

@@ -96,6 +96,7 @@ $postId = get_the_ID();
                 if($icons) { $count = count($icons); ?>
                 <div class="home-repeatable-section icons-repeatable icons-count-<?php echo $count ?>">
                   <?php $ctr=1; foreach ($icons as $ic) { 
+                    $odd_even = ($ctr % 2==0) ? 'even':'odd';
                     $link = $ic['link'];
                     //$icon = $ic['icon'];
                     $icon = $ic['icon_image'];
@@ -124,7 +125,7 @@ $postId = get_the_ID();
                         <?php } ?>
                       </style>
                     <?php } ?>
-                    <div class="icon-block icon-block-<?php echo $ctr ?>">
+                    <div class="icon-block icon-block-<?php echo $ctr ?> <?php echo $odd_even ?>">
                       <div class="inner">
                         <a href="<?php echo $url ?>" target="<?php echo $target ?>">
                           <span class="link-title">

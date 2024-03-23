@@ -2126,6 +2126,9 @@ body.page-template-default .site-header,body.page-template-page-custom .site-hea
 #menu-toggle span.bar,#menu-toggle span.bar:before,#menu-toggle span.bar:after{background-color:#fff}
 .banners{position:relative;top:-1px}
 .events-list-wrapper .eventBox{width:100%}
+.icons-repeatable .icon-block{width:50% !important}
+.icons-repeatable .icon-block a{min-height:180px;padding:20px 20px 15px}
+.icons-repeatable .icon-block.last-odd{width:100% !important}
 .fullscreen-text-image-repeatable figure{min-height:60vw}
 .fullwidth_section_or_columns .columns-content .inner:not(.only-image) figure,.fullwidth_section_or_columns .columns-content .inner:not(.only-image) .textblock,.fullwidth_section_or_columns .columns-content .inner{width:100% !important}
 .fullwidth_section_or_columns .columns-content .inner:not(.only-image) figure{min-height:unset}
