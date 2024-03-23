@@ -2973,7 +2973,7 @@ body.post-type-archive-tribe_events {
     display: inline-block;
     text-decoration: none;
     background: #FFF;
-    color: $primary!important;
+    color: #4c748c!important;
     padding: 8px 65px 8px 25px;
     position: relative;
     margin-bottom: 5px;
@@ -2997,12 +2997,13 @@ body.post-type-archive-tribe_events {
       font-weight: 900;
       position: absolute;
       top: 10px;
-      right: 32px;
+      right: 33px;
       font-size: 15px;
     }
     &:hover, &:focus {
+      color: #403f3f!important;
       &:before {
-        border-color: $teal;
+        border-color: #403f3f!important;
       }
       &:before, &:after {
         transform: translateX(3px);
@@ -3933,6 +3934,10 @@ body.page-template-page-home-new.no-banner {
   padding-top: 80px;
 }
 .home-repeatable-blocks {
+  h2, h3, h4 {
+    color: #403f3f;
+    letter-spacing: 0.03em;
+  }
   background: #FFF;
   p {
     color: #868686;

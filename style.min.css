@@ -1754,8 +1754,9 @@ body.post-type-archive-tribe_events .tribe-common-l-container.tribe-events-l-con
 .site-footer .button-right-arrow{display:inline-block;text-decoration:none;background:#fff;color:#4c748c !important;padding:8px 65px 8px 25px;position:relative;margin-bottom:5px}
 .site-footer .button-right-arrow:before,.site-footer .button-right-arrow:after{-webkit-transition:all ease .2s;transition:all ease .2s}
 .site-footer .button-right-arrow:before{content:"";display:block;width:22px;height:22px;border:1px solid #4c748c;border-radius:100px;position:absolute;top:12px;right:25px}
-.site-footer .button-right-arrow:after{content:"";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;top:10px;right:32px;font-size:15px}
-.site-footer .button-right-arrow:hover:before,.site-footer .button-right-arrow:focus:before{border-color:#3ca7c5}
+.site-footer .button-right-arrow:after{content:"";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;top:10px;right:33px;font-size:15px}
+.site-footer .button-right-arrow:hover,.site-footer .button-right-arrow:focus{color:#403f3f !important}
+.site-footer .button-right-arrow:hover:before,.site-footer .button-right-arrow:focus:before{border-color:#403f3f !important}
 .site-footer .button-right-arrow:hover:before,.site-footer .button-right-arrow:hover:after,.site-footer .button-right-arrow:focus:before,.site-footer .button-right-arrow:focus:after{-webkit-transform:translateX(3px);transform:translateX(3px)}
 .weatherInfo{display:inline-block;position:relative;left:0;top:0}
 .weatherInfo .live-forecast,.weatherInfo .wp-forecast-curr-head,.weatherInfo .wp-forecast-curr-details{display:none !important}
@@ -1878,6 +1879,7 @@ button.rocketrez-web-engine-button:hover{background:#4c748c;color:#fff}
 .events-list-wrapper .description .buttondiv{margin-top:20px}
 body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padding-top:80px}
 .home-repeatable-blocks{background:#fff}
+.home-repeatable-blocks h2,.home-repeatable-blocks h3,.home-repeatable-blocks h4{color:#403f3f;letter-spacing:.03em}
 .home-repeatable-blocks p{color:#868686;font-weight:300 !important}
 .home-repeatable-blocks .home-repeatable-section{margin-top:10px;margin-bottom:10px}
 .home-repeatable-blocks .home-repeatable-section:first-child{margin-top:0}
