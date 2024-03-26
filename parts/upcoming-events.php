@@ -50,11 +50,9 @@ if ( $events->have_posts() ) {  ?>
       }
     }
     ?>
-    <div class="eventBox">
+    <div class="eventBox <?php echo ($is_completed) ? 'completed':'ongoing' ?>">
       <div class="inside">
-        <?php if ($is_completed) { ?>
-        <div class="status">Event Complete</div>  
-        <?php } ?>
+        
         <figure<?php echo $imageBg ?>>
           <img src="<?php echo $imageHelper ?>" alt="" class="resizer">
         </figure>
@@ -68,6 +66,10 @@ if ( $events->have_posts() ) {  ?>
             <a href="<?php echo get_permalink() ?>" class="button">Learn More</a>
           </div>
         </div>
+
+        <?php if ($is_completed) { ?>
+        <div class="status stat-bottom">Event Complete</div>  
+        <?php } ?>
       </div>
     </div>
   <?php $i++; endwhile; wp_reset_postdata(); ?>

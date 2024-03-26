@@ -151,32 +151,38 @@ $postId = get_the_ID();
                     ?>
                     <div class="block">
                       <div class="inside">
-                        <?php if ($is_completed) { ?>
-                        <div class="status">Event Complete</div>  
-                        <?php } ?>
+                        
                         <?php if ($image) { ?>
                         <div class="bImage">
                           <figure style="background-image:url('<?php echo $image['url'] ?>')">
                             <img src="<?php echo $imageHelper ?>" alt="">
                           </figure>
                         </div>
-                        <div class="desc">
-                          <?php } ?>
-                          <?php if ($title) { ?>
-                          <div class="bTitle"><?php echo $title ?></div>
-                          <?php } ?>
-                          <?php if ($text) { ?>
-                          <div class="bText"><?php echo $text ?></div>
-                          <?php } ?>
-                          <?php if ($btnTitle && $btnLink) { ?>
-                          <div class="buttondiv">
-                            <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
+                        <?php } ?>
+
+                        <?php if ( $title || ($btnTitle && $btnLink) ) { ?>
+                          <div class="desc">
+                            <?php if ($title) { ?>
+                            <div class="bTitle"><?php echo $title ?></div>
+                            <?php } ?>
+                            <?php if ($text) { ?>
+                            <div class="bText"><?php echo $text ?></div>
+                            <?php } ?>
+                            <?php if ($btnTitle && $btnLink) { ?>
+                            <div class="buttondiv">
+                              <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
+                            </div>
+                            <?php } ?>
+                            <?php if( $rr_btn ){ ?>
+                              <div class="btn-center"><?php echo $rr_btn; ?></div>
+                            <?php } ?>
                           </div>
-                          <?php } ?>
-                          <?php if( $rr_btn ){ ?>
-                            <div class="btn-center"><?php echo $rr_btn; ?></div>
-                          <?php } ?>
-                        </div>
+                        <?php } ?>
+
+                        <?php if ($is_completed) { ?>
+                        <div class="status">Event Complete</div>  
+                        <?php } ?>
+
                       </div>
                     </div>
                   <?php } ?>
