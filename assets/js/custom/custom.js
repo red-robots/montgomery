@@ -6,6 +6,14 @@
 
 jQuery(document).ready(function ($) {
 
+  if( $('.events-list-wrapper .eventBox').length ) {
+    $('.events-list-wrapper .eventBox').each(function(){
+      if( $(this).hasClass('completed') ) {
+        $(this).appendTo('.events-list-wrapper');
+      }
+    });
+    $('.events-list-wrapper').addClass('show');
+  }
   if( $('.icon-block').length > 3 ) {
     var countIcons = $('.icon-block').length;
     var iconLastIndex = countIcons-1;

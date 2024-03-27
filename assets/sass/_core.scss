@@ -3882,6 +3882,13 @@ button.rocketrez-web-engine-button {
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px 10px;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-duration: 0.8s;
+  &.show {
+    opacity: 1;
+    animation-name: fadeIn;
+  }
   .eventBox {
     width: 33.333%;
     padding: 15px;

@@ -1866,7 +1866,8 @@ button.rocketrez-web-engine-button:hover{background:#4c748c;color:#fff}
 .owl-carousel .owl-nav .owl-prev,.owl-carousel .owl-nav .owl-next{opacity:0;-webkit-transition:all ease .2s;transition:all ease .2s;position:absolute;top:40%}
 .owl-carousel .owl-nav .owl-prev span,.owl-carousel .owl-nav .owl-next span{font-size:50px;color:#fff;background-color:rgba(0,0,0,.3);padding:0 20px}
 .owl-carousel .owl-nav .owl-next{right:0}
-.events-list-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:15px 10px}
+.events-list-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:15px 10px;opacity:0;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.8s;animation-duration:.8s}
+.events-list-wrapper.show{opacity:1;-webkit-animation-name:fadeIn;animation-name:fadeIn}
 .events-list-wrapper .eventBox{width:33.333%;padding:15px}
 .events-list-wrapper .eventBox.completed .description{padding-bottom:90px}
 .events-list-wrapper div.status{display:block;width:100%;float:left;text-align:center;z-index:5;padding:10px 10px;background:#31a7c5;color:#fff;font-size:1.8em;font-weight:500;letter-spacing:.05em;text-transform:uppercase}

@@ -19,7 +19,7 @@ $args = array (
   'meta_key'               => 'start_date', 
   'meta_value'             => $time,
   'meta_compare'           => '>=', 
-  'order'                  => 'DESC',
+  'order'                  => 'ASC',
   'posts_per_page'         => $posts_per_page,
   'paged'                  => $paged
 );
