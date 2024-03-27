@@ -10,37 +10,37 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<div class="flexwrap">
-        <div class="fcol left">
+        <div class="fcol left first">
           <?php if ($footer_logo) { ?>
            <div class="footlogo">
              <img src="<?php echo $footer_logo['url'] ?>" alt="<?php echo $footer_logo['title'] ?>">
            </div> 
           <?php } ?>
+        </div>
 
-          <?php if ($address) { ?>
-          <address class="address">
-            <?php echo $address ?>
-          </address> 
-          <?php } ?>
-
-          <?php if ($social_media) { ?>
-          <div class="social-media">
-            <?php foreach ($social_media as $icon) { ?>
-            <a href="<?php echo $icon['url'] ?>" target="_blank" arial-label="<?php echo ucwords($icon['type']) ?>"><i class="<?php echo $icon['icon'] ?>"></i></a> 
-            <?php } ?>
-          </div> 
+        <div class="fcol middle">
+          <?php if ($w_text) { ?>
+          <div class="wdt-text"><?php echo $w_text ?></div>
           <?php } ?>
         </div>
 
         <?php if ($w_title || $w_text) { ?>
         <div class="fcol right">
           <div class="inner">
-            <?php if ($w_title) { ?>
-            <div class="wdt-title"><?php echo $w_title ?></div>
+            <?php if ($address) { ?>
+            <address class="address">
+              <?php echo $address ?>
+            </address> 
             <?php } ?>
-            <?php if ($w_text) { ?>
-            <div class="wdt-text"><?php echo $w_text ?></div>
+
+            <?php if ($social_media) { ?>
+            <div class="social-media">
+              <?php foreach ($social_media as $icon) { ?>
+              <a href="<?php echo $icon['url'] ?>" target="_blank" arial-label="<?php echo ucwords($icon['type']) ?>"><i class="<?php echo $icon['icon'] ?>"></i></a> 
+              <?php } ?>
+            </div> 
             <?php } ?>
+
           </div>
         </div>
         <?php } ?>
