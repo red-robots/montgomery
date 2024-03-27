@@ -1,5 +1,5 @@
 <?php
-$posts_per_page = 8;
+$posts_per_page = -1;
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 $time = current_time( 'timestamp' );
 
@@ -13,14 +13,14 @@ $time = current_time( 'timestamp' );
 //   'paged'           => $paged
 // );
 $args = array (
-  'post_type'              => 'upcoming-events', // your event post type slug
-  'post_status'            => 'publish', // only show published events
-  'orderby'                => 'meta_value', // order by date
-  'meta_key'               => 'start_date', // your ACF Date & Time Picker field
-  'meta_value'             => $time, // Use the current time from above
-  'meta_compare'           => '>=', // Compare today's datetime with our event datetime
-  'order'                  => 'DESC', // Show earlier events first
-  'posts_per_page'         => 3,
+  'post_type'              => 'upcoming-events', 
+  'post_status'            => 'publish', 
+  'orderby'                => 'meta_value', 
+  'meta_key'               => 'start_date', 
+  'meta_value'             => $time,
+  'meta_compare'           => '>=', 
+  'order'                  => 'DESC',
+  'posts_per_page'         => $posts_per_page,
   'paged'                  => $paged
 );
 $events = new WP_Query($args);
