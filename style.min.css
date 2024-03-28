@@ -1948,14 +1948,15 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .fullwidth_section_or_columns .columns-content.content-2 figure,.fullwidth_section_or_columns .columns-content.content-2 .textblock,.fullwidth_section_or_columns .columns-content.content-3 figure,.fullwidth_section_or_columns .columns-content.content-3 .textblock{width:100%}
 .fullwidth_section_or_columns .columns-content.content-2 .inner{width:50%}
 .fullwidth_section_or_columns .columns-content.content-3 .inner{width:33.333%}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns{display:block}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns .textblock{width:100%;float:left;padding:20px 0}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns .textblock h2{font-size:2em;line-height:1.2;letter-spacing:.02em}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns figure{width:100%;float:left;min-height:unset;position:relative;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns figure span.img{display:block;width:100%;float:left;position:relative}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns figure img.photo{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute !important;top:0;left:0;z-index:3}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns figure img.resizer{width:100% !important;height:auto !important;position:relative !important;float:left}
-.fullwidth_section_or_columns .columns-content .inner.multple-columns:hover figure{border-top-left-radius:40px;border-bottom-right-radius:40px}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns{display:block}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap{position:relative}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textblock{width:100%;float:left;padding:20px 0}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textblock h2{font-size:2em;line-height:1.2;letter-spacing:.02em}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns figure{width:100%;float:left;min-height:unset;position:relative;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns figure span.img{display:block;width:100%;float:left;position:relative}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns figure img.photo{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute !important;top:0;left:0;z-index:3}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns figure img.resizer{width:100% !important;height:auto !important;position:relative !important;float:left}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns:hover figure{border-top-left-radius:40px;border-bottom-right-radius:40px}
 .fullwidth_section_or_columns .columns-content.content-1 .inner.only-image figure{width:100% !important}
 .fullwidth_section_or_columns .columns-content.content-1 .inner.only-image figure a{display:block}
 .fullwidth_section_or_columns .columns-content.content-1 .inner:hover figure{border-top-left-radius:0 !important;border-bottom-right-radius:0 !important}
@@ -2016,6 +2017,7 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .item-details-blocks .item-details.column-one .inforow .itemcol.left{width:calc(100% - 65px);padding-right:5px}
 .item-details-blocks .item-details.column-one .inforow .itemcol.right{width:65px;text-align:right}
 .item-details-blocks .item-details.column-one .inforow .itemcol.right span.price{font-size:25px;font-weight:600;line-height:1.2;letter-spacing:.03em}
+.item-details-blocks .item-details.column-one .inforow .buttonwrap{margin-top:12px}
 .item-details-blocks .item-details.column-two .detailsCol .options{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .item-details-blocks .item-details.column-two .detailsCol .options .inforow{width:48%;text-align:center}
 .item-details-blocks .item-details.column-two .detailsCol .options .inforow .info.price{margin:15px 0}
@@ -2121,6 +2123,9 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .grid-layout .wrapper{padding-left:30px;padding-right:30px}
 .grid-layout .blocks .block{width:33.333%}
 }@media screen and (min-width:820px){.rocketrez-iframe-container{margin-top:110px}
+}@media screen and (min-width:821px){.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap{height:100%}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap .has-button .buttondiv{width:100%;position:absolute;left:0;bottom:0}
+.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap .has-button .wrap{padding-bottom:30px}
 }@media screen and (min-width:850px){.banner-video.has-mobile-video .video-desktop{display:block}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
 .contact-links-section .link-icon{width:20%}

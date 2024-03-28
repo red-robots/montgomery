@@ -189,13 +189,31 @@ $postId = get_the_ID();
                       if( empty($text) && empty($btnTitle) &&  empty($btnUrl) ) {
                         $is_only_image = true;
                       }
-                      $is_multiple_columns = ($countContent>2) ? ' multple-columns':'';
+                      $is_multiple_columns = ($countContent>2) ? ' multiple-columns':'';
                       if ($image || $text ) { ?>
                       <div class="inner<?php echo ($is_only_image) ? ' only-image':'' ?><?php echo $is_multiple_columns ?>">
-                        <?php if ($image) { ?>
-                          <?php if ($clickthrough) { ?>
-                          <figure>
-                            <a href="<?php echo $clickthrough ?>" target="<?php echo ($clickthrough_target) ? '_blank':'_self' ?>">
+
+                        <?php if (($countContent>2)) { ?>
+                          <div class="textwrap">
+                        <?php } ?>
+                        
+
+                          <?php if ($image) { ?>
+                            <?php if ($clickthrough) { ?>
+                            <figure>
+                              <a href="<?php echo $clickthrough ?>" target="<?php echo ($clickthrough_target) ? '_blank':'_self' ?>">
+                                <?php if ($countContent>2) { ?>
+                                  <span class="img">
+                                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/portrait.png" alt="" class="resizer">
+                                  </span>
+                                <?php } else { ?>
+                                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                                <?php } ?>
+                              </a>
+                            </figure>
+                            <?php } else { ?>
+                            <figure>
                               <?php if ($countContent>2) { ?>
                                 <span class="img">
                                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
@@ -204,32 +222,25 @@ $postId = get_the_ID();
                               <?php } else { ?>
                                 <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
                               <?php } ?>
-                            </a>
-                          </figure>
-                          <?php } else { ?>
-                          <figure>
-                            <?php if ($countContent>2) { ?>
-                              <span class="img">
-                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/portrait.png" alt="" class="resizer">
-                              </span>
-                            <?php } else { ?>
-                              <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" class="photo">
+                            </figure>
                             <?php } ?>
-                          </figure>
                           <?php } ?>
-                        <?php } ?>
-                        <?php if ($text) { ?>
-                        <div class="textblock">
-                          <div class="wrap">
-                            <div class="text"><?php echo $text ?></div>
-                            <?php if ($btnTitle || $btnUrl) { ?>
-                              <div class="buttondiv">
-                                <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
-                              </div>
-                            <?php } ?>
+                          <?php if ($text) { ?>
+                          <div class="textblock<?php echo ($btnTitle || $btnUrl) ? ' has-button':'' ?>">
+                            <div class="wrap">
+                              <div class="text"><?php echo $text ?></div>
+                              <?php if ($btnTitle || $btnUrl) { ?>
+                                <div class="buttondiv">
+                                  <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
+                                </div>
+                              <?php } ?>
+                            </div>
                           </div>
-                        </div>
+                          <?php } ?>
+
+
+                        <?php if (($countContent>2)) { ?>
+                          </div>
                         <?php } ?>
                       </div>
                       <?php } ?>

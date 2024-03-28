@@ -4448,8 +4448,25 @@ body.page-template-page-home-new.no-banner {
       }
     }
 
-    .inner.multple-columns {
+    .inner.multiple-columns {
       display: block;
+      .textwrap {
+        position: relative;
+        @media screen and (min-width: 821px) {
+          height: 100%;
+          .has-button {
+            .buttondiv {
+              width: 100%;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+            }
+            .wrap {
+              padding-bottom: 30px;
+            }
+          }
+        }
+      }
       .textblock {
         width: 100%;
         float: left;
@@ -4874,6 +4891,9 @@ body.page-template-page-home-new.no-banner {
               letter-spacing: .03em;
             }
           }
+        }
+        .buttonwrap {
+          margin-top: 12px;
         }
       }
     }
