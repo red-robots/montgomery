@@ -43,3 +43,17 @@
   left: 18px;
   transform: scale(1.1);
 }
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="target"] {
+  position: relative;
+}
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="target"] .acf-label {
+  padding-left: 26px;
+  padding-top: 2px;
+}
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="target"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  transform: scale(1.1);
+}

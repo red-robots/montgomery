@@ -27,13 +27,24 @@
               <button class="goBackToNav" aria-label="Go Back to Main Navigation"><i class="fa-solid fa-arrow-left-long"></i></button>
               <?php foreach ($dropdowns as $d) { 
                 $heading = $d['heading'];
+                $hLink = $d['headingLink'];
+
+                $headingLink = (isset($hLink['url']) && $hLink['url']) ? $hLink['url'] : '';
+                $headingLinkTarget = (isset($hLink['target']) && $hLink['target']) ? '_blank' : '_self';
+
                 $menulinks = $d['dropdown'];
                 $sublink_type = $d['sublink_type'];
                 $link2 = $d['page_link'];
                 if($sublink_type=='list') { ?>
                   <div class="items">
                     <?php if ($heading) { ?>
-                      <div class="menu-heading"><?php echo $heading ?></div>
+                      <div class="menu-heading">
+                        <?php if ($headingLink) { ?>
+                          <a href="<?php echo $headingLink ?>" target="<?php echo $headingLinkTarget ?>" class="headingLink"><?php echo $heading ?></a>
+                        <?php } else { ?>
+                          <?php echo $heading ?>
+                        <?php } ?>
+                      </div>
                     <?php } ?>
                     <?php if ($menulinks) { ?>
                       <ul class="menulink">
