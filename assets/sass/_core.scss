@@ -860,11 +860,13 @@ div.buttondiv {
   }
   &.btn-white {
     background: #FFF;
-    color: #999;
+    color: $primary!important;
+    font-weight: 500;
+    letter-spacing: 0.15em;
     &:hover {
       text-decoration: none;
       background: $yellow2;
-      color: #FFF;
+      color: #FFF!important;
     }
   }
 }
@@ -4731,6 +4733,223 @@ body.page-template-page-home-new.no-banner {
     animation-name: fadeIn;
   }
 }
+
+/* BUY PAGE */
+.item-details-blocks {
+  margin-top: 35px;
+  .item-details {
+    background: $primary;
+    color: #FFF;
+    .flexwrap {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 700px;
+      .flexcol {
+        width: 50%;
+      }
+      .imageCol {
+        figure {
+          margin: 0 0;
+          height: 100%;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+      
+      .detailsCol {
+        padding: 80px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        font-size: 16px;
+        @media screen and (min-width: 1300px) {
+          padding: 8vw 5vw;
+        }
+        h2, h3, h4, p, strong {
+          color: #FFF!important;
+        }
+        h2.itemName {
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          text-align: center;
+          margin: 0 0 50px;
+        }
+        .inner {
+          width: 100%;
+        }
+      }
+    } 
+
+    .inforow {
+      .info.price,
+      .info.name {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+      } 
+      .info.name {
+        margin-bottom: 5px;
+        span.age {
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+      .button {
+        padding: 10px 20px 8px;
+      }
+    }
+
+    .includes-info {
+      margin-top: 70px;
+      display: flex;
+      flex-wrap: wrap;
+      .inc-title {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+        padding-right: 20px;
+        letter-spacing: 0.03em;
+      }
+      .inc-text {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+
+    .disclosure {
+      margin-top: 15px;
+      &.no-includes {
+        margin-top: 60px;
+      }
+    }
+
+    .single-button {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &.even {
+      .flexwrap {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.column-one  {
+      .inforow {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &.no-spacing {
+          margin-bottom: 0;
+        }
+        .itemcol {
+          &.left {
+            width: calc(100% - 65px);
+            padding-right: 5px;
+          }
+          &.right {
+            width: 65px;
+            text-align: right;
+            span.price {
+              font-size: 25px;
+              font-weight: 600;
+              line-height: 1.2;
+              letter-spacing: .03em;
+            }
+          }
+        }
+      }
+    }
+
+    &.column-two {
+      .detailsCol {
+        .options {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .inforow {
+            width: 48%;
+            text-align: center;
+            .info.price {
+              margin: 15px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .item-details {
+      .flexwrap {
+        .flexcol {
+          width: 100%;
+          figure {
+            padding-bottom: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .item-details {
+      .inforow .info.name {
+        font-size: 20px;
+        span.age {
+          display: block;
+        }
+      }
+
+      h2.itemName {
+        font-size: 2.2rem;
+        letter-spacing: 0.05em;
+      }
+
+      .includes-info {
+        display: block;
+      }
+      .disclosure {
+        margin-top: 20px;
+      }
+
+      &.column-two {
+        .detailsCol {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+        .detailsCol .options {
+          .inforow {
+            width: 100%;
+            margin-top: 60px;
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 body.logged-in.admin-bar {
   .submenu-items {
     padding-top: 80px!important;

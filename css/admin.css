@@ -28,3 +28,18 @@
   height: 45px!important;
   background: #adadad!important;
 }
+
+.acf-field-true-false[data-name="two_column"] {
+  position: relative;
+}
+.acf-field-true-false[data-name="two_column"] .acf-label {
+  padding-left: 26px;
+  padding-top: 2px;
+}
+.acf-field-true-false[data-name="two_column"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  transform: scale(1.1);
+}
