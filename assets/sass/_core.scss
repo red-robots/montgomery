@@ -4755,16 +4755,19 @@ body.page-template-page-home-new.no-banner {
 .item-details-blocks {
   margin-top: 35px;
   .item-details {
-    background: $primary;
+    // background: $primary;
     color: #FFF;
+    margin: 1.5% 0;
+    @media screen and (max-width: 600px) {
+      margin: 10px 0;
+    }
     .flexwrap {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       min-height: 700px;
-      .flexcol {
-        width: 50%;
-      }
       .imageCol {
+        width: 35%;
         figure {
           margin: 0 0;
           height: 100%;
@@ -4780,51 +4783,30 @@ body.page-template-page-home-new.no-banner {
           }
         }
       }
-
-      .buttonwrap {
-        button, [type="button"] {
-          display: inline-block;
-          text-decoration: none;
-          appearance: none;
-          border-radius: 0;
-          border: none!important;
-          background: #FFF;
-          color: $primary!important;
-          font-family: $font_forth;
-          font-size: 15px;
-          font-weight: 400;
-          line-height: 1.2;
-          text-transform: uppercase;
-          letter-spacing: .25px;
-          padding: 10px 25px;
-          &:hover, &:focus {
-            text-decoration: none;
-            background: $yellow2!important;
-            color: #FFF!important;
-          }
-        }
-      }
       
       .detailsCol {
+        width: 63.5%;
         padding: 80px 30px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        color: #FFF;
-        font-size: 16px;
+        color: #403f3f;
+        font-size: 15px;
+        background: #EEEEEE;
         @media screen and (min-width: 1300px) {
           padding: 8vw 5vw;
         }
         h2, h3, h4, p, strong {
-          color: #FFF!important;
+          color: #403f3f!important;
         }
         h2.itemName {
+          font-size: 30px;
           font-weight: 500;
           letter-spacing: 0.03em;
           text-transform: uppercase;
           text-align: center;
-          margin: 0 0 50px;
+          margin: 0 0 30px;
         }
         .inner {
           width: 100%;
@@ -4832,10 +4814,36 @@ body.page-template-page-home-new.no-banner {
       }
     } 
 
+    .buttonwrap {
+      button, [type="button"] {
+        display: inline-block;
+        text-decoration: none;
+        appearance: none;
+        border-radius: 0;
+        border: none!important;
+        //background: #FFF;
+        // color: $primary!important;
+        background: #403f3f;
+        color: #FFF;
+        font-family: $font_forth;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: .25px;
+        padding: 10px 25px;
+        &:hover, &:focus {
+          text-decoration: none;
+          background: $yellow2!important;
+          color: #FFF!important;
+        }
+      }
+    }
+
     .inforow {
       .info.price,
       .info.name {
-        font-size: 25px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 1.2;
         letter-spacing: 0.03em;
@@ -4858,19 +4866,30 @@ body.page-template-page-home-new.no-banner {
       flex-wrap: wrap;
       .inc-title {
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
         padding-right: 20px;
         letter-spacing: 0.03em;
       }
       .inc-text {
-        font-size: 18px;
+        font-size: 15px;
         line-height: 1.5;
+      }
+      &.centered {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 25px;
+        position: relative;
+        .inc-title,
+        .inc-text {
+          width: 100%;
+        }
       }
     }
 
     .disclosure {
-      margin-top: 15px;
+      margin-top: 50px;
+      text-align: center;
       &.no-includes {
         margin-top: 60px;
       }
@@ -4909,7 +4928,7 @@ body.page-template-page-home-new.no-banner {
             width: 65px;
             text-align: right;
             span.price {
-              font-size: 25px;
+              font-size: 18px;
               font-weight: 600;
               line-height: 1.2;
               letter-spacing: .03em;
@@ -4956,7 +4975,6 @@ body.page-template-page-home-new.no-banner {
   @media screen and (max-width: 820px) {
     .item-details {
       .inforow .info.name {
-        font-size: 20px;
         span.age {
           display: block;
         }

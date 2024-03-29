@@ -47,6 +47,22 @@ $postId = get_the_ID();
                   <div class="inner">
                     <?php if ($title || $options) { ?>
                       <h2 class="itemName"><?php echo $title ?></h2>
+
+                      <?php 
+                      $inc_title = ( isset($includes['title']) && $includes['title'] ) ? $includes['title'] : '';
+                      $inc_text = ( isset($includes['text']) && $includes['text'] ) ? $includes['text'] : '';
+                      $has_includes = ($inc_title || $inc_text) ? 'has-includes':'no-includes';
+                      if($inc_title || $inc_text) { ?>
+                      <div class="includes-info centered">
+                        <?php if ($inc_title) { ?>
+                        <div class="inc-title"><?php echo $inc_title ?></div> 
+                        <?php } ?>
+                        <?php if ($inc_text) { ?>
+                        <div class="inc-text"><?php echo $inc_text ?></div> 
+                        <?php } ?>
+                      </div>
+                      <?php } ?>
+
                       <?php if ($options) { ?>
                       <div class="options">
                         <?php foreach ($options as $v) { 
@@ -112,21 +128,6 @@ $postId = get_the_ID();
                       </div>
                       <?php } ?>
                     <?php } ?>
-
-                    <?php 
-                      $inc_title = ( isset($includes['title']) && $includes['title'] ) ? $includes['title'] : '';
-                      $inc_text = ( isset($includes['text']) && $includes['text'] ) ? $includes['text'] : '';
-                      $has_includes = ($inc_title || $inc_text) ? 'has-includes':'no-includes';
-                      if($inc_title || $inc_text) { ?>
-                      <div class="includes-info">
-                        <?php if ($inc_title) { ?>
-                        <div class="inc-title"><?php echo $inc_title ?></div> 
-                        <?php } ?>
-                        <?php if ($inc_text) { ?>
-                        <div class="inc-text"><?php echo $inc_text ?></div> 
-                        <?php } ?>
-                      </div>
-                      <?php } ?>
 
                       <?php if($additional_info) { ?>
                       <div class="disclosure <?php echo $has_includes ?>"><?php echo $additional_info ?></div>
