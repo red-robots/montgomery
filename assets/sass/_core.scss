@@ -4780,6 +4780,30 @@ body.page-template-page-home-new.no-banner {
           }
         }
       }
+
+      .buttonwrap {
+        button, [type="button"] {
+          display: inline-block;
+          text-decoration: none;
+          appearance: none;
+          border-radius: 0;
+          border: none!important;
+          background: #FFF;
+          color: $primary!important;
+          font-family: $font_forth;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.2;
+          text-transform: uppercase;
+          letter-spacing: .25px;
+          padding: 10px 25px;
+          &:hover, &:focus {
+            text-decoration: none;
+            background: $yellow2!important;
+            color: #FFF!important;
+          }
+        }
+      }
       
       .detailsCol {
         padding: 80px 30px;

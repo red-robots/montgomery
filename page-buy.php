@@ -29,7 +29,6 @@ $postId = get_the_ID();
             $two_column = get_sub_field('two_column');
             $format = ( isset($two_column) && $two_column ) ? 'two' : 'one';
             $options = get_sub_field('options');
-            $single_button = get_sub_field('single_button');
             $includes = get_sub_field('includes');
             $additional_info = get_sub_field('additional_info');
             $singleButton = get_sub_field('single_button');
@@ -55,8 +54,10 @@ $postId = get_the_ID();
                           $v_age = $v['age'];
                           $v_description = $v['description'];
                           $v_price = $v['price'];
-                          $v_btn = $v['button'];
                           $v_margin = ( isset($v['no_margin_bottom']) && $v['no_margin_bottom'] ) ? 'no-spacing':'spacing-default';
+
+                          $v_btn_html = $v['button_html'];
+                          $v_btn = $v['button'];
                           $btnTarget = ( isset($v_btn['target']) && $v_btn['target'] ) ? $v_btn['target'] : '_self';
                           $btnTitle = ( isset($v_btn['title']) && $v_btn['title'] ) ? $v_btn['title'] : '';
                           $btnLink = ( isset($v_btn['url']) && $v_btn['url'] ) ? $v_btn['url'] : '';
@@ -100,8 +101,10 @@ $postId = get_the_ID();
                             <?php } ?>
 
 
-                            <?php if ($btnTitle && $btnLink) { ?>
-                            <div class="info buttonwrap"><a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button btn-white"><?php echo $btnTitle ?></a></div>
+                            <?php if ($v_btn_html) { ?>
+                            <div class="info buttonwrap">
+                              <?php echo $v_btn_html ?>
+                            </div>
                             <?php } ?>
                           </div>
                           <?php } ?>
@@ -129,13 +132,9 @@ $postId = get_the_ID();
                       <div class="disclosure <?php echo $has_includes ?>"><?php echo $additional_info ?></div>
                       <?php } ?>
 
-                      <?php 
-                      $s_btnTarget = ( isset($singleButton['target']) && $singleButton['target'] ) ? $singleButton['target'] : '_self';
-                      $s_btnTitle = ( isset($singleButton['title']) && $singleButton['title'] ) ? $singleButton['title'] : '';
-                      $s_btnLink = ( isset($singleButton['url']) && $singleButton['url'] ) ? $singleButton['url'] : '';
-                      if($s_btnTitle && $s_btnLink) { ?>
-                      <div class="single-button">
-                        <a href="<?php echo $s_btnLink ?>" target="<?php echo $s_btnTarget ?>" class="button btn-white"><?php echo $s_btnTitle ?></a>
+                      <?php if($singleButton) { ?>
+                      <div class="single-button buttonwrap">
+                        <?php echo $singleButton ?>
                       </div>
                       <?php } ?>
                     </div>
