@@ -1971,21 +1971,21 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .menu-custom .submenu-items .menu-heading a{color:#000;text-decoration:none}
 .menu-custom .submenu-items .menu-heading a:hover,.menu-custom .submenu-items .menu-heading a:focus{color:#3ca7c5}
 .menu-custom .submenu-items .menulink{margin:0;padding:0}
-.menu-custom .submenu-items .menulink a{display:inline-block;color:#4d768d;padding:10px 0}
+.menu-custom .submenu-items .menulink a{display:inline-block;color:#404f3f;padding:10px 0}
 .menu-custom .has-sub-items a[data-link]{position:relative;letter-spacing:.05em;text-transform:uppercase}
 .menu-custom .has-sub-items a[data-link] i[class*=fa-]{display:inline-block;position:relative;top:0;right:-5px;font-size:13px}
 .menu-custom .has-sub-items .submenu-items.show{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;left:329px;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft;z-index:999;padding:20px 15px;width:380px}
 #subMenuContainer{position:fixed;top:0;left:329px;width:380px;height:100vh;z-index:999;overflow:hidden;display:none}
 #subMenuContainer.show{display:block}
 #subMenuContainer .submenu-items{position:absolute;top:0;left:0;width:100%;height:100%;overflow:auto;background-color:#fff;display:none;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:30px;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-transition:all ease .3s;transition:all ease .3s}
-#subMenuContainer .submenu-items a{display:inline-block;padding:2px;text-decoration:none}
+#subMenuContainer .submenu-items a{display:inline-block;padding:2px;text-decoration:none;color:#404f3f}
 #subMenuContainer .submenu-items a:hover,#subMenuContainer .submenu-items a:focus{color:#3ca8c5}
 #subMenuContainer .submenu-items a:focus{outline:1px dotted #3ca8c5}
 #subMenuContainer .submenu-items .items{width:100%}
-#subMenuContainer .submenu-items .items .menu-heading{text-transform:capitalize;color:#403f3f;margin-bottom:5px;font-size:16px}
+#subMenuContainer .submenu-items .items .menu-heading{text-transform:uppercase;color:#403f3f;margin-bottom:5px;font-size:16px}
 #subMenuContainer .submenu-items .items .menu-heading a{color:#403f3f}
 #subMenuContainer .submenu-items .items .menu-heading a:hover,#subMenuContainer .submenu-items .items .menu-heading a:focus{color:#3ca8c5}
-#subMenuContainer .submenu-items .items .menulink{margin:0 0 15px;padding:0;list-style:none}
+#subMenuContainer .submenu-items .items .menulink{margin:0 0 20px;padding:0;list-style:none}
 #subMenuContainer .submenu-items .items.page_link{margin-bottom:0}
 #subMenuContainer .submenu-items.show{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.4s;animation-duration:.4s;-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}
 .goBackToNav{display:none}

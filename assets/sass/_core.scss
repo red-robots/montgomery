@@ -4623,7 +4623,7 @@ body.page-template-page-home-new.no-banner {
       padding: 0 0;
       a {
         display: inline-block;
-        color: #4d768d;
+        color: #404f3f;
         padding: 10px 0;
       }
     }
@@ -4699,6 +4699,7 @@ body.page-template-page-home-new.no-banner {
       display: inline-block;
       padding: 2px;
       text-decoration: none;
+      color: #404f3f;
       &:hover, &:focus {
         color: #3ca8c5;
       }
@@ -4711,7 +4712,7 @@ body.page-template-page-home-new.no-banner {
       width: 100%;
       // margin-bottom: 20px;
       .menu-heading {
-        text-transform: capitalize;
+        text-transform: uppercase;
         color: $color_dark;
         margin-bottom: 5px;
         font-size: 16px;
@@ -4723,7 +4724,7 @@ body.page-template-page-home-new.no-banner {
         }
       }
       .menulink {
-        margin: 0 0 15px;
+        margin: 0 0 20px;
         padding: 0 0;
         list-style: none;
       }
