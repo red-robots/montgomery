@@ -2548,6 +2548,8 @@ body.single-tribe_events {
         margin: 0 0 15px;
         text-transform: uppercase;
         color: $primary;
+        font-family: $font_primary;
+        font-size: 22px;
       }
     }
     .wrap {
@@ -3763,7 +3765,7 @@ body.page-template-page-videos .titlediv.typical .page-title {
   .video-title {
     width: 100%;
     float: left;
-    margin-top: 8px;
+    margin: 8px auto 10px auto;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -3774,6 +3776,9 @@ body.page-template-page-videos .titlediv.typical .page-title {
         color: #D0A256;
       }
     }
+  }
+  p {
+    text-align: center;
   }
   figure {
     margin: 0 0;
@@ -4613,6 +4618,7 @@ body.page-template-page-home-new.no-banner {
       a {
         color: #000;
         text-decoration: none;
+        padding: 0;
         &:hover, &:focus {
           color: $teal;
         }
@@ -4714,11 +4720,12 @@ body.page-template-page-home-new.no-banner {
       .menu-heading {
         text-transform: uppercase;
         color: $color_dark;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         font-size: 16px;
         letter-spacing: .05em;
         a {
           color: $color_dark;
+          padding: 0;
           &:hover, &:focus {
             color: #3ca8c5;
           }
@@ -4728,6 +4735,9 @@ body.page-template-page-home-new.no-banner {
         margin: 0 0 20px;
         padding: 0 0;
         list-style: none;
+        li {
+          margin-bottom: 3px;
+        }
       }
       &.page_link {
         margin-bottom: 0;
@@ -4960,10 +4970,19 @@ body.page-template-page-home-new.no-banner {
         .options {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          // justify-content: space-between;
+          justify-content: center;
           .inforow {
-            width: 48%;
+            // width: 48%;
+            width: 40%;
             text-align: center;
+            &:nth-child(even) {
+              // border-top: 1px solid #adaaaa;
+              @include tab() {
+                border-top: 0;
+                border-left: 1px solid #adaaaa;
+              }
+            }
             .info.price {
               margin: 15px 0;
             }

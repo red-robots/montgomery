@@ -30,6 +30,7 @@ get_header(); ?>
               if($videoLink) {
                 $basename = basename( $videoLink );
                 $title = $v['video_title'];
+                $sub_title = $v['video_sub_title'];
                 $placeholder = get_stylesheet_directory_uri() . '/images/video-helper.png';
                 $thumbnail = 'https://vumbnail.com/'.$basename.'.jpg';
                 ?>
@@ -43,11 +44,58 @@ get_header(); ?>
                   <div class="video-title">
                     <a href="<?php echo $videoLink ?>" data-fancybox="gallery" data-type="video"><?php echo $title ?></a>
                   </div>
+                  <?php if( $sub_title ) { ?>
+                    <p><?php echo $sub_title; ?></p>
+                  <?php } ?>
                 </div>
               <?php } ?>
             <?php } ?>
           </div>
           <?php } ?>
+
+
+          <?php 
+          $section_title = get_field('section_title'); 
+          if( $section_title ) {
+          ?>
+            <div class="titlediv typical">
+              <h1 class="page-title"><span><?php echo $section_title; ?></span></h1>
+            </div>
+          <?php } ?>
+
+          <?php if( $news_links = get_field('news_links') ) { ?>
+          <div class="videoLibrary">
+            <?php foreach ($news_links as $nl) { 
+              // echo '<pre>';
+              // print_r($nl);
+              // echo '</pre>';
+                $link = $nl['link']['url'];
+                $target = $nl['link']['target'];
+                $title = $nl['title'];
+                $sub_title = $nl['sub_title'];
+                $placeholder = get_stylesheet_directory_uri() . '/images/video-helper.png';
+                $thumbnail = $nl['thumbnail']['url'];
+                $alt = $nl['thumbnail']['alt'];
+                ?>
+                <div class="video">
+                  <figure>
+                    <a href="<?php echo $link ?>" target="<?php echo $target; ?>">
+                      <img src="<?php echo $thumbnail ?>" alt="<?php echo $alt; ?>" class="thumbnail">
+                      <img src="<?php echo $placeholder ?>" alt="" class="helper" />
+                    </a>
+                  </figure>
+                  <div class="video-title">
+                    <a href="<?php echo $link ?>" target="<?php echo $target; ?>"><?php echo $title; ?></a>
+                  </div>
+                  <?php if( $sub_title ) { ?>
+                    <p><?php echo $sub_title; ?></p>
+                  <?php } ?>
+                </div>
+            <?php } ?>
+          </div>
+          <?php } ?>
+
+
 
 		    <?php endwhile; endif; ?>
 	    </div>
