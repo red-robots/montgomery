@@ -2549,7 +2549,7 @@ body.single-tribe_events {
         text-transform: uppercase;
         color: $primary;
         font-family: $font_primary;
-        font-size: 22px;
+        font-size: 18px;
       }
     }
     .wrap {
@@ -3750,7 +3750,8 @@ body.search {
   }
 }
 body.page-template-page-videos .titlediv.typical .page-title {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  margin-bottom: 4.5rem !important;
 }
 .videoLibrary {
   display: flex;
@@ -3768,17 +3769,18 @@ body.page-template-page-videos .titlediv.typical .page-title {
     margin: 8px auto 10px auto;
     font-size: 16px;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
     a {
       text-decoration: none;
       font-size: 18px;
+      color: #404f3f;
       &:hover, &:focus {
         color: #D0A256;
       }
     }
   }
   p {
-    text-align: center;
+    text-align: left;
   }
   figure {
     margin: 0 0;
@@ -4606,6 +4608,7 @@ body.page-template-page-home-new.no-banner {
     padding: 20px 15px;
     display: flex;
     transition: all ease .5s;
+    font-weight: 500;
     .items {
       width: 50%;
       padding: 10px;

@@ -10,9 +10,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area-full generic-layout">
 	<main id="main" class="site-main" role="main">
-    <div class="wrapper">
+    <div class="wrapper wraptax">
 
-    	<div class="titlediv typical">
+    	<div class="titlediv typical nomb">
         <h1 class="page-title"><span><?php the_title(); ?></span></h1>
       </div>
       <div class="entry-content">
