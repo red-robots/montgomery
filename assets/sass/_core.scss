@@ -2163,6 +2163,9 @@ body.single-tribe_events {
   .h2 {
     margin: 0 0 20px;
     letter-spacing: 0.045em;
+    color: #403f3f;
+    // color: #000;
+    letter-spacing: .0352em;
   }
   .fullwidth {
     .wrapper {
@@ -2185,13 +2188,14 @@ body.single-tribe_events {
     }
   }
   .repeatable:nth-child(even) {
-    background-color: $gray;
+    // background-color: $gray;
   }
   .repeatable.text-image {
-    padding-top: 40px;
-    padding-bottom: 70px;
+    // padding-top: 40px;
+    // padding-bottom: 70px;
+    padding-bottom: 10px;
     @include tab {
-      padding-top: 70px;
+      // padding-top: 70px;
     }
     .wrapper {
       max-width: 100%!important;
@@ -3365,7 +3369,7 @@ body.home {
       }
       .inside {
         height: 100%;
-        background: #eee;
+        background: #fff;
         position: relative;
         &.no-image {
           display: flex;
@@ -3414,21 +3418,32 @@ body.home {
     .desc {
       width: 100%;
       float: left;
-      padding: 20px;
-      background: $gray;
+      // padding: 20px;
+      // background: $gray;
+      background-color: #fff;
     }
     .bTitle {
       font-family: $font_heading;
-      font-size: 1.75rem;
+      // font-size: 1.75rem;
+      // line-height: 1.2;
+      // margin: 0 0 15px;
+      // text-transform: uppercase;
+      // color: $primary;
+      // text-align: center;
+      // letter-spacing: 0.04em;
+      font-size: 2em;
       line-height: 1.2;
-      margin: 0 0 15px;
-      text-transform: uppercase;
-      color: $primary;
-      text-align: center;
-      letter-spacing: 0.04em;
+      letter-spacing: .02em;
+      color: #403f3f;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    .bText {
+      color: #868686;
+      font-weight: 300 !important;
     }
     .buttondiv {
-      text-align: center;
+      text-align: left;
       margin-top: 20px;
     }
   }
