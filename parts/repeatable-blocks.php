@@ -85,6 +85,8 @@
                     $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
                     $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
                     $image = $b['image'];
+                    $alignment = strtolower($b['title_align']);
+
                     ?>
                     <div class="block">
                       <div class="inside <?php echo ($image) ? 'has-image':'no-image' ?>">
@@ -97,7 +99,7 @@
                         <?php } ?>
                         <div class="desc">
                           <?php if ($title) { ?>
-                          <div class="bTitle"><?php echo $title ?></div>
+                          <div class="bTitle" style="text-align: <?php echo $alignment; ?>"><?php //echo $title ?></div>
                           <?php } ?>
                           <?php if ($text) { ?>
                           <div class="bText"><?php echo $text ?></div>

@@ -124,6 +124,7 @@ $postId = get_the_ID();
                     $text = $b['text'];
                     $rr_btn = $b['rocket_rez_button_code'];
                     $btn = $b['button'];
+                    $alignment = strtolower($b['title_align']);
                     $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
                     $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
                     $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
@@ -163,7 +164,7 @@ $postId = get_the_ID();
                         <?php if ( $title || ($btnTitle && $btnLink) ) { ?>
                           <div class="desc">
                             <?php if ($title) { ?>
-                            <div class="bTitle"><?php echo $title ?></div>
+                            <div class="bTitle" style="text-align: <?php echo $alignment; ?>"><?php echo $title ?></div>
                             <?php } ?>
                             <?php if ($text) { ?>
                             <div class="bText"><?php echo $text ?></div>
