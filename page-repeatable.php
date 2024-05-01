@@ -56,6 +56,7 @@ $postId = get_the_ID();
             $content = get_sub_field('content');
             $image = get_sub_field('image'); 
             $imageSize = get_sub_field('image_size'); 
+            $background = strtolower(get_sub_field('background'));
             $text_alignment = get_sub_field('text_alignment'); 
 
             $col = ( ($title || $content) && $image ) ? 'half':'full';
@@ -71,7 +72,7 @@ $postId = get_the_ID();
             ?>
             <div class="repeatable text-image <?php echo $col ?>">
               <div class="wrapper">
-                <div class="flexwrap">
+                <div class="flexwrap <?php echo $background; ?>">
                   <?php if ($title || $content) { ?>
                   <div class="textcol">
                     <?php if ($title) { ?><h2 class="h2"><?php echo $title ?></h2><?php } ?>
@@ -125,6 +126,7 @@ $postId = get_the_ID();
                     $rr_btn = $b['rocket_rez_button_code'];
                     $btn = $b['button'];
                     $alignment = strtolower($b['title_align']);
+                    $background = strtolower($b['background']);
                     $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
                     $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
                     $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
@@ -162,7 +164,7 @@ $postId = get_the_ID();
                         <?php } ?>
 
                         <?php if ( $title || ($btnTitle && $btnLink) ) { ?>
-                          <div class="desc">
+                          <div class="desc <?php echo $background; ?>">
                             <?php if ($title) { ?>
                             <div class="bTitle" style="text-align: <?php echo $alignment; ?>"><?php echo $title ?></div>
                             <?php } ?>

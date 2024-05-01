@@ -1614,6 +1614,8 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .fullwidth.no-subtitle.first .wrapper{padding-top:15px}
 .repeatable-blocks .repeatable.text-image{padding-bottom:10px}
 .repeatable-blocks .repeatable.text-image .wrapper{max-width:100% !important;padding-left:0;padding-right:0}
+.repeatable-blocks .repeatable.text-image .wrapper .flexwrap.white{background-color:#fff}
+.repeatable-blocks .repeatable.text-image .wrapper .flexwrap.gray{background-color:#eee}
 .repeatable-blocks .repeatable.text-image .textcol,.repeatable-blocks .repeatable.text-image .imagecol{width:100%}
 .repeatable-blocks .repeatable.text-image .textcol{padding:20px}
 .repeatable-blocks .repeatable.text-image figure{margin:0;background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -1797,7 +1799,9 @@ body.home #primary{padding-bottom:0}
 .grid-layout .blocks .bImage{width:100%;float:left}
 .grid-layout .blocks .bImage figure{margin:0;width:100%;float:left;background-size:cover;background-repeat:no-repeat;background-position:center}
 .grid-layout .blocks .bImage figure img{width:100%;height:auto;float:left}
-.grid-layout .blocks .desc{width:100%;float:left;background-color:#fff}
+.grid-layout .blocks .desc{width:100%;float:left}
+.grid-layout .blocks .desc.gray{background-color:#eee;padding:0 20px 20px 20px}
+.grid-layout .blocks .desc.white{background-color:#fff}
 .grid-layout .blocks .bTitle{font-family:"Anton",sans-serif;font-size:2em;line-height:1.2;letter-spacing:.02em;color:#403f3f;margin-top:20px;margin-bottom:15px}
 .grid-layout .blocks .bText{color:#868686;font-weight:300 !important}
 .grid-layout .blocks .buttondiv{text-align:left;margin-top:20px}

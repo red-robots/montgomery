@@ -2201,6 +2201,12 @@ body.single-tribe_events {
       max-width: 100%!important;
       padding-left: 0;
       padding-right: 0;
+      .flexwrap.white {
+        background-color: #fff;
+      }
+      .flexwrap.gray {
+        background-color: #eee;
+      }
     }
     .textcol, .imagecol {
       width: 100%;
@@ -3420,7 +3426,14 @@ body.home {
       float: left;
       // padding: 20px;
       // background: $gray;
-      background-color: #fff;
+      
+      &.gray {
+        background-color: #eee;
+        padding: 0 20px 20px 20px;
+      }
+      &.white {
+        background-color: #fff;
+      }
     }
     .bTitle {
       font-family: $font_heading;
