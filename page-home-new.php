@@ -184,6 +184,9 @@ $postId = get_the_ID();
                 <?php if( $content = get_sub_field('content') ) { $countContent = count($content); ?>
                   <div class="columns-content content-<?php echo $countContent ?>">
                     <?php foreach ($content as $c) { 
+                      // echo '<pre>';
+                      // print_r($c);
+                      // echo '</pre>';
                       $image = $c['image'];
                       $clickthrough = $c['clickthrough_image'];
                       $clickthrough_target = $c['clickthrough_target'];
@@ -194,6 +197,7 @@ $postId = get_the_ID();
                       $btnUrl = (isset($button['url']) && $button['url']) ? $button['url'] : '';
                       $btnTarget = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
                       $is_only_image = false;
+                      $rr_btn = $textgroup['rocket_rez_button'];
                       if( empty($text) && empty($btnTitle) &&  empty($btnUrl) ) {
                         $is_only_image = true;
                       }
@@ -242,6 +246,7 @@ $postId = get_the_ID();
                                   <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
                                 </div>
                               <?php } ?>
+                              <?php if( $rr_btn ){ echo $rr_btn; } ?>
                             </div>
                           </div>
                           <?php } ?>
