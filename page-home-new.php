@@ -209,7 +209,7 @@ $postId = get_the_ID();
                           <div class="textwrap">
                         <?php } ?>
                         
-
+                        
                           <?php if ($image) { ?>
                             <?php if ($clickthrough) { ?>
                             <figure>
