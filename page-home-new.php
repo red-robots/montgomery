@@ -164,6 +164,12 @@ $postId = get_the_ID();
               $btnTarget = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
               $has_text = ($text || ($btnTitle && $btnUrl)) ? 'has-text':'only-image';
               if($image) { ?>
+                <style type="text/css">
+                  .clear {
+                    width: 100%;
+                    clear: both;
+                  }
+                </style>
               <div class="home-repeatable-section fullscreen-text-image-repeatable <?php echo $has_text ?>">
                 <figure class="<?php echo ($position) ? $position : 'left' ?>">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
