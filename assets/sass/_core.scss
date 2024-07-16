@@ -4325,6 +4325,9 @@ body.page-template-page-home-new.no-banner {
         display: block;
         width: 100%;
       }
+      img {
+        position: relative;
+      }
       @media screen and (min-width: 1300px) {
         padding: 2vw;
       }

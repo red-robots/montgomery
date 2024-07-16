@@ -1920,6 +1920,7 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .fullscreen-text-image-repeatable figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute;top:0;left:0}
 .fullscreen-text-image-repeatable figure .textblock{position:relative;z-index:10;background:#FFF;padding:30px;color:#000;width:35%;min-height:25vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center}
 .fullscreen-text-image-repeatable figure .textblock h2,.fullscreen-text-image-repeatable figure .textblock p{display:block;width:100%}
+.fullscreen-text-image-repeatable figure .textblock img{position:relative}
 .fullscreen-text-image-repeatable figure .buttondiv{margin-top:5px}
 .fullscreen-text-image-repeatable figure .buttondiv a.button{display:inline-block;text-decoration:none;background:#403f3f;color:#FFF;padding:10px 20px;letter-spacing:.08em}
 .fullscreen-text-image-repeatable figure .buttondiv a.button:hover,.fullscreen-text-image-repeatable figure .buttondiv a.button:focus{background:#cea155}
