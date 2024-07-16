@@ -158,6 +158,7 @@ $postId = get_the_ID();
               $text = get_sub_field('text');
               $button = get_sub_field('button');
               $position =  get_sub_field('position');
+              $rr_btn = $textgroup['rocket_rez_button'];
               $btnTitle = (isset($button['title']) && $button['title']) ? $button['title'] : '';
               $btnUrl = (isset($button['url']) && $button['url']) ? $button['url'] : '';
               $btnTarget = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
@@ -174,6 +175,7 @@ $postId = get_the_ID();
                       <a href="<?php echo $btnUrl ?>" class="button" target="<?php echo $btnTarget ?>"><?php echo $btnTitle ?></a>
                     </div>  
                     <?php } ?>
+                    <?php if( $rr_btn ){ echo $rr_btn; } ?>
                   </div>
                   <?php } ?>
                 </figure>
