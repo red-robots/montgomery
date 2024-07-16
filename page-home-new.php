@@ -175,6 +175,7 @@ $postId = get_the_ID();
                       <a href="<?php echo $btnUrl ?>" class="button" target="<?php echo $btnTarget ?>"><?php echo $btnTitle ?></a>
                     </div>  
                     <?php } ?>
+                    <div class="clear"></div>
                     <?php if( $rr_btn ){ echo $rr_btn; } ?>
                   </div>
                   <?php } ?>
