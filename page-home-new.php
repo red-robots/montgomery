@@ -177,7 +177,7 @@ $postId = get_the_ID();
                     <?php } ?>
                    
                     <?php if( $rr_btn ){ echo $rr_btn; } ?>
-                    <
+                    
                   </div>
                   <?php } ?>
                 </figure>
