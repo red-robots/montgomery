@@ -4326,7 +4326,7 @@ body.page-template-page-home-new.no-banner {
         width: 100%;
       }
       img {
-        position: relative;
+        position: relative !important;
       }
       @media screen and (min-width: 1300px) {
         padding: 2vw;
