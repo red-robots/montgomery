@@ -99,7 +99,7 @@
                         <?php } ?>
                         <div class="desc">
                           <?php if ($title) { ?>
-                          <div class="bTitle" style="text-align: <?php echo $alignment; ?>"><?php //echo $title ?></div>
+                          <div class="bTitle" style="text-align: <?php echo $alignment; ?>"><?php echo $title; ?></div>
                           <?php } ?>
                           <?php if ($text) { ?>
                           <div class="bText"><?php echo $text ?></div>
