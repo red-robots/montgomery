@@ -1637,7 +1637,7 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .schedule-wrap .name{width:auto;position:absolute;right:0;bottom:0}
 .repeatable-blocks .schedule-wrap .schedules-list,.repeatable-blocks .schedule-wrap .schedules-list_2{display:none;-webkit-animation-duration:1s;animation-duration:1s;width:100%}
 .repeatable-blocks .schedule-wrap .schedules-list.active,.repeatable-blocks .schedule-wrap .schedules-list_2.active{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
-.repeatable-blocks .schedule-wrap .scheduleContent{width:100%;float:left;overflow:hidden}
+.repeatable-blocks .schedule-wrap .scheduleContent{width:100%;float:left;overflow:hidden;margin-bottom:30px}
 .repeatable-blocks .schedule-wrap #tabOptions,.repeatable-blocks .schedule-wrap #tabOptions_2{width:100%;float:left;text-align:center;margin-bottom:30px}
 .repeatable-blocks .schedule-wrap #tabOptions ul,.repeatable-blocks .schedule-wrap #tabOptions_2 ul{max-width:800px;width:100%;margin:0 auto;padding:0;list-style:none}
 .repeatable-blocks .schedule-wrap #tabOptions ul li,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li{display:inline-block;margin:10px 5px}

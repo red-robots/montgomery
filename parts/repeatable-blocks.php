@@ -215,12 +215,14 @@
                       <div id="pop-<?php echo $pop; ?>" class="popup">
                         <?php echo $popup_content_content; ?>
                         <div class="clear"></div>
-                        <?php if ( $cta_button ) { ?>
-                          <div class="buttondiv">
-                            <a href="<?php echo $cta_button['url']; ?>" target="<?php echo $cta_button['target']; ?>" class="button"><?php echo $cta_button['title']; ?></a>
-                          </div>
-                        <?php } ?>
-                        <?php if( $rocket_rez_button ){ echo $rocket_rez_button; } ?>
+                        <div style="text-align: center; width: 100%;">
+                          <?php if ( $cta_button ) { ?>
+                            <div class="buttondiv">
+                              <a href="<?php echo $cta_button['url']; ?>" target="<?php echo $cta_button['target']; ?>" class="button"><?php echo $cta_button['title']; ?></a>
+                            </div>
+                          <?php } ?>
+                          <?php if( $rocket_rez_button ){ echo $rocket_rez_button; } ?>
+                        </div>
                       </div>
                     </div>
                   <?php } ?>
