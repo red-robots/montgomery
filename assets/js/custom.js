@@ -7,6 +7,26 @@
  */
 
 jQuery(document).ready(function ($) {
+  $('.js-blocks').matchHeight();
+  $("a#inline").fancybox({
+    'hideOnContentClick': true
+  });
+  $(document).on("click", "#tabOptions a", function (e) {
+    e.preventDefault();
+    $("#tabOptions li").removeClass('active');
+    $(this).parent().addClass('active');
+    $(".schedules-list").removeClass('active');
+    var tabContent = $(this).attr("data-tab");
+    $(tabContent).addClass('active');
+  });
+  $(document).on("click", "#tabOptions_2 a", function (e) {
+    e.preventDefault();
+    $("#tabOptions_2 li").removeClass('active');
+    $(this).parent().addClass('active');
+    $(".schedules-list_2").removeClass('active');
+    var tabContent = $(this).attr("data-tab");
+    $(tabContent).addClass('active');
+  });
   if ($('.events-list-wrapper .eventBox').length) {
     $('.events-list-wrapper .eventBox').each(function () {
       if ($(this).hasClass('completed')) {

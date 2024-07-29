@@ -2171,6 +2171,7 @@ body.single-tribe_events {
     .wrapper {
       padding-top: 60px;
       padding-bottom: 40px;
+      overflow: hidden;
     }
     .buttondiv {
       margin-bottom: 20px;
@@ -2305,6 +2306,86 @@ body.single-tribe_events {
         .textcol, .imagecol {
           width: 100%;
         }
+      }
+    }
+  }
+  .schedule-wrap {
+    width: 100%;
+    margin: 20px auto;
+    @include tab {
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    h3 {
+      width: 100%;
+      text-align: center;
+      color: $primary;
+    }
+    .line {
+      width: 100%;
+      border-bottom: 1px dotted #000 ;
+      position: relative;
+      height: 40px;
+    }
+    .time {
+      width: auto;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .name {
+      width: auto;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .schedules-list, .schedules-list_2 {
+      display: none;
+      @include animateThis(1s);
+      width: 100%;
+      &.active {
+        display: block;
+        @include animateEffect(fadeIn);
+      }
+    }
+    .scheduleContent {
+      width: 100%;
+      float: left;
+      overflow: hidden;
+    }
+    #tabOptions, #tabOptions_2 {
+      width: 100%;
+      float: left;
+      text-align: center;
+      margin-bottom: 30px;
+      @include tab {
+        text-align: right;
+      }
+      ul {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin: 10px 5px;
+          @include tab {
+            margin: 0 0 0 18px;
+          }
+          a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            color: $color_text_main;
+          }
+          &.active a {
+            border-bottom: 2px solid $primary;
+          }
+        }
+        
       }
     }
   }
@@ -3387,6 +3468,7 @@ body.home {
           .desc {
             padding: 30px 20px;
             // height: 100%;
+
           }
         }
       }
@@ -3429,6 +3511,8 @@ body.home {
       float: left;
       padding: 20px;
       background: $gray;
+      // display: flex;
+      // flex-direction: column;
       // height: 100%;
       // clear: both;
       &.gray {
@@ -3463,6 +3547,7 @@ body.home {
     .buttondiv {
       text-align: center;
       margin-top: 20px;
+      // align-self: flex-end;
     }
   }
 

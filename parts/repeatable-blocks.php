@@ -9,6 +9,11 @@
             $btn_title = (isset($button['title']) && $button['title']) ? $button['title'] : '';
             $btn_url = (isset($button['url']) && $button['url']) ? $button['url'] : '';
             $button_center = get_sub_field('button_center');
+            $add_schedule = get_sub_field('add_schedule'); 
+            $schedule_title = get_sub_field('schedule_title');
+            $days = get_sub_field('days');
+            // echo '<pre>';
+            // print_r($schedule);
 
             if($title || $content) { ?>
             <div class="repeatable fullwidth <?php echo ($title) ? 'has-subtitle':'no-subtitle' ?>">
@@ -20,6 +25,43 @@
                 <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
               </div>  
               <?php } ?>
+              <?php if( $add_schedule == 'yes' ) { ?>
+                <div class="schedule-wrap">
+                  <h3><?php echo $schedule_title; ?></h3>
+                  <div class="schedule">
+                    <div id="tabOptions">
+                      <ul>
+                      <?php $n=1; foreach ($days as $day) {
+                        if($day) {
+                          // echo '<pre>';
+                          // print_r($day);
+                          $tabActive = ($n==1) ? ' active':''; ?>
+                          <li class="tablink<?php echo $tabActive?>"><a href="#" data-tab="#daygroup<?php echo $n?>"><?php echo ucwords($day['day'])?></a></li>
+                        <?php $n++; } ?>
+                      <?php } ?>
+                      </ul>
+                    </div>
+                    <div class="scheduleContent">
+                      <?php $ctr=1;
+                        foreach( $days as $schedule ) { 
+                          $isActive = ($ctr==1) ? ' active':'';  ?>
+                          <div id="daygroup<?php echo $ctr?>" class="schedules-list<?php echo $isActive?>">
+                            <!-- <ul class="items"> -->
+                              <?php foreach ($schedule['times'] as $sch) {
+                                      $isActive = ($ctr==1) ? ' active':'';  ?>
+                                
+                                <div class="line">
+                                  <div class="time"><?php echo $sch['time']; ?></div>
+                                  <div class="name"><?php echo $sch['name']; ?></div>
+                                </div>
+                            <?php } ?>
+                           <!--  </ul> -->
+                          </div>
+                      <?php $ctr++; } ?>
+                    </div>
+                  </div>
+                </div>
+              <?php } ?>
               </div>
             </div>
             <?php } ?> 
@@ -30,6 +72,11 @@
             $imageSize = get_sub_field('image_size'); 
             $text_alignment = get_sub_field('text_alignment'); 
             $rocket_rez_button = get_sub_field('rocket_rez_button'); 
+            $add_schedule_2 = get_sub_field('add_schedule_2'); 
+            $schedule_title_2 = get_sub_field('schedule_title_2');
+            $days_2 = get_sub_field('days_2');
+            
+
 
             $col = ( ($title || $content) && $image ) ? 'half':'full';
             $col .= ($n % 2==0) ? ' even':' odd';
@@ -58,6 +105,43 @@
                       <br>
                       <?php echo $rocket_rez_button; ?>
                     <?php } ?>
+                    <?php if( $add_schedule_2 == 'yes' ) { ?>
+                      <div class="schedule-wrap">
+                        <h3><?php echo $schedule_title_2; ?></h3>
+                        <div class="schedule">
+                          <div id="tabOptions_2">
+                            <ul>
+                            <?php $n=1; foreach ($days_2 as $day) {
+                              if($day) {
+                                // echo '<pre>';
+                                // print_r($day);
+                                $tabActive = ($n==1) ? ' active':''; ?>
+                                <li class="tablink<?php echo $tabActive?>"><a href="#" data-tab="#daygroup_2<?php echo $n?>"><?php echo ucwords($day['day_2'])?></a></li>
+                              <?php $n++; } ?>
+                            <?php } ?>
+                            </ul>
+                          </div>
+                          <div class="scheduleContent">
+                            <?php $ctr=1;
+                              foreach( $days_2 as $schedule ) { 
+                                $isActive = ($ctr==1) ? ' active':'';  ?>
+                                <div id="daygroup_2<?php echo $ctr?>" class="schedules-list_2<?php echo $isActive?>">
+                                  <!-- <ul class="items"> -->
+                                    <?php foreach ($schedule['times'] as $sch) {
+                                            $isActive = ($ctr==1) ? ' active':'';  ?>
+                                      
+                                      <div class="line">
+                                        <div class="time"><?php echo $sch['time']; ?></div>
+                                        <div class="name"><?php echo $sch['name']; ?></div>
+                                      </div>
+                                  <?php } ?>
+                                 <!--  </ul> -->
+                                </div>
+                            <?php $ctr++; } ?>
+                          </div>
+                        </div>
+                      </div>
+                    <?php } ?>
                   </div>  
                   <?php } ?>
 
@@ -77,15 +161,23 @@
             <div class="repeatable grid-layout">
               <div class="wrapper">
                 <div class="flexwrap blocks">
-                  <?php foreach ($blocks as $b) { 
+                  <?php 
+                  $pop=0;
+                  foreach ($blocks as $b) { $pop++;
                     $title = $b['title'];
                     $text = $b['text'];
                     $btn = $b['button'];
+                    $rr_btn_first = $b['rr_btn_first'];
                     $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
                     $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
                     $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
                     $image = $b['image'];
                     $alignment = strtolower($b['title_align']);
+                    $rocket_rez_button = $b['rocket_rez_button'];
+                    $popup_content = $b['popup_content'];
+                    $popup_content_content = $b['popup_content_content'];
+                    $cta_button = $b['cta_button'];
+                    $rocket_rez_button = $b['rocket_rez_button'];
 
                     ?>
                     <div class="block">
@@ -97,19 +189,38 @@
                           </figure>
                         </div>
                         <?php } ?>
-                        <div class="desc">
+                        <div class="desc ">
                           <?php if ($title) { ?>
                           <div class="bTitle" style="text-align: <?php echo $alignment; ?>"><?php echo $title; ?></div>
                           <?php } ?>
                           <?php if ($text) { ?>
-                          <div class="bText"><?php echo $text ?></div>
+                          <div class="bText js-blocks"><?php echo $text ?></div>
                           <?php } ?>
-                          <?php if ($btnTitle && $btnLink) { ?>
-                          <div class="buttondiv">
-                            <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
-                          </div>
+                          <?php if( $popup_content == 'yes' ) { ?>
+                            <div class="buttondiv">
+                              <a id="inline" href="#pop-<?php echo $pop; ?>" class="button">MORE DETAILS</a>
+                            </div>
+                          <?php } else { ?>
+                            <?php if ($btnTitle && $btnLink) { ?>
+                              <div class="buttondiv">
+                                <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnTitle ?></a>
+                              </div>
+                            <?php } ?>
                           <?php } ?>
+                          <?php if( $rr_btn_first ){ echo $rr_btn_first; } ?>
                         </div>
+                      </div>
+                    </div>
+                    <div style="display: none;">
+                      <div id="pop-<?php echo $pop; ?>" class="popup">
+                        <?php echo $popup_content_content; ?>
+                        <div class="clear"></div>
+                        <?php if ( $cta_button ) { ?>
+                          <div class="buttondiv">
+                            <a href="<?php echo $cta_button['url']; ?>" target="<?php echo $cta_button['target']; ?>" class="button"><?php echo $cta_button['title']; ?></a>
+                          </div>
+                        <?php } ?>
+                        <?php if( $rocket_rez_button ){ echo $rocket_rez_button; } ?>
                       </div>
                     </div>
                   <?php } ?>

@@ -1608,7 +1608,7 @@ body.single-tribe_events #main{padding-top:50px;padding-bottom:50px}
 body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform:uppercase;color:#4c748c;font-family:"Anton",sans-serif;font-size:2rem;font-weight:400;line-height:1.2;margin:0 0 .5em}
 .repeatable-blocks{padding-bottom:0}
 .repeatable-blocks .h2{margin:0 0 20px;letter-spacing:.045em;color:#000}
-.repeatable-blocks .fullwidth .wrapper{padding-top:60px;padding-bottom:40px}
+.repeatable-blocks .fullwidth .wrapper{padding-top:60px;padding-bottom:40px;overflow:hidden}
 .repeatable-blocks .fullwidth .buttondiv{margin-bottom:20px}
 .repeatable-blocks .fullwidth.no-subtitle .wrapper{padding-top:4em;padding-bottom:3.5em}
 .repeatable-blocks .fullwidth.no-subtitle.first .wrapper{padding-top:15px}
@@ -1630,6 +1630,19 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image.orig-size .imagecol img.actual{display:block}
 .repeatable-blocks .repeatable.text-image.full .flexwrap{max-width:80%;width:100%;margin:0 auto}
 .repeatable-blocks .repeatable.text-image.full .flexwrap .textcol,.repeatable-blocks .repeatable.text-image.full .flexwrap .imagecol{width:100%}
+.repeatable-blocks .schedule-wrap{width:100%;margin:20px auto}
+.repeatable-blocks .schedule-wrap h3{width:100%;text-align:center;color:#4c748c}
+.repeatable-blocks .schedule-wrap .line{width:100%;border-bottom:1px dotted #000;position:relative;height:40px}
+.repeatable-blocks .schedule-wrap .time{width:auto;position:absolute;left:0;bottom:0}
+.repeatable-blocks .schedule-wrap .name{width:auto;position:absolute;right:0;bottom:0}
+.repeatable-blocks .schedule-wrap .schedules-list,.repeatable-blocks .schedule-wrap .schedules-list_2{display:none;-webkit-animation-duration:1s;animation-duration:1s;width:100%}
+.repeatable-blocks .schedule-wrap .schedules-list.active,.repeatable-blocks .schedule-wrap .schedules-list_2.active{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
+.repeatable-blocks .schedule-wrap .scheduleContent{width:100%;float:left;overflow:hidden}
+.repeatable-blocks .schedule-wrap #tabOptions,.repeatable-blocks .schedule-wrap #tabOptions_2{width:100%;float:left;text-align:center;margin-bottom:30px}
+.repeatable-blocks .schedule-wrap #tabOptions ul,.repeatable-blocks .schedule-wrap #tabOptions_2 ul{max-width:800px;width:100%;margin:0 auto;padding:0;list-style:none}
+.repeatable-blocks .schedule-wrap #tabOptions ul li,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li{display:inline-block;margin:10px 5px}
+.repeatable-blocks .schedule-wrap #tabOptions ul li a,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li a{display:inline-block;text-decoration:none;font-size:14px;line-height:1.2;text-transform:uppercase;color:#868686}
+.repeatable-blocks .schedule-wrap #tabOptions ul li.active a,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li.active a{border-bottom:2px solid #4c748c}
 .contact-page .intro-content .wrapper{padding-top:15px;padding-bottom:50px}
 .contact-form-section .fxcol{width:100%}
 .contact-form-section .fxcol.text{padding:50px 20px;background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-size:cover;text-align:center}
@@ -2110,6 +2123,9 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{font-size:3.2r
 .repeatable-blocks .repeatable.text-image.odd .flexwrap .textcol{padding-right:5vw}
 .repeatable-blocks .repeatable.text-image.even .flexwrap .imagecol{padding-left:3vw}
 .repeatable-blocks .repeatable.text-image.even .flexwrap .textcol{padding-left:5vw}
+.repeatable-blocks .schedule-wrap{max-width:600px;margin:40px auto}
+.repeatable-blocks .schedule-wrap #tabOptions,.repeatable-blocks .schedule-wrap #tabOptions_2{text-align:right}
+.repeatable-blocks .schedule-wrap #tabOptions ul li,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li{margin:0 0 0 18px}
 .contact-form-section .fxcol{width:50%}
 .contact-form-section .fxcol.text{padding:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:3vw}
 .contact-form-section .fxcol.form{padding:3vw}
