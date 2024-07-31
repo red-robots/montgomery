@@ -1630,7 +1630,7 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image.orig-size .imagecol img.actual{display:block}
 .repeatable-blocks .repeatable.text-image.full .flexwrap{max-width:80%;width:100%;margin:0 auto}
 .repeatable-blocks .repeatable.text-image.full .flexwrap .textcol,.repeatable-blocks .repeatable.text-image.full .flexwrap .imagecol{width:100%}
-.repeatable-blocks .schedule-wrap{width:100%;margin:20px auto}
+.repeatable-blocks .schedule-wrap{width:80%;margin:20px auto}
 .repeatable-blocks .schedule-wrap h3{width:100%;text-align:center;color:#4c748c}
 .repeatable-blocks .schedule-wrap .line{width:100%;position:relative;height:40px}
 .repeatable-blocks .schedule-wrap .time{width:auto;position:absolute;left:0;bottom:0}
@@ -1643,6 +1643,8 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .schedule-wrap #tabOptions ul li,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li{display:inline-block;margin:10px 5px}
 .repeatable-blocks .schedule-wrap #tabOptions ul li a,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li a{display:inline-block;text-decoration:none;font-size:14px;line-height:1.2;text-transform:uppercase;color:#868686}
 .repeatable-blocks .schedule-wrap #tabOptions ul li.active a,.repeatable-blocks .schedule-wrap #tabOptions_2 ul li.active a{border-bottom:2px solid #4c748c}
+.popup{max-width:500px}
+.popup img{width:100%}
 .contact-page .intro-content .wrapper{padding-top:15px;padding-bottom:50px}
 .contact-form-section .fxcol{width:100%}
 .contact-form-section .fxcol.text{padding:50px 20px;background-color:#3ca7c5;background-image:url("images/BKG_Cover_2.png");background-position:center;background-size:cover;text-align:center}

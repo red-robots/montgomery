@@ -2310,7 +2310,7 @@ body.single-tribe_events {
     }
   }
   .schedule-wrap {
-    width: 100%;
+    width: 80%;
     margin: 20px auto;
     @include tab {
       max-width: 600px;
@@ -2389,6 +2389,12 @@ body.single-tribe_events {
         
       }
     }
+  }
+}
+.popup {
+  max-width: 500px;
+  img {
+    width: 100%;
   }
 }
 
