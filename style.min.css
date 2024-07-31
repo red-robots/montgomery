@@ -1632,7 +1632,7 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image.full .flexwrap .textcol,.repeatable-blocks .repeatable.text-image.full .flexwrap .imagecol{width:100%}
 .repeatable-blocks .schedule-wrap{width:100%;margin:20px auto}
 .repeatable-blocks .schedule-wrap h3{width:100%;text-align:center;color:#4c748c}
-.repeatable-blocks .schedule-wrap .line{width:100%;border-bottom:1px dotted #000;position:relative;height:40px}
+.repeatable-blocks .schedule-wrap .line{width:100%;position:relative;height:40px}
 .repeatable-blocks .schedule-wrap .time{width:auto;position:absolute;left:0;bottom:0}
 .repeatable-blocks .schedule-wrap .name{width:auto;position:absolute;right:0;bottom:0}
 .repeatable-blocks .schedule-wrap .schedules-list,.repeatable-blocks .schedule-wrap .schedules-list_2{display:none;-webkit-animation-duration:1s;animation-duration:1s;width:100%}

@@ -51,7 +51,7 @@
                                       $isActive = ($ctr==1) ? ' active':'';  ?>
                                 
                                 <div class="line">
-                                  <div class="time"><?php echo $sch['time']; ?></div>
+                                  <div class="time"><?php echo $sch['time']; ?><?php if( $sch['time_end']) { echo ' - '.$sch['time_end']; } ?></div>
                                   <div class="name"><?php echo $sch['name']; ?></div>
                                 </div>
                             <?php } ?>
@@ -131,7 +131,9 @@
                                             $isActive = ($ctr==1) ? ' active':'';  ?>
                                       
                                       <div class="line">
-                                        <div class="time"><?php echo $sch['time']; ?></div>
+                                        <div class="time">
+                                          <?php echo $sch['time']; ?><?php if( $sch['time_end']) { echo ' - '.$sch['time_end']; } ?>
+                                         </div>
                                         <div class="name"><?php echo $sch['name']; ?></div>
                                       </div>
                                   <?php } ?>
