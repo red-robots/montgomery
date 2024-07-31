@@ -1,4 +1,6 @@
-<?php if( have_rows('repeatable_blocks') ) { ?>
+<?php 
+  $count = 0;
+  if( have_rows('repeatable_blocks') ) { ?>
       <div class="repeatable-blocks">
         <?php $n=1; while( have_rows('repeatable_blocks') ): the_row(); ?>
           <?php if( get_row_layout() == 'fullwidth_content' ) { 
@@ -158,7 +160,8 @@
                 </div>
               </div>
             </div>
-          <?php $n++; } else if ( get_row_layout() == 'grid_layout' ) {  
+          <?php $n++; } else if ( get_row_layout() == 'grid_layout' ) { 
+              $count = count( get_sub_field('grid_layout') ); 
             $blocks = get_sub_field('blocks'); ?> 
             <div class="repeatable grid-layout">
               <div class="wrapper">
@@ -200,7 +203,7 @@
                           <?php } ?>
                           <?php if( $popup_content == 'yes' ) { ?>
                             <div class="buttondiv">
-                              <a id="inline" href="#pop-<?php echo $pop; ?>" class="button">MORE DETAILS</a>
+                              <a id="inline" href="#pop-<?php echo get_row_index(); ?>-<?php echo $pop; ?>" class="button">MORE DETAILS</a>
                             </div>
                           <?php } else { ?>
                             <?php if ($btnTitle && $btnLink) { ?>
@@ -214,7 +217,7 @@
                       </div>
                     </div>
                     <div style="display: none;">
-                      <div id="pop-<?php echo $pop; ?>" class="popup">
+                      <div id="pop-<?php echo get_row_index(); ?>-<?php echo $pop; ?>" class="popup">
                         <?php echo $popup_content_content; ?>
                         <div class="clear"></div>
                         <div style="text-align: center; width: 100%;">
