@@ -3965,14 +3965,21 @@ body.page-template-page-videos .titlediv.typical .page-title {
 button.rocketrez-web-engine-button {
   display: inline-block;
   text-decoration: none;
-  border: 2px solid $primary;
-  color: $primary;
-  text-transform: uppercase;
+  // border: 2px solid $primary;
+  color: #fff;
+  background-color: $color_dark;
+  // text-transform: uppercase;
   // padding: 10px 20px 8px;
   padding: 14px 35px 12px;
+  font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .25px;
   &:hover {
     background: $yellow2 !important;
     color: #FFF;
+    border: 0;
   }
 }
 .rocketrez-iframe-container {
