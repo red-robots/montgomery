@@ -1872,7 +1872,7 @@ body.page-template-page-videos .titlediv.typical .page-title{margin-bottom:4.5re
 .videoLibrary figure iframe{margin:0;border:0;width:100% !important;height:100%;position:absolute;top:0;left:0;z-index:5}
 button.rocketrez-web-engine-button{display:inline-block;text-decoration:none;color:#fff;background-color:#403f3f;padding:14px 35px 12px;font-size:15px;font-weight:400;line-height:1.2;text-transform:uppercase;letter-spacing:.25px}
 button.rocketrez-web-engine-button:hover{background:#cea155 !important;color:#FFF;border:0}
-.rocketrez-iframe-container{margin-top:120px}
+.rocketrez-iframe-container{margin-top:120px;z-index:1000000 !important}
 .btn-center{width:100%;text-align:center}
 .caro-wrap{width:100%;margin:20px auto}
 .owl-carousel:hover .owl-nav .owl-prev,.owl-carousel:hover .owl-nav .owl-next{opacity:1}
