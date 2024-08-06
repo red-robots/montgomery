@@ -97,7 +97,7 @@ get_header(); ?>
                   <?php } ?>
                   <?php if ($btnText && $btnUrl) { ?>
                   <div class="buttondiv">
-                    <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button-outline"><?php echo $btnText ?></a>
+                    <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnText ?></a>
                   </div> 
                   <?php } ?>
                   <?php if( $rr_btn ){ echo $rr_btn; } ?>
@@ -114,7 +114,7 @@ get_header(); ?>
                   <div class="text"><?php echo anti_email_spam($note_content); ?></div>
                   <?php if ($nBtnLink && $nBtnTitle) { ?>
                   <div class="buttondiv mt-25">
-                    <a href="<?php echo $nBtnLink ?>" target="<?php echo $nBtnTarget ?>" class="button-outline"><?php echo $nBtnTitle ?></a>
+                    <a href="<?php echo $nBtnLink ?>" target="<?php echo $nBtnTarget ?>" class="button"><?php echo $nBtnTitle ?></a>
                   </div> 
                   <?php } ?>
                 </div>
