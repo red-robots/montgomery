@@ -14,6 +14,7 @@
             $add_schedule = get_sub_field('add_schedule'); 
             $schedule_title = get_sub_field('schedule_title');
             $days = get_sub_field('days');
+            $rocket_rez_button = get_sub_field('rocket_rez_button'); 
             // echo '<pre>';
             // print_r($schedule);
 
@@ -26,6 +27,12 @@
               <div class="buttondiv <?php echo ($button_center) ? 'center':'left' ?>">
                 <a href="<?php echo $btn_url ?>" target="<?php echo $btn_target ?>" class="button"><?php echo $btn_title ?></a>
               </div>  
+              <?php } ?>
+              <?php if( $rocket_rez_button ) { ?>
+                <div style="width: 100%; text-align: center;">
+                <br>
+                <?php echo $rocket_rez_button; ?>
+                </div>
               <?php } ?>
               <?php if( $add_schedule == 'yes' ) { ?>
                 <div class="schedule-wrap">
