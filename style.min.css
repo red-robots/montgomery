@@ -1613,7 +1613,6 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .fullwidth.no-subtitle .wrapper{padding-top:4em;padding-bottom:3.5em}
 .repeatable-blocks .fullwidth.no-subtitle.first .wrapper{padding-top:15px}
 .repeatable-blocks .repeatable:nth-child(even){background-color:#eee}
-.repeatable-blocks .repeatable.text-image{padding-top:40px;padding-bottom:70px}
 .repeatable-blocks .repeatable.text-image .wrapper{max-width:100% !important;padding-left:0;padding-right:0}
 .repeatable-blocks .repeatable.text-image .wrapper .flexwrap.white{background-color:#fff}
 .repeatable-blocks .repeatable.text-image .wrapper .flexwrap.gray{background-color:#eee}
