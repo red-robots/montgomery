@@ -2115,7 +2115,7 @@ h1.page-title{font-size:3.2rem}
 .taxonomy-banner .banner-text .title span:after,.static-banner .banner-text .title span:after{width:200px;position:absolute;right:-95px;bottom:-50px;-webkit-transform:none;transform:none}
 .taxonomy-banner.white .banner-text:before,.static-banner.white .banner-text:before{background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.65)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.65) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',endColorstr='#00000000',GradientType=1)}
 body.single-tribe_events #main h1.tribe-events-single-event-title{font-size:3.2rem}
-.repeatable-blocks .repeatable.text-image{padding-top:70px}
+.repeatable-blocks .repeatable.text-image{padding-top:70px;padding-bottom:70px}
 .repeatable-blocks .repeatable.text-image .textcol,.repeatable-blocks .repeatable.text-image .imagecol{width:50%}
 .repeatable-blocks .repeatable.text-image figure img.helper{display:block}
 .repeatable-blocks .repeatable.text-image figure img.actual{display:none}
