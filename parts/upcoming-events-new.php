@@ -1,5 +1,5 @@
 <?php  
-$displayNum = 6;
+$displayNum = 5;
 $event_title = 'Upcoming Events';
 $today = date('Y-m-d H:i:s');
 $arg = array(
