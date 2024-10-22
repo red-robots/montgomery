@@ -127,7 +127,7 @@ function build_taxonomies() {
       'plural'    => 'Activity Types',
       'single'    => 'Activity Type',
       'taxonomy'  => 'activity-type'
-    )
+    ),
     array(
       'post_type' => array('upcoming-events'),
       'menu_name' => 'Event Types',
