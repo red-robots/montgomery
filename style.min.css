@@ -2041,6 +2041,10 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .item-details-blocks .item-details.column-two .detailsCol .options .inforow{width:40%;text-align:center}
 .item-details-blocks .item-details.column-two .detailsCol .options .inforow .info.price{margin:15px 0}
 body.logged-in.admin-bar .submenu-items{padding-top:80px !important}
+.event-filter{width:100%;padding:20px 0 0 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}
+.event-filter div{margin:0 5px}
+.event-filter select option{background-color:#f9f9f9;color:#333;padding:10px}
+.event-filter select{appearance:none;-webkit-appearance:none;-moz-appearance:none;padding:10px 30px 10px 10px;border:0 solid #eee;background:url("images/angle-down-light.svg") no-repeat right 10px center;background-color:#3ca7c5;color:#fff;background-size:16px;width:auto;position:relative}
 @media screen and (max-device-width:480px) and (orientation:portrait){.banner-video.has-mobile-video .video-mobile{width:110vh}
 }@media screen and (max-device-width:850px) and (orientation:landscape){.banner-video.has-mobile-video .video-mobile{width:120vw}
 }@media(min-width:600px){.homerow5.section .block{width:50%}

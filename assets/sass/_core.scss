@@ -5247,6 +5247,48 @@ body.logged-in.admin-bar {
     padding-top: 60px;
   }
 }
+.event-filter {
+  width: 100%;
+  padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  div {
+    margin: 0 5px;
+  }
+  select option {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 30px 10px 10px;
+    border: 0 solid $gray;
+    background: url('images/angle-down-light.svg') no-repeat right 10px center;
+    background-color: $teal;
+    color: #fff;
+    background-size: 16px;
+    width: auto;
+    position: relative;
+    // &::after {
+    //   content: "\f107"; /* Font Awesome Unicode for caret-down */
+    //   font-family: "Font Awesome 6 Free"; /* Ensure using Font Awesome */
+    //   font-weight: 900; /* Needed to make it appear as solid */
+    //   position: absolute;
+    //   right: 10px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   pointer-events: none; /* Prevent clicking on the icon */
+    //   color: #007BFF;
+    // }
+  }
 
+
+
+}
 
 

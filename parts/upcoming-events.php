@@ -21,11 +21,43 @@ $args = array (
   'meta_compare'           => '>=', 
   'order'                  => 'ASC',
   'posts_per_page'         => $posts_per_page,
-  'paged'                  => $paged
+  'paged'                  => $paged,
+  'facetwp'                => true
 );
 $events = new WP_Query($args);
 if ( $events->have_posts() ) {  ?>
+  <div class="event-filter">
+    <div>Filter By:</div> <div><?php echo do_shortcode('[facetwp facet="event_categories"]'); ?></div>
+    <?php
+      // Define the taxonomy slug
+      // $taxonomy = 'event-type'; // Replace with your actual taxonomy slug
+
+      // // Fetch all terms for the 'event_category' taxonomy
+      // $terms = get_terms(array(
+      //     'taxonomy' => $taxonomy,
+      //     'hide_empty' => false, // Set to true if you only want terms with events
+      // ));
+
+      // if ( !empty($terms) && !is_wp_error($terms) ) {
+      //     echo '<ul>';
+      //     foreach ($terms as $term) {
+      //         // Get the term link
+      //         $term_link = get_term_link($term);
+              
+      //         if (!is_wp_error($term_link)) {
+      //             // Output the term name with a link to the term archive page
+      //             echo '<li><a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a></li>';
+      //         }
+      //     }
+      //     echo '</ul>';
+      // } else {
+      //     echo 'No terms found.';
+      // }
+      ?>
+
+  </div>
 <div class="events-list-wrapper">
+
   <?php $i=1; while ( $events->have_posts() ) : $events->the_post();  
     $photo = get_field('main_photo');
     $start_date = get_field('start_date');
@@ -51,6 +83,7 @@ if ( $events->have_posts() ) {  ?>
     }
     ?>
     <div class="eventBox <?php echo ($is_completed) ? 'completed':'ongoing' ?>">
+      
       <div class="inside">
         
         <figure<?php echo $imageBg ?>>

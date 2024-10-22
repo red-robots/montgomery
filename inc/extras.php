@@ -15,6 +15,33 @@
  */
 define('THEMEURI',get_template_directory_uri() . '/');
 
+
+add_filter( 'facetwp_query_args', function( $args, $class ) {
+    // Always set the default order by 'start_date'
+    $args['orderby']    = 'meta_value';
+    $args['meta_key']   = 'start_date';
+    $args['order']      = 'ASC';
+
+    // Add or modify the meta_query to always sort by date (Y-m-d H:i:s format)
+    $args['meta_query'] = array(
+        array(
+            'key'     => 'start_date',
+            'value'   => date('Y-m-d H:i:s'), // Use the current datetime
+            'compare' => '>=',                // Ensure upcoming events are listed
+            'type'    => 'DATETIME'           // Specify the correct date type
+        )
+    );
+
+    // Optionally, handle specific facet logic for category or other filters
+    if ( isset( $class->query_vars['facets']['event_categories'] ) ) {
+        // Additional facet-specific query modifications if needed
+    }
+
+    return $args;
+}, 10, 2 );
+
+
+
 function bellaworks_body_classes( $classes ) {
     // Adds a class of group-blog to blogs with more than 1 published author.
    global $post;
