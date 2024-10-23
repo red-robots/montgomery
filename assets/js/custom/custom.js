@@ -8,6 +8,11 @@ jQuery(document).ready(function ($) {
 
   $('.js-blocks').matchHeight();
 
+  $('.facetwp-dropdown').select2({
+      placeholder: "Select an option",
+      allowClear: true
+  });
+
   $("a#inline").fancybox({
     'hideOnContentClick': true
   });

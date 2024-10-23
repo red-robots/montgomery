@@ -27,7 +27,7 @@ $args = array (
 $events = new WP_Query($args);
 if ( $events->have_posts() ) {  ?>
   <div class="event-filter">
-    <div>Filter By:</div> <div><?php echo do_shortcode('[facetwp facet="event_categories"]'); ?></div>
+    <div class="filterby">Filter By:</div> <div><?php echo do_shortcode('[facetwp facet="event_categories"]'); ?></div>
     <?php
       // Define the taxonomy slug
       // $taxonomy = 'event-type'; // Replace with your actual taxonomy slug
