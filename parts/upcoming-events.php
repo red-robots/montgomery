@@ -1,5 +1,8 @@
 <?php
 $pageTitle = get_the_title();
+if(is_page('events')) {
+  $slug = 'events';
+}
 
 $posts_per_page = -1;
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
@@ -28,7 +31,7 @@ $args = array (
 );
 $events = new WP_Query($args);
 if ( $events->have_posts() ) {  ?>
-  <?php if( $pageTitle == 'Events' ) { ?>
+  <?php if( $slug == 'events' ) { ?>
     <div class="titlediv typical nomb">
       <div class="wrapper">
         <h1 class="page-title"><span><?php echo $pageTitle; ?></span></h1>
