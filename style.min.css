@@ -1363,7 +1363,7 @@ a:hover{color:midnightblue}
 .gform_wrapper.gravity-theme .gform_footer.top_label input.gform_button:hover{border-color:#3ca7c5;background:#3ca7c5}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
 .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-.wp-block-group.alignwide,.wrapper{max-width:100%;width:100%;margin:0 auto;padding-left:15px;padding-right:15px}
+.wp-block-group.alignwide,.wrapper{max-width:100%;width:100%;margin:0 auto;padding-left:15px;padding-right:15px;position:relative}
 .site-header{position:fixed;top:0;left:0;width:100%;height:80px;z-index:300;background-color:#FFF;-webkit-transition:all ease .5s;transition:all ease .5s}
 .site-header .wrapper{position:relative;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-header .head-inner{width:100%;position:relative;padding-top:10px;padding-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
@@ -1549,7 +1549,7 @@ h1.page-title{text-transform:uppercase;color:#4c748c;font-size:2rem;font-weight:
 .homerow5.section .block figure img{width:100%;height:auto}
 .homerow5.section .block:hover .title{opacity:1}
 .homerow5.section .block:hover .title span{-webkit-transform:translateY(0);transform:translateY(0)}
-.homerow5.section .wrapper{max-width:95vw}
+.homerow5.section .wrapper{max-width:95vw;position:relative}
 .homerow5.section .flexwrap{margin-left:-15px;margin-right:-15px}
 .homerow5.section .leftColumn,.homerow5.section .rightColumn{width:50%;padding:15px}
 .homerow5.section .fullColumn{width:100%}
@@ -2156,6 +2156,7 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .grid-layout .wrapper{padding-left:30px;padding-right:30px}
 .grid-layout .blocks .block{width:33.333%}
 .item-details-blocks .item-details.column-two .detailsCol .options .inforow:nth-child(even){border-top:0;border-left:1px solid #adaaaa}
+.event-filter{width:auto;position:absolute;right:0;top:0}
 }@media screen and (min-width:820px){.rocketrez-iframe-container{margin-top:110px}
 }@media screen and (min-width:821px){.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap{height:100%}
 .fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap .has-button .buttondiv{width:100%;position:absolute;left:0;bottom:0}

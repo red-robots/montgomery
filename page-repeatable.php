@@ -18,11 +18,14 @@ $postId = get_the_ID();
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="titlediv typical nomb">
-      <div class="wrapper">
-        <h1 class="page-title"><span><?php the_title(); ?></span></h1>
+
+    <?php if( !is_page('events') ) { ?>
+      <div class="titlediv typical nomb">
+        <div class="wrapper">
+          <h1 class="page-title"><span><?php the_title(); ?></span></h1>
+        </div>
       </div>
-    </div>
+    <?php } ?>
 			
       <?php if( have_rows('repeatable_blocks') ) { ?>
       <div class="repeatable-blocks">

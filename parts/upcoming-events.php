@@ -1,4 +1,6 @@
 <?php
+$pageTitle = get_the_title();
+
 $posts_per_page = -1;
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 $time = current_time( 'timestamp' );
@@ -26,36 +28,18 @@ $args = array (
 );
 $events = new WP_Query($args);
 if ( $events->have_posts() ) {  ?>
-  <div class="event-filter">
-    <div class="filterby">Filter By:</div> <div><?php echo do_shortcode('[facetwp facet="event_categories"]'); ?></div>
-    <?php
-      // Define the taxonomy slug
-      // $taxonomy = 'event-type'; // Replace with your actual taxonomy slug
+  <?php if( $pageTitle == 'Events' ) { ?>
+    <div class="titlediv typical nomb">
+      <div class="wrapper">
+        <h1 class="page-title"><span><?php echo $pageTitle; ?></span></h1>
+        <div class="event-filter">
+          <div class="filterby">Filter By:</div> <div><?php echo do_shortcode('[facetwp facet="event_categories"]'); ?></div>
+        </div>
+      </div>
 
-      // // Fetch all terms for the 'event_category' taxonomy
-      // $terms = get_terms(array(
-      //     'taxonomy' => $taxonomy,
-      //     'hide_empty' => false, // Set to true if you only want terms with events
-      // ));
-
-      // if ( !empty($terms) && !is_wp_error($terms) ) {
-      //     echo '<ul>';
-      //     foreach ($terms as $term) {
-      //         // Get the term link
-      //         $term_link = get_term_link($term);
-              
-      //         if (!is_wp_error($term_link)) {
-      //             // Output the term name with a link to the term archive page
-      //             echo '<li><a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a></li>';
-      //         }
-      //     }
-      //     echo '</ul>';
-      // } else {
-      //     echo 'No terms found.';
-      // }
-      ?>
-
-  </div>
+    </div>
+  <?php } ?>
+  
 <div class="events-list-wrapper">
 
   <?php $i=1; while ( $events->have_posts() ) : $events->the_post();  
