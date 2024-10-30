@@ -1364,8 +1364,15 @@ a:hover{color:midnightblue}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
 .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .wp-block-group.alignwide,.wrapper{max-width:100%;width:100%;margin:0 auto;padding-left:15px;padding-right:15px;position:relative}
-.site-header{position:fixed;top:0;left:0;width:100%;height:80px;z-index:300;background-color:#FFF;-webkit-transition:all ease .5s;transition:all ease .5s}
-.site-header .wrapper{position:relative;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.site-header{position:fixed;top:0;left:0;width:100%;height:100px;z-index:300;background-color:#FFF;-webkit-transition:all ease .5s;transition:all ease .5s}
+.site-header .trail-bar{width:100%;height:25px;background-color:#fff;padding-top:5px}
+.site-header .trail-bar .trail-wrapper{width:100%;margin:0 auto;padding:0 15px}
+.site-header .trail-bar .trails{width:auto;float:right;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.site-header .trail-bar .trails .trail-text{width:auto;float:left;font-size:13px;color:#4c748c}
+.site-header .trail-bar .trails .trailsquare{width:11px;height:11px;margin-left:10px;float:left}
+.site-header .trail-bar .trails .trailsquare.green{background-color:#89e195}
+.site-header .trail-bar .trails .trailsquare.red{background-color:#e36d30}
+.site-header .wrapper{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;clear:both}
 .site-header .head-inner{width:100%;position:relative;padding-top:10px;padding-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-logo{display:inline-block;width:110px}
 .site-logo a{display:block;width:100%}
@@ -1895,7 +1902,7 @@ button.rocketrez-web-engine-button:hover{background:#cea155 !important;color:#FF
 .events-list-wrapper .description .summary{margin-top:20px}
 .events-list-wrapper .description .summary p:last-child{margin-bottom:0}
 .events-list-wrapper .description .buttondiv{margin-top:20px}
-body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padding-top:80px}
+body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padding-top:100px}
 .home-repeatable-blocks{background:#FFF}
 .home-repeatable-blocks h2,.home-repeatable-blocks h3,.home-repeatable-blocks h4{color:#403f3f;letter-spacing:.03em}
 .home-repeatable-blocks p{color:#868686;font-weight:300 !important}
@@ -2163,6 +2170,9 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap .has-button .wrap{padding-bottom:30px}
 }@media screen and (min-width:850px){.banner-video.has-mobile-video .video-desktop{display:block}
 }@media(min-width:980px){.wp-block-group.alignwide,.wrapper{max-width:80%}
+.site-header .trail-bar{background-color:#4c748c}
+.site-header .trail-bar .trail-wrapper{max-width:80%}
+.site-header .trail-bar .trails .trail-text{color:#fff}
 .contact-links-section .link-icon{width:20%}
 }@media(min-width:1200px){.banners .banner .text{font-size:4.5rem}
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
@@ -2195,9 +2205,10 @@ body.logged-in.admin-bar #closeMenu{top:70px}
 .banners .banner-content .banner-logo img.banner-logo-mobile{display:block;width:65%}
 body.logged-in.admin-bar{padding-top:68px}
 body.logged-in.admin-bar .site-header{top:46px}
-body{padding-top:70px !important}
+body{padding-top:95px !important}
 body.page-template-default .site-header,body.page-template-page-custom .site-header,.site-header{background-color:#4c748c !important}
-.site-header,.site-header .head-inner{height:70px}
+.site-header{height:95px}
+.site-header .head-inner{height:70px}
 .site-header{background:#4c748c;position:fixed !important}
 .site-header .site-logo img{height:65px;top:0}
 .site-header .head-inner{padding-top:0;padding-bottom:0;width:100%;display:block;position:relative;z-index:80}

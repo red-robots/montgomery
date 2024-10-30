@@ -185,16 +185,63 @@ a {
   left: 0;
   width: 100%;
   // height: 120px;
-  height: 80px;
+  height: 100px;
   z-index: 300;
   background-color: #FFF;
   transition: all ease .5s;
+  .trail-bar {
+    width: 100%;
+    height: 25px;
+    background-color: #fff;
+    padding-top: 5px;
+    @include mid {
+      background-color: $primary;
+    }
+    .trail-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+      @include mid {
+        max-width: 80%;
+      }
+    }
+    .trails {
+      width: auto;
+      float: right;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .trail-text {
+        width: auto;
+        float: left;
+        font-size: 13px;
+        color: $primary;
+        // font-weight: bold;
+        @include mid {
+          color: #fff;
+        }
+      }
+      .trailsquare {
+        width: 11px;
+        height: 11px;
+        margin-left: 10px;
+        float: left;
+        &.green {
+          background-color: #89e195;
+        }
+        &.red {
+          background-color: #e36d30;
+        }
+      }
+    }
+  }
   .wrapper {
     position: relative;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    clear: both;
   }
   .head-inner {
     width: 100%;
@@ -3571,15 +3618,20 @@ body.home {
 /* MOBILE */
 @include max($tabwidth) {
   body {
-    padding-top: 70px!important;
+    // padding-top: 70px!important;
+    padding-top: 95px!important;
   }
   body.page-template-default .site-header,
   body.page-template-page-custom .site-header,
   .site-header {
     background-color: $primary!important;
   }
-  .site-header,
+  .site-header{
+   // height: 70px;
+    height: 95px;
+  }
   .site-header .head-inner {
+   // height: 70px;
     height: 70px;
   }
   .site-header {
@@ -4142,7 +4194,7 @@ button.rocketrez-web-engine-button {
 /* New Homepage Styles*/
 body.page-template-page-home-new,
 body.page-template-page-home-new.no-banner {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .home-repeatable-blocks {
   h2, h3, h4 {

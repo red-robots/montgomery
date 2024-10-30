@@ -62,6 +62,15 @@ wp_head();
 $rr_btn_menu = get_field('rr_btn_menu', 'option');
 $activities_link = get_field('activities_link', 'option');
 $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '/';
+
+$trail_status = get_field('trail_status', 'option');
+if( $trail_status == 'open' ) {
+  $trailText = 'Trails Open';
+  $trailSquare = 'green';
+} else {
+  $trailText = 'Trails Closed';
+  $trailSquare = 'red';
+}
 ?>
 </head>
 <body <?php body_class($extra_class); ?>>
@@ -69,6 +78,13 @@ $a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '
 	<div id="overlay"></div>
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 	<header id="masthead" class="site-header">
+    <div class="trail-bar">
+      <div class="trail-wrapper">
+        <div class="trails">
+          <div class="trail-text"><?php echo $trailText; ?></div><div class="trailsquare <?php echo $trailSquare; ?>">&nbsp;</div>
+        </div>
+      </div>
+    </div>
 		<div class="wrapper cf">
       <div class="head-inner">
         <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
