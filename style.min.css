@@ -2030,7 +2030,7 @@ body.page-template-page-home-new,body.page-template-page-home-new.no-banner{padd
 .item-details-blocks .item-details .inforow .info.name span.age{font-size:16px;font-weight:normal}
 .item-details-blocks .item-details .inforow .button{padding:10px 20px 8px}
 .item-details-blocks .item-details .includes-info{margin-top:70px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-.item-details-blocks .item-details .includes-info .inc-title{text-transform:uppercase;font-size:15px;font-weight:600;padding-right:20px;letter-spacing:.03em}
+.item-details-blocks .item-details .includes-info .inc-title{text-transform:uppercase;font-size:15px;font-weight:600;letter-spacing:.03em}
 .item-details-blocks .item-details .includes-info .inc-text{font-size:15px;line-height:1.5}
 .item-details-blocks .item-details .includes-info.centered{text-align:center;margin-top:0;margin-bottom:25px;position:relative}
 .item-details-blocks .item-details .includes-info.centered .inc-title,.item-details-blocks .item-details .includes-info.centered .inc-text{width:100%}
