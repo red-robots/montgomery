@@ -145,7 +145,8 @@ if( $trail_status == 'open' ) {
             <?php $buttonLabel = get_field('book_button_label','option'); ?>
             <?php if ($buttonLabel) { ?>
             <div class="header-link">
-              <button type="button" class="rocketrez-web-engine-button button" eid="b51df41873cb0f76" id="rafting"><?php echo $buttonLabel ?></button>
+              <!-- <button type="button" class="rocketrez-web-engine-button button" eid="b51df41873cb0f76" id="rafting"><?php echo $buttonLabel ?></button> -->
+              <div class=""><a href="<?php bloginfo('url'); ?>/buy/" class="button">Book an Activity</a></div>
             </div>
             <?php } ?>
           <?php } else { ?>

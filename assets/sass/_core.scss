@@ -939,7 +939,7 @@ div.buttondiv {
   }
   a {
     text-decoration: none;
-  background: $teal;
+  // background: $teal;
   color: #FFF;
     color: #fff;
     transition: all ease .2s;
@@ -2305,6 +2305,7 @@ body.single-tribe_events {
 
     &.odd {
       .flexwrap {
+        flex-direction: column-reverse;
         @include tab {
           flex-direction: row-reverse;
         }
@@ -2322,9 +2323,14 @@ body.single-tribe_events {
     }
     &.even {
       .flexwrap {
+        flex-direction: column-reverse;
+        @include tab {
+          flex-direction: row;
+        }
         .imagecol {
           @include tab {
             padding-left: 3vw;
+
           }
         }
         .textcol {

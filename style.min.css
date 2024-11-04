@@ -1463,7 +1463,7 @@ div.buttondiv{margin-top:40px}
 .button.btn-white:hover{text-decoration:none;background:#cea155;color:#FFF !important}
 .header-link{display:inline-block;margin-top:10px;font-family:"Inter",sans-serif;font-size:14px;font-weight:500}
 .header-link button.rocketrez-web-engine-button{padding:10px 20px 10px}
-.header-link a{text-decoration:none;background:#3ca7c5;color:#FFF;color:#fff;-webkit-transition:all ease .2s;transition:all ease .2s;text-transform:uppercase;letter-spacing:.25px;padding:10px 25px}
+.header-link a{text-decoration:none;color:#FFF;color:#fff;-webkit-transition:all ease .2s;transition:all ease .2s;text-transform:uppercase;letter-spacing:.25px;padding:10px 25px}
 .header-link:hover{text-decoration:none;background:#cea155;color:#FFF}
 .header-link.btn-white{background:#FFF;color:#999}
 .header-link.btn-white:hover{text-decoration:none;background:#cea155;color:#FFF}
@@ -1630,6 +1630,8 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image figure img{width:100%;height:auto}
 .repeatable-blocks .repeatable.text-image figure img.helper{display:none}
 .repeatable-blocks .repeatable.text-image figure img.actual{display:block}
+.repeatable-blocks .repeatable.text-image.odd .flexwrap{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
+.repeatable-blocks .repeatable.text-image.even .flexwrap{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
 .repeatable-blocks .repeatable.text-image.text-middle .textcol{text-align:center}
 .repeatable-blocks .repeatable.text-image.text-right .textcol{text-align:right}
 .repeatable-blocks .repeatable.text-image.orig-size .flexwrap{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -2141,6 +2143,7 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{font-size:3.2r
 .repeatable-blocks .repeatable.text-image.odd .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-blocks .repeatable.text-image.odd .flexwrap .imagecol{padding-right:3vw}
 .repeatable-blocks .repeatable.text-image.odd .flexwrap .textcol{padding-right:5vw}
+.repeatable-blocks .repeatable.text-image.even .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .repeatable-blocks .repeatable.text-image.even .flexwrap .imagecol{padding-left:3vw}
 .repeatable-blocks .repeatable.text-image.even .flexwrap .textcol{padding-left:5vw}
 .repeatable-blocks .schedule-wrap{max-width:600px;margin:40px auto}
