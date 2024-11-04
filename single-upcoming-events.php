@@ -25,14 +25,14 @@ get_header(); ?>
         </div>
       <?php } else { ?>
 
-        <div class="titlediv typical">
+        <div class="titlediv typical nomb">
           <h1 class="page-title"><span><?php the_title(); ?></span></h1>
         </div>
 
       <?php } ?>
 
       <?php if ( get_the_content() ) { ?>
-			<div class="entry-content padtop">
+			<div class="entry-content " style="padding-top: 15px;">
 				<?php the_content(); ?>
 			</div>
       <?php } ?>
