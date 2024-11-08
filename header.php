@@ -81,7 +81,7 @@ if( $trail_status == 'open' ) {
     <div class="trail-bar">
       <div class="trail-wrapper">
         <div class="trails">
-          <!-- <div class="trail-text"><?php echo $trailText; ?></div><div class="trailsquare <?php echo $trailSquare; ?>">&nbsp;</div> -->
+          <div class="trail-text"><?php echo $trailText; ?></div><div class="trailsquare <?php echo $trailSquare; ?>">&nbsp;</div>
         </div>
       </div>
     </div>
