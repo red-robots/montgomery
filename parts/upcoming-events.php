@@ -12,8 +12,8 @@ $today = date('Y-m-d H:i:s'); // Today at current time
 $six_months_ago = date('Y-m-d H:i:s', strtotime('-6 months')); // Six months ago
 
 // DEBUG: Output formatted dates
-echo '<p>Current Date (Today): ' . $today . '</p>';
-echo '<p>Six Months Ago: ' . $six_months_ago . '</p>';
+// echo '<p>Current Date (Today): ' . $today . '</p>';
+// echo '<p>Six Months Ago: ' . $six_months_ago . '</p>';
 
 $args = array(
     'post_type'      => 'upcoming-events',
@@ -42,16 +42,16 @@ $args = array(
 );
 
 // DEBUG: Print query arguments
-echo '<pre>';
-print_r($args);
-echo '</pre>';
+// echo '<pre>';
+// print_r($args);
+// echo '</pre>';
 
 $events = new WP_Query($args);
 
 // DEBUG: Check if any events were found
-if (!$events->have_posts()) {
-    echo '<p style="color: red;">No events found. Double-check date formats in the database.</p>';
-}
+// if (!$events->have_posts()) {
+//     echo '<p style="color: red;">No events found. Double-check date formats in the database.</p>';
+// }
 
 
 if ( $events->have_posts() ) {  ?>
