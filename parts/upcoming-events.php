@@ -1,35 +1,59 @@
 <?php
 $pageTitle = get_the_title();
-if(is_page('events')) {
-  $slug = 'events';
+if (is_page('events')) {
+    $slug = 'events';
 }
 
 $posts_per_page = -1;
-$paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
-$time = current_time( 'timestamp' );
+$paged = (get_query_var('pg')) ? absint(get_query_var('pg')) : 1;
 
-// $args = array(
-//   'posts_per_page'  => -1,
-//   'post_type'       => 'upcoming-events',
-//   'meta_key'        => 'start_date',
-//   'orderby'         => 'meta_value_num',
-//   'order'           => 'DESC',
-//   'post_status'     => 'publish',
-//   'paged'           => $paged
-// );
-$args = array (
-  'post_type'              => 'upcoming-events', 
-  'post_status'            => 'publish', 
-  'orderby'                => 'meta_value', 
-  'meta_key'               => 'start_date', 
-  'meta_value'             => $time,
-  'meta_compare'           => '>=', 
-  'order'                  => 'ASC',
-  'posts_per_page'         => $posts_per_page,
-  'paged'                  => $paged,
-  'facetwp'                => true
+// Set date range in the correct format (YYYY-MM-DD H:i:s)
+$today = date('Y-m-d H:i:s'); // Today at current time
+$six_months_ago = date('Y-m-d H:i:s', strtotime('-6 months')); // Six months ago
+
+// DEBUG: Output formatted dates
+echo '<p>Current Date (Today): ' . $today . '</p>';
+echo '<p>Six Months Ago: ' . $six_months_ago . '</p>';
+
+$args = array(
+    'post_type'      => 'upcoming-events',
+    'post_status'    => 'publish',
+    'orderby'        => 'meta_value',
+    'meta_key'       => 'start_date',
+    'order'          => 'ASC',
+    'posts_per_page' => $posts_per_page,
+    'paged'          => $paged,
+    'facetwp'        => true,
+    'meta_query'     => array(
+        'relation' => 'OR', // Include both past 6 months and future events
+        array(
+            'key'     => 'start_date',
+            'value'   => array($six_months_ago, $today),
+            'compare' => 'BETWEEN',
+            'type'    => 'CHAR' // Past events within last 6 months
+        ),
+        array(
+            'key'     => 'start_date',
+            'value'   => $today,
+            'compare' => '>=',
+            'type'    => 'CHAR' // Future events
+        ),
+    ),
 );
+
+// DEBUG: Print query arguments
+echo '<pre>';
+print_r($args);
+echo '</pre>';
+
 $events = new WP_Query($args);
+
+// DEBUG: Check if any events were found
+if (!$events->have_posts()) {
+    echo '<p style="color: red;">No events found. Double-check date formats in the database.</p>';
+}
+
+
 if ( $events->have_posts() ) {  ?>
   <?php if( $slug == 'events' ) { ?>
     <div class="titlediv typical nomb">
