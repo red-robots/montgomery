@@ -2391,19 +2391,26 @@ body.single-tribe_events {
       width: 100%;
       // border-bottom: 1px dotted #000 ;
       position: relative;
-      height: 40px;
+      // height: 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 10px;
     }
-    .time {
+    .time, .name  {
       width: auto;
-      position: absolute;
-      left: 0;
-      bottom: 0;
+      flex-basis: 49%;
+      // position: absolute;
+      // left: 0;
+      // bottom: 0;
     }
     .name {
       width: auto;
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      text-align: right;
+      // position: absolute;
+      // right: 0;
+      // bottom: 0;
     }
     .schedules-list, .schedules-list_2 {
       display: none;

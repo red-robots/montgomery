@@ -1641,9 +1641,9 @@ body.single-tribe_events #main h1.tribe-events-single-event-title{text-transform
 .repeatable-blocks .repeatable.text-image.full .flexwrap .textcol,.repeatable-blocks .repeatable.text-image.full .flexwrap .imagecol{width:100%}
 .repeatable-blocks .schedule-wrap{width:80%;margin:20px auto}
 .repeatable-blocks .schedule-wrap h3{width:100%;text-align:center;color:#4c748c}
-.repeatable-blocks .schedule-wrap .line{width:100%;position:relative;height:40px}
-.repeatable-blocks .schedule-wrap .time{width:auto;position:absolute;left:0;bottom:0}
-.repeatable-blocks .schedule-wrap .name{width:auto;position:absolute;right:0;bottom:0}
+.repeatable-blocks .schedule-wrap .line{width:100%;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:10px}
+.repeatable-blocks .schedule-wrap .time,.repeatable-blocks .schedule-wrap .name{width:auto;-ms-flex-preferred-size:49%;flex-basis:49%}
+.repeatable-blocks .schedule-wrap .name{width:auto;text-align:right}
 .repeatable-blocks .schedule-wrap .schedules-list,.repeatable-blocks .schedule-wrap .schedules-list_2{display:none;-webkit-animation-duration:1s;animation-duration:1s;width:100%}
 .repeatable-blocks .schedule-wrap .schedules-list.active,.repeatable-blocks .schedule-wrap .schedules-list_2.active{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
 .repeatable-blocks .schedule-wrap .scheduleContent{width:100%;float:left;overflow:hidden;margin-bottom:30px}
