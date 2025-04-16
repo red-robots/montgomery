@@ -155,7 +155,7 @@ $postId = get_the_ID();
                       }
                     }
                     ?>
-                    <div class="block">
+                    <div class="block js-blocks">
                       <div class="inside">
                         
                         <?php if ($image) { ?>

@@ -1817,7 +1817,7 @@ body.home #primary{padding-bottom:0}
 .grid-layout .wrapper{max-width:100%;width:100%;padding-left:15px;padding-right:15px}
 .grid-layout .blocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-15px;margin-right:-15px;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
 .grid-layout .blocks .block{width:100%;padding:30px 15px}
-.grid-layout .blocks .block .inside{height:100%;position:relative}
+.grid-layout .blocks .block .inside{height:100%;background:#eee;position:relative}
 .grid-layout .blocks .block .inside.no-image{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .grid-layout .blocks .block .inside.no-image .desc{padding:30px 20px}
 .grid-layout .blocks .block .status{display:block;width:100%;text-align:center;position:absolute;top:0;left:0;z-index:5;padding:10px 10px;background:#31a7c5;color:#fff;font-size:1.8em;font-weight:500;letter-spacing:.05em;text-transform:uppercase}
