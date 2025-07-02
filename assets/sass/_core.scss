@@ -5413,5 +5413,14 @@ body.logged-in.admin-bar {
     right: 10px;
   }
 }
-
+section.home-full-width-text {
+  width: 100%;
+  padding: 20px;
+  @include tab {
+    padding: 40px 20%;
+  }
+  @include desk {
+    padding: 60px 30%;
+  }
+}
 

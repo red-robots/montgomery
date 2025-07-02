@@ -183,6 +183,12 @@ $postId = get_the_ID();
                 </figure>
               </div>
               <?php } ?>
+            <?php } else if( get_row_layout() == 'full_width_text' ) {  
+                      $text_full_width = get_sub_field('text_full_width');
+              ?>
+              <section class="home-full-width-text">
+                <?php echo $text_full_width; ?>
+              </section>
             <?php } else if( get_row_layout() == 'fullwidth_section_columns' ) {  ?>
               <div class="home-repeatable-section fullwidth_section_or_columns">
                 <?php if( $content = get_sub_field('content') ) { $countContent = count($content); ?>

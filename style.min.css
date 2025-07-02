@@ -2061,6 +2061,7 @@ body.logged-in.admin-bar .submenu-items{padding-top:80px !important}
 .facetwp-facet-event_categories .fs-dropdown{background-color:#403f3f;color:#fff;padding:10px;border:0;margin:0}
 .facetwp-facet-event_categories .fs-search{display:none}
 .facetwp-facet-event_categories .fs-arrow{border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #fff;right:10px}
+section.home-full-width-text{width:100%;padding:20px}
 @media screen and (max-device-width:480px) and (orientation:portrait){.banner-video.has-mobile-video .video-mobile{width:110vh}
 }@media screen and (max-device-width:850px) and (orientation:landscape){.banner-video.has-mobile-video .video-mobile{width:120vw}
 }@media(min-width:600px){.homerow5.section .block{width:50%}
@@ -2168,6 +2169,7 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .grid-layout .blocks .block{width:33.333%}
 .item-details-blocks .item-details.column-two .detailsCol .options .inforow:nth-child(even){border-top:0;border-left:1px solid #adaaaa}
 .event-filter{width:auto;position:absolute;right:0;top:0}
+section.home-full-width-text{padding:40px 20%}
 }@media screen and (min-width:820px){.rocketrez-iframe-container{margin-top:110px}
 }@media screen and (min-width:821px){.fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap{height:100%}
 .fullwidth_section_or_columns .columns-content .inner.multiple-columns .textwrap .has-button .buttondiv{width:100%;position:absolute;left:0;bottom:0}
@@ -2180,6 +2182,7 @@ body.page-template-default #primary,body.page-template-page-custom #primary{padd
 .contact-links-section .link-icon{width:20%}
 }@media(min-width:1200px){.banners .banner .text{font-size:4.5rem}
 body.single-tribe_events .hentry .tribe-events-event-image.image-bg{height:45vh}
+section.home-full-width-text{padding:60px 30%}
 }@media screen and (min-width:1300px){.fullscreen-text-image-repeatable figure .textblock{padding:2vw}
 .item-details-blocks .item-details .flexwrap .detailsCol{padding:8vw 5vw}
 }@media screen and (min-width:1400px){.home-repeatable-blocks h2{font-size:34px}
