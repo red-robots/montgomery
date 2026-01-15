@@ -27,11 +27,13 @@ get_header(); ?>
       </div>
       <?php } ?>
 
-      <?php if ($from_content || $form_shortcode) { ?>
+      <?php if ($from_content || $form_shortcode) { 
+      $bgImg = get_field('from_content_bgimage');
+      $bgStyle = ($bgImg) ? ' style="background-image:url('.$bgImg['url'].')"':''; ?>
       <div class="contact-form-section <?php echo $form_div ?>">
         <div class="flexwrap">
           <?php if ($from_content) { ?>
-          <div class="fxcol text"><div class="inside"><?php echo $from_content ?></div></div>  
+          <div class="fxcol text"<?php echo $bgStyle ?>><div class="inside"><?php echo $from_content ?></div></div>  
           <?php } ?>
 
           <?php if ($form_shortcode && do_shortcode($form_shortcode) ) { ?>

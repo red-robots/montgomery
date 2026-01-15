@@ -87,6 +87,7 @@ get_header();
       $button = get_sub_field('button');
       $soon = get_sub_field('coming_soon');
       $type = get_sub_field('type');
+      $rr_btn = get_sub_field('rr_btn_home');
       $is_coming_soon = (isset($soon[0]) && $soon[0]) ? ' coming_soon' : '';
 
       $fc_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
@@ -111,7 +112,6 @@ get_header();
                 <h4 class="t2"><?php echo $title2 ?></h4>  
                 <?php } ?>
               </div>
-              <div class="text_divider <?php echo $type ?>"><?php include( locate_template('images/symbol/'.$type.'.svg') ); ?></div>
               <?php } ?>
 
               <?php if ($text || $button) { ?>
@@ -124,6 +124,11 @@ get_header();
                 <div class="buttondiv">
                   <a href="<?php echo $fc_link ?>" target="<?php echo $fc_target ?>" class="button"><?php echo $fc_text ?></a>
                 </div>  
+                <?php } ?>
+                <?php if( $rr_btn ){ ?>
+                  <div class="buttondiv">
+                    <?php echo $rr_btn; ?>
+                  </div>
                 <?php } ?>
               </div>
               <?php } ?>
@@ -152,6 +157,8 @@ get_header();
   $restaurant_image = get_field('restaurant_image');
   $restaurant_text = get_field('restaurant_content');
   $restaurant_button = get_field('restaurant_button');
+  $restaurant_bg_image = get_field('restaurant_bg_image');
+  $restDivStyle = ($restaurant_bg_image) ? ' style="background-image:url('.$restaurant_bg_image['url'].')"':'';
   $res_style = ($restaurant_image) ? ' style="background-image:url('.$restaurant_image['url'].')"':'';
 
   $res_target = (isset($restaurant_button['target']) && $restaurant_button['target']) ? $restaurant_button['target'] : '_self';
@@ -161,7 +168,7 @@ get_header();
   ?>
   <?php if( $restaurant_text ) { ?>
   <section class="section homerow3 full-width-bg">
-    <div class="inner">
+    <div class="inner"<?php echo $restDivStyle ?>>
       <?php if ($restaurant_image) { ?>
       <div class="feat-image"<?php echo $res_style ?>></div>
       <?php } ?>

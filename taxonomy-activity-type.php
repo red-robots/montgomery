@@ -19,10 +19,20 @@ $has_cat_description = ( category_description( $current_term_id ) ) ? 'has-cat-d
 
 <div id="primary" data-term="<?php echo $current_term_name ?>" class="content-area-full taxonomy-content taxonomy-<?php echo $current_term_slug ?> <?php echo $has_cat_description ?>">
   <main id="main" class="site-main" role="main">
-    <?php if ( category_description( $current_term_id ) ) { ?>
-    <div class="wrapper cat-description">
-      <?php echo anti_email_spam(category_description( $current_term_id )); ?>
+
+    <div class="wrapper wraptax">
+      <div class="titlediv typical nomb"><h1 class="page-title"><span><?php echo $current_term_name; ?></span></h1></div>
+      <?php if ( category_description( $current_term_id ) ) { ?>
+      <div class="entry-content" style="padding-top: 15px;">
+        <?php echo anti_email_spam(category_description( $current_term_id )); ?>
+      </div>
+      <?php } ?>
     </div>
+    
+    <?php if ( category_description( $current_term_id ) ) { ?>
+    <!-- <div class="wrapper cat-description">
+      <?php echo anti_email_spam(category_description( $current_term_id )); ?>
+    </div> -->
     <?php } ?>
 
     <?php  

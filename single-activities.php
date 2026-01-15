@@ -13,9 +13,9 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
       <div class="wrapper">
-        <div class="titlediv typical"><h1 class="page-title"><span><?php the_title(); ?></span></h1></div>
+        <div class="titlediv typical nomb"><h1 class="page-title"><span><?php the_title(); ?></span></h1></div>
         <?php if ( $intro = get_field('intro') ) { ?>
-        <div class="entry-content">
+        <div class="entry-content" style="padding-top: 15px;">
           <?php echo anti_email_spam($intro); ?>
         </div>
         <?php } ?>
@@ -24,6 +24,7 @@ get_header(); ?>
       <?php  
       $trip_options = get_field('trip_options');
       $pass_options = get_field('pass_options');
+      $rr_btn = get_field('rr_btn');
       $note_title = get_field('pass_note_title');
       $note_content = get_field('pass_note_content');
       $section_class = ($trip_options && ($pass_options || $note_content )) ? 'half':'full';
@@ -37,7 +38,7 @@ get_header(); ?>
 
               <div class="table-data">
                 <div class="thead flexwrap">
-                  <div class="tbcol c1">TRIP OPTION</div>
+                  <div class="tbcol c1">OPTIONS</div>
                   <div class="tbcol c2">DIFFICULTY</div>
                   <div class="tbcol c3">QUALIFIER</div>
                 </div>
@@ -96,9 +97,10 @@ get_header(); ?>
                   <?php } ?>
                   <?php if ($btnText && $btnUrl) { ?>
                   <div class="buttondiv">
-                    <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button-outline"><?php echo $btnText ?></a>
+                    <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="button"><?php echo $btnText ?></a>
                   </div> 
                   <?php } ?>
+                  <?php if( $rr_btn ){ echo $rr_btn; } ?>
                 </div>
               </div> 
               <?php } ?>
@@ -112,7 +114,7 @@ get_header(); ?>
                   <div class="text"><?php echo anti_email_spam($note_content); ?></div>
                   <?php if ($nBtnLink && $nBtnTitle) { ?>
                   <div class="buttondiv mt-25">
-                    <a href="<?php echo $nBtnLink ?>" target="<?php echo $nBtnTarget ?>" class="button-outline"><?php echo $nBtnTitle ?></a>
+                    <a href="<?php echo $nBtnLink ?>" target="<?php echo $nBtnTarget ?>" class="button"><?php echo $nBtnTitle ?></a>
                   </div> 
                   <?php } ?>
                 </div>
@@ -126,8 +128,11 @@ get_header(); ?>
       </div> 
 
 
-      <?php if ($additional_information = get_field('additional_information')) { ?>
-      <div class="section-additional-information">
+      <?php if ($additional_information = get_field('additional_information')) { 
+        $infoBg = get_field('additional_information_bg');
+        $bgStyle = ($infoBg) ? ' style="background-image:url('.$infoBg['url'].')"':'';
+      ?>
+      <div class="section-additional-information"<?php echo $bgStyle ?>>
         <div class="wrapper">
           <h2 class="stitle">ADDITIONAL INFORMATION</h2>
           <div class="accordions">

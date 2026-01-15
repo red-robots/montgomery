@@ -5,13 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php bloginfo("template_url") ?>/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="<?php bloginfo("template_url") ?>/css/jquery.fancybox.min.css?v=1.1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/css/select2.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+
+
 <?php if ( is_singular(array('post')) ) { 
 global $post;
 $post_id = $post->ID;
@@ -51,21 +56,57 @@ if ( $titleOpt=='hide' ) { ?>
 <style>.titlediv,h1.page-title,.default-page-title {display: none!important;}</style>
 <?php } ?>
 
-<?php wp_head(); ?>
+<?php 
+wp_head(); 
+
+$rr_btn_menu = get_field('rr_btn_menu', 'option');
+$activities_link = get_field('activities_link', 'option');
+$a_link = get_bloginfo('url') . '/event/hours-of-operation-' . date("m-d-y") . '/';
+
+$trail_status = get_field('trail_status', 'option');
+if( $trail_status == 'open' ) {
+  $trailText = 'Trails Open';
+  $trailSquare = 'green';
+} else {
+  $trailText = 'Trails Closed';
+  $trailSquare = 'red';
+}
+?>
 </head>
 <body <?php body_class($extra_class); ?>>
 <div id="page" class="site cf">
 	<div id="overlay"></div>
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 	<header id="masthead" class="site-header">
+    <div class="trail-bar">
+      <div class="trail-wrapper">
+        <div class="trails">
+          <div class="trail-text"><?php echo $trailText; ?></div><div class="trailsquare <?php echo $trailSquare; ?>">&nbsp;</div>
+        </div>
+      </div>
+    </div>
 		<div class="wrapper cf">
       <div class="head-inner">
         <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
 
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-          <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
-          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
-        </nav><!-- #site-navigation -->
+        <?php  
+        $new_navigation = get_field('enable_new_navigation','option');
+        if($new_navigation=='on') { ?>
+          <?php include( locate_template('parts/navigation-new.php') );  ?>
+        <?php } else { ?>
+
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <span id="closeMenu" class="menu-toggle"><span class="bar"></span></span>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container_class'=>'menu-wrapper') ); ?>
+            <?php if( $rr_btn_menu ){  ?>
+              <div class="menu-cta-btn"><?php echo $rr_btn_menu; ?></div>
+            <?php } ?>
+            <?php if( $activities_link ){ ?>
+              <div class="menu-cta-btn mobile"><a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a></div>
+            <?php } ?>
+          </nav><!-- #site-navigation -->
+
+        <?php } ?>
 
         <?php $mobileLogo = get_field('logo_mobile','option'); ?>
         <?php if ($mobileLogo) { ?>
@@ -99,11 +140,30 @@ if ( $titleOpt=='hide' ) { ?>
           if ($btn_text && $btn_link) { ?>
           <a href="<?php echo $btn_link ?>" target="<?php echo $btn_target ?>" class="head-button"><?php echo $btn_text ?></a>
           <?php } ?>
+
+          <?php if($new_navigation=='on') { ?>
+            <?php $buttonLabel = get_field('book_button_label','option'); ?>
+            <?php if ($buttonLabel) { ?>
+            <div class="header-link">
+              <!-- <button type="button" class="rocketrez-web-engine-button button" eid="b51df41873cb0f76" id="rafting"><?php echo $buttonLabel ?></button> -->
+              <div class=""><a href="<?php bloginfo('url'); ?>/buy/" class="button">Book an Activity</a></div>
+            </div>
+            <?php } ?>
+          <?php } else { ?>
+            <?php if( $activities_link ){ ?>
+              <div class="header-link">
+                <a href="<?php echo $a_link; ?>"><?php echo $activities_link; ?></a>
+              </div>
+            <?php } ?>
+          <?php } ?>
+
         </div>
+
       </div>
       <div class="searchbar">
         <div class="inner"><?php get_template_part('searchform') ?></div>
       </div>
+      
 		</div>
 	</header>
 

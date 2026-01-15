@@ -64,3 +64,12 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/inc/visual-biography-editor/visual-editor-biography.php';
 
+
+function filter_events_title_month( $title ) {
+    if ( tribe_is_month() ) {
+        $title = 'Calendar';
+    }
+    return $title;
+}
+add_filter( 'tribe_events_title_tag', 'filter_events_title_month' );
+

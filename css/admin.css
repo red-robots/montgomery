@@ -1,0 +1,66 @@
+.acf-field-true-false[data-name="button_center"] {
+  position: relative;
+}
+.acf-field-true-false[data-name="button_center"] .acf-label {
+  position: absolute;
+  left: 41px;
+  top: 17px;
+  margin: 0 0;
+}
+.acf-field-true-false[data-name="button_center"] .acf-input {
+  position: relative;
+  z-index: 5;
+}
+.acf-field-true-false[data-name="clickthrough_target"] {
+  position: relative;
+}
+.acf-field-true-false[data-name="clickthrough_target"] .acf-label {
+  padding-left: 22px;
+}
+.acf-field-true-false[data-name="clickthrough_target"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: 16px;
+}
+.acf-field-image[data-name="icon_image"] .image-wrap img {
+  width: auto!important;
+  height: 45px!important;
+  background: #adadad!important;
+}
+
+.acf-field-true-false[data-name="two_column"] {
+  position: relative;
+}
+.acf-field-true-false[data-name="two_column"] .acf-label {
+  padding-left: 26px;
+  padding-top: 2px;
+}
+.acf-field-true-false[data-name="two_column"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  transform: scale(1.1);
+}
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="url"] .acf-label {
+  display: none!important;
+}
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="target"] {
+  position: relative;
+  top: -5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: none;
+}
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="target"] .acf-label {
+  padding-left: 26px;
+  padding-top: 0;
+}
+.acf-field.acf-field-group[data-name="headingLink"] [data-name="target"] .acf-input {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 18px;
+  transform: scale(1.1);
+}

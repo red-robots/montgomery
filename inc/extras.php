@@ -15,6 +15,33 @@
  */
 define('THEMEURI',get_template_directory_uri() . '/');
 
+
+add_filter( 'facetwp_query_args', function( $args, $class ) {
+    // Always set the default order by 'start_date'
+    $args['orderby']    = 'meta_value';
+    $args['meta_key']   = 'start_date';
+    $args['order']      = 'ASC';
+
+    // Add or modify the meta_query to always sort by date (Y-m-d H:i:s format)
+    $args['meta_query'] = array(
+        array(
+            'key'     => 'start_date',
+            'value'   => date('Y-m-d H:i:s'), // Use the current datetime
+            'compare' => '>=',                // Ensure upcoming events are listed
+            'type'    => 'DATETIME'           // Specify the correct date type
+        )
+    );
+
+    // Optionally, handle specific facet logic for category or other filters
+    if ( isset( $class->query_vars['facets']['event_categories'] ) ) {
+        // Additional facet-specific query modifications if needed
+    }
+
+    return $args;
+}, 10, 2 );
+
+
+
 function bellaworks_body_classes( $classes ) {
     // Adds a class of group-blog to blogs with more than 1 published author.
    global $post;
@@ -167,7 +194,7 @@ function get_social_media() {
 
 function social_icons() {
     $social_types = array(
-        'facebook'  => 'fab fa-facebook-square',
+        'facebook'  => 'fa-brands fa-facebook',
         'twitter'   => 'fab fa-twitter',
         'linkedin'  => 'fab fa-linkedin',
         'instagram' => 'fab fa-instagram',
@@ -1006,4 +1033,34 @@ function display_faqs_shortcode_func( $atts ) {
 
   return $output;
 }
+
+
+function getHoursOperationSlug($slug) {
+  global $wpdb;
+  $post_id = '';
+  $post_slug = '';
+  if(empty($slug)) return '';
+
+  $query = "SELECT p.ID, p.post_name FROM " . $wpdb->prefix . "posts p WHERE p.post_status='publish' AND p.post_name='".$slug."'";
+  $result = $wpdb->get_row($query);
+  if($result) {
+    $post_id = $result->ID;
+    $post_slug = $result->post_name;
+  } else {
+    $parts = explode('hours-of-operation-',$slug);
+    $date_string = end($parts);
+    $date = DateTime::createFromFormat('d-m-Y', $date_string);
+    $newdateformat = $date->format('d-m-y');
+    $slug2 = 'hours-of-operation-' . $newdateformat;
+    
+    $query = "SELECT p.ID, p.post_name FROM " . $wpdb->prefix . "posts p WHERE p.post_status='publish' AND p.post_name='".$slug2."'";
+    $result = $wpdb->get_row($query);
+    $post_id = ($result) ? $result->ID : '';
+    $post_slug = ($result) ? $result->post_name : '';
+  }
+
+  return $post_slug;
+}
+
+
 
