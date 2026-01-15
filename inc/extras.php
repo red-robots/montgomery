@@ -1062,5 +1062,29 @@ function getHoursOperationSlug($slug) {
   return $post_slug;
 }
 
+function convertTimeTo24HrFormat($time) {
+  if(empty($time)) return $time;
+  $date = DateTime::createFromFormat('g:ia', $time);
+  return $date->format('H:i'); 
+}
+
+
+function isTrailOpen(string $openTime, string $closeTime, ?string $checkTime = null): bool {
+  // Use current time if none provided
+  $currentTime = $checkTime ?? wp_date('H:i');
+
+  $current = strtotime($currentTime);
+  $open    = strtotime($openTime);
+  $close   = strtotime($closeTime);
+
+  // Normal same-day range
+  if ($close > $open) {
+    return ($current >= $open && $current <= $close);
+  }
+
+  // Overnight range (e.g. 10 PM – 2 AM)
+  return ($current >= $open || $current <= $close);
+}
+
 
 

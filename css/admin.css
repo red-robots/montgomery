@@ -64,3 +64,13 @@
   left: 18px;
   transform: scale(1.1);
 }
+.acf-field-group[data-name="automatic_trail_time"] .acf-input .acf-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+.acf-field-group[data-name="automatic_trail_time"] [data-name="trail_time_from"] {
+  width: 50%;
+}
+.acf-field-group[data-name="automatic_trail_time"] [data-name="trail_time_to"] {
+  width: 50%;
+}

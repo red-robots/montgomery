@@ -71,6 +71,32 @@ if( $trail_status == 'open' ) {
   $trailText = 'Trails Closed';
   $trailSquare = 'red';
 }
+
+
+$autoTrailStat = get_field('automatic_trail_time', 'option');
+$trail_time_from = (isset($autoTrailStat['trail_time_from']) && $autoTrailStat['trail_time_from']) ? $autoTrailStat['trail_time_from'] : '';
+$trail_time_to = (isset($autoTrailStat['trail_time_to']) && $autoTrailStat['trail_time_to']) ? $autoTrailStat['trail_time_to'] : '';
+if( $trail_status == 'auto' ) {
+  if($trail_time_from && $trail_time_to) {
+    $current_time = wp_date('g:i a');
+    $current_time = convertTimeTo24HrFormat($current_time);
+
+    $fromTime = convertTimeTo24HrFormat($trail_time_from);
+    $toTime = convertTimeTo24HrFormat($trail_time_to);
+    $auto_trail_status = isTrailOpen($fromTime, $toTime, $current_time);
+
+    if($auto_trail_status) {
+      //echo 'OPEN';
+      $trailText = 'Trails Open';
+      $trailSquare = 'green';
+    } else {
+      //echo 'CLOSED';
+      $trailText = 'Trails Closed';
+      $trailSquare = 'red';
+    }
+  }
+}
+
 ?>
 </head>
 <body <?php body_class($extra_class); ?>>
