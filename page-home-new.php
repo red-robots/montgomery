@@ -127,7 +127,7 @@ $postId = get_the_ID();
                     <?php } ?>
                     <?php
                       $link_title_slug = ($title) ? sanitize_title($title) : '';
-                      $current_date_slug = date('m-d-y');
+                      $current_date_slug = date('m-d-Y');
                       if($link_title_slug=='todays-hours') {
                         $url = get_site_url() . '/event/hours-of-operation-' . $current_date_slug;
                         $target = '_self';
