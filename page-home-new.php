@@ -129,11 +129,11 @@ $postId = get_the_ID();
                       $link_title_slug = ($title) ? sanitize_title($title) : '';
                       $current_date_slug = date('m-d-y');
                       if($link_title_slug=='todays-hours') {
-                        //$url = get_site_url() . '/event/hours-of-operation-' . $current_date_slug;
+                        $url = get_site_url() . '/event/hours-of-operation-' . $current_date_slug;
                         $target = '_self';
-						$hours_slug =  'hours-of-operation-' . $current_date_slug;
-						$post__slug = getHoursOperationSlug($hours_slug);  
-						$url = get_site_url() . '/event/' . $post__slug;  
+						//$hours_slug =  'hours-of-operation-' . $current_date_slug;
+						//$post__slug = getHoursOperationSlug($hours_slug);  
+						//$url = get_site_url() . '/event/' . $post__slug;  
                       }
                     ?>
                     <div class="icon-block icon-block-<?php echo $ctr ?> <?php echo $odd_even ?>">
